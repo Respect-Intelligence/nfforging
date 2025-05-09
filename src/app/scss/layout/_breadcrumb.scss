@@ -1,0 +1,28 @@
+/*-------------------------
+    Breadcrumb
+--------------------------*/
+@use "../global/vars" as *;
+@use "../global/mixins" as *;
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item {
+    position: relative;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    font-family: FontAwesome;
+    content: "\f105";
+}
+
+/* Extra Small Devices */
+@include xs-sm-screens {
+
+    .breadcrumb-item a,
+    .breadcrumb-item+.breadcrumb-item {
+        font-size: 12px;
+    }
+}
