@@ -1,8 +1,9 @@
 // components/ClientBootstrapWrapper.tsx
 "use client";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+// import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "../app/scss/style.scss";
+import "swiper/css";
 
 export default function ClientBootstrapWrapper() {
   return null;

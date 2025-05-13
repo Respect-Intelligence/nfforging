@@ -20,6 +20,16 @@
     background-color: $color-white;
     border-bottom: 1px solid #ededed;
 
+    .nav__item.with-dropdown {
+        .nav__item.with-dropdown:hover {
+            .dropdown-menu {
+
+                left: 100% !important;
+                top: 0 !important;
+            }
+        }
+    }
+
     >.container,
     >.container-fluid {
         position: relative;
