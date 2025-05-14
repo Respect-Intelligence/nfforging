@@ -43,3 +43,90 @@
 @use "module/banners" as *;
 @use "module/careeres" as *;
 @use "module/services" as *;
+
+
+
+
+.cirtification-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/images/banner5.jpg");
+        background-size: cover;
+        background-position: center center;
+        // filter: blur(20px);
+
+        z-index: -1;
+    }
+
+    ul.list-items {
+        li {
+            display: flex;
+            // align-items: center;
+            gap: 8px;
+
+            &::before {
+                display: none;
+            }
+
+            .checkIcon {
+                height: 20px;
+                width: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: #fff;
+
+                svg {
+                    height: 12px;
+                    // fill: $color-theme;
+                    color: $color-theme ;
+                    stroke-width: 3px;
+                }
+            }
+
+        }
+    }
+}
+
+// .portfolio-item {
+//     .portfolio__title {
+//         text-align: center;
+//     }
+
+//     .portfolio__desc {
+//         text-align: center;
+//     }
+
+//     &:hover {
+//         background-color: $color-theme;
+
+//         .portfolio__title {
+//             color: white;
+//         }
+
+//         img {
+//             filter: brightness(0) invert(1);
+//         }
+//     }
+// }
+
+
+.wpo-feature-section {
+
+    h5,
+    h3,
+    h2,
+    span {
+        margin-bottom: 5px;
+    }
+}

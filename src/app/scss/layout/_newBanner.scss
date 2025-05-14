@@ -34,7 +34,7 @@
     .content {
         margin-left: 250px;
         margin-top: -100px;
-        max-width: 702px;
+        // max-width: 702px;
         text-align: left;
 
         @media (max-width:1499px) {
@@ -194,6 +194,10 @@
 
             .icon {
                 margin-bottom: 20px;
+
+                img {
+                    max-height: 60px;
+                }
             }
 
             .content {

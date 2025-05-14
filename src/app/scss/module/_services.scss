@@ -18,6 +18,12 @@
     .service__icon {
         margin-bottom: 50px;
 
+        svg {
+            height: 60px;
+            width: 60px;
+            fill: $color-theme;
+        }
+
         i {
             font-size: 65px;
             line-height: 1;
@@ -56,15 +62,26 @@
         margin-top: 14px;
         height: 32px;
         line-height: 32px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
 
-        i {
+        i,
+        .icon_svg {
+            svg {
+                height: 18px;
+            }
+
+            display: flex;
+            align-items: center;
+            justify-self: center;
             width: 22px;
             height: 22px;
             line-height: 22px;
             background-color: $color-theme;
             color: $color-white;
             border-radius: 50%;
-            display: inline-block;
+            // display: inline-block;
             @include prefix(transition, all 0.3s linear, webkit moz ms o);
         }
     }
@@ -95,18 +112,21 @@
 
         .service__title,
         .service__desc,
+        .service__icon svg,
         .service__icon i,
         .btn__link {
             color: $color-white;
+            fill: #fff;
         }
 
         .service__title:after {
             background-color: $color-white;
         }
 
-        .btn__link i {
-            width: 30px;
-            height: 30px;
+        .btn__link .icon_svg {
+            // width: 30px;
+            // height: 30px;
+            transform: scale(1.2);
             line-height: 30px;
             color: $color-theme;
             background-color: $color-white;

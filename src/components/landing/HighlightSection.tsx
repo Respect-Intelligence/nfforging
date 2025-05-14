@@ -8,28 +8,28 @@ import img4 from "@/assets/images/features/svg/4.svg";
 export default function HighlightSection() {
   let highlightsData = [
     {
-      img: img1,
-      count: 500,
-      title: "Successfully",
-      subTitle: "completed projects",
+      img: "/images/highlights/employment.png",
+      count: 25,
+      title: "Experiance",
+      subTitle: "Years of Experiance",
     },
     {
-      img: img2,
-      count: 500,
-      title: "Successfully",
-      subTitle: "completed projects",
+      img: "/images/highlights/project-management.png",
+      count: 68,
+      title: "Projects",
+      subTitle: "Projects per Year",
     },
     {
-      img: img3,
-      count: 500,
-      title: "Successfully",
-      subTitle: "completed projects",
+      img: "/images/highlights/boxes.png",
+      count: "23K",
+      title: "Products",
+      subTitle: "Products per Month",
     },
     {
-      img: img4,
+      img: "/images/highlights/client.png",
       count: 500,
-      title: "Successfully",
-      subTitle: "completed projects",
+      title: "Clients",
+      subTitle: "Satisfied Clients",
     },
   ];
   return (
@@ -40,7 +40,8 @@ export default function HighlightSection() {
             return (
               <div className="item" key={index}>
                 <div className="icon">
-                  <Image src={img} alt="completed projects" priority={false} />
+                  {/* <Image src={img} alt="completed projects" priority={false} /> */}
+                  <img src={img} alt={title} />
                 </div>
                 <div className="content">
                   <h2>

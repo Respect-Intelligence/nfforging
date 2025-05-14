@@ -1,4 +1,126 @@
+import { url } from "inspector";
+import { ArrowRight } from "lucide-react";
+
 export default function Section_2() {
+  let arr = [
+    {
+      title: "CRF Division",
+      para: "CRF division which has capabilities to Cold Roll Form profiles and sections ranging from 1 kilogram per square meter to 125 kilograms per square meter in thicknesses ranging from 0.8mm to 10mm",
+      img: "https://nfforging.com/images/CRF-Division.jpg",
+      svg: (
+        <svg
+          id="Layer_1"
+          height="300"
+          viewBox="0 0 64 64"
+          width="300"
+          xmlns="http://www.w3.org/2000/svg"
+          data-name="Layer 1"
+          version="1.1"
+          // xmlns:xlink="http://www.w3.org/1999/xlink"
+          // xmlns:svgjs="http://svgjs.dev/svgjs"
+        >
+          <g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)">
+            <path
+              d="m58.225 4.768a5.6 5.6 0 0 0 -4.512 2.284l-13.465 13.464-.955-2.475a1 1 0 0 0 -.933-.64h-17.513a1 1 0 0 0 -1 1v15.025h-3.576v-7.012a1 1 0 0 0 -1-1h-2.136v-6.314a1 1 0 0 0 -1-1h-3.466a1 1 0 0 0 0 2h2.466v5.316h-9.069a1 1 0 0 0 -1 1v16.04a1 1 0 0 0 1 1h13.987v4.065h-10.471a5.517 5.517 0 1 0 0 11.034h35.448a5.517 5.517 0 1 0 0-11.034h-10.47v-4.067h13.986a1 1 0 0 0 1-1v-8.028a.979.979 0 0 0 -.038-.188 1.025 1.025 0 0 0 -.029-.173l-.011-.028-1.216-3.15 9.826-9.826v18.928l-6.807 6.811a1 1 0 0 0 .708 1.707h10.805a4.838 4.838 0 0 0 4.832-4.832v-31.728a5.6 5.6 0 0 0 -5.391-7.179zm0 2a3.618 3.618 0 1 1 -3.619 3.617 3.622 3.622 0 0 1 3.619-3.617zm-36.378 12.632h15.828l1.267 3.284 3.214 8.326.93 2.41h-21.239zm-7.576 8.013v6.012h-11.205v-6.011zm22.512 22.1a5.5 5.5 0 0 0 0 7.034h-26.954a5.5 5.5 0 0 0 0-7.034zm-34.719 3.522a3.518 3.518 0 1 1 3.518 3.518 3.521 3.521 0 0 1 -3.518-3.518zm42.484 0a3.518 3.518 0 1 1 -3.518-3.516 3.522 3.522 0 0 1 3.518 3.516zm-15.988-5.516h-10.507v-4.065h10.507zm14.986-6.065h-40.48v-6.028h40.48zm-2.51-18.9 11.6-11.6a5.634 5.634 0 0 0 3.923 4.793l-2.187 2.187-10.906 10.9zm15.041-3.5 3.152-3.152a5.58 5.58 0 0 0 2.387-1.055v17.6l-5.539 5.539zm5.539 24.61a2.835 2.835 0 0 1 -2.832 2.836h-8.391l5.39-5.39 5.831-5.831z"
+              fill-opacity="1"
+              data-original-color="#000000ff"
+              stroke="none"
+              stroke-opacity="1"
+            />
+            <path
+              d="m8.669 36.525a1 1 0 0 0 -1 1v1.83a1 1 0 0 0 2 0v-1.83a1 1 0 0 0 -1-1z"
+              fill-opacity="1"
+              data-original-color="#000000ff"
+              stroke="none"
+              stroke-opacity="1"
+            />
+            <path
+              d="m13.332 36.525a1 1 0 0 0 -1 1v1.83a1 1 0 0 0 2 0v-1.83a1 1 0 0 0 -1-1z"
+              fill-opacity="1"
+              data-original-color="#000000ff"
+              stroke="none"
+              stroke-opacity="1"
+            />
+            <path
+              d="m38.009 28.521-1.909-4.935a1 1 0 0 0 -1.866.721l1.906 4.934a1 1 0 0 0 1.865-.72z"
+              fill-opacity="1"
+              data-original-color="#000000ff"
+              stroke="none"
+              stroke-opacity="1"
+            />
+          </g>
+        </svg>
+      ),
+    },
+    {
+      title: "Foundry",
+      para: "Foundry division which has been classified as Class 'A' by RDSO (Research and Development Services Organisation). Details may please be seen in the relevant section of this website.",
+      img: "https://nfforging.com/images/foundry.jpg",
+      svg: (
+        <svg
+          height="512"
+          viewBox="0 0 512 512"
+          width="512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="Icons_copy" data-name="Icons copy">
+            <path d="m120 352v8a8 8 0 0 0 8 8h24a24.164 24.164 0 0 1 20.873 36.34l-25.468 43.66h-11.405a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h272a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8h-16v-56a64.072 64.072 0 0 1 64-64 8 8 0 0 0 8-8v-48a8 8 0 0 0 -8-8h-104v-24a8 8 0 0 0 -8-8h-176a8 8 0 0 0 -8 8v24h-32a8 8 0 0 0 -8 8h-64a8 8 0 0 0 -8 8 72.081 72.081 0 0 0 72 72zm280 128h-256v-16h256zm-224-232h160v16h-160zm-40 32h312v32h-80v16h40.074a79.916 79.916 0 0 0 -32.074 64v56h-210.072l20.765-35.6a39.744 39.744 0 0 0 .136-40.242 41.6 41.6 0 0 0 -2.746-4.16h31.917v-15.998h-80zm-16 8v48a56.086 56.086 0 0 1 -55.43-48z" />
+            <path d="m486.453 121.613a30.725 30.725 0 0 0 -22.765-8.607l-159.688 6.654v-31.66a8 8 0 0 0 -2.343-5.657l-8-8a8 8 0 0 0 -5.657-2.343h-64a8 8 0 0 0 -5.657 2.343l-8 8a8 8 0 0 0 -2.343 5.657v32h-8a24 24 0 0 0 0 48h8v32a8 8 0 0 0 2.343 5.657l8 8a8 8 0 0 0 5.657 2.343h64a8 8 0 0 0 5.657-2.343l8-8a8 8 0 0 0 2.343-5.657v-31.66l159.688 6.654c.446.019.89.027 1.333.027a31.021 31.021 0 0 0 21.432-53.408zm-286.453 30.387a8 8 0 0 1 0-16h8v16zm88 44.687-3.313 3.313h-57.374l-3.313-3.313v-105.374l3.313-3.313h57.374l3.313 3.313zm187.377-41.847a14.868 14.868 0 0 1 -11.023 4.168l-160.354-6.682v-16.652l160.354-6.682a15.021 15.021 0 0 1 11.023 25.848z" />
+            <path d="m248 16h16v40h-16z" />
+            <path
+              d="m155.897 44.07h16v72.807h-16z"
+              transform="matrix(.866 -.5 .5 .866 -18.279 92.73)"
+            />
+            <path
+              d="m125.934 102.475h15.999v134.099h-15.999z"
+              transform="matrix(.5 -.866 .866 .5 -79.846 200.752)"
+            />
+            <path d="m48 232h96v16h-96z" />
+            <path d="m368 232h96v16h-96z" />
+            <path
+              d="m318.52 189.525h22.099v15.999h-22.099z"
+              transform="matrix(.866 -.5 .5 .866 -54.609 191.249)"
+            />
+            <path
+              d="m321.78 73.934h50.96v16h-50.96z"
+              transform="matrix(.5 -.866 .866 .5 102.672 341.701)"
+            />
+            <path
+              d="m197.93 43.678h16v18.914h-16z"
+              transform="matrix(.966 -.259 .259 .966 -6.735 55.111)"
+            />
+            <path
+              d="m99.877 181.659h16v37.303h-16z"
+              transform="matrix(.259 -.966 .966 .259 -113.527 252.675)"
+            />
+            <path
+              d="m383.123 191.039h51.485v16h-51.485z"
+              transform="matrix(.966 -.259 .259 .966 -37.583 112.604)"
+            />
+          </g>
+        </svg>
+      ),
+    },
+    {
+      title: "Fabrication",
+      para: "Fabrication division which is at ease with most demanding and challenging assignments for wagons for railways (Indian and overseas both), passenger coaches, ISO Shipping Containers and engineering assignments for refineries and other industries.",
+      img: "https://nfforging.com/images/fabrication.jpg",
+      svg: (
+        <svg
+          height="512pt"
+          viewBox="0 0 512 512"
+          width="512pt"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="m215.832031 253.5 34.136719 34.132812c1.597656 1.601563 3.769531 2.5 6.03125 2.5s4.433594-.898437 6.03125-2.5l34.136719-34.132812c1.597656-1.601562 2.5-3.769531 2.5-6.035156v-128h14.222656c9.300781-.195313 17.273437-6.6875 19.351563-15.753906l33.363281-80.078126c2.199219-5.265624 1.621093-11.285156-1.546875-16.03125-3.164063-4.75-8.492188-7.601562-14.199219-7.601562h-187.71875c-5.707031-.00390625-11.039063 2.851562-14.203125 7.601562-3.167969 4.75-3.746094 10.769532-1.546875 16.035157l33.367187 80.074219c3.953126 9.554687 13.285157 15.777343 23.625 15.753906h9.949219v128c0 2.265625.902344 4.433594 2.5 6.035156zm65.769531-9.566406-25.601562 25.597656-25.601562-25.597656v-124.46875h51.203124zm-86.09375-146.789063-33.398437-80.078125h187.75l-33.367187 80.082032c-.65625 1.796874-1.496094 3.515624-2.507813 5.140624-.355469.097657-.726563.132813-1.09375.109376h-109.507813c-3.445312.003906-6.554687-2.070313-7.875-5.253907zm0 0" />
+          <path d="m36.382812 142.011719-18.097656 18.105469c-3.203125 3.199218-5.003906 7.539062-5.003906 12.066406s1.800781 8.867187 5.003906 12.066406l216.597656 216.601562c5.601563 5.601563 13.195313 8.75 21.117188 8.75s15.515625-3.148437 21.117188-8.75l216.597656-216.601562c3.203125-3.199219 5.003906-7.539062 5.003906-12.066406s-1.800781-8.867188-5.003906-12.066406l-18.097656-18.105469c-6.667969-6.65625-17.46875-6.65625-24.132813 0l-195.484375 195.480469-195.484375-195.480469c-6.664063-6.65625-17.464844-6.65625-24.132813 0zm225.648438 213.585937 201.519531-201.519531 18.097657 18.105469-216.597657 216.597656c-5.066406 4.835938-13.035156 4.835938-18.101562 0l-216.597657-216.597656 18.097657-18.105469 201.519531 201.519531c3.332031 3.328125 8.730469 3.328125 12.0625 0zm0 0" />
+          <path d="m494.933594 298.667969h-89.5c-5.480469.007812-10.625 2.636719-13.84375 7.074219l-105.824219 146.523437h-59.539063l-105.828124-146.53125c-3.214844-4.433594-8.355469-7.058594-13.832032-7.066406h-89.5c-9.421875.007812-17.0546872 7.644531-17.066406 17.066406v179.199219c.0117188 9.421875 7.644531 17.054687 17.066406 17.066406h477.867188c9.421875-.011719 17.054687-7.644531 17.066406-17.066406v-179.199219c-.011719-9.421875-7.644531-17.058594-17.066406-17.066406zm0 196.265625h-477.867188v-179.199219h89.507813l105.824219 146.53125c3.21875 4.433594 8.359374 7.058594 13.835937 7.066406h59.53125c5.480469-.007812 10.625-2.636719 13.84375-7.074219l105.824219-146.523437h89.5zm0 0" />
+          <path d="m110.933594 0c-4.714844 0-8.535156 3.820312-8.535156 8.535156v105.726563l-9.75-16.25c-1.554688-2.636719-4.40625-4.238281-7.472657-4.195313-3.0625.046875-5.867187 1.730469-7.34375 4.410156-1.480469 2.683594-1.410156 5.953126.183594 8.566407l25.601563 42.667969c.09375.160156.234374.273437.339843.425781.179688.25.367188.488281.570313.71875.371094.425781.777344.816406 1.222656 1.160156.222656.171875.429688.34375.664062.488281.609376.382813 1.261719.6875 1.949219.902344.105469.035156.1875.113281.300781.140625l.074219.011719c.675781.179687 1.375.273437 2.074219.28125l.121094.011718h.007812c.074219 0 .152344-.03125.226563-.03125.664062-.011718 1.320312-.097656 1.964843-.261718.191407-.050782.367188-.160156.558594-.226563.527344-.167969 1.039063-.386719 1.523438-.652343l.109375-.046876c.085937-.050781.125-.132812.203125-.183593.753906-.496094 1.425781-1.105469 1.984375-1.8125.152343-.1875.308593-.355469.441406-.554688.089844-.132812.214844-.234375.296875-.375l25.601562-42.664062c1.59375-2.617188 1.664063-5.886719.183594-8.570313-1.480468-2.679687-4.28125-4.363281-7.347656-4.40625-3.0625-.046875-5.914062 1.554688-7.46875 4.191406l-9.753906 16.253907v-105.726563c0-4.714844-3.820313-8.535156-8.53125-8.535156zm0 0" />
+          <path d="m401.066406 0c-4.710937 0-8.53125 3.820312-8.53125 8.535156v105.726563l-9.753906-16.25c-2.441406-4.003907-7.652344-5.285157-11.675781-2.871094-4.019531 2.410156-5.339844 7.617187-2.957031 11.652344l25.601562 42.667969c.09375.160156.234375.273437.335938.425781.179687.25.367187.488281.570312.71875.371094.425781.777344.816406 1.226562 1.160156.21875.171875.425782.34375.660157.488281.609375.382813 1.261719.6875 1.949219.902344.105468.035156.1875.113281.300781.140625l.074219.011719c.675781.179687 1.375.273437 2.074218.28125l.125.011718h.007813c.074219 0 .152343-.03125.226562-.03125.664063-.011718 1.324219-.097656 1.964844-.261718.191406-.050782.367187-.160156.558594-.226563.527343-.167969 1.039062-.386719 1.523437-.652343l.109375-.046876c.085938-.050781.125-.132812.203125-.183593.753906-.496094 1.425782-1.105469 1.984375-1.8125.152344-.1875.308594-.355469.441407-.554688.089843-.132812.214843-.234375.296874-.375l25.601563-42.664062c1.59375-2.617188 1.664063-5.886719.183594-8.570313-1.476563-2.679687-4.28125-4.363281-7.34375-4.40625-3.066407-.046875-5.917969 1.554688-7.472657 4.191406l-9.75 16.253907v-105.726563c0-4.714844-3.820312-8.535156-8.535156-8.535156zm0 0" />
+        </svg>
+      ),
+    },
+  ];
   return (
     <>
       <section className="services-layout2 pt-120 bg-gray">
@@ -10,107 +132,52 @@ export default function Section_2() {
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
               <div className="heading text-center mb-40">
-                <span className="heading__subtitle">
-                  The Best A Grade Commercial &amp; Residential Services
-                </span>
+                <span className="heading__subtitle">Our Core Divisions</span>
                 <h2 className="heading__title">
-                  High Quality Construction Solutions For Residentials &amp;
-                  Industries!
+                  Precision & Performance in CRF, Foundry, and Fabrication
                 </h2>
               </div>
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-12 col-md-4 col-lg-4">
-              <div className="service-item">
-                <div className="service__content">
-                  <div className="service__icon">
-                    <i className="icon-brick-wall"></i>
+            {arr.map(({ title, para, img, svg }, index) => {
+              return (
+                <div className="col-sm-12 col-md-4 col-lg-4 pb-50" key={index}>
+                  <div className="service-item h-100">
+                    <div className="service__content">
+                      <div className="service__icon">{svg}</div>
+                      <h4 className="service__title">{title}</h4>
+                      <p className="service__desc">{para}</p>
+                      <a
+                        href="services-single-service.html"
+                        className="btn btn__secondary btn__link"
+                      >
+                        <span>Read More</span>
+                        <span className="icon_svg">
+                          <ArrowRight className="" />
+                        </span>
+                      </a>
+                    </div>
+                    <div
+                      className="service__overlay bg-overlay bg-overlay-theme bg-img"
+                      style={{
+                        backgroundImage: `url("${img}")`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center center",
+                      }}
+                      // style="background-image: url(&quot;assets/images/services/service-overlay.png&quot;); background-size: cover; background-position: center center;"
+                    ></div>
                   </div>
-                  <h4 className="service__title">
-                    Architecture <br /> &amp; Building
-                  </h4>
-                  <p className="service__desc">
-                    Architecture is both the process and the product of
-                    planning, and constructing buildings or any other
-                    structures.
-                  </p>
-                  <a
-                    href="services-single-service.html"
-                    className="btn btn__secondary btn__link"
-                  >
-                    <span>Read More</span>
-                    <i className="icon-arrow-right"></i>
-                  </a>
                 </div>
-                <div
-                  className="service__overlay bg-overlay bg-overlay-theme bg-img"
-                  // style="background-image: url(&quot;assets/images/services/service-overlay.png&quot;); background-size: cover; background-position: center center;"
-                ></div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4">
-              <div className="service-item">
-                <div className="service__content">
-                  <div className="service__icon">
-                    <i className="icon-engineer3"></i>
-                  </div>
-                  <h4 className="service__title">
-                    Construction <br /> Consultants
-                  </h4>
-                  <p className="service__desc">
-                    Given the increasing complexity of many construction
-                    projects it is becoming more common that a consultant.
-                  </p>
-                  <a
-                    href="services-single-service.html"
-                    className="btn btn__secondary btn__link"
-                  >
-                    <span>Read More</span>
-                    <i className="icon-arrow-right"></i>
-                  </a>
-                </div>
-                <div
-                  className="service__overlay bg-overlay bg-overlay-theme bg-img"
-                  // style="background-image: url(&quot;assets/images/services/service-overlay.png&quot;); background-size: cover; background-position: center center;"
-                ></div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4">
-              <div className="service-item">
-                <div className="service__content">
-                  <div className="service__icon">
-                    <i className="icon-building"></i>
-                  </div>
-                  <h4 className="service__title">
-                    Construction
-                    <br /> Management
-                  </h4>
-                  <p className="service__desc">
-                    Professional service uses specialized, project management
-                    techniques to oversee the planning, design.
-                  </p>
-                  <a
-                    href="services-single-service.html"
-                    className="btn btn__secondary btn__link"
-                  >
-                    <span>Read More</span>
-                    <i className="icon-arrow-right"></i>
-                  </a>
-                </div>
-                <div
-                  className="service__overlay bg-overlay bg-overlay-theme bg-img"
-                  // style="background-image: url(&quot;assets/images/services/service-overlay.png&quot;); background-size: cover; background-position: center center;"
-                />
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-12 text-center">
             <p className="text__link">
-              Offering high quality construction solutions.{" "}
-              <a href="contacs.html">Build Your Dream Now!</a>
+              Providing Robust Engineering Solutions{" "}
+              <a href="contacs.html">Connect With Us Now!</a>
             </p>
           </div>
         </div>

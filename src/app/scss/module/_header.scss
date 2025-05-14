@@ -20,6 +20,10 @@
     background-color: $color-white;
     border-bottom: 1px solid #ededed;
 
+    .navbar-logo {
+        height: 50px;
+    }
+
     .nav__item.with-dropdown {
         .nav__item.with-dropdown:hover {
             .dropdown-menu {
@@ -46,13 +50,34 @@
         display: none;
     }
 
-    .contact__number a {
-        color: $color-heading;
+    .contact__number {
+        .phone-icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            height: 45px;
+            width: 45px;
+            border: 2px solid $color-white;
+            border-radius: 50%;
 
-        i {
+            svg {
+
+                fill: $color-white;
+                stroke: none;
+            }
+        }
+
+        a {
             color: $color-heading;
+
+            i {
+                color: $color-heading;
+            }
+
         }
     }
+
 
     .navbar-toggler {
         padding: 0;
@@ -434,6 +459,21 @@
 
     .navbar-nav {
         margin-top: 0;
+    }
+
+    .contact__number {
+        .phone-icon-wrapper {
+
+            border: 2px solid $color-black;
+
+            svg {
+
+                fill: $color-black;
+                stroke: none;
+            }
+        }
+
+
     }
 
     .action__btn,

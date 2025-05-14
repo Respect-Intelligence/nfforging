@@ -1,4 +1,5 @@
 import ClientBootstrapWrapper from "@/components/ClientBootstrapWrapper";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 export default function RootLayout({
@@ -12,6 +13,8 @@ export default function RootLayout({
         <ClientBootstrapWrapper />
         <Header />
         {children}
+
+        <Footer />
       </body>
     </html>
   );

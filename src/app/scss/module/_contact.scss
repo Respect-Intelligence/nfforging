@@ -7,6 +7,13 @@
 .contact-info-box {
     margin-bottom: 30px;
 
+    h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        color: #fff;
+
+    }
+
     .contact__info-box-title {
         font-size: 17px;
         margin-bottom: 20px;
@@ -103,6 +110,21 @@
 }
 
 .contact__number {
+    .phone_icon_svg {
+        height: 45px;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        border-radius: 50%;
+
+        svg {
+            stroke: none;
+            fill: white;
+
+        }
+    }
 
     i {
         width: 45px;

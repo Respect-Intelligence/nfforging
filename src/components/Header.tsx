@@ -1,8 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import logoLight from "@/assets/images/logo/logo-light.png";
 import logoDark from "@/assets/images/logo/logo-dark.png";
+import { useEffect, useState } from "react";
+import { Phone } from "lucide-react";
 
 export default function Header() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerWidth >= 992) {
+        setIsSticky(window.scrollY > 200);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     // <header className="header header-transparent header-layout1">
     //   <nav className="navbar navbar-expand-lg sticky-navbar">
@@ -239,10 +257,23 @@ export default function Header() {
     // </header>
 
     <header className="header header-transparent header-layout1">
-      <nav className="navbar navbar-expand-lg sticky-navbar">
+      <nav
+        className={`navbar navbar-expand-lg sticky-navbar ${
+          isSticky ? "fixed-navbar" : ""
+        }`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="index.html">
-            <img src="/images/logo.png" className="logo-light" alt="" />
+            <img
+              src="/images/logo.png"
+              className="logo-light navbar-logo"
+              alt=""
+            />
+            <img
+              src="/images/logo.png"
+              className="logo-dark navbar-logo"
+              alt=""
+            />
           </a>
           <button className="navbar-toggler" type="button">
             <span className="menu-lines">
@@ -385,8 +416,10 @@ export default function Header() {
               </li>
             </ul>
           </div>
-          <div className="contact__number d-flex align-items-center">
-            <i className="icon-phone"></i>
+          <div className="contact__number d-flex align-items-center gap-2">
+            <span className="phone-icon-wrapper">
+              <Phone />
+            </span>
             <a href="tel:5565454117">55 654 541 17</a>
           </div>
         </div>

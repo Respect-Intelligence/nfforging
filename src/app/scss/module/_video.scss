@@ -21,6 +21,11 @@
         border-radius: 50%;
         background-color: $color-theme;
         color: $color-white;
+
+        svg {
+            // fill: $color-theme;
+            stroke: $color-theme;
+        }
     }
 
     .video__player-animation {
