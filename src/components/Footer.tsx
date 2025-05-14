@@ -1,3 +1,5 @@
+import { Facebook, Instagram, Twitter } from "lucide-react";
+
 export default function Footer() {
   return (
     <>
@@ -28,18 +30,29 @@ export default function Footer() {
                   </p>
                   <ul className="social__icons list-unstyled">
                     <li>
-                      <a href="#">
-                        <i className="fa fa-facebook"></i>
+                      <a href="#" className="">
+                        {/* <i className="fa fa-facebook"></i> */}
+                        <Facebook
+                          fill="#fff"
+                          stroke="none"
+                          height={18}
+                          className="fillIcon"
+                        />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="fa fa-instagram"></i>
+                        <Instagram height={18} />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i className="fa fa-twitter"></i>
+                        <Twitter
+                          fill="#fff"
+                          stroke="none"
+                          height={18}
+                          className="fillIcon"
+                        />
                       </a>
                     </li>
                   </ul>

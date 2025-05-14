@@ -4,7 +4,7 @@ import Image from "next/image";
 import logoLight from "@/assets/images/logo/logo-light.png";
 import logoDark from "@/assets/images/logo/logo-dark.png";
 import { useEffect, useState } from "react";
-import { Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -412,6 +412,15 @@ export default function Header() {
               <li className="nav__item">
                 <a href="contact.html" className="nav__item-link">
                   Contact
+                </a>
+              </li>
+              <li className="nav__item nav__item-btn d-none d-md-block">
+                <a
+                  href="request-quote.html"
+                  className="btn btn__primary action__btn-request"
+                >
+                  <span>Get A Quote</span>
+                  <ArrowRight height={18} />
                 </a>
               </li>
             </ul>

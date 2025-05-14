@@ -5,7 +5,8 @@
 @use "../global/mixins" as *;
 
 .footer {
-    background-color: #161616;
+    background-color: #5d1212;
+    // background-color: #161616;
 }
 
 .footer-top {
@@ -140,8 +141,21 @@
             color: $color-white;
             font-size: 17px;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                // fill: #fff;
+                // stroke: none;
+                height: 18px;
+            }
 
             &:hover {
+                .fillIcon {
+                    fill: #272727;
+                }
+
                 background-color: $color-white;
                 color: #272727;
             }
@@ -150,7 +164,8 @@
 }
 
 .footer-bottom {
-    background-color: #121212;
+    background-color: #530d0d;
+    // background-color: #121212;
     padding-top: 42px;
     padding-bottom: 42px;
 }

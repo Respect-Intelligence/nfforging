@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+// import { Navigation } from 'swiper/modules';
 
 const blogPosts = [
   {
@@ -21,6 +22,14 @@ const blogPosts = [
   },
   {
     imgSrc: "https://nfforging.com/images/blog-img2.jpg",
+    date: "August 11, 2021",
+    title: "Providing Robust Engineering Solutions",
+    description:
+      "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group",
+    link: "#",
+  },
+  {
+    imgSrc: "https://nfforging.com/images/blog-img3.jpg",
     date: "August 11, 2021",
     title: "Providing Robust Engineering Solutions",
     description:
@@ -69,8 +78,12 @@ const BlogSection = () => {
               </button> */}
 
               <Swiper
-                modules={[Pagination, Autoplay]}
+                modules={[Pagination, Autoplay, Navigation]}
                 pagination={{ clickable: true }}
+                navigation={{
+                  nextEl: ".carousel-nav-next",
+                  prevEl: ".arousel-nav-prev",
+                }}
                 autoplay={{
                   delay: 3000, // 1 second
                   disableOnInteraction: false,
