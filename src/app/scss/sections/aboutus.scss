@@ -2,6 +2,7 @@
 
 @use "../global/vars" as *;
 @use "../global/mixins" as *;
+@use "tailwindcss";
 
 .wpo-about-section {
     @media (max-width:991px) {
@@ -9,11 +10,14 @@
     }
 
     .about-left-image {
+        // @apply flex items-center;
         position: relative;
         z-index: 1;
         max-width: 730px;
         max-height: 810px;
+
         // margin-left: -150px;
+
 
         @media (max-width:1399px) {
             margin-left: 0px;
