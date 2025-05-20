@@ -176,7 +176,7 @@ export default function Header() {
               </li>
 
               <li className="nav__item">
-                <a href="contact.html" className="nav__item-link">
+                <a href="contact-us" className="nav__item-link">
                   Contact
                 </a>
               </li>

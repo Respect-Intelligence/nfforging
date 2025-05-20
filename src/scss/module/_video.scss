@@ -21,6 +21,10 @@
         border-radius: 50%;
         background-color: $color-theme;
         color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
 
         svg {
             // fill: $color-theme;

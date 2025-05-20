@@ -1,9 +1,10 @@
+import { ArrowRight, Check, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Section_6() {
   return (
-    <section className="about-layout2">
+    <section className="about-layout2 ">
       <div className="container-fluid">
         <div className="row">
           <div className="text-block">
@@ -27,12 +28,48 @@ export default function Section_6() {
             </div>
 
             <ul className="list-items list-unstyled mb-40">
-              <li>Quality Control System</li>
-              <li>Unrivalled workmanship</li>
-              <li>100% Satisfaction Guarantee</li>
-              <li>Accurate Testing Processes</li>
-              <li>Highly Professional Staff</li>
-              <li>Professional and Qualified</li>
+              <li>
+                {" "}
+                <span className="checkIcon">
+                  <Check />
+                </span>{" "}
+                Quality Control System
+              </li>
+              <li>
+                {" "}
+                <span className="checkIcon">
+                  <Check />
+                </span>
+                Unrivalled workmanship
+              </li>
+              <li>
+                {" "}
+                <span className="checkIcon">
+                  <Check />
+                </span>
+                100% Satisfaction Guarantee
+              </li>
+              <li>
+                {" "}
+                <span className="checkIcon">
+                  <Check />
+                </span>
+                Accurate Testing Processes
+              </li>
+              <li>
+                {" "}
+                <span className="checkIcon">
+                  <Check />
+                </span>
+                Highly Professional Staff
+              </li>
+              <li>
+                {" "}
+                <span className="checkIcon">
+                  <Check />
+                </span>
+                Professional and Qualified
+              </li>
             </ul>
 
             <Link
@@ -40,7 +77,7 @@ export default function Section_6() {
               className="btn btn__secondary btn__icon"
             >
               <span>Latest Projects</span>
-              <i className="icon-arrow-right"></i>
+              <ArrowRight height={18} />
             </Link>
           </div>
 
@@ -65,7 +102,7 @@ export default function Section_6() {
                 <div className="video__player">
                   <span className="video__player-animation"></span>
                   <span className="video__player-animation video__player-animation-2"></span>
-                  <i className="fa fa-play"></i>
+                  <Play strokeWidth={2.25} />
                 </div>
               </a>
             </div>

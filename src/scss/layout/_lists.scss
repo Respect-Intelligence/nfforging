@@ -12,6 +12,11 @@
     color: $color-heading;
     margin-bottom: 9px;
 
+    display: flex;
+    gap: 8px;
+
+
+
     &:before {
         content: "\f00c";
         font-family: 'Fontawesome';

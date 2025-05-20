@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 function Section_7() {
   return (
@@ -7,14 +8,15 @@ function Section_7() {
       <section className="banner-layout1 p-0">
         <div className="container-fluid col-padding-0 bg-theme">
           <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-6 background-banner">
-              <div className="bg-img">
-                <img src="assets/images/banners/1.jpg" alt="background" />
-              </div>
-              <div className="cta__banner">
-                <div className="bg-img">
-                  <img src="assets/images/backgrounds/1.jpg" alt="background" />
-                </div>
+            <div
+              className="col-sm-12 col-md-12 col-lg-6 background-banner"
+              style={{
+                backgroundImage: "url(/images/page-titles/1.jpg)",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            >
+              <div className="cta__banner bg-white">
                 <h5 className="cta__title">
                   A Leading Developer Of First Grade Commercial & Projects!
                 </h5>
@@ -23,7 +25,10 @@ function Section_7() {
                   Over The World.
                 </p>
                 <Link href="#" className="btn btn__primary btn__link">
-                  <span>Learn More</span> <i className="icon-arrow-right"></i>
+                  <span>Learn More</span>{" "}
+                  <span className="">
+                    <ArrowRight height={18} />
+                  </span>
                 </Link>
               </div>
             </div>
@@ -80,7 +85,7 @@ function Section_7() {
                   className="btn btn__white btn__bordered btn__icon box-shadow-none"
                 >
                   <span>Request A Quote</span>
-                  <i className="icon-arrow-right"></i>
+                  <ArrowRight height={18} />
                 </Link>
               </div>
             </div>

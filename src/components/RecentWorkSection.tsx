@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { ArrowRight } from "lucide-react";
 
 const RecentWorkSection = () => {
   let objArr = [
@@ -93,7 +94,7 @@ const RecentWorkSection = () => {
                       <p className="portfolio__desc">{item.desc}</p>
                       <a href={item.link} className="btn btn__loadMore">
                         <span>Explore More</span>
-                        <i className="icon-arrow-right"></i>
+                        <ArrowRight height={18} />
                       </a>
                     </div>
                   </div>
