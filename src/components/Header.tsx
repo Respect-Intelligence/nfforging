@@ -61,8 +61,11 @@ export default function Header() {
               </li>
 
               <li className="nav__item with-dropdown">
-                <a href="#" className="dropdown-toggle nav__item-link">
-                  Products & Services
+                <a
+                  href="product-service"
+                  className="dropdown-toggle nav__item-link"
+                >
+                  Product & Services
                 </a>
                 <i className="fa fa-angle-down" data-toggle="dropdown"></i>
                 <ul className="dropdown-menu">
@@ -70,7 +73,7 @@ export default function Header() {
                     <a href="#" className="nav__item-link">
                       CRF
                     </a>
-                    <ul className="dropdown-menu">
+                    {/* <ul className="dropdown-menu">
                       <li className="nav__item">
                         <a href="crf-overview.html" className="nav__item-link">
                           Overview
@@ -107,14 +110,14 @@ export default function Header() {
                           Crash Barriers
                         </a>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
 
                   <li className="nav__item with-dropdown">
                     <a href="#" className="nav__item-link">
                       Foundry
                     </a>
-                    <ul className="dropdown-menu">
+                    {/* <ul className="dropdown-menu">
                       <li className="nav__item">
                         <a
                           href="foundry-overview.html"
@@ -147,7 +150,7 @@ export default function Header() {
                           Quality
                         </a>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
 
                   <li className="nav__item">

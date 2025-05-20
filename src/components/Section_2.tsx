@@ -51,6 +51,7 @@ export default function Section_2() {
           </g>
         </svg>
       ),
+      link: "crf-division",
     },
     {
       title: "Foundry",
@@ -100,6 +101,7 @@ export default function Section_2() {
           </g>
         </svg>
       ),
+      link: "foundry",
     },
     {
       title: "Fabrication",
@@ -119,6 +121,7 @@ export default function Section_2() {
           <path d="m401.066406 0c-4.710937 0-8.53125 3.820312-8.53125 8.535156v105.726563l-9.753906-16.25c-2.441406-4.003907-7.652344-5.285157-11.675781-2.871094-4.019531 2.410156-5.339844 7.617187-2.957031 11.652344l25.601562 42.667969c.09375.160156.234375.273437.335938.425781.179687.25.367187.488281.570312.71875.371094.425781.777344.816406 1.226562 1.160156.21875.171875.425782.34375.660157.488281.609375.382813 1.261719.6875 1.949219.902344.105468.035156.1875.113281.300781.140625l.074219.011719c.675781.179687 1.375.273437 2.074218.28125l.125.011718h.007813c.074219 0 .152343-.03125.226562-.03125.664063-.011718 1.324219-.097656 1.964844-.261718.191406-.050782.367187-.160156.558594-.226563.527343-.167969 1.039062-.386719 1.523437-.652343l.109375-.046876c.085938-.050781.125-.132812.203125-.183593.753906-.496094 1.425782-1.105469 1.984375-1.8125.152344-.1875.308594-.355469.441407-.554688.089843-.132812.214843-.234375.296874-.375l25.601563-42.664062c1.59375-2.617188 1.664063-5.886719.183594-8.570313-1.476563-2.679687-4.28125-4.363281-7.34375-4.40625-3.066407-.046875-5.917969 1.554688-7.472657 4.191406l-9.75 16.253907v-105.726563c0-4.714844-3.820312-8.535156-8.535156-8.535156zm0 0" />
         </svg>
       ),
+      link: "fabrication",
     },
   ];
   return (
@@ -140,16 +143,18 @@ export default function Section_2() {
             </div>
           </div>
           <div className="row">
-            {arr.map(({ title, para, img, svg }, index) => {
+            {arr.map(({ title, para, img, svg, link }, index) => {
               return (
                 <div className="col-sm-12 col-md-4 col-lg-4 pb-50" key={index}>
-                  <div className="service-item h-100">
+                  <div className="service-item ">
                     <div className="service__content">
-                      <div className="service__icon">{svg}</div>
-                      <h4 className="service__title">{title}</h4>
-                      <p className="service__desc">{para}</p>
+                      <div>
+                        <div className="service__icon">{svg}</div>
+                        <h4 className="service__title">{title}</h4>
+                        <p className="service__desc">{para}</p>
+                      </div>
                       <a
-                        href="services-single-service.html"
+                        href={`product-service/${link}`}
                         className="btn btn__secondary btn__link"
                       >
                         <span>Read More</span>

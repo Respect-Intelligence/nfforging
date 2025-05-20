@@ -1,6 +1,6 @@
 import React from "react";
 
-function BasicTopBanner({ title }: { title: string }) {
+function BasicTopBanner({ title }: { title: string | undefined }) {
   return (
     <>
       <section
