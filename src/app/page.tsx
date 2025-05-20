@@ -7,7 +7,6 @@ import OurClientsSection from "@/components/landing/OurClientsSection";
 import Section_2 from "@/components/landing/Section_2";
 import Section_3 from "@/components/landing/Section_3";
 import Section_4 from "@/components/landing/Section_4";
-import TestimonialSection from "@/components/landing/TestimonialSection";
 import TopBanner from "@/components/landing/TopBanner";
 import ServiceSection from "@/components/landing/ServiceSection";
 import AboutUsSection from "@/components/landing/AboutUsSection";
@@ -18,7 +17,7 @@ export default function Home() {
     <>
       <TopBanner />
       <HighlightSection_2 />
-      {/* <HighlightSection />
+      {/* <HighlightSection /> */}
       <AboutUsSection />
       <ServiceSection />
       {/* <Section_2 /> */}
@@ -29,7 +28,7 @@ export default function Home() {
       <ContactFormSection />
       {/* <TestimonialSection /> */}
       <BlogSection />
-      <MapSection /> */}
+      <MapSection />
     </>
   );
 }

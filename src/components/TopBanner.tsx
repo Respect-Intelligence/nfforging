@@ -3,10 +3,17 @@ import backImg from "@/assets/images/page-titles/8.jpg";
 
 function TopBanner() {
   return (
-    <section className="page-title page-title-layout1 bg-overlay bg-overlay-2 bg-parallax">
-      <div className="bg-img">
+    <section
+      className="page-title page-title-layout1 bg-overlay bg-overlay-2 bg-parallax"
+      style={{
+        backgroundImage: "url(/images/page-titles/1.jpg)",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+      {/* <div className="bg-img">
         <img src="/images/page-titles/1.jpg" alt="background" />
-      </div>
+      </div> */}
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
