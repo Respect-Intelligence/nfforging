@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <TopBanner />
       <HighlightSection_2 />
-      {/* <HighlightSection /> */}
+      {/* <HighlightSection />
       <AboutUsSection />
       <ServiceSection />
       {/* <Section_2 /> */}
@@ -29,7 +29,7 @@ export default function Home() {
       <ContactFormSection />
       {/* <TestimonialSection /> */}
       <BlogSection />
-      <MapSection />
+      <MapSection /> */}
     </>
   );
 }

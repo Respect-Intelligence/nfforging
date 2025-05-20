@@ -1,5 +1,5 @@
-import "@/app/scss/sections/ourClients.scss";
-import "@/app/scss/sections/section5.scss";
+import "@/scss/sections/ourClients.scss";
+import "@/scss/sections/section5.scss";
 import React from "react";
 export default function OurClientsSection() {
   let section5Arr = [

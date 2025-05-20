@@ -29,7 +29,7 @@ export default function Header() {
         }`}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="index.html">
+          <a className="navbar-brand" href="/">
             <img
               src="/images/logo.png"
               className="logo-light navbar-logo"
@@ -46,16 +46,16 @@ export default function Header() {
               <span></span>
             </span>
           </button>
-          <div className="collapse navbar-collapse" id="mainNavigation">
+          <div className=" navbar-collapse" id="mainNavigation">
             <ul className="navbar-nav">
               <li className="nav__item">
-                <a href="index.html" className="nav__item-link active">
+                <a href="/" className="nav__item-link active">
                   Home
                 </a>
               </li>
 
               <li className="nav__item">
-                <a href="about-us.html" className="nav__item-link">
+                <a href="about-us" className="nav__item-link">
                   About Us
                 </a>
               </li>

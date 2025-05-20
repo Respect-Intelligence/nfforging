@@ -1,4 +1,4 @@
-import "@/app/scss/sections/aboutus.scss";
+import "@/scss/sections/aboutus.scss";
 
 export default function AboutUsSection() {
   return (

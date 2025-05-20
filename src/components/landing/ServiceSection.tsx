@@ -1,6 +1,6 @@
 "use client";
 
-import "@/app/scss/sections/service.scss";
+import "@/scss/sections/service.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect } from "react";
