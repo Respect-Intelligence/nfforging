@@ -20,7 +20,7 @@ function TopBanner() {
           <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <span className="pagetitle__subheading">About NF Forgings</span>
             <h1 className="pagetitle__heading">
-              About NF Forgings: A Legacy of Industrial Innovation Since 1997
+              A Legacy of Industrial Innovation Since 1997
             </h1>
             <a
               href="projects-grid.html"

@@ -2,49 +2,51 @@ import React from "react";
 
 const contactInfo = [
   {
-    office: "London Office",
-    email: "Promina@7oroof.com",
-    address: "2307 Beverley Rd Brooklyn, NY",
-    phone: "55 654 541 17",
+    office: "Registered & Works Office",
+    email: "info@nfforging.com",
+    address: `Sankrail Industrial Park
+N.H. 6 (Bombay Road), Dhulagarh, Sankrail
+Howrah - 711 302, West Bengal, India`,
+    phone: "+91 33 2661 7660",
     hours: "Mon-Fri: 8am – 7pm",
   },
   {
-    office: "Berlin Office",
-    email: "Promina@7oroof.com",
-    address: "2307 Beverley Rd Brooklyn, NY",
-    phone: "55 654 541 17",
-    hours: "Mon-Fri: 8am – 7pm",
-  },
-  {
-    office: "Manchester Office",
-    email: "Promina@7oroof.com",
-    address: "2307 Beverley Rd Brooklyn, NY",
-    phone: "55 654 541 17",
+    office: "Corporate Office",
+    email: "marketing@nfforging.com",
+    address: `The Legacy, 25A Shakespeare Sarani
+3rd Floor, Unit No. 38A, Kolkata - 700 017`,
+    phone: "+91 33 4600 9083",
     hours: "Mon-Fri: 8am – 7pm",
   },
 ];
 
 const ContactInfoSection = () => {
   return (
-    <section className="contact-info pt-50 pb-70">
+    <section className="contact-info pt-70 pb-70">
       <div className="container">
         <div className="row">
           {contactInfo.map((info, index) => (
-            <div className="col-sm-12 col-md-4 col-lg-4" key={index}>
+            <div className="col-sm-12 col-md-6 col-lg-6" key={index}>
               <div className="contact-info-box">
                 <h4 className="contact__info-box-title">{info.office}</h4>
                 <ul className="contact__info-list list-unstyled">
                   <li>
-                    Email: <a href={`mailto:${info.email}`}>{info.email}</a>
+                    <span>Email: </span>{" "}
+                    <a href={`mailto:${info.email}`}>{info.email}</a>
                   </li>
-                  <li>Address: {info.address}</li>
                   <li>
-                    Phone:{" "}
+                    {" "}
+                    <span>Address: </span> {info.address}
+                  </li>
+                  <li>
+                    <span>Phone: </span>{" "}
                     <a href={`tel:${info.phone.replace(/\s/g, "")}`}>
                       {info.phone}
                     </a>
                   </li>
-                  <li>Hours: {info.hours}</li>
+                  <li>
+                    <span>Hours: </span> {info.hours}
+                  </li>
                 </ul>
               </div>
             </div>

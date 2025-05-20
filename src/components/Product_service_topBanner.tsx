@@ -16,12 +16,13 @@ function Product_service_topBanner() {
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <h1 className="pagetitle__heading">
-                Best A Grade Commercial &amp; Residential Services
+                Engineered Precision. Delivered with Excellence.
               </h1>
               <p className="pagetitle__desc">
-                A leading developer of A-grade commercial, industrial and
-                residential projects in USA. Since its foundation the company
-                has doubled its turnover year on year with its staff.
+                NF Forgings offers a wide range of high-quality solutions in CRF
+                Sections, Foundry components, and Heavy Fabrication. Backed by
+                decades of experience and cutting-edge technology, we deliver
+                reliable, industry-grade products tailored to your needs.
               </p>
               <a
                 href="projects-standard.html"

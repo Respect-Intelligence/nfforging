@@ -131,3 +131,67 @@
         margin-bottom: 5px;
     }
 }
+
+
+.basic-top-banner {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        // inset: 10px;
+        filter: blur(7px);
+        height: calc(100% + 15px);
+        width: calc(100% + 15px);
+        z-index: -1;
+        background: rgba(255, 255, 255, 0.1);
+        background-image: url("/images/contactus.jpg");
+        background-size: "cover";
+        background-position: "bottom";
+        background-repeat: no-repeat;
+    }
+
+
+}
+
+.contact-info {
+    .contact-info-box {
+        background-color: $color-theme;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px 30px;
+        height: 100%;
+
+        h4 {
+            color: #fff;
+        }
+
+        ul {
+            li {
+                span {
+                    font-weight: 600;
+                }
+
+                ;
+                color: #fff;
+                // font-weight: 600;
+
+                a {
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+    height: 100% !important;
+}

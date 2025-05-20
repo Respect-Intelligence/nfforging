@@ -5,6 +5,7 @@ import logoLight from "@/assets/images/logo/logo-light.png";
 import logoDark from "@/assets/images/logo/logo-dark.png";
 import { useEffect, useState } from "react";
 import { ArrowRight, Phone } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
@@ -29,7 +30,7 @@ export default function Header() {
         }`}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" href="/">
             <img
               src="/images/logo.png"
               className="logo-light navbar-logo"
@@ -40,7 +41,7 @@ export default function Header() {
               className="logo-dark navbar-logo"
               alt=""
             />
-          </a>
+          </Link>
           <button className="navbar-toggler" type="button">
             <span className="menu-lines">
               <span></span>
@@ -49,148 +50,148 @@ export default function Header() {
           <div className=" navbar-collapse" id="mainNavigation">
             <ul className="navbar-nav">
               <li className="nav__item">
-                <a href="/" className="nav__item-link active">
+                <Link href="/" className="nav__item-link active">
                   Home
-                </a>
+                </Link>
               </li>
 
               <li className="nav__item">
-                <a href="about-us" className="nav__item-link">
+                <Link href="/about-us" className="nav__item-link">
                   About Us
-                </a>
+                </Link>
               </li>
 
               <li className="nav__item with-dropdown">
-                <a
-                  href="product-service"
+                <Link
+                  href="/product-service"
                   className="dropdown-toggle nav__item-link"
                 >
                   Product & Services
-                </a>
+                </Link>
                 <i className="fa fa-angle-down" data-toggle="dropdown"></i>
                 <ul className="dropdown-menu">
                   <li className="nav__item with-dropdown">
-                    <a href="#" className="nav__item-link">
+                    <Link href="#" className="nav__item-link">
                       CRF
-                    </a>
+                    </Link>
                     {/* <ul className="dropdown-menu">
                       <li className="nav__item">
-                        <a href="crf-overview.html" className="nav__item-link">
+                        <Link href="crf-overview.html" className="nav__item-link">
                           Overview
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__item">
-                        <a href="sheet-piles.html" className="nav__item-link">
+                        <Link href="sheet-piles.html" className="nav__item-link">
                           Sheet Piles
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__item">
-                        <a href="solar-module.html" className="nav__item-link">
+                        <Link href="solar-module.html" className="nav__item-link">
                           Solar Module Mounting Solutions
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__item">
-                        <a href="wagon-coaches.html" className="nav__item-link">
+                        <Link href="wagon-coaches.html" className="nav__item-link">
                           Wagon & Coaches
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__item">
-                        <a
+                        <Link
                           href="pre-engineered-building.html"
                           className="nav__item-link"
                         >
                           Pre Engineered Building
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__item">
-                        <a
+                        <Link
                           href="crash-barriers.html"
                           className="nav__item-link"
                         >
                           Crash Barriers
-                        </a>
+                        </Link>
                       </li>
                     </ul> */}
                   </li>
 
                   <li className="nav__item with-dropdown">
-                    <a href="#" className="nav__item-link">
+                    <Link href="#" className="nav__item-link">
                       Foundry
-                    </a>
+                    </Link>
                     {/* <ul className="dropdown-menu">
                       <li className="nav__item">
-                        <a
+                        <Link
                           href="foundry-overview.html"
                           className="nav__item-link"
                         >
                           Overview
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__item">
-                        <a
+                        <Link
                           href="foundry-products.html"
                           className="nav__item-link"
                         >
                           Products
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__item">
-                        <a
+                        <Link
                           href="infrastructure.html"
                           className="nav__item-link"
                         >
                           Infrastructure
-                        </a>
+                        </Link>
                       </li>
                       <li className="nav__item">
-                        <a
+                        <Link
                           href="foundry-quality.html"
                           className="nav__item-link"
                         >
                           Quality
-                        </a>
+                        </Link>
                       </li>
                     </ul> */}
                   </li>
 
                   <li className="nav__item">
-                    <a href="fabrication.html" className="nav__item-link">
+                    <Link href="fabrication.html" className="nav__item-link">
                       Fabrication
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav__item">
-                    <a href="services.html" className="nav__item-link">
+                    <Link href="services.html" className="nav__item-link">
                       Services
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
 
               <li className="nav__item">
-                <a href="careers.html" className="nav__item-link">
+                <Link href="careers.html" className="nav__item-link">
                   Careers
-                </a>
+                </Link>
               </li>
 
               <li className="nav__item">
-                <a href="media.html" className="nav__item-link">
+                <Link href="media.html" className="nav__item-link">
                   Sustainability
-                </a>
+                </Link>
               </li>
 
               <li className="nav__item">
-                <a href="contact-us" className="nav__item-link">
+                <Link href="contact-us" className="nav__item-link">
                   Contact
-                </a>
+                </Link>
               </li>
               <li className="nav__item nav__item-btn d-none d-md-block">
-                <a
+                <Link
                   href="request-quote.html"
                   className="btn btn__primary action__btn-request"
                 >
                   <span>Get A Quote</span>
                   <ArrowRight height={18} />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -198,7 +199,7 @@ export default function Header() {
             <span className="phone-icon-wrapper">
               <Phone />
             </span>
-            <a href="tel:5565454117">55 654 541 17</a>
+            <Link href="tel:5565454117">55 654 541 17</Link>
           </div>
         </div>
       </nav>

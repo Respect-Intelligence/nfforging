@@ -10,45 +10,24 @@ import { ArrowRight } from "lucide-react";
 const RecentWorkSection = () => {
   let objArr = [
     {
-      image: "/images/portfolio/grid/1.jpg",
-      title: "The Fallingwater House",
+      image: "/images/service/ser1.jpg",
+      title: "Cold Rolled Formed Sections",
       categories: ["Building", "Interior"],
-      desc: "We understand that data is greatest asset when it comes to analyzing and optimizing your supply chain performance.",
+      desc: "CRF division which has capabilities to Cold Roll Form profiles and sections ranging from 1 kilogram per square meter to 125 kilograms per square meter in thicknesses ranging from 0.8mm to 10mm",
       link: "/projects-single-project.html",
     },
     {
-      image: "/images/portfolio/grid/2.jpg",
-      title: "The Guggenheim Museum",
+      image: "/images/service/ser2.jpg",
+      title: "Foundry",
       categories: ["Construction", "Engineering"],
-      desc: "Cost savings is crucial, innovative technology minimizes your overall spend by utilizing an extensive consolidation.",
+      desc: "Foundry division which has been classified as Class 'A' by RDSO (Research and Development Services Organisation). Details may please be seen in the relevant section of this website.",
       link: "/projects-single-project.html",
     },
     {
-      image: "/images/portfolio/grid/3.jpg",
-      title: "Neue National Galerie",
+      image: "/images/service/ser3.jpg",
+      title: "Fabrication",
       categories: ["Renovation", "Architecture"],
-      desc: "Our Group has been building relationships and projects last. Serving an impressive list of long-term clients with experience.",
-      link: "/projects-single-project.html",
-    },
-    {
-      image: "/images/portfolio/grid/4.jpg",
-      title: "Sagrada Familia",
-      categories: ["Construstion", "Cuilding"],
-      desc: "Cost savings is crucial, innovative technology minimizes your overall spend by utilizing an extensive consolidation.",
-      link: "/projects-single-project.html",
-    },
-    {
-      image: "/images/portfolio/grid/5.jpg",
-      title: "Heydar Aliyev Center",
-      categories: ["Engineering", "Renovation"],
-      desc: "Our Group has been building relationships and projects last. Serving an impressive list of long-term clients with experience.",
-      link: "/projects-single-project.html",
-    },
-    {
-      image: "/images/portfolio/grid/6.jpg",
-      title: "Cathedral of Brasilia",
-      categories: ["Building", "Modern"],
-      desc: "We understand that data is greatest asset when it comes to analyzing and optimizing your supply chain performance.",
+      desc: "abrication division which is at ease with most demanding and challenging assignments for wagons for railways (Indian and overseas both), passenger coaches, ISO Shipping Containers and engineering assignments for refineries and other industries.",
       link: "/projects-single-project.html",
     },
   ];
@@ -58,8 +37,10 @@ const RecentWorkSection = () => {
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
             <div className="heading text-center mb-50">
-              <span className="heading__subtitle">Featured Projects</span>
-              <h2 className="heading__title">Our Recent Works</h2>
+              <span className="heading__subtitle">Infra Capability</span>
+              <h2 className="heading__title">
+                Built to deliver precision and performance.
+              </h2>
             </div>
           </div>
         </div>
@@ -68,6 +49,7 @@ const RecentWorkSection = () => {
             <Swiper
               spaceBetween={30}
               slidesPerView={3}
+              autoHeight={true}
               breakpoints={{
                 992: { slidesPerView: 3 },
                 767: { slidesPerView: 2 },
@@ -81,17 +63,19 @@ const RecentWorkSection = () => {
                       <img src={item.image} alt="portfolio img" />
                     </div>
                     <div className="portfolio__content">
-                      <h4 className="portfolio__title">
-                        <a href="#">{item.title}</a>
-                      </h4>
-                      <div className="portfolio__cat">
-                        {item.categories.map((cat, i) => (
-                          <a href="#" key={i}>
-                            {cat}
-                          </a>
-                        ))}
+                      <div>
+                        <h4 className="portfolio__title">
+                          <a href="#">{item.title}</a>
+                        </h4>
+                        <div className="portfolio__cat">
+                          {item.categories.map((cat, i) => (
+                            <a href="#" key={i}>
+                              {cat}
+                            </a>
+                          ))}
+                        </div>
+                        <p className="portfolio__desc">{item.desc}</p>
                       </div>
-                      <p className="portfolio__desc">{item.desc}</p>
                       <a href={item.link} className="btn btn__loadMore">
                         <span>Explore More</span>
                         <ArrowRight height={18} />

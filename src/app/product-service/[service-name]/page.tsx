@@ -17,8 +17,9 @@ function page() {
 
   return (
     <>
-      <BasicTopBanner title={"fdsaf"} />(
-      <section className="text-content-section pb-90">
+      <BasicTopBanner title={"fdsaf"} />
+
+      {/* <section className="text-content-section pb-90">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-4">
@@ -32,7 +33,7 @@ function page() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

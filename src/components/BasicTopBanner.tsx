@@ -4,12 +4,8 @@ function BasicTopBanner({ title }: { title: string | undefined }) {
   return (
     <>
       <section
-        className="page-title page-title-layout7 bg-overlay bg-overlay-2 bg-parallax text-center bg-img"
-        style={{
-          backgroundImage: 'url("assets/images/page-titles/10.jpg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-        }}
+        className="page-title page-title-layout7 bg-overlay bg-overlay-2 bg-parallax text-center bg-img basic-top-banner"
+        style={{}}
       >
         <div className="container">
           <div className="row align-items-center">

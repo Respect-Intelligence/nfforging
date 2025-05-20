@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ClockPlus, TrendingUp } from "lucide-react";
 
 function Section_7() {
   return (
@@ -18,11 +18,13 @@ function Section_7() {
             >
               <div className="cta__banner bg-white">
                 <h5 className="cta__title">
-                  A Leading Developer Of First Grade Commercial & Projects!
+                  Driven by Vision, Powered by Purpose
                 </h5>
                 <p className="cta__desc">
-                  Today Promin has over 4,000 professionals on its payroll All
-                  Over The World.
+                  At NF Forgings, our vision is to lead the steel engineering
+                  industry through innovation and quality. Our mission is to
+                  deliver reliable, high-performance solutions by combining
+                  technology, expertise, and experience.
                 </p>
                 <Link href="#" className="btn btn__primary btn__link">
                   <span>Learn More</span>{" "}
@@ -36,28 +38,28 @@ function Section_7() {
               <div className="inner-padding">
                 <div className="heading-layout2 heading-light mb-40">
                   <h2 className="heading__title">
-                    Best A Gra de Commercial & Residential Services
+                    Driven by Vision, Powered by Purpose
                   </h2>
                   <p className="heading__desc">
-                    Building bigger, better, faster & stronger products than
-                    ever before. We can help you build on your past and prepare
-                    for future.
+                    At NF Forgings, our vision is to lead the steel engineering
+                    industry through innovation and quality. Our mission is to
+                    deliver reliable, high-performance solutions by combining
+                    technology, expertise, and experience.
                   </p>
                 </div>
                 <div className="row fancybox-light">
                   <div className="col-sm-6 col-md-6 col-lg-6">
                     <div className="fancybox-item">
                       <div className="fancybox__icon">
-                        <i className="icon-welding"></i>
+                        <ClockPlus width={"60px"} height={"auto"} />
                       </div>
                       <div className="fancybox__content">
-                        <h4 className="fancybox__title">
-                          Powerfull Product
-                          <br /> Strategy
-                        </h4>
+                        <h4 className="fancybox__title">OUR VISION</h4>
                         <p className="fancybox__desc">
-                          Our facilities meet high security requirements and are
-                          certified to the highest local standards.
+                          We have the vision to become the pioneers in the steel
+                          engineering industry. We are relentlessly working to
+                          achieve the numerouno status in the industry. We have
+                          to achieve higher production levels.
                         </p>
                       </div>
                     </div>
@@ -65,16 +67,15 @@ function Section_7() {
                   <div className="col-sm-6 col-md-6 col-lg-6">
                     <div className="fancybox-item">
                       <div className="fancybox__icon">
-                        <i className="icon-checklist"></i>
+                        <TrendingUp width={"60px"} height={"auto"} />
                       </div>
                       <div className="fancybox__content">
-                        <h4 className="fancybox__title">
-                          Award Winning <br />
-                          Projects
-                        </h4>
+                        <h4 className="fancybox__title">OUR MISSION</h4>
                         <p className="fancybox__desc">
-                          Our facilities meet high security requirements and are
-                          certified to the highest local standards.
+                          We aim to leverage our existing facilities and
+                          technologies as well as our technical expertise so
+                          that we can evolve as a team to do better. Our
+                          experience coupled with quality service will ensure
                         </p>
                       </div>
                     </div>

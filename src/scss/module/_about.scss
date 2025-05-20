@@ -73,7 +73,12 @@
             -ms-flex: 0 0 50%;
             flex: 0 0 50%;
             max-width: 50%;
-            padding-left: 0;
+            font-size: 14px;
+
+            &:nth-child(odd) {
+
+                padding-left: 0;
+            }
 
 
             gap: 8px;

@@ -10,65 +10,75 @@ export default function Section_6() {
           <div className="text-block">
             <div className="heading-layout2 mb-30">
               <span className="heading__subtitle">
-                Leading The Way In Building And Civil Construction
+                Driven by Innovation, Built on Legacy
               </span>
               <h2 className="heading__title">
-                Bigger, Better, Faster And Stronger Projects Than Ever!!
+                NF Forging Excellence Since 1997
               </h2>
               <p className="heading__desc mb-30 mt-40">
-                Yet those that embrace change are thriving, building bigger,
-                better, faster, and stronger products than ever before. You are
-                helping to lead the charge; we can help you build on your past
-                and prepare future.
+                NF Forgings Pvt. Ltd., the flagship of the esteemed LAL BABA
+                Group, has been a name synonymous with quality and innovation in
+                the steel engineering industry since 1997
               </p>
               <p className="heading__desc">
-                The world is changing faster than ever before, Promina
-                industries are threatened as technology disrupts and software.
+                Founded by Mr. Murari Lal Dhanuka, the company began as a humble
+                venture and has evolved into a multi-division enterprise leading
+                in Cold Rolled Formed Sections, Foundry, and Fabrication. At NF
+                Forgings, we believe that machines are only as good as the
+                people behind them — which is why we’ve invested in building a
+                highly skilled and experienced team committed to delivering
+                engineering excellence across industries.
               </p>
             </div>
 
             <ul className="list-items list-unstyled mb-40">
               <li>
-                {" "}
                 <span className="checkIcon">
                   <Check />
                 </span>{" "}
-                Quality Control System
+                Legacy of Over 25 Years
               </li>
               <li>
-                {" "}
                 <span className="checkIcon">
                   <Check />
-                </span>
-                Unrivalled workmanship
+                </span>{" "}
+                Diverse Divisions: CRF, Foundry, Fabrication
               </li>
               <li>
-                {" "}
                 <span className="checkIcon">
                   <Check />
-                </span>
-                100% Satisfaction Guarantee
+                </span>{" "}
+                Skilled and Experienced Workforce
               </li>
               <li>
-                {" "}
                 <span className="checkIcon">
                   <Check />
-                </span>
-                Accurate Testing Processes
+                </span>{" "}
+                NABL-Accredited Laboratory
               </li>
               <li>
-                {" "}
                 <span className="checkIcon">
                   <Check />
-                </span>
-                Highly Professional Staff
+                </span>{" "}
+                Advanced Infrastructure at Multiple Units
               </li>
               <li>
-                {" "}
                 <span className="checkIcon">
                   <Check />
-                </span>
-                Professional and Qualified
+                </span>{" "}
+                Expertise in Critical Engineering Assignments
+              </li>
+              <li>
+                <span className="checkIcon">
+                  <Check />
+                </span>{" "}
+                ISO, RDSO & BIS Certified
+              </li>
+              <li>
+                <span className="checkIcon">
+                  <Check />
+                </span>{" "}
+                Mission-Driven Technological Growth
               </li>
             </ul>
 
