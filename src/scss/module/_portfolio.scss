@@ -393,7 +393,8 @@
         margin: -75px auto 0;
         border-radius: 50%;
 
-        i {
+        i,
+        span {
             width: 124px;
             height: 124px;
             line-height: 124px;
@@ -403,6 +404,11 @@
             display: inline-block;
             border: 2px solid $color-theme;
             border-radius: 50%;
+
+            svg {
+                height: 75px;
+                width: 75px;
+            }
         }
     }
 

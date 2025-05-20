@@ -1,0 +1,132 @@
+@use "../global/vars" as *;
+@use "../global/mixins" as *;
+
+.portfolio-item-service-details {
+    position: relative;
+    margin-bottom: 30px;
+
+    .portfolio-item {
+
+        height: fit-content;
+    }
+
+
+
+    .portfolio__img {
+        position: relative;
+        overflow: hidden;
+
+
+        img {
+            width: 100%;
+            // height: 100%;
+            // max-height: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            @include prefix(transition, all 0.6s linear, webkit moz ms o);
+        }
+    }
+
+    &:hover .portfolio__img img {
+        @include prefix(transform, scale(1.1), webkit moz ms o);
+    }
+
+    .portfolio__content {
+        padding-top: 26px;
+        display: block;
+        // flex-grow: 1;
+        // flex-direction: column;
+        // justify-content: space-between;
+    }
+
+    .portfolio__cat {
+        a {
+            position: relative;
+            font-size: 14px;
+            color: $color-theme;
+            padding-right: 7px;
+
+            &:hover {
+                color: $color-heading;
+            }
+
+            &:after {
+                content: ",";
+                position: absolute;
+                top: -2px;
+                right: 2px;
+                color: $color-theme;
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+    }
+
+    .portfolio__title {
+        font-size: 35px;
+        margin-bottom: 11px;
+    }
+
+    .portfolio__title a {
+        color: $color-heading;
+
+        &:hover {
+            color: $color-theme;
+        }
+    }
+
+    .portfolio__desc {
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: $color-heading;
+    }
+
+    .portfolio__icon {
+        background-color: $color-white;
+        position: relative;
+        width: 144px;
+        height: 144px;
+        padding: 10px;
+        margin: -75px auto 0;
+        border-radius: 50%;
+
+        i,
+        span {
+            width: 124px;
+            height: 124px;
+            line-height: 124px;
+            font-size: 75px;
+            color: $color-theme;
+            text-align: center;
+            display: inline-block;
+            border: 2px solid $color-theme;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            svg {
+                height: 75px;
+                width: 75px;
+                stroke-width: 1px;
+            }
+        }
+    }
+}
+
+.fancybox-layout2 {
+    .fancybox-item {
+        .fancybox__icon {
+            svg {
+                height: 50px;
+                width: 50px;
+                stroke-width: 1px;
+            }
+        }
+    }
+}
