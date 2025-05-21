@@ -6,9 +6,36 @@ import logoDark from "@/assets/images/logo/logo-dark.png";
 import { useEffect, useState } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+const menuItems = [
+  { title: "Home", href: "/" },
+  { title: "About Us", href: "/about-us" },
+  {
+    title: "Product & Services",
+
+    children: [
+      { title: "CRF", href: "/crf" },
+      { title: "Foundry", href: "/foundry" },
+      { title: "Fabrication", href: "/fabrication" },
+      { title: "Services", href: "/services" },
+    ],
+  },
+  { title: "Careers", href: "/careers" },
+  { title: "Sustainability", href: "/media" },
+  { title: "Contact", href: "/contact-us" },
+];
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
+  const pathname = usePathname();
+  console.log(pathname);
+
+  const isActive = (href: string) => {
+    // if (href == "/" || href == "") {
+    // }
+    return pathname == href;
+    // return pathname.includes(href);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,144 +76,70 @@ export default function Header() {
           </button>
           <div className=" navbar-collapse" id="mainNavigation">
             <ul className="navbar-nav">
-              <li className="nav__item">
-                <Link href="/" className="nav__item-link active">
-                  Home
-                </Link>
-              </li>
-
-              <li className="nav__item">
-                <Link href="/about-us" className="nav__item-link">
-                  About Us
-                </Link>
-              </li>
-
-              <li className="nav__item with-dropdown">
-                <Link
-                  href="/product-service"
-                  className="dropdown-toggle nav__item-link"
+              {menuItems.map((item, idx) => (
+                <li
+                  key={idx}
+                  className={`nav__item ${
+                    item.children ? "with-dropdown" : ""
+                  }`}
                 >
-                  Product & Services
-                </Link>
-                <i className="fa fa-angle-down" data-toggle="dropdown"></i>
-                <ul className="dropdown-menu">
-                  <li className="nav__item with-dropdown">
-                    <Link href="#" className="nav__item-link">
-                      CRF
-                    </Link>
-                    {/* <ul className="dropdown-menu">
-                      <li className="nav__item">
-                        <Link href="crf-overview.html" className="nav__item-link">
-                          Overview
-                        </Link>
-                      </li>
-                      <li className="nav__item">
-                        <Link href="sheet-piles.html" className="nav__item-link">
-                          Sheet Piles
-                        </Link>
-                      </li>
-                      <li className="nav__item">
-                        <Link href="solar-module.html" className="nav__item-link">
-                          Solar Module Mounting Solutions
-                        </Link>
-                      </li>
-                      <li className="nav__item">
-                        <Link href="wagon-coaches.html" className="nav__item-link">
-                          Wagon & Coaches
-                        </Link>
-                      </li>
-                      <li className="nav__item">
-                        <Link
-                          href="pre-engineered-building.html"
-                          className="nav__item-link"
-                        >
-                          Pre Engineered Building
-                        </Link>
-                      </li>
-                      <li className="nav__item">
-                        <Link
-                          href="crash-barriers.html"
-                          className="nav__item-link"
-                        >
-                          Crash Barriers
-                        </Link>
-                      </li>
-                    </ul> */}
-                  </li>
+                  <Link
+                    href={item.href ? item.href : "#"}
+                    className={`nav__item-link ${
+                      isActive(item.href) ? "active" : ""
+                    } ${item.children ? "dropdown-toggle" : ""}`}
+                  >
+                    {item.title}
+                  </Link>
+                  {item.children && (
+                    <>
+                      <i
+                        className="fa fa-angle-down"
+                        data-toggle="dropdown"
+                      ></i>
+                      <ul className="dropdown-menu">
+                        {item.children.map((child, cIdx) => (
+                          <li
+                            key={cIdx}
+                            className={`nav__item ${
+                              child.children ? "with-dropdown" : ""
+                            }`}
+                          >
+                            <Link
+                              href={child.href}
+                              className={`nav__item-link ${
+                                isActive(child.href) ? "active" : ""
+                              }`}
+                            >
+                              {child.title}
+                            </Link>
+                            {child.children && (
+                              <ul className="dropdown-menu">
+                                {child.children.map((sub, sIdx) => (
+                                  <li className="nav__item" key={sIdx}>
+                                    <Link
+                                      href={sub.href}
+                                      className={`nav__item-link ${
+                                        isActive(sub.href) ? "active" : ""
+                                      }`}
+                                    >
+                                      {sub.title}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </li>
+              ))}
 
-                  <li className="nav__item with-dropdown">
-                    <Link href="#" className="nav__item-link">
-                      Foundry
-                    </Link>
-                    {/* <ul className="dropdown-menu">
-                      <li className="nav__item">
-                        <Link
-                          href="foundry-overview.html"
-                          className="nav__item-link"
-                        >
-                          Overview
-                        </Link>
-                      </li>
-                      <li className="nav__item">
-                        <Link
-                          href="foundry-products.html"
-                          className="nav__item-link"
-                        >
-                          Products
-                        </Link>
-                      </li>
-                      <li className="nav__item">
-                        <Link
-                          href="infrastructure.html"
-                          className="nav__item-link"
-                        >
-                          Infrastructure
-                        </Link>
-                      </li>
-                      <li className="nav__item">
-                        <Link
-                          href="foundry-quality.html"
-                          className="nav__item-link"
-                        >
-                          Quality
-                        </Link>
-                      </li>
-                    </ul> */}
-                  </li>
-
-                  <li className="nav__item">
-                    <Link href="fabrication.html" className="nav__item-link">
-                      Fabrication
-                    </Link>
-                  </li>
-                  <li className="nav__item">
-                    <Link href="services.html" className="nav__item-link">
-                      Services
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-
-              <li className="nav__item">
-                <Link href="careers.html" className="nav__item-link">
-                  Careers
-                </Link>
-              </li>
-
-              <li className="nav__item">
-                <Link href="media.html" className="nav__item-link">
-                  Sustainability
-                </Link>
-              </li>
-
-              <li className="nav__item">
-                <Link href="contact-us" className="nav__item-link">
-                  Contact
-                </Link>
-              </li>
               <li className="nav__item nav__item-btn d-none d-md-block">
                 <Link
-                  href="request-quote.html"
+                  href="/request-quote.html"
                   className="btn btn__primary action__btn-request"
                 >
                   <span>Get A Quote</span>
