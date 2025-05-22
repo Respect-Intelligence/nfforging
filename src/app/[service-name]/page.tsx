@@ -10,7 +10,7 @@ interface PageProps {
   };
 }
 
-function page({ params }: PageProps) {
+function page() {
   // const { 'service-name': rawServiceName } = params;
 
   //   if (!isValidServiceName(rawServiceName)) {
