@@ -12,10 +12,36 @@ const menuItems = [
   { title: "About Us", href: "/about-us" },
   {
     title: "Product & Services",
-
+    href: "",
     children: [
-      { title: "CRF", href: "/crf" },
-      { title: "Foundry", href: "/foundry" },
+      {
+        title: "CRF",
+        href: "/crf",
+
+        children: [
+          { title: "Overview", href: "/crf" },
+          { title: "Sheet Piles", href: "/crf/sheet-piles" },
+          {
+            title: "Solar Module Mounting Solutions",
+            href: "/crf/solar-module",
+          },
+          { title: "Wagon & Coaches", href: "/crf/wagon-coaches" },
+          {
+            title: "Pre Engineered Building",
+            href: "/crf/pre-engineered-building",
+          },
+          { title: "Crash Barriers", href: "/crf/crash-barriers" },
+        ],
+      },
+      {
+        title: "Foundry",
+        href: "/foundry",
+        children: [
+          { title: "Products", href: "/crf/products" },
+          { title: "Infrastructure", href: "/crf/infrastructure" },
+          { title: "Quality Assurance", href: "/crf/foundry-quality" },
+        ],
+      },
       { title: "Fabrication", href: "/fabrication" },
       { title: "Services", href: "/services" },
     ],
@@ -31,7 +57,7 @@ export default function Header() {
   console.log(pathname);
 
   const isActive = (href: string) => {
-    // if (href == "/" || href == "") {
+    // if (href == "/") {
     // }
     return pathname == href;
     // return pathname.includes(href);

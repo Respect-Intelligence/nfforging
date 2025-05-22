@@ -9,130 +9,19 @@ import { ArrowRight, Check } from "lucide-react";
 import "@/scss/sections/serviceOverview.scss";
 import { Drill, HandPlatter } from "lucide-react";
 import Link from "next/link";
+import { fancyboxItems, services_data } from "@/assets/static/data";
 
-const data = {
-  crf: {
-    title: "CRF",
-    oneLiner:
-      "The Cold Rolled Formed (CRF) section produces high-precision steel profiles using advanced roll forming technology. It serves key industries like railways, solar, and infrastructure with sections up to 12 mm thick.",
-    overview1:
-      "We are the leading manufacturer of Cold Rolled Formed Sections & Steel Structures to cater the need of the major industries mainly Indian Railways for Coaches and Wagons, Sheet Pilings and Solar Projects.",
-    overview2:
-      "Cold Rolled Forming is a progressive motion process of gradually forming a flat strip of metal sheet through pairs of rolls to the desired profile without changing the thickness, at ambient temperatures. Cold-Rolled Forming can produce different cold formed steel sections like Z, C, Channels, Angles, Hat sections etc. The plant can produce sections from 1.2 mm - 10 mm in Stainless Steel and up to 12 mm in Mild Steel.",
-
-    productsArr: [
-      {
-        title: "Sheet Piles",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-1.jpg",
-        desc: "Cold formed steel sheet piles are time-tested solution for all types of earth retention requirements.",
-        link: "/crf/sheet-piles",
-      },
-      {
-        title: "Solar Module Mounting Solutions",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-2.jpg",
-        desc: "N F FORGING'S Solar Module Mounting system includes everything you need for a simple and efficient PV installation.",
-        link: "solar-module.html",
-      },
-      {
-        title: "Wagon & Coaches",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-3.jpg",
-        desc: "Our quality manufacturing has enabled us to effectively meet the desired standards our customers.",
-        link: "wagon-coaches.html",
-      },
-      {
-        title: "Pre Engineered Building",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-4.jpg",
-        desc: "Cold formed members can be efficient on a weight basis relative to mill rolled sections for secondary member applications.",
-        link: "pre-engineered-building.html",
-      },
-      {
-        title: "Crash Barriers",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-5.jpg",
-        desc: "Metal Crash Barriers are an effective road safety measure to protect a vehicle and its occupants in case of an accident.",
-        link: "crash-barriers.html",
-      },
-    ],
-    keyPoints: [
-      "High-strength, precision-engineered steel sections.",
-      "Produces Z, C, Channel, Angle, and Hat profiles.",
-      "Supports 1.2–10 mm SS and up to 12 mm MS thickness.",
-      "Used in railways, solar, piling, and infrastructure.",
-      "Custom profiles for structural and industrial needs.",
-    ],
-  },
-  foundry: {
-    title: "Foundry",
-    oneLiner:
-      "Our state-of-the-art foundry produces high-quality castings with precision, supporting critical industrial applications through robust infrastructure and stringent quality control.",
-    overview1:
-      "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group which has been active for the last six decades in the field of Steel, Forgings, Seamless Tubes & Pipes, FRP – Fiber Reinforced Plastic and Transmission Components.",
-    overview2:
-      "Our A-Class foundry is equipped with advanced technologies and a production capacity of 300 MTs/month. We deliver castings with exceptional dimensional accuracy and surface finish, and are approved by RDSO – Indian Railways, BHEL, BEML, NTPC, and other PSUs.",
-
-    productsArr: [
-      {
-        title: "Products",
-        categories: ["casting", "industrial"],
-        image: "https://nfforging.com/images/foundry-pro-img.jpg",
-        desc: "We offer varius range of products to our prospective buyers",
-        link: "foundry-products.html",
-      },
-      {
-        title: "Infrastructure",
-        categories: ["infrastructure", "automation"],
-        image: "https://nfforging.com/images/infra-img.jpg",
-        desc: "An automated High Pressure Molding Line with multi-piston fast loop facility",
-        link: "infrastructure.html",
-      },
-      {
-        title: "Quality Assurance",
-        categories: ["quality", "standards"],
-        image: "https://nfforging.com/images/quality-img.jpg",
-        desc: "We shall strive for a continual quality improvement and comply with",
-        link: "foundry-quality.html",
-      },
-    ],
-    keyPoints: [
-      "300 MT/month casting capacity with A-Class certification.",
-      "Approved by RDSO, BHEL, BEML, NTPC and other PSUs.",
-      "Equipped with advanced high-pressure molding technology.",
-      "Expert team including metallurgists and engineers.",
-      "High dimensional accuracy and superior surface finish.",
-    ],
-  },
-};
-
-function FirstSection({
+function Overview({
   topImage = false,
   serviceName,
+  productname,
 }: {
   serviceName: "crf" | "foundry";
   topImage?: boolean;
-}) {
-  const fancyboxItems = [
-    {
-      icon: "icon-welding",
-      title: "Powerfull Product<br> Strategy",
-      desc: "Our facilities meet high security requirements and are certified to the highest local standards.",
-    },
-    {
-      icon: "icon-checklist",
-      title: "Award Winning <br>Projects",
-      desc: "The world of international supply chains involves of unknown risks and challenging regulations.",
-    },
-    {
-      icon: "icon-wrench5",
-      title: "100% Satisfaction <br> Guarantee",
-      desc: "Building relationships and projects that last. Serving an impressive clients.",
-    },
-  ];
 
-  let serviceData = data[serviceName];
+  productname?: string;
+}) {
+  let serviceData = services_data[serviceName];
 
   return (
     <>
@@ -141,26 +30,8 @@ function FirstSection({
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12">
               <div className="portfolio-item">
-                {topImage && (
-                  <>
-                    <div className="portfolio__img">
-                      <img
-                        src="/images/portfolio/single/1.jpg"
-                        alt="portfolio"
-                        className="img-fluid"
-                      />
-                    </div>
-                    <div className="portfolio__icon">
-                      <span>
-                        <HandPlatter />
-                      </span>
-                    </div>
-                  </>
-                )}
                 <div className="portfolio__content text-center pt-50">
-                  <h2 className="portfolio__title text-uppercase">
-                    {serviceName}
-                  </h2>
+                  <h2 className="portfolio__title ">{serviceData.title}</h2>
                   <div className="portfolio__cat">
                     <a href="#">Building</a>
                     <a href="#">Interior</a>
@@ -312,4 +183,4 @@ function FirstSection({
   );
 }
 
-export default FirstSection;
+export default Overview;

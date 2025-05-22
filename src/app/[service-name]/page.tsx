@@ -3,7 +3,8 @@
 import BasicTopBanner from "@/components/BasicTopBanner";
 import { notFound, useParams } from "next/navigation";
 import React from "react";
-import FirstSection from "./components/FirstSection";
+import { services_data } from "@/assets/static/data";
+import Overview from "./components/Overview";
 
 function page() {
   const params = useParams();
@@ -74,10 +75,11 @@ function page() {
   //   },
   // ];
 
+  let data = services_data[serviceName];
   return (
     <>
-      <BasicTopBanner title={"Product & Services"} />
-      <FirstSection serviceName={serviceName} />
+      <BasicTopBanner title={data?.title} />
+      <Overview serviceName={serviceName} />
 
       {/* <section className="text-content-section pb-90">
         <div className="container">

@@ -8,9 +8,33 @@
     .portfolio-item {
 
         height: fit-content;
+
+        &:hover {
+            .top-image {
+                .portfolio__img {
+                    img {
+                        animation: none;
+                        transform: none;
+                    }
+                }
+            }
+        }
     }
 
+    .top-image {
+        .portfolio__img {
+            height: 500px;
+            display: flex;
+            justify-content: center;
 
+            img {
+                max-width: none;
+                width: auto;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
 
     .portfolio__img {
         position: relative;
@@ -28,9 +52,9 @@
         }
     }
 
-    &:hover .portfolio__img img {
-        @include prefix(transform, scale(1.1), webkit moz ms o);
-    }
+    // &:hover .portfolio__img img {
+    //     @include prefix(transform, scale(1.1), webkit moz ms o);
+    // }
 
     .portfolio__content {
         padding-top: 26px;
