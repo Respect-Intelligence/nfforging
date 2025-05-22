@@ -56,42 +56,25 @@ export default function ServiceSection() {
         "We shall strive for a continual quality improvement and comply with",
     },
   ];
-  // let servicesArr = [
-  //   {
-  //     imgSrc:
-  //       "https://sailo-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.3d51c9a1.jpg&w=640&q=75",
-  //   },
-  //   {
-  //     imgSrc:
-  //       "https://sailo-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.0d2c8fe4.jpg&w=640&q=75",
-  //   },
-  //   {
-  //     imgSrc:
-  //       "https://sailo-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F4.6f815a47.jpg&w=640&q=75",
-  //   },
-  //   {
-  //     imgSrc:
-  //       "https://sailo-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.70c64ba0.jpg&w=640&q=75",
-  //   },
-  // ];
-  const adjustSlideHeights = (swiper: Swiper) => {
-    if (!swiper?.slides?.length) return;
 
-    let maxHeight = 0;
+  // const adjustSlideHeights = (swiper: typeof Swiper) => {
+  //   if (!swiper?.slides?.length) return;
 
-    swiper.slides.forEach((slide) => {
-      const el = slide as HTMLElement;
-      el.style.height = "auto"; // reset
-      const height = el.offsetHeight;
-      if (height > maxHeight) maxHeight = height;
-    });
+  //   let maxHeight = 0;
 
-    swiper.slides.forEach((slide) => {
-      (slide as HTMLElement).style.height = `${maxHeight}px`;
-    });
+  //   swiper.slides.forEach((slide) => {
+  //     const el = slide as HTMLElement;
+  //     el.style.height = "auto"; // reset
+  //     const height = el.offsetHeight;
+  //     if (height > maxHeight) maxHeight = height;
+  //   });
 
-    swiper.update();
-  };
+  //   swiper.slides.forEach((slide) => {
+  //     (slide as HTMLElement).style.height = `${maxHeight}px`;
+  //   });
+
+  //   swiper.update();
+  // };
 
   return (
     <>
@@ -131,8 +114,8 @@ export default function ServiceSection() {
                   slidesPerView: 4,
                 },
               }}
-              onSwiper={(swiper) => adjustSlideHeights(swiper)}
-              onResize={(swiper) => adjustSlideHeights(swiper)}
+              // onSwiper={(swiper) => adjustSlideHeights(swiper)}
+              // onResize={(swiper) => adjustSlideHeights(swiper)}
             >
               {serviceArray.map(({ imgSrc, title, description }, index) => {
                 let iconNo = (index + 1) % 4 == 0 ? 4 : (index + 1) % 4;

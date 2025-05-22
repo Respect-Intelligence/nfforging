@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 
-export default function CirtificationSection(params: type) {
+export default function CirtificationSection() {
   return (
     <>
       <section

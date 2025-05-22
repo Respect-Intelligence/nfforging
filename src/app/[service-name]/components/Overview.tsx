@@ -42,24 +42,33 @@ function Overview({
 
               <div className="fancybox-layout2 ">
                 <div className="row">
-                  {fancyboxItems.map((item, index) => (
-                    <div className="col-sm-12 col-md-12 col-lg-4" key={index}>
-                      <div className="fancybox-item">
-                        <div className="fancybox__icon">
-                          {/* <i className={item.icon}></i> */}
+                  {fancyboxItems.map(
+                    (
+                      item: {
+                        icon: string;
+                        title: string;
+                        desc: string;
+                      },
+                      index
+                    ) => (
+                      <div className="col-sm-12 col-md-12 col-lg-4" key={index}>
+                        <div className="fancybox-item">
+                          <div className="fancybox__icon">
+                            {/* <i className={item.icon}></i> */}
 
-                          <Drill />
-                        </div>
-                        <div className="fancybox__content">
-                          <h4
-                            className="fancybox__title"
-                            dangerouslySetInnerHTML={{ __html: item.title }}
-                          />
-                          <p className="fancybox__desc">{item.desc}</p>
+                            <Drill />
+                          </div>
+                          <div className="fancybox__content">
+                            <h4
+                              className="fancybox__title"
+                              dangerouslySetInnerHTML={{ __html: item.title }}
+                            />
+                            <p className="fancybox__desc">{item.desc}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -147,7 +156,7 @@ function Overview({
             </div>
           </div>
           <div className="row">
-            {serviceData?.productsArr &&
+            {/* {serviceData?.productsArr &&
               serviceData?.productsArr?.map((item, index) => (
                 <div className="col-md-4" key={index}>
                   <div className="portfolio-item">
@@ -175,7 +184,7 @@ function Overview({
                     </div>
                   </div>
                 </div>
-              ))}
+              ))} */}
           </div>
         </div>
       </section>
