@@ -1,5 +1,6 @@
 import CirtificationSection from "@/components/CirtificationSection";
 import ContactFormSection from "@/components/landing/ContactFormSection";
+import OurTeams_section from "@/components/OurTeams_section";
 import RecentWorkSection from "@/components/RecentWorkSection";
 import Section_6 from "@/components/Section_6";
 import Section_7 from "@/components/Section_7";
@@ -16,8 +17,9 @@ function page() {
       <RecentWorkSection />
       {/* <Section_8 /> */}
       <CirtificationSection />
-      <ContactFormSection />
-      <Testimonials />
+      <OurTeams_section />
+      {/* <ContactFormSection /> */}
+      {/* <Testimonials /> */}
     </>
   );
 }

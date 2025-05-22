@@ -1,4 +1,7 @@
-export const services_data = {
+const validSlugs = ["crf", "foundry"] as const;
+type ValidSlug = (typeof validSlugs)[number];
+
+export const services_data: Record<ValidSlug, any> = {
   crf: {
     title: "Cold Rolled Formed",
     oneLiner:
@@ -157,5 +160,27 @@ export const fancyboxItems = [
     icon: "icon-wrench5",
     title: "100% Satisfaction <br> Guarantee",
     desc: "Building relationships and projects that last. Serving an impressive clients.",
+  },
+];
+export const teamMembers = [
+  {
+    name: "Richard Muldoone",
+    role: "Legal Officer",
+    image: "/images/team/4.png",
+  },
+  {
+    name: "Maria Andaloro",
+    role: "HR Officer",
+    image: "/images/team/3.png",
+  },
+  {
+    name: "Marian Chris",
+    role: "Global Sales",
+    image: "/images/team/5.png",
+  },
+  {
+    name: "Jack Mudson",
+    role: "Manager",
+    image: "/images/team/1.png",
   },
 ];
