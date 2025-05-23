@@ -1,7 +1,7 @@
 "use client";
 
 import "@/scss/sections/service.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect } from "react";
 
@@ -56,25 +56,25 @@ export default function ServiceSection() {
         "We shall strive for a continual quality improvement and comply with",
     },
   ];
+  const adjustSlideHeights = (swiper: SwiperClass) => {
+    if (!swiper?.slides?.length) return;
 
-  // const adjustSlideHeights = (swiper: typeof Swiper) => {
-  //   if (!swiper?.slides?.length) return;
+    let maxHeight = 0;
 
-  //   let maxHeight = 0;
+    swiper.slides.forEach((slideEl) => {
+      const el = slideEl as HTMLElement;
+      el.style.height = "auto"; // reset
+      const height = el.offsetHeight;
+      if (height > maxHeight) maxHeight = height;
+    });
 
-  //   swiper.slides.forEach((slide) => {
-  //     const el = slide as HTMLElement;
-  //     el.style.height = "auto"; // reset
-  //     const height = el.offsetHeight;
-  //     if (height > maxHeight) maxHeight = height;
-  //   });
+    swiper.slides.forEach((slideEl) => {
+      const el = slideEl as HTMLElement;
+      el.style.height = `${maxHeight}px`;
+    });
 
-  //   swiper.slides.forEach((slide) => {
-  //     (slide as HTMLElement).style.height = `${maxHeight}px`;
-  //   });
-
-  //   swiper.update();
-  // };
+    swiper.update();
+  };
 
   return (
     <>
@@ -96,6 +96,7 @@ export default function ServiceSection() {
               }}
               autoHeight={false}
               spaceBetween={20}
+              className="pb-5"
               loop={true}
               breakpoints={{
                 0: {
@@ -114,8 +115,8 @@ export default function ServiceSection() {
                   slidesPerView: 4,
                 },
               }}
-              // onSwiper={(swiper) => adjustSlideHeights(swiper)}
-              // onResize={(swiper) => adjustSlideHeights(swiper)}
+              onSwiper={(swiper) => adjustSlideHeights(swiper)}
+              onResize={(swiper) => adjustSlideHeights(swiper)}
             >
               {serviceArray.map(({ imgSrc, title, description }, index) => {
                 let iconNo = (index + 1) % 4 == 0 ? 4 : (index + 1) % 4;

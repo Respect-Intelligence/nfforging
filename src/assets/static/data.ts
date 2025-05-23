@@ -184,3 +184,29 @@ export const teamMembers = [
     image: "/images/team/1.png",
   },
 ];
+export const jobs = [
+  {
+    type: "Full Time",
+    location: "New York",
+    title: "Chief Executive Officer",
+    desc: "A chief executive officer (CEO) is the highest-ranking executive in a company, and their primary responsibilities include making major corporate decisions.",
+  },
+  {
+    type: "Full Time",
+    location: "Latin America",
+    title: "Chief Financial Officer",
+    desc: "A chief Financial officer (CFO) is the highest-ranking executive in a company, and their primary responsibilities include making major corporate decisions.",
+  },
+  {
+    type: "Full Time",
+    location: "New York",
+    title: "Global Sales & Marketing",
+    desc: "These global operations generate a high demand for suitably qualified sales and marketing personnel. The geographical focus of the degree programme.",
+  },
+  {
+    type: "Full Time",
+    location: "New York",
+    title: "Chief Financial Officer",
+    desc: "A chief executive officer (CEO) is the highest-ranking executive in a company, and their primary responsibilities include making major corporate decisions.",
+  },
+];

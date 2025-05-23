@@ -12,6 +12,14 @@
     overflow: hidden;
     position: relative;
 
+    .circleIcon {
+        background-color: white;
+
+        svg {
+            color: $color-theme;
+        }
+    }
+
     .cta__title {
         font-size: 22px;
     }

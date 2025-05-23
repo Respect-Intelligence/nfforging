@@ -320,6 +320,20 @@
                 color: $color-white;
                 margin-bottom: 23px;
             }
+
+            .contact__number {
+                color: #fff;
+
+                a {
+                    color: currentColor;
+                    display: flex;
+                    align-items: center;
+                }
+
+                &:hover {
+                    color: $color-body;
+                }
+            }
         }
     }
 

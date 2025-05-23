@@ -9,8 +9,15 @@ import Link from "next/link";
 import { fancyboxItems, sheetPiles_data } from "@/assets/static/data";
 
 type validSlugs = "crf" | "foundry" | "fabrication" | "services";
-function page() {
-  const params = useParams();
+
+interface PageProps {
+  params: {
+    "product-name": string;
+    "service-name": string;
+  };
+}
+function page({ params }: PageProps) {
+  // const params = useParams();
   let productname = params["product-name"];
   let serviceName = params["service-name"];
 

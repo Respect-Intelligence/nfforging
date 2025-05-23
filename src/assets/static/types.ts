@@ -1,6 +1,6 @@
 // types.ts
-export type ServiceName = "crf" | "foundary";
+export type ServiceName = "crf" | "foundry";
 
 export const isValidServiceName = (name: string): name is ServiceName => {
-  return name === "crf" || name === "foundary";
+  return name === "crf" || name === "foundry";
 };
