@@ -2,30 +2,39 @@
 
 import BasicTopBanner from "@/components/BasicTopBanner";
 import { notFound, useParams } from "next/navigation";
-import React from "react";
+import React, { use } from "react";
 import "@/scss/sections/serviceOverview.scss";
 import { ArrowRight, Check, Drill, HandPlatter } from "lucide-react";
 import Link from "next/link";
 import { fancyboxItems, sheetPiles_data } from "@/assets/static/data";
+import { promises } from "dns";
+import ImageSlider from "../components/ImageSlider";
 
 type validSlugs = "crf" | "foundry" | "fabrication" | "services";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     "product-name": string;
     "service-name": string;
-  };
+  }>;
 }
 function page({ params }: PageProps) {
   // const params = useParams();
-  let productname = params["product-name"];
-  let serviceName = params["service-name"];
+  const { "service-name": serviceName, "product-name": productname } =
+    use(params);
+  // let productname = params["product-name"];
+  // let serviceName = params["service-name"];
 
   if (!productname) {
     notFound(); // 🚨 This triggers the built-in 404 page
   }
 
   let data = sheetPiles_data;
+  const counters = [
+    { count: "6,154", label: "Projects Completed" },
+    { count: "2,512", label: "Qualified Workers" },
+    { count: "1,784", label: "Satisfied Clients" },
+  ];
 
   return (
     <>
@@ -126,8 +135,17 @@ function page({ params }: PageProps) {
               data?.typesOfProduct?.map((item, index) => (
                 <div className="col-md-4" key={index}>
                   <div className="portfolio-item">
-                    <div className="portfolio__img">
-                      <img src={item.image} alt="portfolio img" />
+                    <div
+                      className="portfolio__img p-4"
+                      style={{
+                        height: "150px",
+                      }}
+                    >
+                      <img
+                        src={item.image}
+                        alt="portfolio img"
+                        className="object-fit-contain"
+                      />
                     </div>
                     <div className="portfolio__content">
                       <div>
@@ -145,6 +163,46 @@ function page({ params }: PageProps) {
                   </div>
                 </div>
               ))}
+          </div>
+
+          <ImageSlider />
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
+              <div className="text__block text__block-layout2 mb-70">
+                <h5 className="text__block-title">
+                  Solution & <br /> Results
+                </h5>
+
+                <div className="text__block-content">
+                  <p className="text__block-desc">
+                    That’s why we strive to find the air freight solution that
+                    best suits your needs. We’ll ask you when the freight is
+                    available, what the required delivery date is, and if
+                    there’s potential to save on time or cost. Your answers to
+                    these and other questions help us decide if you should book
+                    the air freight as direct.
+                  </p>
+                  <p className="text__block-desc">
+                    During that time, we’ve become expert in freight
+                    transportation by air and all its related services. We work
+                    closely with all major airlines around the world.
+                  </p>
+
+                  <div className="counters-layout2">
+                    <div className="row">
+                      {counters.map((item, index) => (
+                        <div className="col-4" key={index}>
+                          <div className="counter-item">
+                            <h4 className="counter">{item.count}</h4>
+                            <p className="counter__desc">{item.label}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

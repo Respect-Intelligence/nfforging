@@ -47,7 +47,7 @@ const menuItems = [
     ],
   },
   { title: "Careers", href: "/careers" },
-  { title: "Sustainability", href: "/media" },
+  { title: "Sustainability", href: "/sustainability" },
   { title: "Contact", href: "/contact-us" },
 ];
 
