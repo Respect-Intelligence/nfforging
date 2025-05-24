@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { contactDetails } from "@/assets/static/data";
+import { ArrowRight, Facebook, Instagram, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -24,9 +25,11 @@ export default function Footer() {
                     <br />
                     Kolkata - 700 017
                     <br />
-                    +91 33 4600 9083
+                    {contactDetails.phone}
                     <br />
-                    <a href="mailto:info@nfforging.com">info@nfforging.com</a>
+                    <a href={`mailto:${contactDetails.email}`}>
+                      {contactDetails.email}
+                    </a>
                   </p>
                   <ul className="social__icons list-unstyled">
                     <li>
@@ -156,7 +159,7 @@ export default function Footer() {
                         placeholder="Your Email Address"
                       />
                       <button type="submit" className="btn btn__primary">
-                        <i className="icon-arrow-right"></i>
+                        <ArrowRight size={18} />
                       </button>
                     </div>
                   </form>

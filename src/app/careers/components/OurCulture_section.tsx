@@ -17,21 +17,26 @@ export default function OurCulture_section() {
             <div className="inner-wrapper">
               <div className="heading-layout2 mb-30">
                 <span className="heading__subtitle">
-                  Leading The Way In Building And Civil Construction
+                  A Culture Built on Integrity, Innovation, and Inclusivity
                 </span>
                 <h2 className="heading__title">
-                  Ready to Bring Bigger, Better, Faster And Stronger Projects
-                  Than Ever Before!!
+                  Empowering Excellence Together
                 </h2>
                 <p className="heading__desc mb-30 mt-40">
-                  Yet those that embrace change are thriving, building bigger,
-                  better, faster, and stronger products than ever before. You
-                  are helping to lead the charge; we can help you build on your
-                  past and prepare future.
+                  At NF Forgings Pvt. Ltd., we believe that our people are the
+                  cornerstone of our success. Our leadership style emphasizes
+                  ethical behavior, critical thinking, and adherence to
+                  organizational standards. We foster an environment where
+                  employees are empowered to make decisions, take calculated
+                  risks, and are supported to nurture success.
                 </p>
                 <p className="heading__desc">
-                  The world is changing faster than ever before, Promina
-                  industries are threatened as technology disrupts and software.
+                  Our HR philosophy is deeply rooted in our corporate culture
+                  and values. We provide information and resources to support
+                  managers in making the right decisions at the right time, and
+                  we assist employees in reaching their goals. We continually
+                  seek to improve our services and processes, ensuring that our
+                  team knows exactly what is expected of them.
                 </p>
               </div>
 
@@ -56,10 +61,13 @@ export default function OurCulture_section() {
               />
               <div className="cta__banner">
                 <h5 className="cta__title color-white">
-                  A Leading Developer Of First Grade Commercial &amp; Projects!
+                  Forging a Future Together
                 </h5>
-                <a href="#" className="btn btn__primary btn__link color-white">
-                  <span>Learn More</span>
+                <a
+                  href="#jobsection"
+                  className="btn btn__primary btn__link color-white"
+                >
+                  <span>Explore Jobs</span>
                   <span className="circleIcon ms-2 ">
                     <LucideArrowRight size={16} />
                   </span>

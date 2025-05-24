@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Section_6() {
   return (
-    <section className="about-layout2 ">
+    <section className="about-layout2 " id="aboutCompany">
       <div className="container-fluid">
         <div className="row">
           <div className="text-block">

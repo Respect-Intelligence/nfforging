@@ -130,15 +130,15 @@ function page({ params }: PageProps) {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row pb-5">
             {data?.typesOfProduct &&
               data?.typesOfProduct?.map((item, index) => (
-                <div className="col-md-4" key={index}>
+                <div className="col-md-3" key={index}>
                   <div className="portfolio-item">
                     <div
                       className="portfolio__img p-4"
                       style={{
-                        height: "150px",
+                        height: "120px",
                       }}
                     >
                       <img

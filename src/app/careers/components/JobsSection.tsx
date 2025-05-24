@@ -14,9 +14,9 @@ function JobsSection() {
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
             <div className="heading text-center mb-50">
-              <span className="heading__subtitle">Work With Us!</span>
+              <span className="heading__subtitle">Join Our Team!</span>
               <h2 className="heading__title">
-                Building Relationships With Clients All Over The World!
+                Explore Opportunities to Forge Your Future with Us
               </h2>
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { LucideArrowRight, Phone } from "lucide-react";
+import { contactDetails, jobs } from "@/assets/static/data";
 
 export default function ApplyForm() {
   const [form, setForm] = useState({
@@ -47,11 +48,12 @@ export default function ApplyForm() {
               >
                 <div className="row mb-40">
                   <div className="col-sm-12 col-lg-5 col-lg-7">
-                    <h4 className="contact__panel-title">Request A Quote</h4>
+                    <h4 className="contact__panel-title">Apply Now</h4>
                     <p className="contact__panel-desc">
-                      Complete control over products allows us to ensure our
-                      customers receive the best quality prices and service. We
-                      take great pride in everything that we do in our factory.
+                      Ready to take the next step in your career? Fill out the
+                      form below to apply for a position at NF Forgings Pvt.
+                      Ltd. We value your interest and look forward to learning
+                      more about your qualifications.
                     </p>
                   </div>
                   <div className="col-sm-12 col-md-5 col-lg-5">
@@ -61,11 +63,11 @@ export default function ApplyForm() {
                         everyday, 09:00 AM - 12:00 PM
                       </strong>
                       <div className="contact__number d-flex align-items-center">
-                        <a href="tel:5565454117">
+                        <a href={`tel:${contactDetails.phone}`}>
                           <span className="cilclePhoneIcon me-2">
                             <Phone size={20} />
                           </span>
-                          55 654 541 17
+                          {contactDetails.phone}
                         </a>
                       </div>
                     </div>
@@ -120,16 +122,12 @@ export default function ApplyForm() {
                         onChange={handleChange}
                         required
                       >
-                        <option value="">Select your industry</option>
-                        <option value="Petroleum & Gas Energy">
-                          Petroleum & Gas Energy
-                        </option>
-                        <option value="Construction & Engineering">
-                          Construction & Engineering
-                        </option>
-                        <option value="Mechanical Engineering">
-                          Mechanical Engineering
-                        </option>
+                        <option value="">Position Applied For</option>
+                        {jobs.map((job, index) => (
+                          <option key={index} value={job.title}>
+                            {job.title}
+                          </option>
+                        ))}
                       </select>
                     </div>
                   </div>
@@ -164,7 +162,7 @@ export default function ApplyForm() {
                   {/* Submit */}
                   <div className="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
                     <button type="submit" className="btn btn__secondary mr-40">
-                      <span className="mx-2">Submit Request</span>
+                      <span className="mx-2">Submit Now</span>
                       <LucideArrowRight className="mx-2" size={16} />
                     </button>
                     <div className="form-group input-radio my-3">

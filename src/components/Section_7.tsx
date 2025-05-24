@@ -17,16 +17,17 @@ function Section_7() {
               }}
             >
               <div className="cta__banner bg-white">
-                <h5 className="cta__title">
-                  Driven by Vision, Powered by Purpose
-                </h5>
+                <h5 className="cta__title">Forging Excellence Since 1997</h5>
                 <p className="cta__desc">
-                  At NF Forgings, our vision is to lead the steel engineering
-                  industry through innovation and quality. Our mission is to
-                  deliver reliable, high-performance solutions by combining
-                  technology, expertise, and experience.
+                  For over 25 years, NF Forgings Pvt. Ltd. has been a leader in
+                  Foundry, Forming, and Fabrication. Our commitment to quality,
+                  innovation, and skilled craftsmanship has solidified our
+                  position in the steel engineering industry.
                 </p>
-                <Link href="#" className="btn btn__primary btn__link">
+                <Link
+                  href="#aboutCompany"
+                  className="btn btn__primary btn__link"
+                >
                   <span>Learn More</span>{" "}
                   <span className="">
                     <ArrowRight height={18} />

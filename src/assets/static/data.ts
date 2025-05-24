@@ -187,26 +187,38 @@ export const teamMembers = [
 export const jobs = [
   {
     type: "Full Time",
-    location: "New York",
-    title: "Chief Executive Officer",
-    desc: "A chief executive officer (CEO) is the highest-ranking executive in a company, and their primary responsibilities include making major corporate decisions.",
+    location: "Kolkata",
+    title: "Production Engineer",
+    desc: "Responsible for overseeing manufacturing processes, ensuring quality standards, and optimizing production efficiency.",
   },
   {
     type: "Full Time",
-    location: "Latin America",
-    title: "Chief Financial Officer",
-    desc: "A chief Financial officer (CFO) is the highest-ranking executive in a company, and their primary responsibilities include making major corporate decisions.",
+    location: "Kolkata",
+    title: "Quality Assurance Supervisor",
+    desc: "Leads the QA team to maintain product standards, conducts inspections, and implements quality control procedures.",
   },
   {
     type: "Full Time",
-    location: "New York",
-    title: "Global Sales & Marketing",
-    desc: "These global operations generate a high demand for suitably qualified sales and marketing personnel. The geographical focus of the degree programme.",
+    location: "Kolkata",
+    title: "Design Engineer",
+    desc: "Develops and designs components and systems, collaborates with cross-functional teams to meet project requirements.",
   },
   {
     type: "Full Time",
-    location: "New York",
-    title: "Chief Financial Officer",
-    desc: "A chief executive officer (CEO) is the highest-ranking executive in a company, and their primary responsibilities include making major corporate decisions.",
+    location: "Kolkata",
+    title: "Logistics Manager",
+    desc: "Manages supply chain operations, coordinates with vendors, and ensures timely delivery of materials and products.",
+  },
+  {
+    type: "Full Time",
+    location: "Kolkata",
+    title: "Assistant Store Manager",
+    desc: "Assists in managing inventory, supervises store operations, and ensures compliance with company policies.",
   },
 ];
+export const contactDetails = {
+  phone: "+91 33 4600 9083",
+  email: "info@nfforging.com",
+  address:
+    "3rd Floor, NFF Office, 1st Cross Road, Near Railway Station, Kolkata - 700099",
+};

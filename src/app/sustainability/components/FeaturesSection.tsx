@@ -6,43 +6,45 @@ import Link from "next/link";
 
 const features = [
   {
-    image: "/images/features/1.jpg",
-    title: "Architecture <br> & Building",
+    title: "Cold Roll Forming (CRF)",
     description:
-      "Architecture is both the process and the product of planning, and constructing buildings or any other structures.",
-    items: [
-      "Cognitive architecture",
-      "Computer architecture",
-      "Enterprise architecture",
+      "Precision-engineered profiles and sections ranging from 0.8mm to 10mm in thickness, tailored for various industrial applications.",
+    Points: [
+      "Sheet Piles",
+      "Solar Module Mounting Solutions",
+      "Wagon & Coaches",
+      "Pre-Engineered Buildings",
+      "Crash Barriers",
     ],
-    link: "/services-single-service",
+    link: "/crf",
   },
   {
-    image: "/images/features/2.jpg",
-    title: "Construction <br> Consultants",
+    title: "Foundry Division",
     description:
-      "Given the increasing complexity of many construction projects it is becoming more common that a consultant.",
-    items: [
-      "Construction manager",
-      "Contract administrator",
-      "Consulting engineer",
+      "Class 'A' RDSO-certified foundry delivering high-quality castings with advanced molding and melting technologies.",
+    Points: [
+      "Electric Arc & Induction Furnaces",
+      "High-Pressure Molding Line",
+      "Automated Sand Plant",
+      "Core Shop for CBC Bogie Components",
+      "In-house Fettling & Finishing",
     ],
-    link: "/services-single-service",
+    link: "/foundry",
   },
   {
-    image: "/images/features/3.jpg",
-    title: "Construction <br> Management",
+    title: "Fabrication Services",
     description:
-      "Professional service uses specialized, project management techniques to oversee the planning, design.",
-    items: [
-      "Design, bid, build contracts",
-      "Planning and scheduling",
-      "Design-build contracts",
+      "Comprehensive fabrication solutions for complex engineering projects, including wagons, coaches, and ISO containers.",
+    Points: [
+      "Railway Wagons & Coaches",
+      "ISO Shipping Containers",
+      "Refinery Equipment",
+      "Structural Fabrication",
+      "Custom Engineering Assignments",
     ],
-    link: "/services-single-service",
+    link: "/fabrication",
   },
 ];
-
 export default function FeaturesSection() {
   return (
     <section className="features-layout1 pb-0">
@@ -50,12 +52,9 @@ export default function FeaturesSection() {
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
             <div className="heading text-center mb-50">
-              <span className="heading__subtitle">
-                The Best A Grade Commercial &amp; Residential Services
-              </span>
+              <span className="heading__subtitle">Our Core Capabilities</span>
               <h2 className="heading__title">
-                High Quality Construction Solutions For Residentials &amp;
-                Industries!
+                Delivering Excellence Across Diverse Engineering Solutions
               </h2>
             </div>
           </div>
@@ -81,7 +80,7 @@ export default function FeaturesSection() {
                   />
                   <p className="feature__desc">{feature.description}</p>
                   <ul className="list-items list-items-layout2 list-unstyled mb-30">
-                    {feature.items.map((item, i) => (
+                    {feature.Points.map((item, i) => (
                       <li key={i}>
                         {" "}
                         <Check size={14} strokeWidth={3} /> {item}

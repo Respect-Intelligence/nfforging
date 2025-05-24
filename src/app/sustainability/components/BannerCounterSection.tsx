@@ -2,20 +2,20 @@ import React from "react";
 
 const counters = [
   {
-    count: "6,154",
-    description: "Projects And Residentials Completed in 2020",
+    count: "15,000+",
+    description: "Trees Planted Around Our Facilities",
   },
   {
-    count: "2,512",
-    description: "Qualified Employees And Workers With Us",
+    count: "300 MT",
+    description: "Monthly Casting Capacity with Eco-Friendly Processes",
   },
   {
-    count: "1,784",
-    description: "Satisfied Clients We Have Served Globally",
+    count: "100%",
+    description: "In-House Finishing Using Energy-Efficient Equipment",
   },
   {
-    count: "46",
-    description: "Years Of Experience In The Construction Industry",
+    count: "3",
+    description: "Major Divisions Implementing Sustainable Practices",
   },
 ];
 
@@ -34,11 +34,9 @@ export default function BannerCounterSection() {
           <div className="col-sm-12 col-md-12 col-lg-6">
             <div className="heading-layout2 heading-light mb-50">
               <span className="heading__subtitle">
-                Numbers Speak For Themselves.
+                Sustainability at NF Forgings
               </span>
-              <h2 className="heading__title">
-                Building Relationships With Clients All Over The World!
-              </h2>
+              <h2 className="heading__title">Forging a Greener Future</h2>
             </div>
           </div>
         </div>

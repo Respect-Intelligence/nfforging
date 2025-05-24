@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { contactDetails } from "@/assets/static/data";
 const menuItems = [
   { title: "Home", href: "/" },
   { title: "About Us", href: "/about-us" },
@@ -178,7 +179,9 @@ export default function Header() {
             <span className="phone-icon-wrapper">
               <Phone />
             </span>
-            <Link href="tel:5565454117">55 654 541 17</Link>
+            <Link href={`tel:${contactDetails.phone}`}>
+              {contactDetails.phone}
+            </Link>
           </div>
         </div>
       </nav>
