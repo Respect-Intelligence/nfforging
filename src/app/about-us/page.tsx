@@ -16,7 +16,7 @@ function page() {
       <Section_7 />
       <RecentWorkSection />
       {/* <Section_8 /> */}
-      <CirtificationSection />
+      <CirtificationSection className="pb-5" />
       <OurTeams_section />
       {/* <ContactFormSection /> */}
       {/* <Testimonials /> */}

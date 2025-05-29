@@ -1,11 +1,20 @@
 import React from "react";
 
-function BasicTopBanner({ title }: { title: string | undefined }) {
+function BasicTopBanner({
+  title,
+  bannerImgSrc,
+}: {
+  title: string | undefined;
+  bannerImgSrc: string; // Provide path to image file in public folder. For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.  // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.  // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.
+}) {
   return (
     <>
       <section
         className="page-title page-title-layout7 bg-overlay bg-overlay-2 bg-parallax text-center bg-img basic-top-banner"
-        style={{}}
+        style={{
+          // backgroundImage: `url(${bannerImgSrc})`, // Provide path to image file in public folder. For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.  // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.  // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.   // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.   // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.   // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.   // For example, 'images/banner/banner1.
+          ["--BasicTopBannerBgImgSrc" as any]: `url(${bannerImgSrc})`,
+        }}
       >
         <div className="container">
           <div className="row align-items-center">

@@ -91,14 +91,12 @@ export default function Section_6() {
             </Link>
           </div>
 
-          <div className="imgs-block mt-50">
-            <div className="about__img">
-              <Image
-                src="/images/about/2.png"
+          <div className="imgs-block pe-0 mt-50">
+            <div className="about__img h-100">
+              <img
+                src="/images/about/2.jpg"
                 alt="about"
-                className="img-fluid w-100"
-                width={600}
-                height={400}
+                className="img-fluid  w-auto h-100"
               />
             </div>
 

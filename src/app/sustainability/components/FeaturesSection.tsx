@@ -7,6 +7,7 @@ import Link from "next/link";
 const features = [
   {
     title: "Cold Roll Forming (CRF)",
+    image: "/images/sustainability/2 (2).jpg",
     description:
       "Precision-engineered profiles and sections ranging from 0.8mm to 10mm in thickness, tailored for various industrial applications.",
     Points: [
@@ -20,6 +21,7 @@ const features = [
   },
   {
     title: "Foundry Division",
+    image: "/images/sustainability/2 (3).jpg",
     description:
       "Class 'A' RDSO-certified foundry delivering high-quality castings with advanced molding and melting technologies.",
     Points: [
@@ -33,6 +35,7 @@ const features = [
   },
   {
     title: "Fabrication Services",
+    image: "/images/sustainability/2 (1).jpg",
     description:
       "Comprehensive fabrication solutions for complex engineering projects, including wagons, coaches, and ISO containers.",
     Points: [

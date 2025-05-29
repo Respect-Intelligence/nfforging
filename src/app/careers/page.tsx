@@ -7,7 +7,7 @@ import ApplyForm from "./components/ApplyForm";
 function page() {
   return (
     <>
-      <BasicTopBanner title="careers" />
+      <BasicTopBanner bannerImgSrc="/images/careers/3.jpg" title="careers" />
       <JobsSection />
       <OurCulture_section />
       <ApplyForm />

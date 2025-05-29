@@ -11,7 +11,7 @@ function Section_7() {
             <div
               className="col-sm-12 col-md-12 col-lg-6 background-banner"
               style={{
-                backgroundImage: "url(/images/page-titles/1.jpg)",
+                backgroundImage: "url(/images/about/vision_perpose.jpg)",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}

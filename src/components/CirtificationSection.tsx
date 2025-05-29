@@ -1,10 +1,16 @@
 import { Check } from "lucide-react";
 
-export default function CirtificationSection() {
+export default function CirtificationSection({
+  className,
+}: {
+  className?: string;
+}) {
   return (
     <>
       <section
-        className="banner-layout2 bg-overlay bg-parallax bg-img cirtification-section"
+        className={`banner-layout2 bg-overlay bg-parallax bg-img cirtification-section ${
+          className || ""
+        }  `}
         // style={{
         //   backgroundImage: 'url("images/banner4.jpg")',
         //   backgroundSize: "cover",

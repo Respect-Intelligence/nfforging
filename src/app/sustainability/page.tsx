@@ -7,7 +7,10 @@ import StatusSection from "./components/StatusSection";
 function Page() {
   return (
     <>
-      <BasicTopBanner title="Sustainability" />
+      <BasicTopBanner
+        bannerImgSrc="/images/sustainability/1.jpg"
+        title="Sustainability"
+      />
       <FeaturesSection />
       <BannerCounterSection />
       <StatusSection />

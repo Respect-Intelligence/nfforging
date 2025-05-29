@@ -53,7 +53,7 @@ export default function OurCulture_section() {
           <div className="col-sm-12 col-md-10 col-lg-8 col-xl-5">
             <div className="about__img position-relative">
               <Image
-                src="/images/about/4.jpg"
+                src="/images/careers/1.jpg"
                 alt="about"
                 width={600}
                 height={500}

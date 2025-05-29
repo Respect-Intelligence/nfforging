@@ -150,9 +150,10 @@
         width: calc(100% + 15px);
         z-index: -1;
         background: rgba(255, 255, 255, 0.1);
-        background-image: url("/images/contactus.jpg");
-        background-size: "cover";
-        background-position: "bottom";
+        background-image: var(--BasicTopBannerBgImgSrc);
+        // background-image: url("/images/contactus.jpg");
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
     }
 

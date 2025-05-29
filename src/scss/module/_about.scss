@@ -61,6 +61,24 @@
         max-width: 100%;
         padding-left: 30px;
         position: relative;
+        // display: flex;
+
+        // overflow: hidden;
+        position: relative;
+
+        .about__img {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            // flex-grow: 1;
+            width: 100%;
+
+            img {
+                max-width: none;
+                width: unset;
+                height: 100%;
+            }
+        }
     }
 
     .list-items {
@@ -110,7 +128,7 @@
     .video__box {
         position: absolute;
         left: 60px;
-        bottom: 55px;
+        bottom: 28px;
         width: 165px;
         height: 165px;
         border-radius: 4px 4px 0 0;
