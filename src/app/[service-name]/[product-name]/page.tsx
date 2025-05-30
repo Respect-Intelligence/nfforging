@@ -38,7 +38,10 @@ function page({ params }: PageProps) {
 
   return (
     <>
-      <BasicTopBanner title={"Product & Services"} />
+      <BasicTopBanner
+        bannerImgSrc="/images/contactus.jpg"
+        title={"Product & Services"}
+      />
       <section className="portfolio-item-service-details pt-0 pb-0">
         <div className="container">
           <div className="row">

@@ -5,7 +5,7 @@ function BasicTopBanner({
   bannerImgSrc,
 }: {
   title: string | undefined;
-  bannerImgSrc: string; // Provide path to image file in public folder. For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.  // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.  // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.
+  bannerImgSrc?: string; // Provide path to image file in public folder. For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.  // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.  // For example, 'images/banner/banner1.jpg'  // If not provided, default background image will be used.
 }) {
   return (
     <>
