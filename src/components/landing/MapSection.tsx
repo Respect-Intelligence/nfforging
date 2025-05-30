@@ -1,7 +1,7 @@
 export default function MapSection() {
   return (
     <>
-      <section className="google-map-layout2 p-0">
+      <section className="google-map-layout2 ">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 position-relative">

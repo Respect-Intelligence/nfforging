@@ -194,6 +194,8 @@
     position: relative;
     z-index: 2;
 
+
+
     &:after {
         content: '';
         position: absolute;
@@ -288,6 +290,130 @@
 }
 
 .contact-layout2 {
+    background-color: #F5F5F5;
+
+    .contact-panel {
+        justify-content: space-between;
+        // align-items: center;
+        padding: 70px 80px;
+
+        .contact__panel-title {
+
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 64px;
+            text-align: center;
+            text-transform: uppercase;
+
+            /* nfforging-svyd.vercel.app/Cod Gray */
+            color: #1B1A1A;
+            @extend .barlowFont;
+            margin-bottom: 12px;
+
+
+        }
+
+        .contact__panel-desc {
+
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            /* or 150% */
+            text-align: center;
+
+            color: #1B1A1A;
+            width: 80%;
+
+
+
+        }
+
+        .contact__panel-form {
+            background-color: #EFEFEF;
+            padding: 40px;
+            border-radius: 12px;
+            flex: 0 0 60%;
+            max-width: 60%;
+
+            .form-control {
+                background-color: #fff;
+            }
+
+            .radio-indicator {
+                // border-color: $color-theme;
+                border: 1px solid $color-theme;
+
+                &::after {
+                    // top: 5px;
+
+                    // left: 5px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .contact__panel-info {
+            flex: 0 0 38%;
+            height: 100%;
+            max-width: 38%;
+            padding-bottom: 0;
+
+            .contact__panel-info-top {
+                padding: 24px 50px;
+
+                .contact-info-box {
+                    margin-bottom: 20px;
+
+                    h3 {
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 24px;
+                        /* identical to box height */
+                        text-transform: capitalize;
+
+                        /* nfforging-svyd.vercel.app/White */
+                        color: #FFFFFF;
+                        @extend .barlowFont;
+                        margin-bottom: 12px;
+                    }
+
+                    .contact__info-list {
+                        li {
+                            display: flex;
+                            font-size: 16px;
+                            line-height: 21px;
+                            font-weight: 400;
+
+                            span {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contact__panel-info-bottom {
+                padding: 24px 50px;
+
+                .contact__panel-info-title {}
+            }
+
+
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
     .contact-panel .contact__panel-info-top,
     .contact-panel .contact__panel-info-bottom {
@@ -350,17 +476,18 @@
 
 .google-map-layout2 {
     z-index: 2;
+    padding: 40px 0px;
 
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 140px;
-        background-color: #5d1212;
-    }
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     z-index: -1;
+    //     width: 100%;
+    //     height: 140px;
+    //     background-color: #5d1212;
+    // }
 
     .contact-info-carousel {
         position: absolute;

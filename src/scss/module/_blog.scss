@@ -8,6 +8,9 @@
     position: relative;
     margin-bottom: 50px;
     width: 100%;
+    background-color: #fff;
+    padding-bottom: 30px;
+    border-radius: 12px;
 
     .blog__img {
         position: relative;
@@ -181,6 +184,12 @@
 }
 
 .blog-carousel {
+    background-color: #F5F5F5;
+
+    // .swiper-slide {
+    //     background-color: #fff;
+    // }
+
     .carousel-nav-wrapper {
         position: absolute;
         top: -50px;

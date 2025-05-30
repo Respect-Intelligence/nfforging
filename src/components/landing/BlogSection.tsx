@@ -48,7 +48,7 @@ const blogPosts = [
 
 const BlogSection = () => {
   return (
-    <section className="blog-carousel pt-0 pb-50 z-index-2 mt-80">
+    <section className="blog-carousel pb-0 z-index-2 pt-80">
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6">
