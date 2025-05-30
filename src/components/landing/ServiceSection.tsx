@@ -4,58 +4,9 @@ import "@/scss/sections/service.scss";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect } from "react";
+import { serviceArray } from "@/assets/static/data";
 
 export default function ServiceSection() {
-  const serviceArray = [
-    {
-      title: "Sheet Piles",
-      imgSrc: "images/ov-1.jpg",
-      description:
-        "Cold formed steel sheet piles are time-tested solution for all types of earth retention requirements.",
-    },
-    {
-      title: "Solar Module Mounting Solutions",
-      imgSrc: "images/ov-2.jpg",
-      description:
-        "N F FORGING'S Solar Module Mounting system includes everything you need for a simple and efficient PV installation.",
-    },
-    {
-      title: "Wagon & Coaches",
-      imgSrc: "images/ov-3.jpg",
-      description:
-        "Our quality manufacturing has enabled us to effectively meet the desired standards our customers.",
-    },
-    {
-      title: "Pre Engineered Building",
-      imgSrc: "images/ov-4.jpg",
-      description:
-        "Cold formed members can be efficient on a weight basis relative to mill rolled sections for secondary member applications.",
-    },
-    {
-      title: "Crash Barriers",
-      imgSrc: "images/ov-5.jpg",
-      description:
-        "Metal Crash Barriers are an effective road safety measure to protect a vehicle and its occupants in case of an accident.",
-    },
-    {
-      title: "Products",
-      imgSrc: "images/foundry-pro-img.jpg",
-      description:
-        "We offer various range of products to our prospective buyers",
-    },
-    {
-      title: "Infrastructure",
-      imgSrc: "images/infra-img.jpg",
-      description:
-        "An automated High Pressure Molding Line with multi-piston fast loop facility",
-    },
-    {
-      title: "Quality Assurance",
-      imgSrc: "images/quality-img.jpg",
-      description:
-        "We shall strive for a continual quality improvement and comply with",
-    },
-  ];
   const adjustSlideHeights = (swiper: SwiperClass) => {
     if (!swiper?.slides?.length) return;
 
@@ -78,7 +29,7 @@ export default function ServiceSection() {
 
   return (
     <>
-      <section className="wpo-service-section section-padding mb-50">
+      <section className="wpo-service-section section-padding ">
         <div className="service-wrap">
           <div className="heading-layout2">
             <p className="heading__subtitle">What We Offer</p>
@@ -96,7 +47,7 @@ export default function ServiceSection() {
               }}
               autoHeight={false}
               spaceBetween={20}
-              className="pb-5"
+              // className="pb-5"
               loop={true}
               breakpoints={{
                 0: {
@@ -112,8 +63,11 @@ export default function ServiceSection() {
                   slidesPerView: 3,
                 },
                 1024: {
-                  slidesPerView: 4,
+                  slidesPerView: 3.5,
                 },
+                // 1400: {
+                //   slidesPerView: 4.5,
+                // },
               }}
               onSwiper={(swiper) => adjustSlideHeights(swiper)}
               onResize={(swiper) => adjustSlideHeights(swiper)}
@@ -124,9 +78,10 @@ export default function ServiceSection() {
                 return (
                   <SwiperSlide key={index}>
                     <div className="item h-100">
+                      <span className="count">0{index + 1}</span>
                       <div className="image">
                         <img src={`https://nfforging.com/${imgSrc}`} alt="" />
-                        <span>0{index + 1}</span>
+                        {/* <span className="">0{index + 1}</span> */}
                         <div className="line-one"></div>
                         <div className="line-two"></div>
                       </div>

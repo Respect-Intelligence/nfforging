@@ -6,35 +6,35 @@
 
 // Large Screens 
 @mixin lg-screens {
-    @media  (min-width: 992px) and (max-width: 1200px) {
+    @media (min-width: 992px) and (max-width: 1200px) {
         @content;
     }
 }
 
 // Medium Screens
 @mixin md-screens {
-    @media  (min-width: 768px) and (max-width: 991px) {
+    @media (min-width: 768px) and (max-width: 991px) {
         @content;
     }
 }
 
 // Small Screens
 @mixin sm-screens {
-    @media  (min-width: 576px) and (max-width: 767px) {
+    @media (min-width: 576px) and (max-width: 767px) {
         @content;
     }
 }
 
 // Extra Small Screens
 @mixin xs-screens {
-    @media  (min-width: 320px) and (max-width: 575px) {
+    @media (min-width: 320px) and (max-width: 575px) {
         @content;
     }
 }
 
 // Extra Small and Small Screens
 @mixin xs-sm-screens {
-    @media  (min-width: 320px) and (max-width: 767px) {
+    @media (min-width: 320px) and (max-width: 767px) {
         @content;
     }
 }
@@ -77,4 +77,64 @@
     }
 
     #{$property}: $value;
+}
+
+// _breakpoints.scss
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+@function breakpoint($key) {
+    @if map-has-key($grid-breakpoints, $key) {
+        @return map-get($grid-breakpoints, $key);
+    }
+
+    @warn "Unknown breakpoint: `#{$key}`. Returning 0.";
+    @return 0;
+}
+
+@mixin breakpoint-up($breakpoint) {
+    $min: breakpoint($breakpoint);
+
+    @if $min !=0 {
+        @media (min-width: $min) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($breakpoint) {
+    $max: breakpoint($breakpoint);
+
+    @if $max !=0 {
+        // Subtract 0.02px to prevent overlap with the next breakpoint
+        $max: $max - 0.02px;
+
+        @media (max-width: $max) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+}
+
+@mixin breakpoint-between($minKey, $maxKey) {
+    $min: breakpoint($minKey);
+    $max: breakpoint($maxKey) - 0.02px;
+
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
 }

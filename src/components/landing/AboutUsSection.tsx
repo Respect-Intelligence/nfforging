@@ -7,20 +7,19 @@ export default function AboutUsSection() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 col-12">
-              <div className="about-left-image pe-4">
-                <img
-                  src="https://sailo-next.vercel.app/images/ab-1.jpg"
-                  alt=""
-                />
-                <div className="ab-2">
+              <div className="about-left-image pe-5">
+                <div className="img-wraper">
+                  <img src="/images/home3/ab-1.jpg.png" alt="" />
+                </div>
+                {/* <div className="ab-2">
                   <img
                     src="https://sailo-next.vercel.app/images/ab-2.jpg"
                     alt=""
                   />
-                </div>
+                </div> */}
               </div>
             </div>
-            <div className="col-lg-6 col-12">
+            <div className="col-lg-6 col-12 ps-4">
               <div className=" ps-4">
                 <div className="heading-layout2">
                   <p className="heading__subtitle">About Company</p>

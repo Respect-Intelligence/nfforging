@@ -1,33 +1,33 @@
+"use client";
+
 import "@/scss/sections/ourClients.scss";
 import "@/scss/sections/section5.scss";
-import React from "react";
+import React, { useState } from "react";
 export default function OurClientsSection() {
   let section5Arr = [
     {
-      imgSrc:
-        "https://sailo-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.aeeb9f00.jpg&w=640&q=75",
+      imgSrc: "/images/home3/sec5_1.png",
       title: "CRF Division",
       para: "CRF division which has capabilities to Cold Roll Form profiles and sections ranging from 1 kilogram per square meter to 125 kilograms per square meter in thicknesses ranging from 0.8mm to 10mm",
     },
     {
-      imgSrc:
-        "https://sailo-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.00654ce2.jpg&w=640&q=75",
+      imgSrc: "/images/home3/sec5_2.png",
       title: "Foundry",
       para: "Foundry division which has been classified as Class 'A' by RDSO (Research and Development Services Organisation). Details may please be seen in the relevant section of this website.",
     },
     {
-      imgSrc:
-        "https://sailo-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.d3599469.jpg&w=640&q=75",
+      imgSrc: "/images/home3/sec5_3.png",
       title: "Fabrication",
       para: "Fabrication division which is at ease with most demanding and challenging assignments for wagons for railways (Indian and overseas both), passenger coaches, ISO Shipping Containers and engineering assignments for refineries and other industries",
     },
     {
-      imgSrc:
-        "https://sailo-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F4.0c48f198.jpg&w=640&q=75",
+      imgSrc: "/images/home3/sec5_4.png",
       title: "Services",
       para: "We provide reliable engineering and manufacturing services across sectors like infrastructure, transportation, and renewable energy. With a focus on quality, precision, and timely delivery, we ensure every project meets the highest standards.",
     },
   ];
+
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
   return (
     <>
       <section className="portfolio-standard portfolio-standard-carousel  clients-section pb-0">
@@ -54,25 +54,41 @@ export default function OurClientsSection() {
       </section>
 
       <section className="section5 section pb-0">
-        <div className="items-wrapper">
-          {section5Arr.map(({ imgSrc, title, para }, index) => {
-            return (
-              <div
-                className="item"
-                key={index}
-                style={{
+        <div
+          className="items-wrapper"
+          style={
+            {
+              // Example: change a background color variable or anything else
+              "--item-hight": hoveredIndex !== null ? "20%" : "25%",
+            } as React.CSSProperties
+          }
+          onMouseLeave={() => setHoveredIndex(0)}
+        >
+          {section5Arr.map(({ imgSrc, title, para }, index) => (
+            <div
+              className="item"
+              key={index}
+              style={
+                {
                   backgroundImage: `url(${imgSrc})`,
-                }}
-              >
-                <div className="content">
-                  <h3>
-                    <a href="project-single.html">{title}</a>
-                  </h3>
-                  <p>{para}</p>
-                </div>
+                  "--item-hight":
+                    hoveredIndex === index
+                      ? "40%"
+                      : hoveredIndex !== null
+                      ? "20%"
+                      : "25%",
+                } as React.CSSProperties
+              }
+              onMouseEnter={() => setHoveredIndex(index)}
+            >
+              <div className="content">
+                <h3>
+                  <a href="project-single.html">{title}</a>
+                </h3>
+                <p>{para}</p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </section>
     </>

@@ -69,10 +69,15 @@
     }
 
     ul.list-items {
+        padding: 24px;
+        background-color: #fff;
+        border-radius: 16px;
+
         li {
             display: flex;
-            // align-items: center;
+            align-items: start;
             gap: 8px;
+            color: #1B1A1A;
 
             &::before {
                 display: none;
@@ -85,12 +90,13 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
-                background-color: #fff;
+                background-color: $color-theme ;
+                margin-top: 2px;
 
                 svg {
                     height: 12px;
                     // fill: $color-theme;
-                    color: $color-theme ;
+                    color: #fff;
                     stroke-width: 3px;
                 }
             }

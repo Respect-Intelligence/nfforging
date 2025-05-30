@@ -9,7 +9,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    background: url(https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg);
+    background: url("/images/home3/heroBanner.png");
 
     video {
         z-index: -2;
@@ -72,6 +72,7 @@
             font-size: 50px;
             font-weight: 700;
             margin-bottom: 15px;
+            @extend .barlowFont;
 
             // @media (max-width:767px) {
             //     font-size: 50px;

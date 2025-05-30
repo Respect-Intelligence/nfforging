@@ -5,8 +5,21 @@
 
 /*3.4 wpo-service-section */
 .wpo-service-section {
-
+    background-color: $color-theme;
+    color: #fff;
     padding-top: 50px;
+    padding: 120px 0;
+
+    .heading-layout2 {
+        p {
+            font-size: 20px;
+            color: currentColor;
+        }
+
+        .heading__title {
+            color: currentColor;
+        }
+    }
 
     &.s2 {
         padding-top: 120px;
@@ -30,7 +43,7 @@
         }
 
         h3 {
-            color: #000B47;
+            color: currentColor;
             font-size: 50px;
             font-weight: 700;
             line-height: 75px;
@@ -70,12 +83,32 @@
 
         display: flex;
         flex-direction: column;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
 
 
         @media (max-width:767px) {
             margin-right: 0px;
             max-width: 450px;
             margin: 0 auto;
+        }
+
+        .count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            border-bottom-left-radius: 16px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1E1E1E;
+            font-size: 28px;
+            font-weight: 700px;
+            height: 64px;
+            width: 64px;
         }
 
         .image {
@@ -98,6 +131,7 @@
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: #fff;
                 z-index: 1;
+
             }
 
             .line-one {
@@ -181,7 +215,7 @@
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                margin-top: -90px;
+                // margin-top: -90px;
                 z-index: 1;
                 transition: all .3s ease-in-out;
 
@@ -192,14 +226,17 @@
             }
 
             h2 {
-                margin-top: 20px;
+                // margin-top: 20px;
+                font-weight: 700;
+
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                margin-bottom: 8px;
 
                 a {
                     color: #000;
-                    font-size: 25px;
+                    font-size: 24px;
                     font-weight: 700;
                     transition: all .3s ease-in-out;
 
@@ -217,9 +254,9 @@
 
             p {
                 color: $color-dark;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 400;
-                line-height: 30px;
+                line-height: 24px;
                 margin-bottom: 0;
             }
         }

@@ -10,16 +10,19 @@ import TopBanner from "@/components/landing/TopBanner";
 import ServiceSection from "@/components/landing/ServiceSection";
 import AboutUsSection from "@/components/landing/AboutUsSection";
 import HighlightSection_2 from "@/components/landing/HighlightSection_2";
+import HighlightSection_3 from "@/components/landing/HighlightSection_3";
+import AboutWithHighlight from "@/components/landing/AboutWithHighlight";
 
 export default function Home() {
   return (
     <>
       <TopBanner />
-      <HighlightSection_2 />
+      <HighlightSection_3 />
       {/* <HighlightSection /> */}
       <AboutUsSection />
       <ServiceSection />
-      <Section_3 />
+      <AboutWithHighlight />
+      {/* <Section_3 /> */}
       {/* <Section_4 /> */}
       <OurClientsSection />
       <CirtificationSection />

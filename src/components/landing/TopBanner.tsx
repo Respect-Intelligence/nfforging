@@ -4,7 +4,7 @@ export default function TopBanner() {
   return (
     <>
       <section className="static-hero relative">
-        <video
+        {/* <video
           autoPlay
           muted
           loop
@@ -18,7 +18,7 @@ export default function TopBanner() {
             type="video/mp4"
           />
           Your browser does not support HTML5 video.
-        </video>
+        </video> */}
         <div className="container">
           <div className="wraper position-relative z-50">
             <div className="content">

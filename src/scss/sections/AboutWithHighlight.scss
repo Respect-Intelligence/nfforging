@@ -1,0 +1,154 @@
+@use "../global/vars" as *;
+@use "../global/mixins" as *;
+@use "../global/global" as *;
+
+
+.AboutWithHighlight {
+    padding: 120px 0;
+    background-color: #F5F5F5;
+    color: $color-heading;
+    text-align: center;
+
+    .about-video {
+        .heading-layout2 {
+            .heading__subtitle {
+                font-size: 20px;
+                font-weight: 700;
+                color: $color-theme;
+                margin-bottom: 8px;
+                line-height: normal;
+                text-align: left;
+
+            }
+
+            .heading__title {
+                color: #000;
+                font-size: 48px;
+                line-height: normal;
+                font: 700;
+                text-align: start;
+                margin-bottom: 24px;
+
+            }
+        }
+
+        .video-div-wraper {
+            width: 100%;
+            position: relative;
+
+            .playBtn {
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                svg {
+                    height: 36px;
+                    width: 36px;
+                    color: $color-theme;
+                    transition: fill 150ms linear;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+
+        }
+    }
+
+    .highlight {
+        padding: 40px 20px;
+        border-radius: 8px;
+        background-color: white;
+        color: $color-theme;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 150ms linear;
+
+
+
+        &:hover {
+            background-color: $color-theme;
+            // color: #fff;
+
+            .icon {
+                background-color: #fff;
+
+                svg {
+                    color: $color-theme;
+                }
+            }
+
+            h3 {
+                color: #fff;
+            }
+
+            p {
+                color: #fff;
+            }
+        }
+
+        .icon {
+            height: 80px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-color: $color-theme;
+            border-radius: 6px;
+            color: #fff;
+            margin-bottom: 40px;
+
+            svg {
+                width: 48px;
+                height: 48px;
+                // fill: white;
+                color: white;
+            }
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 36px;
+            color: #1B1A1A;
+            margin-bottom: 8px;
+            text-align: center;
+
+
+
+
+        }
+
+        p {
+            font-size: 20px;
+            line-height: normal;
+            margin-bottom: 0;
+            color: #525252;
+            text-align: center;
+        }
+
+    }
+
+    .desc {
+        text-align: start;
+        font-size: 20px;
+        line-height: normal;
+        color: #272727;
+    }
+}

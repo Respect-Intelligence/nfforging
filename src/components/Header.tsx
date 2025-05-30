@@ -164,10 +164,10 @@ export default function Header() {
                 </li>
               ))}
 
-              <li className="nav__item nav__item-btn d-none d-md-block">
+              <li className="nav__item nav__item-btn d-none d-md-block ">
                 <Link
                   href="/request-quote.html"
-                  className="btn btn__primary action__btn-request"
+                  className="btn btn__primary action__btn-request get-aquoteBtn"
                 >
                   <span>Get A Quote</span>
                   <ArrowRight height={18} />
