@@ -158,7 +158,10 @@ export default function Footer() {
                         className="form-control"
                         placeholder="Your Email Address"
                       />
-                      <button type="submit" className="btn btn__primary">
+                      <button
+                        type="submit"
+                        className="btn btn__primary d-flex align-items-center justify-content-center flex-shrink-0"
+                      >
                         <ArrowRight size={18} />
                       </button>
                     </div>

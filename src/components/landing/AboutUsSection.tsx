@@ -5,9 +5,9 @@ export default function AboutUsSection() {
     <>
       <section className="wpo-about-section section-padding">
         <div className="container">
-          <div className="row align-items-center">
+          <div className="row align-items-start flex-row-reverse">
             <div className="col-lg-6 col-12">
-              <div className="about-left-image pe-5">
+              <div className="about-left-image ">
                 <div className="img-wraper">
                   <img src="/images/home3/ab-1.jpg.png" alt="" />
                 </div>
@@ -19,8 +19,8 @@ export default function AboutUsSection() {
                 </div> */}
               </div>
             </div>
-            <div className="col-lg-6 col-12 ps-4">
-              <div className=" ps-4">
+            <div className="col-lg-6 col-12 pe-4">
+              <div className="">
                 <div className="heading-layout2">
                   <p className="heading__subtitle">About Company</p>
                   <h2 className="heading__title">
@@ -40,6 +40,27 @@ export default function AboutUsSection() {
                     journey from humble beginnings to industry leadership is
                     rooted in a commitment to quality and long-term vision.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row align-items-end ">
+            <div className="col-lg-6 col-12">
+              <div className="about-left-image ">
+                <div className="img-wraper">
+                  <img src="/images/home3/ab-2.png" alt="" />
+                </div>
+                {/* <div className="ab-2">
+                  <img
+                    src="https://sailo-next.vercel.app/images/ab-2.jpg"
+                    alt=""
+                  />
+                </div> */}
+              </div>
+            </div>
+            <div className="col-lg-6 col-12 ps-4">
+              <div className=" ps-4">
+                <div className="content">
                   <p>
                     At NF, we believe that while machines build products, people
                     build trust. Over the years, we've invested heavily in

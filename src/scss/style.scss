@@ -70,14 +70,15 @@
 
     ul.list-items {
         padding: 24px;
-        background-color: #fff;
+        background-color: #FFFFFF33;
         border-radius: 16px;
+        color: #fff;
 
         li {
             display: flex;
             align-items: start;
             gap: 8px;
-            color: #1B1A1A;
+            color: currentColor;
 
             &::before {
                 display: none;
@@ -90,13 +91,13 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
-                background-color: $color-theme ;
+                background-color: currentColor;
                 margin-top: 2px;
 
                 svg {
                     height: 12px;
                     // fill: $color-theme;
-                    color: #fff;
+                    color: $color-theme;
                     stroke-width: 3px;
                 }
             }

@@ -4,12 +4,24 @@
 
 .static-hero {
     height: 1000px;
-    max-height: 90vh;
+    max-height: 97vh;
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
+    padding: 0 !important;
+
+    // padding-bottom: 120px;
     background: url("/images/home3/heroBanner.png");
+
+    .hero-img {
+        img {
+
+            @include breakpoint-down(xxl) {
+                max-height: 300px;
+            }
+        }
+    }
 
     video {
         z-index: -2;
@@ -41,6 +53,8 @@
         // margin-top: -100px;
         // max-width: 702px;
         text-align: left;
+        // padding-top: 100px;
+
 
         @media (max-width:1499px) {
             margin-left: 150px;
@@ -86,9 +100,10 @@
         p {
             color: $white;
             font-size: 16px;
-            font-weight: 600;
+            // font-weight: 600;
             max-width: 649px;
-            margin-bottom: 45px;
+            // margin-bottom: 45px;
+            margin-bottom: 20px;
 
             @media (max-width:575px) {
                 font-size: 14px;

@@ -9,15 +9,36 @@
         padding-bottom: 0;
     }
 
+    background-color: #F5F5F5;
 
+
+    .heading-layout2 {
+        .heading__subtitle {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            margin-bottom: 10px;
+            color: $color-theme;
+        }
+
+        .heading__title {
+            font-size: 48px;
+            color: #1B1A1A;
+            line-height: 60px;
+            font-weight: 700px;
+            margin-bottom: 20px;
+        }
+    }
 
     .about-left-image {
         // @apply flex items-center;
         position: relative;
+        width: 100%;
         z-index: 1;
-        max-width: 730px;
-        max-height: 810px;
+        // max-width: 730px;
+        // max-height: 810px;
         width: fit-content;
+
 
         // margin-left: -150px;
 
@@ -36,6 +57,10 @@
 
         .img-wraper {
             position: relative;
+            width: 100%;
+            max-height: 480px;
+            overflow: hidden;
+            border-radius: 12px;
 
             img {
                 // width: 100%;
@@ -47,31 +72,33 @@
                 min-width: 100%;
                 min-height: 100%;
 
+
+
             }
 
-            &::before {
-                position: absolute;
-                left: -10px;
-                top: -10px;
-                height: 85%;
-                width: 77%;
+            // &::before {
+            //     position: absolute;
+            //     left: -10px;
+            //     top: -10px;
+            //     height: 85%;
+            //     width: 77%;
 
-                content: '';
-                background: $color-theme;
-                z-index: -1;
-            }
+            //     content: '';
+            //     background: $color-theme;
+            //     z-index: -1;
+            // }
 
-            &::after {
-                position: absolute;
-                right: -10px;
-                bottom: -10px;
-                height: 85%;
-                width: 77%;
+            // &::after {
+            //     position: absolute;
+            //     right: -10px;
+            //     bottom: -10px;
+            //     height: 85%;
+            //     width: 77%;
 
-                content: '';
-                background: $color-theme;
-                z-index: -1;
-            }
+            //     content: '';
+            //     background: $color-theme;
+            //     z-index: -1;
+            // }
         }
 
         .ab-2 {
@@ -142,7 +169,7 @@
 
         p {
             color: $cyan;
-            font-size: 16px;
+            font-size: 20px;
             // font-size: 18px;
             font-weight: 400;
             line-height: 30px;

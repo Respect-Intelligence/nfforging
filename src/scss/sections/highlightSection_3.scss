@@ -88,3 +88,79 @@
         }
     }
 }
+
+.highlightSection_4 {
+    width: 100%;
+    margin-top: 50px;
+
+    @include breakpoint-down(xxl) {
+        margin-top: 20px;
+    }
+
+    .wraper {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+
+        .item {
+            padding: 24px;
+            background-color: white;
+            border-radius: 8px;
+            color: #1E1E1E;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            // gap: 24px;
+            justify-content: space-between;
+            // flex-shrink: 0;
+
+            &:hover {
+                background-color: $color-theme;
+                color: #fff;
+
+                .icon {
+                    background-color: #fff;
+
+                    svg {
+                        color: $color-theme;
+                    }
+                }
+            }
+
+            .content {
+
+                // flex-grow: 1;
+                h2 {
+                    font-size: 28px;
+                    font-weight: 700;
+                    // @extend.barlowFont;
+                    color: currentColor;
+                    line-height: normal;
+                    white-space: nowrap;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: currentColor;
+                    margin-bottom: 0;
+                }
+            }
+
+            .icon {
+                height: 48px;
+                width: 48px;
+                border-radius: 50%;
+                background-color: #1E1E1E;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                margin-right: -10px;
+
+                svg {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

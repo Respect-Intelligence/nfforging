@@ -70,17 +70,17 @@ h6 {
 }
 
 .heading-layout2 {
-    .heading__subtitle:after {
-        content: '';
-        position: absolute;
-        left: -50px;
-        top: 50%;
-        width: 30px;
-        height: 2px;
-        border-radius: 1px;
-        background-color: $color-theme;
-        @include prefix(transform, translateY(-50%), webkit moz ms o);
-    }
+    // .heading__subtitle:after {
+    //     content: '';
+    //     position: absolute;
+    //     left: -50px;
+    //     top: 50%;
+    //     width: 30px;
+    //     height: 2px;
+    //     border-radius: 1px;
+    //     background-color: $color-theme;
+    //     @include prefix(transform, translateY(-50%), webkit moz ms o);
+    // }
 
     .heading__title {
         font-size: 40px;

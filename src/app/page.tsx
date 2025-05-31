@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <TopBanner />
-      <HighlightSection_3 />
+      {/* <HighlightSection_3 /> */}
       {/* <HighlightSection /> */}
       <AboutUsSection />
       <ServiceSection />
