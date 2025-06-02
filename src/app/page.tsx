@@ -22,12 +22,9 @@ export default function Home() {
       <AboutUsSection />
       <ServiceSection />
       <AboutWithHighlight />
-      {/* <Section_3 /> */}
-      {/* <Section_4 /> */}
       <OurClientsSection />
       <CirtificationSection />
       <ContactFormSection />
-      {/* <TestimonialSection /> */}
       <BlogSection />
       <MapSection />
     </>

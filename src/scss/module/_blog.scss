@@ -34,6 +34,11 @@
         padding-top: 30px;
         padding-left: 30px;
         overflow: hidden;
+
+        @include breakpoint-down(md) {
+            padding-top: 20px;
+            padding-left: 20px;
+        }
     }
 
     .blog__meta {
@@ -533,9 +538,7 @@
         margin-bottom: 10px;
     }
 
-    .blog-item .blog__content {
-        padding-left: 0;
-    }
+
 
     .blog-single .blog-item .blog__title {
         font-size: 20px;

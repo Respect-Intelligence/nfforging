@@ -1,6 +1,16 @@
+@use "../global/vars" as *;
+@use "../global/mixins" as *;
+@use "../global/global" as *;
+
 .clients-section {
 
+    @include breakpoint-down(lg) {
+        padding: 80px 0;
+    }
 
+    @include breakpoint-down(md) {
+        padding: 50px 0;
+    }
 
     .clients-carosoul {
         display: flex;

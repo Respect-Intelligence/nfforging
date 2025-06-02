@@ -294,8 +294,20 @@
 
     .contact-panel {
         justify-content: space-between;
+
         // align-items: center;
-        padding: 70px 80px;
+        @include breakpoint-up(lg) {
+            padding: 70px 80px;
+
+        }
+
+        @include breakpoint-up(md) {
+            padding: 50px 60px;
+        }
+
+        @include breakpoint-down(md) {
+            padding: 20px 10px;
+        }
 
         .contact__panel-title {
 
@@ -309,6 +321,17 @@
             color: #1B1A1A;
             @extend .barlowFont;
             margin-bottom: 12px;
+
+            @include breakpoint-down(lg) {
+                font-size: 40px;
+                line-height: 52px;
+
+            }
+
+            @include breakpoint-down(md) {
+                font-size: 36px;
+                line-height: 48px;
+            }
 
 
         }
@@ -324,6 +347,16 @@
             color: #1B1A1A;
             width: 80%;
 
+            @include breakpoint-down(lg) {
+                font-size: 18px;
+                line-height: 28px;
+
+            }
+
+            @include breakpoint-down(md) {
+                font-size: 16px;
+                line-height: 26px;
+            }
 
 
         }
@@ -334,6 +367,14 @@
             border-radius: 12px;
             flex: 0 0 60%;
             max-width: 60%;
+
+            @include breakpoint-down(lg) {
+                flex: 0 0 100%;
+                max-width: none;
+                padding: 20px;
+            }
+
+
 
             .form-control {
                 background-color: #fff;
@@ -361,6 +402,14 @@
             padding-bottom: 0;
             border-radius: 12px;
             overflow: hidden;
+
+            @include breakpoint-down(lg) {
+                flex: 0 0 100%;
+                max-width: none;
+                padding: 0px;
+                max-width: none;
+                margin-top: 20px;
+            }
 
             .contact__panel-info-top {
                 padding: 24px 50px;
@@ -481,18 +530,22 @@
     padding: 40px 0px;
     position: relative;
     // padding: 0;
-    margin-bottom: -140px;
+    margin-bottom: -100px;
 
-    // &:after {
-    //     content: '';
-    //     position: absolute;
-    //     bottom: 0;
-    //     left: 0;
-    //     z-index: -1;
-    //     width: 100%;
-    //     height: 100px;
-    //     background-color: #5d1212;
-    // }
+    @include breakpoint-down(md) {
+        margin-bottom: -50px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100px;
+        background-color: #5d1212;
+    }
 
     .contact-info-carousel {
         position: absolute;

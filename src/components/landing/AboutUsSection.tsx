@@ -7,7 +7,7 @@ export default function AboutUsSection() {
         <div className="container">
           <div className="row align-items-start flex-row-reverse">
             <div className="col-lg-6 col-12">
-              <div className="about-left-image ">
+              <div className="about-left-image d-none d-md-block">
                 <div className="img-wraper">
                   <img src="/images/home3/ab-1.jpg.png" alt="" />
                 </div>
@@ -58,8 +58,8 @@ export default function AboutUsSection() {
                 </div> */}
               </div>
             </div>
-            <div className="col-lg-6 col-12 ps-4">
-              <div className=" ps-4">
+            <div className="col-lg-6 col-12">
+              <div className=" ">
                 <div className="content">
                   <p>
                     At NF, we believe that while machines build products, people

@@ -4,7 +4,7 @@ import Image from "next/image";
 import logoLight from "@/assets/images/logo/logo-light.png";
 import logoDark from "@/assets/images/logo/logo-dark.png";
 import { useEffect, useState } from "react";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowDown, ArrowRight, ChevronDown, Phone } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { contactDetails } from "@/assets/static/data";
@@ -54,6 +54,7 @@ const menuItems = [
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
+  const [isMobilenavOpen, setIsMobilenavOpen] = useState(false);
   const pathname = usePathname();
   console.log(pathname);
 
@@ -96,12 +97,23 @@ export default function Header() {
               alt=""
             />
           </Link>
-          <button className="navbar-toggler" type="button">
+          <button
+            className={`navbar-toggler ${isMobilenavOpen ? "actived" : ""}`}
+            type="button"
+            onClick={() => {
+              setIsMobilenavOpen(!isMobilenavOpen);
+            }}
+          >
             <span className="menu-lines">
               <span></span>
             </span>
           </button>
-          <div className=" navbar-collapse" id="mainNavigation">
+          <div
+            className={`navbar-collapse ${
+              isMobilenavOpen ? "menu-opened" : ""
+            }`}
+            id="mainNavigation"
+          >
             <ul className="navbar-nav">
               {menuItems.map((item, idx) => (
                 <li
@@ -120,10 +132,9 @@ export default function Header() {
                   </Link>
                   {item.children && (
                     <>
-                      <i
-                        className="fa fa-angle-down"
-                        data-toggle="dropdown"
-                      ></i>
+                      <button className="dropdown-toggler d-md-none">
+                        <ChevronDown />
+                      </button>
                       <ul className="dropdown-menu">
                         {item.children.map((child, cIdx) => (
                           <li

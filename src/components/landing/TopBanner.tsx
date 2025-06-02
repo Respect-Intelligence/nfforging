@@ -20,20 +20,20 @@ export default function TopBanner() {
           />
           Your browser does not support HTML5 video.
         </video> */}
-        <div className="container">
+        <div className="container py-3 py-md-0">
           <div className="wraper position-relative pt-100 z-50">
             <div className="row ">
-              <div className="col-md-6">
-                <div className="content pe-lg-5">
+              <div className="col-lg-6">
+                <div className="content pe-lg-5  ">
                   {/* <h2>Welcome to NF Foregins</h2> */}
                   <h3 className="text-uppercase">
                     Providing Robust <br /> Engineering <br /> Solutions
                   </h3>
-                  <p>
+                  <p className="text-center text-lg-start w-100">
                     Decades of Excellence in Foundry, Forming & Fabrication –
                     Powered by People, Driven by Precision.
                   </p>
-                  <div className="hero-btn">
+                  <div className="hero-btn ">
                     <a
                       href="about.html"
                       className="btn btn__primary action__btn-request"
@@ -51,7 +51,7 @@ export default function TopBanner() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-lg-6 d-none d-lg-block">
                 <div className="hero-img">
                   <img src="/images/home3/heroBanner_2.png" alt="NF Foregins" />
                 </div>

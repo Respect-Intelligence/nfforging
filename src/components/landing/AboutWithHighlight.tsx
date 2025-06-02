@@ -1,13 +1,30 @@
+"use client";
+
 import React from "react";
 import "@/scss/sections/AboutWithHighlight.scss";
 import { aboutHighlights } from "@/assets/static/data";
 import { Indent } from "lucide-react";
+import Popup from "../Popup";
 
 function AboutWithHighlight() {
+  const [isPopupOpen, setIsPopupOpen] = React.useState(false);
   return (
     <>
-      <section className="AboutWithHighlight">
-        <div className="d-flex ">
+      <section className="AboutWithHighlight ">
+        <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/eDVSNnDEXK8?si=x1nhnw2h5Gszr4mk"
+            title="YouTube video player"
+            frameborder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </Popup>
+        {/* <div className="container-fluid"> */}
+        <div className=" d-flex flex-col flex-md-row">
           <div className="col-md-6">
             <div className="about-video">
               <div className="heading-layout2">
@@ -29,11 +46,11 @@ function AboutWithHighlight() {
                 team to help us achieve the highest levels of excellence.
               </p>
 
-              <div className="row g-3">
+              <div className="row g-3 ">
                 {aboutHighlights.map(
                   ({ icon, title, description, IconSvg }, index) => {
                     return (
-                      <div className="col-6" key={index}>
+                      <div className="col-md-6" key={index}>
                         <div className="highlight">
                           <div className="top">
                             <span className="icon">{IconSvg}</span>
@@ -48,9 +65,15 @@ function AboutWithHighlight() {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 ">
             <div className="video-div-wraper">
-              <div className="playBtn">
+              <button
+                onClick={() => {
+                  setIsPopupOpen(true);
+                }}
+                type="button"
+                className="playBtn"
+              >
                 <svg
                   width="29"
                   height="29"
@@ -63,11 +86,12 @@ function AboutWithHighlight() {
                     fill="currentColor"
                   />
                 </svg>
-              </div>
+              </button>
               <img src="/images/home3/Background (1).png" alt="" />
             </div>
           </div>
         </div>
+        {/* </div> */}
       </section>
     </>
   );

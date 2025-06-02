@@ -5,11 +5,11 @@ export default function MapSection() {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 position-relative">
-              <div className="contact-info-carousel">
+              <div className="contact-info-carousel ">
                 <h5 className="contact__info-title">Locations</h5>
 
                 <div
-                  className="contact-info-box slick-slide slick-cloned"
+                  className="contact-info-box slick-slide slick-cloned m-0"
                   data-slick-index="-1"
                   aria-hidden="true"
                   style={{ width: "240px" }}

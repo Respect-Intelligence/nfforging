@@ -357,12 +357,41 @@
         border-bottom: 1px solid rgba(255, 255, 255, .15);
         background-color: transparent;
 
-        .navbar-toggler .menu-lines {
+        .navbar-toggler {
+            border: none;
+            background: transparent;
+            box-shadow: none;
 
-            &:before,
-            &:after,
-            span {
-                background-color: $color-white;
+            &.actived {
+                border: none;
+            }
+
+            .menu-lines {
+
+                &:before,
+                &:after,
+                span {
+                    background-color: $color-theme;
+                }
+            }
+        }
+
+        .dropdown-toggler {
+            background-color: $color-theme;
+            color: #fff;
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            svg {
+                height: 18px;
             }
         }
     }
@@ -407,6 +436,8 @@
     top: 0;
     left: 0;
     background-color: transparent;
+
+
 }
 
 .header-layout2 {
