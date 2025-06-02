@@ -23,7 +23,7 @@ export default function TopBanner() {
         <div className="container">
           <div className="wraper position-relative pt-100 z-50">
             <div className="row ">
-              <div className="col -md-6">
+              <div className="col-md-6">
                 <div className="content pe-lg-5">
                   {/* <h2>Welcome to NF Foregins</h2> */}
                   <h3 className="text-uppercase">

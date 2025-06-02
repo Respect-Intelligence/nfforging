@@ -42,10 +42,10 @@ export default function ServiceSection() {
               <Swiper
                 modules={[Pagination, Autoplay]}
                 pagination={{ clickable: true }}
-                // autoplay={{
-                //   delay: 3000, // 1 second
-                //   disableOnInteraction: false,
-                // }}
+                autoplay={{
+                  delay: 3000, // 1 second
+                  disableOnInteraction: false,
+                }}
                 autoHeight={false}
                 spaceBetween={20}
                 // className="pb-5"

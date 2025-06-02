@@ -114,7 +114,10 @@
             justify-content: space-between;
             // flex-shrink: 0;
 
+
             &:hover {
+
+
                 background-color: $color-theme;
                 color: #fff;
 
@@ -127,11 +130,12 @@
                 }
             }
 
+
             .content {
 
                 // flex-grow: 1;
                 h2 {
-                    font-size: 28px;
+                    font-size: 24px;
                     font-weight: 700;
                     // @extend.barlowFont;
                     color: currentColor;
@@ -140,7 +144,7 @@
                 }
 
                 p {
-                    font-size: 16px;
+                    font-size: 14px;
                     color: currentColor;
                     margin-bottom: 0;
                 }
@@ -156,6 +160,7 @@
                 justify-content: center;
                 flex-shrink: 0;
                 margin-right: -10px;
+                margin-top: -10px;
 
                 svg {
                     color: #fff;
