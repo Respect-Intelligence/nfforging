@@ -42,14 +42,14 @@ export default function OurClientsSection() {
           </div>
         </div>
         <div className="">
-          <div className="clients-carosoul-wrpper mb-4">
-            <ClientsCarosoul className="swipe1" />
-            <ClientsCarosoul className="swipe1" />
+          <div className="clients-carosoul-wrpper mb-4 justify-content-center ">
+            <ClientsCarosoul className=" flex-wrap w-100  justify-content-center" />
+            {/* <ClientsCarosoul className="swipe1" /> */}
           </div>
-          <div className="clients-carosoul-wrpper justify-content-end mb-4 pb-1">
+          {/* <div className="clients-carosoul-wrpper justify-content-end mb-4 pb-1">
+            <ClientsCarosoul className="" />
             <ClientsCarosoul className="swipe2" />
-            <ClientsCarosoul className="swipe2" />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -101,7 +101,7 @@ function ClientsCarosoul({
   className: string;
 }): React.ReactNode {
   return (
-    <div className={`clients-carosoul ${className}`}>
+    <div className={`clients-carosoul  ${className}`}>
       <div className="client-logo-box">
         <img src="/images/clients/20.png" alt="Client Logo 20" />
       </div>
@@ -114,7 +114,7 @@ function ClientsCarosoul({
       <div className="client-logo-box">
         <img src="/images/clients/25.png" alt="Client Logo 25" />
       </div>
-      <div className="client-logo-box">
+      {/*<div className="client-logo-box">
         <img src="/images/clients/26.png" alt="Client Logo 26" />
       </div>
       <div className="client-logo-box">
@@ -191,7 +191,7 @@ function ClientsCarosoul({
       </div>
       <div className="client-logo-box">
         <img src="/images/clients/51.png" alt="Client Logo 51" />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -366,7 +366,13 @@
             padding: 40px;
             border-radius: 12px;
             flex: 0 0 60%;
-            max-width: 60%;
+            // max-width: 60%;
+
+            &.w-full {
+                flex: 0 0 100%;
+                max-width: none;
+                padding: 20px;
+            }
 
             @include breakpoint-down(lg) {
                 flex: 0 0 100%;

@@ -5,15 +5,17 @@ function Popup({
   isOpen,
   onClose,
   children,
+  className,
 }: {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <>
       {isOpen && (
-        <div className={`popup ${isOpen ? "" : "d-none"}`}>
+        <div className={`popup ${isOpen ? "" : "d-none"} ${className}`}>
           <div className="content">
             <button type="button" className="closeBtn" onClick={onClose}>
               <CircleX />

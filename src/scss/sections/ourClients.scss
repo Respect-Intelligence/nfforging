@@ -38,6 +38,16 @@
         align-items: center;
         justify-content: center;
 
+        @include breakpoint-down(lg) {
+            width: 200px;
+            height: 60px;
+        }
+
+        @include breakpoint-down(md) {
+            width: 100px;
+            height: 50px;
+        }
+
         img {
             width: auto;
             max-width: 60%;
