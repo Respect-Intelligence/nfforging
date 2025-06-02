@@ -374,6 +374,15 @@
                 padding: 20px;
             }
 
+            input::placeholder,
+            textarea::placeholder,
+            select:invalid {
+                color: #b59b9b;
+            }
+
+            select:valid {
+                color: #212529;
+            }
 
 
             .form-control {

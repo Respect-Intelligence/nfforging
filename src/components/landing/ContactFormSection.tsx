@@ -69,8 +69,11 @@ export default function ContactFormSection() {
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6">
                       <div className="form-group">
-                        <select className="form-control">
-                          <option>select your industry</option>
+                        <select className="form-control form-select" required>
+                          <option value="" disabled hidden>
+                            select your industry
+                          </option>
+
                           <option>Petroleum &amp; Gas Energy</option>
                           <option>Construction &amp; Engineering</option>
                           <option>Mechanical Engineering</option>

@@ -20,6 +20,10 @@
     background-color: $color-white;
     border-bottom: 1px solid #ededed;
 
+    a {
+        color: #6d6b6b;
+    }
+
     // font-family: bar;
     @extend .barlowFont;
 

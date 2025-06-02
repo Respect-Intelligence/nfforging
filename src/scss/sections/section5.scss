@@ -3,6 +3,14 @@
 @use "../global/global" as *;
 
 .section5 {
+    @include breakpoint-down(lg) {
+        padding: 80px 0;
+    }
+
+    @include breakpoint-down(md) {
+        padding: 50px 0;
+    }
+
     .items-wrapper {
 
         display: flex;
