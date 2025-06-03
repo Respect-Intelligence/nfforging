@@ -23,7 +23,7 @@ function page({ params }: PageProps) {
   const data = services_data[serviceName];
   return (
     <>
-      <BasicTopBanner title={data?.title} />
+      <BasicTopBanner bannerImgSrc="/images/banner5.jpg" title={data?.title} />
       <Overview serviceName={serviceName} />
 
       {/* <section className="text-content-section pb-90">

@@ -7,7 +7,7 @@ import React from "react";
 function page() {
   return (
     <>
-      <BasicTopBanner title="Contact Us" />
+      <BasicTopBanner bannerImgSrc="/images/contactus.jpg" title="Contact Us" />
       <ContactFormSection />
       <ContactInfoSection />
     </>
