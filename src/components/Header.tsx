@@ -144,7 +144,11 @@ export default function Header() {
               </div>
               <div className="col-sm-12 col-md-6 col-lg-6">
                 <div className="form-group">
-                  <select className="form-control form-select" required>
+                  <select
+                    className="form-control form-select"
+                    required
+                    defaultValue=""
+                  >
                     <option value="" disabled hidden>
                       select your industry
                     </option>

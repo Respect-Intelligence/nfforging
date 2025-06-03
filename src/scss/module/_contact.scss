@@ -380,7 +380,8 @@
 
             input::placeholder,
             textarea::placeholder,
-            select:invalid {
+            select:invalid,
+            select option[value="null"] {
                 color: #b59b9b;
             }
 
