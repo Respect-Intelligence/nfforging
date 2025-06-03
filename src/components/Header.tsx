@@ -84,22 +84,22 @@ export default function Header() {
       <Popup
         isOpen={isGetQuotePopupOpen}
         onClose={() => setIsGetQuotePopupOpen(false)}
-        className="contact-layout2 p-0"
+        className="contact-layout2 "
       >
-        <div className="contact-panel p-0 bg-transparent">
-          {/* <div className="col-sm-12">
+        <div className="contact-panel p-0  box-shadow-none">
+          <div className="col-sm-12">
             <h4 className="contact__panel-title">Send Us Message</h4>
             <div className="d-flex justify-content-center">
               <p className="contact__panel-desc mb-40">
                 Send us a message and we'll get back to you as soon as possible.
               </p>
             </div>
-          </div> */}
+          </div>
           <form
             method="post"
             action="assets/php/contact.php"
             id="contactForm"
-            className="contact__panel-form w-full"
+            className="contact__panel-form  border-r-0"
             noValidate
           >
             <div className="row">
@@ -167,7 +167,7 @@ export default function Header() {
                   ></textarea>
                 </div>
               </div>
-              <div className="col-sm-12 col-md-12 col-lg-12 d-flex flex-wrap align-items-center">
+              <div className="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
                 <button type="submit" className="btn btn__primary mr-40">
                   <span className="mx-2">Submit Request</span>
                   <i className="icon-arrow-right mx-2"></i>
@@ -182,6 +182,9 @@ export default function Header() {
               </div>
             </div>
           </form>
+          <div className="contact__panel-info">
+            <img src="/images/contactus.jpg" alt="" />
+          </div>
         </div>
       </Popup>
       <header className="header header-transparent header-layout1">
