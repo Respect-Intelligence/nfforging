@@ -40,7 +40,7 @@ export default function ServiceSection() {
             </div>
             <div className="service-slider">
               <Swiper
-                modules={[Pagination, Autoplay]}
+                modules={[Autoplay]}
                 pagination={{ clickable: true }}
                 autoplay={{
                   delay: 3000, // 1 second
