@@ -35,17 +35,13 @@ export default function TopBanner() {
                   </p>
                   <div className="hero-btn ">
                     <a
-                      href="about.html"
+                      href="contact-us"
                       className="btn btn__primary action__btn-request"
                     >
-                      Explore Our Solutions
+                      Contact Us
                       <ArrowRight className="h-4 ms-2" />
                     </a>
-                    <a
-                      href="about-us.html"
-                      className="btn btn__white"
-                      tabIndex={0}
-                    >
+                    <a href="about-us" className="btn btn__white" tabIndex={0}>
                       More About Us!
                     </a>
                   </div>

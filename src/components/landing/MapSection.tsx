@@ -15,15 +15,24 @@ export default function MapSection() {
                   style={{ width: "240px" }}
                   tabIndex={-1}
                 >
-                  <h4 className="contact__info-box-title">Berlin Office</h4>
+                  <h4 className="contact__info-box-title">
+                    Registered & Works Office
+                  </h4>
                   <ul className="contact__info-list list-unstyled">
                     <li>
-                      2307 Beverley Rd Brooklyn, New York 11226 United States.
+                      Sankrail Industrial Park N.H. 6 (Bombay Road), Dhulagarh,
+                      Sankrail Howrah - 711 302, West Bengal, India
                     </li>
                     <li>
                       Email:{" "}
-                      <a href="mailto:Promina@7oroof.com" tabIndex={-1}>
-                        Promina@7oroof.com
+                      <a href="mailto:info@nfforging.com" tabIndex={-1}>
+                        info@nfforging.com
+                      </a>
+                    </li>
+                    <li>
+                      Mobile:{" "}
+                      <a href="tel:+91 33 2661 7660" tabIndex={-1}>
+                        +91 33 2661 7660
                       </a>
                     </li>
                     <li>Hours: Mon-Fri: 8am – 7pm</li>

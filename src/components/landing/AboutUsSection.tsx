@@ -30,7 +30,7 @@ export default function AboutUsSection() {
                 <div className="content">
                   {/* <h2>About Company</h2>
                 <h3>We Are Solving All of Your Business Problem</h3> */}
-                  <p>
+                  <p className="text-justify">
                     A quarter century ago, our founding father Mr. Murari Lal
                     Dhanuka planted the seeds of what would grow into the LAL
                     BABA group — a name now synonymous with reliability and
@@ -61,7 +61,7 @@ export default function AboutUsSection() {
             <div className="col-lg-6 col-12">
               <div className=" ">
                 <div className="content">
-                  <p>
+                  <p className="text-justify">
                     At NF, we believe that while machines build products, people
                     build trust. Over the years, we've invested heavily in
                     assembling a highly skilled, experienced, and passionate

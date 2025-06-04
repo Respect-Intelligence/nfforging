@@ -33,7 +33,7 @@ export default function ContactFormSection() {
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="Name"
+                          placeholder="Name*"
                           id="contact-name"
                           name="contact-name"
                           required
@@ -46,7 +46,7 @@ export default function ContactFormSection() {
                         <input
                           type="email"
                           className="form-control"
-                          placeholder="Email"
+                          placeholder="Email*"
                           id="contact-email"
                           name="contact-email"
                           required
@@ -59,7 +59,7 @@ export default function ContactFormSection() {
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="Phone"
+                          placeholder="Phone*"
                           id="contact-Phone"
                           name="contact-phone"
                           required
@@ -76,7 +76,7 @@ export default function ContactFormSection() {
                           defaultValue=""
                         >
                           <option value="" disabled hidden>
-                            select your industry
+                            select your industry*
                           </option>
 
                           <option>Petroleum &amp; Gas Energy</option>

@@ -85,7 +85,7 @@ export default function OurClientsSection() {
                 <h3>
                   <a href="project-single.html">{title}</a>
                 </h3>
-                <p>{para}</p>
+                <p className="text-justify">{para}</p>
               </div>
             </div>
           ))}
