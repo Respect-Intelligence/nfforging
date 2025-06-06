@@ -1,0 +1,30 @@
+.blog-page-title {
+    margin-top: 100px;
+
+    ol {
+        li {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+
+.blog.blog-single {
+    .recent-post-swiper {
+        padding-bottom: 30px;
+    }
+
+    .blog-share {
+        a {
+            height: 55px;
+            color: white;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            min-width: 210px;
+
+        }
+    }
+}

@@ -18,7 +18,7 @@ const blogPosts = [
     title: "Providing Robust Engineering Solutions",
     description:
       "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group",
-    link: "#",
+    link: "blog",
   },
   {
     imgSrc: "https://nfforging.com/images/blog-img2.jpg",
@@ -26,7 +26,7 @@ const blogPosts = [
     title: "Providing Robust Engineering Solutions",
     description:
       "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group",
-    link: "#",
+    link: "blog",
   },
   {
     imgSrc: "https://nfforging.com/images/blog-img3.jpg",
@@ -34,7 +34,7 @@ const blogPosts = [
     title: "Providing Robust Engineering Solutions",
     description:
       "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group",
-    link: "#",
+    link: "blog",
   },
   {
     imgSrc: "https://nfforging.com/images/blog-img3.jpg",
@@ -42,7 +42,7 @@ const blogPosts = [
     title: "Providing Robust Engineering Solutions",
     description:
       "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group",
-    link: "#",
+    link: "blog",
   },
 ];
 

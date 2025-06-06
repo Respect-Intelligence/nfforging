@@ -69,16 +69,21 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.innerWidth >= 992) {
+      console.log(pathname, "fd");
+
+      if (pathname == "/blog") {
+        setIsSticky(true);
+      } else if (window.innerWidth >= 992) {
         setIsSticky(window.scrollY > 200);
       } else {
         setIsSticky(false);
       }
     };
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
   return (
     <>
       <Popup
