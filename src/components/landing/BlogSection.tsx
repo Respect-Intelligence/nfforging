@@ -118,7 +118,7 @@ const BlogSection = () => {
                           tabIndex={-1}
                         >
                           <div className="blog__img">
-                            <a href="#" tabIndex={-1}>
+                            <a href={link} tabIndex={-1}>
                               <img src={imgSrc} alt={title} />
                             </a>
                           </div>

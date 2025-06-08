@@ -39,6 +39,7 @@ const menuItems = [
         title: "Foundry",
         href: "/foundry",
         children: [
+          { title: "Overview", href: "/crf" },
           { title: "Products", href: "/crf/products" },
           { title: "Infrastructure", href: "/crf/infrastructure" },
           { title: "Quality Assurance", href: "/crf/foundry-quality" },

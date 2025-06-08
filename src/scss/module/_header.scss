@@ -221,6 +221,18 @@
             padding: 0 20px;
             margin-right: 0;
 
+            &:hover {
+                >.nav__item-link {
+
+                    color: $color-theme;
+
+                    &:after {
+                        opacity: 1;
+                        width: 11px;
+                    }
+                }
+            }
+
             .nav__item-link {
                 color: $color-body;
                 text-transform: capitalize;
@@ -244,14 +256,7 @@
                     @include prefix(transition, all 0.3s ease, webkit moz ms o);
                 }
 
-                &:hover {
-                    color: $color-theme;
 
-                    &:after {
-                        opacity: 1;
-                        width: 11px;
-                    }
-                }
             }
         }
 

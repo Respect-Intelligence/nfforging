@@ -7,6 +7,12 @@ function OurTeams_section() {
     <section className="team-layout2 text-center pb-30">
       <div className="container">
         <div className="row">
+          <div className="heading-layout2">
+            <p className="heading__subtitle">Our Teams</p>
+            <h2 className="heading__title">
+              Meet the Experts Behind Our Success
+            </h2>
+          </div>
           {teamMembers.map((member, index) => (
             <div key={index} className="col-sm-6 col-md-6 col-lg-3">
               <div className="member">
