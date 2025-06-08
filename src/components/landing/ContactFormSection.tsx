@@ -7,7 +7,7 @@ export default function ContactFormSection() {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12">
-              <div className="contact-panel mt--140">
+              <div className="contact-panel ">
                 <div className="col-sm-12">
                   <h4 className="contact__panel-title">Send Us Message</h4>
                   <div className="d-flex justify-content-center">
@@ -114,7 +114,7 @@ export default function ContactFormSection() {
                 </form>
                 <div className="contact__panel-info">
                   <div className="contact__panel-info-top">
-                    <div className="contact-info-box">
+                    <div className="contact-info-box ">
                       <h3>Registered & Works Office</h3>
                       {/* <h4 className="contact__info-box-title">Our Location</h4> */}
                       <ul className="contact__info-list list-unstyled">

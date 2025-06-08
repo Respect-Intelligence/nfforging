@@ -71,7 +71,7 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       console.log(pathname, "fd");
-
+      setIsMobilenavOpen(false);
       if (pathname == "/blog") {
         setIsSticky(true);
       } else if (window.innerWidth >= 992) {
@@ -240,6 +240,7 @@ export default function Header() {
                     className={`nav__item ${
                       item.children ? "with-dropdown" : ""
                     }`}
+                    onClick={(e) => {}}
                   >
                     <Link
                       href={item.href ? item.href : "#"}

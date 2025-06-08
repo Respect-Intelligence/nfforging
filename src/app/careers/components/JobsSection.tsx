@@ -23,12 +23,12 @@ function JobsSection() {
         </div>
 
         <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-12">
+          <div className="col-12">
             <Swiper
               modules={[Pagination]}
               pagination={{ clickable: true }}
               spaceBetween={30}
-              slidesPerView={3}
+              slidesPerView={1}
               breakpoints={{
                 480: {
                   slidesPerView: 1,

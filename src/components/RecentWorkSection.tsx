@@ -48,7 +48,7 @@ const RecentWorkSection = () => {
           <div className="col-sm-12 col-md-12 col-lg-12">
             <Swiper
               spaceBetween={30}
-              slidesPerView={3}
+              slidesPerView={1}
               autoHeight={true}
               breakpoints={{
                 992: { slidesPerView: 3 },

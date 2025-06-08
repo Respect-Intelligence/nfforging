@@ -294,6 +294,11 @@
 
     .contact-panel {
         justify-content: space-between;
+        margin-top: -140px;
+
+        @include breakpoint-down(lg) {
+            margin-top: 20px;
+        }
 
         // align-items: center;
         @include breakpoint-up(lg) {

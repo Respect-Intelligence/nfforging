@@ -26,7 +26,10 @@ const ContactInfoSection = () => {
       <div className="container">
         <div className="row">
           {contactInfo.map((info, index) => (
-            <div className="col-sm-12 col-md-6 col-lg-6" key={index}>
+            <div
+              className="col-sm-12 col-md-6 col-lg-6 mb-2 mb-md-0"
+              key={index}
+            >
               <div className="contact-info-box">
                 <h4 className="contact__info-box-title">{info.office}</h4>
                 <ul className="contact__info-list list-unstyled">

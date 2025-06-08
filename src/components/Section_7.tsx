@@ -9,7 +9,7 @@ function Section_7() {
         <div className="container-fluid col-padding-0 bg-theme">
           <div className="row">
             <div
-              className="col-sm-12 col-md-12 col-lg-6 background-banner"
+              className="col-sm-12 position-relative col-md-12 col-lg-6 background-banner"
               style={{
                 backgroundImage: "url(/images/about/vision_perpose.jpg)",
                 backgroundPosition: "center",
@@ -18,7 +18,7 @@ function Section_7() {
             >
               <div className="cta__banner bg-white">
                 <h5 className="cta__title">Forging Excellence Since 1997</h5>
-                <p className="cta__desc">
+                <p className="cta__desc text-justify">
                   For over 25 years, NF Forgings Pvt. Ltd. has been a leader in
                   Foundry, Forming, and Fabrication. Our commitment to quality,
                   innovation, and skilled craftsmanship has solidified our
@@ -41,7 +41,7 @@ function Section_7() {
                   <h2 className="heading__title">
                     Driven by Vision, Powered by Purpose
                   </h2>
-                  <p className="heading__desc">
+                  <p className="heading__desc text-justify">
                     At NF Forgings, our vision is to lead the steel engineering
                     industry through innovation and quality. Our mission is to
                     deliver reliable, high-performance solutions by combining
@@ -56,7 +56,7 @@ function Section_7() {
                       </div>
                       <div className="fancybox__content">
                         <h4 className="fancybox__title">OUR VISION</h4>
-                        <p className="fancybox__desc">
+                        <p className="fancybox__desc text-justify">
                           We have the vision to become the pioneers in the steel
                           engineering industry. We are relentlessly working to
                           achieve the numerouno status in the industry. We have
@@ -72,7 +72,7 @@ function Section_7() {
                       </div>
                       <div className="fancybox__content">
                         <h4 className="fancybox__title">OUR MISSION</h4>
-                        <p className="fancybox__desc">
+                        <p className="fancybox__desc text-justify">
                           We aim to leverage our existing facilities and
                           technologies as well as our technical expertise so
                           that we can evolve as a team to do better. Our

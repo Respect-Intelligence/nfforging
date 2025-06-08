@@ -34,7 +34,10 @@ function StatusSection() {
             </div>
             {statusArr.map((item, index) => {
               return (
-                <div className="col-12 col-lg-6 statusItem-wrapper" key={index}>
+                <div
+                  className="col-12 col-lg-6 statusItem-wrapper mb-2 mb-md-0"
+                  key={index}
+                >
                   <div className="statusItem">
                     <div className="img-wraper">
                       <img src={item.image} alt="" />
