@@ -10,48 +10,56 @@ import { usePathname } from "next/navigation";
 import { contactDetails } from "@/assets/static/data";
 import Popup from "./Popup";
 const menuItems = [
-  { title: "Home", href: "/" },
-  { title: "About Us", href: "/about-us" },
+  { id: "1", title: "Home", href: "/" },
+  { id: "2", title: "About Us", href: "/about-us" },
   {
+    id: "3",
     title: "Product & Services",
     href: "",
     children: [
       {
+        id: "3_1",
         title: "CRF",
         href: "/crf",
-
         children: [
-          { title: "Overview", href: "/crf" },
-          { title: "Sheet Piles", href: "/crf/sheet-piles" },
+          { id: "3_1_1", title: "Overview", href: "/crf" },
+          { id: "3_1_2", title: "Sheet Piles", href: "/crf/sheet-piles" },
           {
+            id: "3_1_3",
             title: "Solar Module Mounting Solutions",
             href: "/crf/solar-module",
           },
-          { title: "Wagon & Coaches", href: "/crf/wagon-coaches" },
+          { id: "3_1_4", title: "Wagon & Coaches", href: "/crf/wagon-coaches" },
           {
+            id: "3_1_5",
             title: "Pre Engineered Building",
             href: "/crf/pre-engineered-building",
           },
-          { title: "Crash Barriers", href: "/crf/crash-barriers" },
+          { id: "3_1_6", title: "Crash Barriers", href: "/crf/crash-barriers" },
         ],
       },
       {
+        id: "3_2",
         title: "Foundry",
         href: "/foundry",
         children: [
-          { title: "Overview", href: "/crf" },
-          { title: "Products", href: "/crf/products" },
-          { title: "Infrastructure", href: "/crf/infrastructure" },
-          { title: "Quality Assurance", href: "/crf/foundry-quality" },
+          { id: "3_2_1", title: "Overview", href: "/crf" },
+          { id: "3_2_2", title: "Products", href: "/crf/products" },
+          { id: "3_2_3", title: "Infrastructure", href: "/crf/infrastructure" },
+          {
+            id: "3_2_4",
+            title: "Quality Assurance",
+            href: "/crf/foundry-quality",
+          },
         ],
       },
-      { title: "Fabrication", href: "/fabrication" },
-      { title: "Services", href: "/services" },
+      { id: "3_3", title: "Fabrication", href: "/fabrication" },
+      { id: "3_4", title: "Services", href: "/services" },
     ],
   },
-  { title: "Careers", href: "/careers" },
-  { title: "Sustainability", href: "/sustainability" },
-  { title: "Contact", href: "/contact-us" },
+  { id: "4", title: "Careers", href: "/careers" },
+  { id: "5", title: "Sustainability", href: "/sustainability" },
+  { id: "6", title: "Contact", href: "/contact-us" },
 ];
 
 export default function Header() {
@@ -59,6 +67,9 @@ export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobilenavOpen, setIsMobilenavOpen] = useState(false);
   const pathname = usePathname();
+  const [mobileNavDropdownOpen, setMobileNavDropdownOpen] = useState<string[]>(
+    []
+  );
   console.log(pathname);
 
   const isActive = (href: string) => {
@@ -92,7 +103,7 @@ export default function Header() {
         onClose={() => setIsGetQuotePopupOpen(false)}
         className="contact-layout2 "
       >
-        <div className="contact-panel p-0  box-shadow-none">
+        <div className="contact-panel p-0 mt-0  box-shadow-none">
           <div className="col-sm-12">
             <h4 className="contact__panel-title">Send Us Message</h4>
             <div className="d-flex justify-content-center">
@@ -248,14 +259,40 @@ export default function Header() {
                         isActive(item.href) ? "active" : ""
                       } ${item.children ? "dropdown-toggle" : ""}`}
                     >
-                      {item.title}
+                      {item.title}{" "}
+                      {item.children && (
+                        <button
+                          className={`dropdown-toggler d-md-none ${
+                            mobileNavDropdownOpen.indexOf(item.id) === -1
+                              ? ""
+                              : "opened"
+                          }`}
+                          onClick={(e) => {
+                            setMobileNavDropdownOpen((prev) => {
+                              if (prev.indexOf(item.id) === -1) {
+                                return [...prev, item.id];
+                              } else {
+                                return prev.filter((el) => el !== item.id);
+                              }
+                            });
+                          }}
+                        >
+                          <ChevronDown />
+                        </button>
+                      )}
                     </Link>
                     {item.children && (
                       <>
-                        <button className="dropdown-toggler d-md-none">
+                        {/* <button className="dropdown-toggler d-md-none">
                           <ChevronDown />
-                        </button>
-                        <ul className="dropdown-menu">
+                        </button> */}
+                        <ul
+                          className={`dropdown-menu ${
+                            mobileNavDropdownOpen.indexOf(item.id) === -1
+                              ? ""
+                              : "show"
+                          }`}
+                        >
                           {item.children.map((child, cIdx) => (
                             <li
                               key={cIdx}
@@ -270,9 +307,40 @@ export default function Header() {
                                 }`}
                               >
                                 {child.title}
+                                {child.children && (
+                                  <button
+                                    className={`dropdown-toggler d-md-none ${
+                                      mobileNavDropdownOpen.indexOf(
+                                        child.id
+                                      ) === -1
+                                        ? ""
+                                        : "opened"
+                                    }`}
+                                    onClick={(e) => {
+                                      setMobileNavDropdownOpen((prev) => {
+                                        if (prev.indexOf(child.id) === -1) {
+                                          return [...prev, child.id];
+                                        } else {
+                                          return prev.filter(
+                                            (el) => el !== child.id
+                                          );
+                                        }
+                                      });
+                                    }}
+                                  >
+                                    <ChevronDown />
+                                  </button>
+                                )}
                               </Link>
                               {child.children && (
-                                <ul className="dropdown-menu">
+                                <ul
+                                  className={`dropdown-menu ${
+                                    mobileNavDropdownOpen.indexOf(child.id) ===
+                                    -1
+                                      ? ""
+                                      : "show"
+                                  }`}
+                                >
                                   {child.children.map((sub, sIdx) => (
                                     <li className="nav__item" key={sIdx}>
                                       <Link
