@@ -1,0 +1,306 @@
+@use "../global/vars" as *;
+@use "../global/mixins" as *;
+@use "../global/global" as *;
+
+
+// Animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+// Main Section
+.milestone-section {
+    padding: 5rem 0;
+    background-color: $color-gray;
+    overflow: hidden;
+    position: relative;
+}
+
+// Header Styles
+
+
+// Timeline Container
+.timeline-container {
+    position: relative;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+
+// Milestones Wrapper
+.milestones-wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 2rem 0;
+
+    @include breakpoint-down(md) {
+        padding: 1rem;
+    }
+
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        height: 100%;
+        width: 0;
+        border-right: 2px dashed white;
+
+        background-color: $color-dark;
+
+        @include breakpoint-down(md) {
+            left: 0;
+            // transform: none;
+            transform: translateX(9px);
+        }
+
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        height: 100%;
+        width: 20px;
+        background-color: $color-dark;
+
+        @include breakpoint-down(md) {
+            left: 0;
+            transform: none;
+        }
+    }
+}
+
+// Milestone Items
+.milestone-item {
+    position: relative;
+    animation: fadeInUp 0.6s ease-out;
+    z-index: 1;
+
+    @include breakpoint-up(md) {
+
+        &:not(:first-child) {
+            margin-top: -20px;
+        }
+    }
+
+    @include breakpoint-down(md) {
+
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+
+    display: flex;
+    justify-content: flex-end;
+
+    .milestone-card {
+        margin-left: 2rem;
+    }
+
+    .year-badge {
+        top: -1rem;
+        left: -1rem;
+    }
+
+    .milestone-arrow {
+        position: absolute;
+        top: 50%;
+        left: -0.75rem;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-right: 0.5rem solid $color-white;
+        border-top: 0.5rem solid transparent;
+        border-bottom: 0.5rem solid transparent;
+    }
+
+    &:nth-child(even) {
+        animation-delay: 0.2s;
+
+
+
+    }
+
+    @include breakpoint-up(md) {
+
+
+        &:nth-child(odd) {
+            animation-delay: 0.1s;
+
+            display: flex;
+            justify-content: flex-start;
+
+            .milestone-card {
+                margin-right: 2rem;
+                margin-left: unset;
+            }
+
+            .year-badge {
+                top: -1rem;
+                right: -1rem;
+                left: unset;
+            }
+
+            .milestone-arrow {
+                position: absolute;
+                top: 50%;
+                right: -0.75rem;
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-left: 0.5rem solid $color-white;
+                border-top: 0.5rem solid transparent;
+                border-bottom: 0.5rem solid transparent;
+            }
+
+
+
+        }
+    }
+
+
+
+
+    // Milestone Card
+    .milestone-card {
+        background-color: $color-white;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        // max-width: 28rem;
+        width: 40%;
+        position: relative;
+        transition: transform 0.3s ease;
+        z-index: 1;
+
+        @include breakpoint-down(md) {
+            width: 90%;
+
+        }
+
+
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .year-badge {
+            position: absolute;
+            background-color: $color-theme;
+            color: $color-white;
+            font-weight: bold;
+            font-size: 1.125rem;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            @include breakpoint-down(md) {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+        }
+
+        .milestone-content {
+            padding-top: 1rem;
+
+            .milestone-card-title {
+                font-size: 1.125rem;
+                font-weight: bold;
+                color: $color-heading;
+                margin-bottom: 0.5rem;
+
+                @include breakpoint-down(md) {
+                    font-size: 15px;
+                }
+            }
+
+            .milestone-description {
+                color: $color-body;
+                font-size: 0.875rem;
+                line-height: 1.6;
+                margin: 0;
+            }
+        }
+    }
+
+
+    &:nth-child(even) {
+        .red-dot {
+            &::before {
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &:nth-child(odd) {
+        .red-dot {
+            &::before {
+                transform: translate(50%, -50%);
+                right: 0;
+            }
+        }
+    }
+
+    .red-dot {
+        height: 4px;
+        width: 50%;
+        position: absolute;
+        top: 4px;
+        background-color: $color-theme;
+        z-index: 0;
+
+        @include breakpoint-down(md) {
+            width: 90%;
+            left: 0;
+
+
+            &::before {
+                transform: translate(-74%, -50%) !important;
+                right: unset !important;
+            }
+        }
+
+        &::before {
+            content: "";
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            background-color: $color-theme;
+            position: absolute;
+            z-index: 9;
+            top: 50%;
+            // transform: translateY(-50%);
+
+        }
+    }
+
+}

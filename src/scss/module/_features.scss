@@ -6,19 +6,33 @@
 
 .feature-item {
     position: relative;
-    margin-bottom: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
     .feature__img {
         overflow: hidden;
+        height: 250px;
+        display: flex;
 
         img {
             @include prefix(transition, transform .3s ease, webkit moz ms o);
+            min-width: 100%;
+            width: unset;
+            max-width: unset;
+            height: auto;
+            flex-shrink: 0;
         }
     }
 
     .feature__content {
         position: relative;
         padding: 46px 45px 20px 50px;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .feature__subtitle {
@@ -50,6 +64,7 @@
         height: 40px;
         line-height: 40px;
         min-width: 110px;
+        width: fit-content;
 
         i {
             opacity: 0;

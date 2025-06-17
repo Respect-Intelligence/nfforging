@@ -1,3 +1,5 @@
+import { Milestone } from "./types";
+
 const validSlugs = ["crf", "foundry"] as const;
 type ValidSlug = (typeof validSlugs)[number];
 
@@ -491,5 +493,67 @@ export const opotunityList = [
   {
     iconSrc: "/images/careers/compliant.png",
     para: "Employees Benefits and Policy",
+  },
+];
+export const milestones: Milestone[] = [
+  {
+    year: "1964",
+    title: "LALBABA INDUSTRIAL CORPORATION",
+    description: "Commenced operations at Belur, West Bengal",
+    isLeft: true,
+  },
+  {
+    year: "1972",
+    title: "Railway Market Entry",
+    description:
+      "Entered the Railways market as a supplier of rolling stock products",
+    isLeft: false,
+  },
+  {
+    year: "1982",
+    title: "NF FORGINGS PVT LTD",
+    description:
+      "Set up a manufacturing unit for casting Cold Rolled Formed and Fabrications as NF FORGINGS PVT LTD, SANKRAIL (Unit 1)",
+    isLeft: true,
+  },
+  {
+    year: "1991",
+    title: "Air Brake Components",
+    description:
+      "PEW Pvt. Ltd. commenced operations for supplying Air Brake components to Indian Railways",
+    isLeft: false,
+  },
+  {
+    year: "2002",
+    title: "FRP & Paints Catering",
+    description:
+      "MACEDON VINIMAY PVT. LTD setup in SODEPUR first of its kind state-of-art of FRP & Paints Catering to power sector and Railway sector",
+    isLeft: true,
+  },
+  {
+    year: "2009",
+    title: "Seamless Pipes Innovation",
+    description:
+      "LALBABA SEAMLESS TUBES PVT. LTD was set up in Haldia, West Bengal, a first of its kind state-of-art seamless pipes unit in Eastern India",
+    isLeft: false,
+  },
+  {
+    year: "2018",
+    title: "Retro Fitment Services",
+    description:
+      "NF Forgings Pvt. Limited Started Retro fitment, refurbishment, epic, upgradation of rolling stock at Indian railway site",
+    isLeft: true,
+  },
+  {
+    year: "2021",
+    title: "NAIHATI Expansion",
+    description: "NF Forgings Pvt. Limited established unit 2 at NAIHATI",
+    isLeft: false,
+  },
+  {
+    year: "2023",
+    title: "TULSIBERIA Growth",
+    description: "NF Forgings Pvt. Limited established unit 3 at TULSIBERIA",
+    isLeft: true,
   },
 ];

@@ -4,38 +4,64 @@ import "@/scss/sections/statusSection.scss";
 function StatusSection() {
   const statusArr = [
     {
-      title: "Hindalco",
-      status: "100 Mn",
-      para: "Children immunised with polio, BCG, DPT & Hepatitis-B vaccines",
-      image: "/images/features/3.jpg",
+      title: "Step 1: Define Your Role",
+      status: "Identify Risk Zones",
+      para: "Entire the Risk Zone & define your Role",
+      image: "/images/sustainability/step1.jpg",
     },
     {
-      title: "Hindalco",
-      status: "100 Mn",
-      para: "Children immunised with polio, BCG, DPT & Hepatitis-B vaccines",
-      image: "/images/features/2.jpg",
+      title: "Step 2: Clarify Value",
+      status: "Effective Communication",
+      para: "Communicate & Clarify value",
+      image: "/images/sustainability/step2.jpg",
+    },
+    {
+      title: "Step 3: Time Awareness",
+      status: "Self Assessment",
+      para: "Analyze your use of TIME",
+      image: "/images/sustainability/step3.jpg",
+    },
+    {
+      title: "Step 4: Prioritize & Plan",
+      status: "Goal Setting",
+      para: "Allocate time according to the Priorities & set your Goal",
+      image: "/images/sustainability/step4.jpg",
+    },
+    {
+      title: "Step 5: Stay Organized",
+      status: "Task Management",
+      para: "Maintain a 'TO DO LIST'",
+      image: "/images/sustainability/step5.jpg",
+    },
+    {
+      title: "Step 6: Follow Through",
+      status: "Execution",
+      para: "Have a Follow Through",
+      image: "/images/sustainability/step6.jpg",
+    },
+    {
+      title: "Step 7: Delegate Wisely",
+      status: "Smart Delegation",
+      para: "Delegate low Priority items",
+      image: "/images/sustainability/step7.jpg",
     },
   ];
+
   return (
     <>
       <section className="statusSection">
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-12">
               <div className="heading text-center mb-50">
-                <span className="heading__subtitle">
-                  The Best A Grade Commercial &amp; Residential Services
-                </span>
-                <h2 className="heading__title">
-                  High Quality Construction Solutions For Residentials &amp;
-                  Industries!
-                </h2>
+                <span className="heading__subtitle">Action Plan</span>
+                <h2 className="heading__title">Weaving a Sustainable Future</h2>
               </div>
             </div>
             {statusArr.map((item, index) => {
               return (
                 <div
-                  className="col-12 col-lg-6 statusItem-wrapper mb-2 mb-md-0"
+                  className="col-12 col-lg-6 statusItem-wrapper mb-2 mb-md-4 "
                   key={index}
                 >
                   <div className="statusItem">

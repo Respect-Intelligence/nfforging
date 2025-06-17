@@ -1,5 +1,6 @@
 import CirtificationSection from "@/components/CirtificationSection";
 import ContactFormSection from "@/components/landing/ContactFormSection";
+import MilestoneSection from "@/components/MilestoneSection";
 import OurTeams_section from "@/components/OurTeams_section";
 import RecentWorkSection from "@/components/RecentWorkSection";
 import SecondUnitAboutSection from "@/components/SecondUnitAboutSection";
@@ -17,6 +18,7 @@ function page() {
       <SecondUnitAboutSection className="pb-70 " />
       <OurTeams_section />
       <Section_7 />
+      <MilestoneSection />
       <RecentWorkSection />
     </>
   );
