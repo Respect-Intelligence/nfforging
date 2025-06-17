@@ -2,6 +2,7 @@ import CirtificationSection from "@/components/CirtificationSection";
 import ContactFormSection from "@/components/landing/ContactFormSection";
 import OurTeams_section from "@/components/OurTeams_section";
 import RecentWorkSection from "@/components/RecentWorkSection";
+import SecondUnitAboutSection from "@/components/SecondUnitAboutSection";
 import Section_6 from "@/components/Section_6";
 import Section_7 from "@/components/Section_7";
 import Testimonials from "@/components/Testimonials";
@@ -13,13 +14,10 @@ function page() {
     <>
       <TopBanner />
       <Section_6 />
+      <SecondUnitAboutSection className="pb-70 " />
+      <OurTeams_section />
       <Section_7 />
       <RecentWorkSection />
-      {/* <Section_8 /> */}
-      <CirtificationSection className="pb-5" />
-      <OurTeams_section />
-      {/* <ContactFormSection /> */}
-      {/* <Testimonials /> */}
     </>
   );
 }

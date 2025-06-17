@@ -31,15 +31,24 @@ export default function AboutUsSection() {
                   {/* <h2>About Company</h2>
                 <h3>We Are Solving All of Your Business Problem</h3> */}
                   <p className="text-justify">
-                    A quarter century ago, our founding father Mr. Murari Lal
-                    Dhanuka planted the seeds of what would grow into the LAL
-                    BABA group — a name now synonymous with reliability and
-                    innovation in the engineering sector. As the flagship of the
-                    group, NF Forgings Private Limited has established itself as
-                    a market leader in Foundry, Forming, and Fabrication. Our
-                    journey from humble beginnings to industry leadership is
-                    rooted in a commitment to quality and long-term vision.
+                    NF Forgings Private Limited (NFFPL) is a flagship of Lal
+                    Baba group commanding market leadership in FOUNDRY, FORMING
+                    and FABRICATION.
                   </p>
+                  <p className="text-justify">
+                    Money can buy machines but at NF, we have always believed
+                    that the men behind the machine are more important. Apart
+                    from machines, over the past few decades, we have heavily
+                    invested into and nurtured an able, experienced and
+                    qualified team to help us achieve the highest levels of
+                    excellence.
+                  </p>
+                  {/* <p className="text-justify">
+                    NFFPL is a ‘Total Solutions’ engineering company providing
+                    design, engineering, procurement, construction and
+                    integrated project management services from ‘Concept to
+                    Commissioning’ with highest quality and safety standards
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -62,13 +71,10 @@ export default function AboutUsSection() {
               <div className=" ">
                 <div className="content">
                   <p className="text-justify">
-                    At NF, we believe that while machines build products, people
-                    build trust. Over the years, we've invested heavily in
-                    assembling a highly skilled, experienced, and passionate
-                    team dedicated to excellence. With a strong focus on
-                    delivering robust engineering solutions, our people-first
-                    approach continues to drive our growth and success in
-                    serving global industries.
+                    NFFPL is a ‘Total Solutions’ engineering company providing
+                    design, engineering, procurement, construction and
+                    integrated project management services from ‘Concept to
+                    Commissioning’ with highest quality and safety standards
                   </p>
                 </div>
               </div>

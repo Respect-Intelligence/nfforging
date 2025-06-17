@@ -11,11 +11,6 @@ export default function CirtificationSection({
         className={`banner-layout2 bg-overlay bg-parallax bg-img cirtification-section ${
           className || ""
         }  `}
-        // style={{
-        //   backgroundImage: 'url("images/banner4.jpg")',
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center center",
-        // }}
       >
         <div className="container">
           <div className="row">
@@ -35,9 +30,10 @@ export default function CirtificationSection({
                 <div className="col-lg-6">
                   <ul className="list-items list-items-white list-unstyled mb-40">
                     <li>
-                      <span className="checkIcon">
-                        <Check />
-                      </span>{" "}
+                      <div className="cirtification-logo">
+                        <img src="/images/cirtificates/iso.png" alt="" />
+                      </div>
+
                       <div>
                         <b>ISO Certification</b> <br />
                         International standards compliance ensuring excellence
@@ -46,9 +42,10 @@ export default function CirtificationSection({
                       </div>
                     </li>
                     <li>
-                      <span className="checkIcon">
-                        <Check />
-                      </span>
+                      <div className="cirtification-logo">
+                        <img src="/images/cirtificates/rdso.png" alt="" />
+                      </div>
+
                       <div>
                         <b> RDSO Certification</b> <br />
                         Approved by the Research Designs and Standards
@@ -57,9 +54,10 @@ export default function CirtificationSection({
                       </div>
                     </li>
                     <li>
-                      <span className="checkIcon">
-                        <Check />
-                      </span>
+                      <div className="cirtification-logo">
+                        <img src="/images/cirtificates/bis.png" alt="" />
+                      </div>
+
                       <div>
                         <b>Bureau of Indian Standards (BIS)</b> <br />
                         Certified for adherence to national safety, quality, and

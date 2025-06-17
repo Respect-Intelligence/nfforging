@@ -25,7 +25,7 @@ function AboutWithHighlight() {
         </Popup>
         {/* <div className="container-fluid"> */}
         <div className=" d-flex flex-col flex-md-row">
-          <div className="col-md-6">
+          <div className="col-md-7">
             <div className="about-video">
               <div className="heading-layout2">
                 <p className="heading__subtitle">
@@ -34,16 +34,30 @@ function AboutWithHighlight() {
                 <h2 className="heading__title">NF Forgings Private Limited</h2>
               </div>
               <p className="desc">
-                A quarter century ago, our founding father Mr. Murari Lal
-                Dhanuka had sown a small seed which, over the years, has grown
-                into a behemoth known as the LAL BABA group of companies. NF
-                Forgings Private Limited is a flagship of Lal Baba group
-                commanding market leadership in Foundry, Forming and
-                Fabrication. Money can buy machines but at NF, we have always
-                believed that the men behind the machine are more important.
-                Apart from machines, over the past few decades, we have heavily
-                invested into and nurtured an able, experienced and qualified
-                team to help us achieve the highest levels of excellence.
+                A quarter century ago (In Year 1964 ), our founding father Mr.
+                Murari Lal Dhanuka had sown a small seed which, over the years,
+                has grown into a behemoth known as the LAL BABA group of
+                companies in Howrah which was the heart of Melting and
+                Processing units of ferrous-based industries in erstwhile India,
+                by setting up a small pneumatic forging and fabrication unit.
+                <br />
+                <br />
+                His quest and untiring efforts to set an example of excellence
+                have elevated the group to a leading position as a preferred
+                supplier for Indian Railways (IR) as well as OEMs. Today, the
+                group has in its fold multiple manufacturing facilities spread
+                over the entire Industrial belt in the state of West Bengal,
+                India.
+                <br />
+                <br />
+                The versatile range of products manufactured by the Group has
+                earned the group a unique place in the MSME sector in the state
+                of West Bengal. The products of the group are extensively used
+                in Railways Fertilizers, LNG, Non-Ferrous Metallurgy, Strategic
+                Crude Oil Storage, Infrastructure, Nuclear Energy, and thermal
+                Energy & Solar Energy. The Group has also started undertaking
+                project work (EPC/ Refurbishment/ Upgradation) in the Railway
+                Sector for upgrading Rolling Stock at customer sites.
               </p>
 
               <div className="row g-3 ">
@@ -65,7 +79,7 @@ function AboutWithHighlight() {
               </div>
             </div>
           </div>
-          <div className="col-md-6 ">
+          <div className="col-md-5 ">
             <div className="video-div-wraper">
               <button
                 onClick={() => {

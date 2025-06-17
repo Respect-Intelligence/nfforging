@@ -97,6 +97,12 @@
 
 .team-layout2 {
     .member {
+        .member__img {
+            max-height: 240px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
         .member__hover {
             background-color: transparent;
         }

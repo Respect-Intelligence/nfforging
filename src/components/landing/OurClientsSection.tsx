@@ -35,8 +35,8 @@ export default function OurClientsSection() {
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
               <div className="heading text-center mb-50">
-                <span className="heading__subtitle">NF Forgings</span>
-                <h2 className="heading__title">Our Clients?</h2>
+                <span className="heading__subtitle"> Our Esteemed</span>
+                <h2 className="heading__title">Our Clients</h2>
               </div>
             </div>
           </div>

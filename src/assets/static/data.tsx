@@ -164,24 +164,24 @@ export const fancyboxItems = [
 ];
 export const teamMembers = [
   {
-    name: "Richard Muldoone",
-    role: "Legal Officer",
-    image: "/images/team/4.png",
+    name: "Murari Lal Dhanuka",
+    role: "Founder",
+    image: "/images/team/Lalbaba-2.jpg",
   },
   {
-    name: "Maria Andaloro",
-    role: "HR Officer",
-    image: "/images/team/3.png",
+    name: "Mahesh Dhanuka",
+    role: "Director",
+    image: "/images/team/Picture1.jpg",
   },
   {
-    name: "Marian Chris",
-    role: "Global Sales",
-    image: "/images/team/5.png",
+    name: "Kishan Dhanuka",
+    role: "Director",
+    image: "/images/team/Picture2.png",
   },
   {
-    name: "Jack Mudson",
-    role: "Manager",
-    image: "/images/team/1.png",
+    name: "Narayan Dhanuka",
+    role: "Director",
+    image: "/images/team/Picture3.jpg",
   },
 ];
 export const jobs = [
@@ -454,5 +454,42 @@ export const aboutHighlights = [
         />
       </svg>
     ),
+  },
+];
+export const CareForPeople_stand = [
+  {
+    iconSrc: "/images/careers/balance.png",
+    title: "Human Rights Commitment",
+    para: "We respect and protect human  rights both within and outside  the workplace through the  implementation of  relationship framework.",
+  },
+  {
+    iconSrc: "/images/careers/labour.png",
+    title: "Workplace Safety Training",
+    para: "All workmen on the shop floor  are required to undergo  workplace safety training to  ensure prevention of unsafe acts.",
+  },
+];
+
+export const opotunityList = [
+  {
+    iconSrc: "/images/careers/medal.png",
+    para: "Performance based reward system is  implemented for incentivizing the  best performing employees",
+  },
+
+  {
+    iconSrc: "/images/careers/adhd.png",
+    para: "Imparted product training,  behavioural training, functional training and personality  training",
+  },
+  {
+    iconSrc: "/images/careers/productivity.png",
+    para: "Performance Improvement Plan helps  our employees reach desired  productivity levels through specific  project work and close guidance",
+  },
+
+  {
+    iconSrc: "/images/careers/togetherness.png",
+    para: "Celebrating days of national and  international importance like  Christmas, Diwali, Bengali New  Year, Women’s Day and  conducting events focussed on  team building and career  guidance",
+  },
+  {
+    iconSrc: "/images/careers/compliant.png",
+    para: "Employees Benefits and Policy",
   },
 ];

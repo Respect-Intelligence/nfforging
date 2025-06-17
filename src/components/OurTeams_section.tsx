@@ -4,7 +4,7 @@ import React from "react";
 
 function OurTeams_section() {
   return (
-    <section className="team-layout2 text-center pb-30">
+    <section className="team-layout2 text-center pb-30 ">
       <div className="container">
         <div className="row">
           <div className="heading-layout2">

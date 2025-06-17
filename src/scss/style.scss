@@ -66,6 +66,7 @@
         // filter: blur(20px);
 
         z-index: -1;
+        filter: brightness(0.8);
     }
 
     ul.list-items {
@@ -77,16 +78,32 @@
         li {
             display: flex;
             align-items: start;
-            gap: 8px;
+            gap: 12px;
             color: currentColor;
 
             &::before {
                 display: none;
             }
 
+
+            .cirtification-logo {
+                height: 70px;
+                width: 70px;
+                flex-shrink: 0;
+                background-color: rgba(255, 255, 255, 0.705);
+                border-radius: 6px;
+                padding: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
             .checkIcon {
                 height: 20px;
                 width: 20px;
+                // display: none;
                 display: flex;
                 align-items: center;
                 justify-content: center;
