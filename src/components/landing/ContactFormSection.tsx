@@ -1,6 +1,88 @@
+"use client";
+
 import { Phone } from "lucide-react";
+import { useState } from "react";
 
 export default function ContactFormSection() {
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    industry: "",
+    message: "",
+  });
+
+  const validateForm = (data: any) => {
+    const newErrors: any = {};
+    if (!data.name.trim()) newErrors.name = "Name is required.";
+
+    if (!data.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+      newErrors.email = "Email is invalid.";
+    }
+
+    if (!data.phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(data.phone.trim())) {
+      newErrors.phone = "Phone number must be 10 digits.";
+    }
+
+    if (!data.industry) newErrors.industry = "Please select an industry.";
+
+    if (!data.message.trim()) newErrors.message = "Message is required.";
+    return newErrors;
+  };
+  // const inputFocusOut = async (
+  //   e: React.FocusEvent<
+  //     HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+  //   >
+  // ) => {
+  //   let { name, value } = e.target;
+  //   const formErrors = validateForm({ [name]: value });
+  //   if (Object.keys(formErrors).length > 0) {
+  //     setErrors((prev) => ({ ...prev, ...formErrors }));
+  //     return;
+  //   }
+  // };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+
+    const data = {
+      name: form["name"].value,
+      email: form["email"].value,
+      phone: form["phone"].value,
+      industry: form["industry"].value,
+      message: form["message"].value,
+    };
+
+    const formErrors = validateForm(data);
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        alert("Message sent successfully!");
+        form.reset();
+        setErrors({});
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong.");
+    }
+  };
+
   return (
     <>
       <section className="contact-layout2 p-0">
@@ -21,10 +103,9 @@ export default function ContactFormSection() {
                   </div>
                 </div>
                 <form
-                  method="post"
-                  action="assets/php/contact.php"
                   id="contactForm"
                   className="contact__panel-form"
+                  onSubmit={handleSubmit}
                   noValidate
                 >
                   <div className="row">
@@ -34,11 +115,17 @@ export default function ContactFormSection() {
                           type="text"
                           className="form-control"
                           placeholder="Name*"
-                          id="contact-name"
-                          name="contact-name"
+                          id="name"
+                          name="name"
                           required
                           aria-required="true"
+                          // onBlur={inputFocusOut}
                         />
+                        {errors.name && (
+                          <small className="text-danger err-msg">
+                            {errors.name}
+                          </small>
+                        )}
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6">
@@ -47,24 +134,34 @@ export default function ContactFormSection() {
                           type="email"
                           className="form-control"
                           placeholder="Email*"
-                          id="contact-email"
-                          name="contact-email"
+                          id="email"
+                          name="email"
                           required
                           aria-required="true"
                         />
+                        {errors.email && (
+                          <small className="text-danger err-msg">
+                            {errors.email}
+                          </small>
+                        )}
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6">
                       <div className="form-group">
                         <input
-                          type="text"
+                          type="number"
                           className="form-control"
                           placeholder="Phone*"
-                          id="contact-Phone"
-                          name="contact-phone"
+                          id="phone"
+                          name="phone"
                           required
                           aria-required="true"
                         />
+                        {errors.phone && (
+                          <small className="text-danger err-msg">
+                            {errors.phone}
+                          </small>
+                        )}
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6">
@@ -74,6 +171,7 @@ export default function ContactFormSection() {
                           required
                           // defaultValue={"null"}
                           defaultValue=""
+                          name="industry"
                         >
                           <option value="" disabled hidden>
                             select your industry*
@@ -83,6 +181,11 @@ export default function ContactFormSection() {
                           <option>Construction &amp; Engineering</option>
                           <option>Mechanical Engineering</option>
                         </select>
+                        {errors.industry && (
+                          <small className="text-danger err-msg">
+                            {errors.industry}
+                          </small>
+                        )}
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-12">
@@ -91,10 +194,15 @@ export default function ContactFormSection() {
                           className="form-control"
                           placeholder="Additional Details!"
                           id="contact-messgae"
-                          name="contact-messgae"
+                          name="message"
                           required
                           aria-required="true"
                         ></textarea>
+                        {errors.message && (
+                          <small className="text-danger err-msg">
+                            {errors.message}
+                          </small>
+                        )}
                       </div>
                     </div>
                     <div className="col-sm-12 col-md-12 col-lg-12 d-flex flex-wrap align-items-center">
