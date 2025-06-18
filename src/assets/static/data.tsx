@@ -1,3 +1,23 @@
+import {
+  BadgeCheckIcon,
+  ClockIcon,
+  ConstructionIcon,
+  EarthIcon,
+  ExpandIcon,
+  FactoryIcon,
+  HammerIcon,
+  LayersIcon,
+  MicroscopeIcon,
+  Ruler,
+  RulerDimensionLine,
+  RulerIcon,
+  SettingsIcon,
+  ShieldAlertIcon,
+  ShieldCheckIcon,
+  TrainFrontIcon,
+  WeightIcon,
+  WrenchIcon,
+} from "lucide-react";
 import { Milestone } from "./types";
 
 const validSlugs = ["crf", "foundry"] as const;
@@ -6,12 +26,29 @@ type ValidSlug = (typeof validSlugs)[number];
 export const services_data: Record<ValidSlug, any> = {
   crf: {
     title: "Cold Rolled Formed",
+    highlights: [
+      {
+        Icon: <FactoryIcon />,
+        title: "3000 metric tons per month",
+        para: "Our factory’s CRF production capacity",
+      },
+      {
+        Icon: <MicroscopeIcon />,
+        title: "Lab facilities are NABH approved",
+        para: "Our QA is compliant with standards and open to testing by required agencies",
+      },
+      {
+        Icon: <SettingsIcon />,
+        title: "9 CRF mills",
+        para: "Our strength lies in the 9 facilitated Mills ready for all production demands",
+      },
+    ],
     oneLiner:
       "The Cold Rolled Formed (CRF) section produces high-precision steel profiles using advanced roll forming technology. It serves key industries like railways, solar, and infrastructure with sections up to 12 mm thick.",
     overview1:
-      "We are the leading manufacturer of Cold Rolled Formed Sections & Steel Structures to cater the need of the major industries mainly Indian Railways for Coaches and Wagons, Sheet Pilings and Solar Projects.",
+      "We are a premier manufacturer of Cold Rolled Formed Sections and Steel Structures, dedicated to delivering high-precision components for critical industries including Indian Railways, infrastructure development, and solar energy projects.",
     overview2:
-      "Cold Rolled Forming is a progressive motion process of gradually forming a flat strip of metal sheet through pairs of rolls to the desired profile without changing the thickness, at ambient temperatures. Cold-Rolled Forming can produce different cold formed steel sections like Z, C, Channels, Angles, Hat sections etc. The plant can produce sections from 1.2 mm - 10 mm in Stainless Steel and up to 12 mm in Mild Steel.",
+      "Our manufacturing process leverages advanced roll forming techniques to shape flat metal strips into complex profiles with consistent accuracy and structural integrity. With a focus on quality, efficiency, and customization, we offer solutions tailored to the evolving demands of modern engineering and construction.",
 
     productsArr: [
       {
@@ -51,11 +88,11 @@ export const services_data: Record<ValidSlug, any> = {
       },
     ],
     keyPoints: [
-      "High-strength, precision-engineered steel sections.",
-      "Produces Z, C, Channel, Angle, and Hat profiles.",
-      "Supports 1.2–10 mm SS and up to 12 mm MS thickness.",
-      "Used in railways, solar, piling, and infrastructure.",
-      "Custom profiles for structural and industrial needs.",
+      "Over 60 years of industrial expertise since 1964.",
+      "Multiple manufacturing facilities across West Bengal.",
+      "Preferred supplier to Indian Railways and leading OEMs.",
+      "Diverse product applications: Railways, Fertilizers, LNG, Infrastructure, and Renewable Energy.",
+      "Executing EPC, refurbishment, and rolling stock upgrades on-site.",
     ],
   },
   foundry: {
@@ -108,7 +145,23 @@ export const sheetPiles_data = {
   para: "At NF Forgings, we manufacture high-quality cold rolled steel sheet piles that offer strength, durability, and design flexibility for retaining walls, foundations, and marine structures. Produced with precision in our state-of-the-art CRF division, our sheet piles meet stringent performance and safety standards.",
   para2:
     "Cold formed steel sheet piles are a time-tested solution for all types of earth retention requirements. The installation is simple, fast, and cost-effective. Although vibratory hammers are the most preferred installation tools, impact hammers and hydraulic presses can also be used for difficult locations where heavy vibratory hammers cannot reach.",
-
+  highlights: [
+    {
+      Icon: <RulerIcon />,
+      title: "1 to 10 mm",
+      para: "Our steel sheet thickness rolling capacity",
+    },
+    {
+      Icon: <ExpandIcon />,
+      title: "1250 mm",
+      para: "Maximum input steel width",
+    },
+    {
+      Icon: <RulerDimensionLine />,
+      title: "18 meters",
+      para: "Maximum output length",
+    },
+  ],
   section: {
     title: "Why Choose NF Forgings Sheet Piles?",
     points: [
@@ -123,7 +176,11 @@ export const sheetPiles_data = {
       "Handling hole can be punched on every sheet pile as per customers' requirement.",
     ],
   },
-
+  typesOfProductHeading: {
+    heading: "Types of Steel Sheet Piles",
+    subHeading:
+      "Engineered for strength, reuse, and adaptability across diverse soil and structural conditions.",
+  },
   typesOfProduct: [
     {
       title: "'Z' Type Sheet Piles Type - A",
@@ -622,3 +679,207 @@ export const manufacturingLocationsArr = [
     establishedYear: 1967,
   },
 ];
+export const solarMounting_data = {
+  title: "Solar Module Mounting Structure",
+  // Icon:,
+  oneLiner:
+    "Pre-engineered, corrosion-resistant solar mounting systems tailored for fast, safe, and versatile PV installations.",
+  image: "/images/service/solar-module-stucture.jpg", // Replace with actual image URL
+  para: `NF’s Solar Module Mounting System offers a complete solution for streamlined and efficient photovoltaic (PV) installations. Designed specifically for flush-mount applications, every component of the system is engineered with the installer in mind. The system includes pre-assembled module clamps, precision-cut rails, and custom wire clips—ensuring a clean, reliable, and aesthetically appealing installation.`,
+  para2: `Each system is tailored by N F FORGING’S in-house design team to meet the unique requirements of the job site. This customized approach ensures optimal system performance, accelerated installation times, and maximum return on investment while maintaining full compliance with safety and code standards.`,
+
+  highlights: [
+    {
+      Icon: <ClockIcon />,
+      title: "Time-Saving, Pre-Engineered System",
+      para: "All key components are factory-assembled or preset, allowing for rapid, tool-minimal installation on-site.",
+    },
+    {
+      Icon: <ShieldCheckIcon />,
+      title: "Engineered for Extreme Durability",
+      para: "Anodized aluminum and stainless steel construction ensures the system withstands corrosion, weather, and mechanical stress over time.",
+    },
+    {
+      Icon: <LayersIcon />,
+      title: "Multi-Roof Compatibility",
+      para: "Designed to adapt across a wide variety of roof types without the need for structural changes.",
+    },
+  ],
+
+  section: {
+    title: "Why Choose NF Forgings Solar Mounting System?",
+    points: [
+      "Corrosion-Resistant Components",
+      "Durable Stainless Steel Hardware",
+      "Pre-Installed Components",
+      "Color Customization: Black anodized finishes to match aesthetic preferences",
+      "Optimized Rail Lengths",
+      "Tool-Free Rail Setup",
+      "Certified Grounding Compatibility from WEEB",
+      "Integrated Wire Management System",
+      "Industry-Certified Attachments",
+    ],
+  },
+};
+export const preEngineeredBuildings_data = {
+  title: "Pre Engineered Buildings",
+  // Icon:,
+  oneLiner:
+    "Engineered cold-formed purlins designed for strength, precision, and compatibility across industrial roofing systems.",
+  image: "/images/service/pre-eng-building.jpg", // Replace with actual banner if available
+  para: `In steel construction, Purlins are structural members that run parallel to the building eave and support roof decking or sheeting. These essential components, most commonly used in Metal Building Systems, are supported by rafters or walls and are critical for maintaining structural integrity.`,
+  para2: `At NF Forgings, our purlins are cold-formed in Z, C, and U shapes to ensure flexural continuity, stability, and ease of construction. Designed with optimum profiles and cut to length with pre-punched holes, they offer faster installations and less on-site waste. Manufactured from high-strength steel and protected through galvanization or painting, our purlins offer long-lasting, low-maintenance performance.`,
+
+  // highlights: [
+  //   {
+  //     Icon: <WeightIcon />,
+  //     title: "Lightweight Yet High Strength",
+  //     para: "Delivers excellent strength-to-weight ratio, reducing load on primary supports.",
+  //   },
+  //   {
+  //     Icon: <ConstructionIcon />,
+  //     title: "Cold-Formed for Enhanced Performance",
+  //     para: "Yield strength and structural safety are maximized through cold-forming processes.",
+  //   },
+  //   {
+  //     Icon: <WrenchIcon />,
+  //     title: "Pre-Punched & Custom-Cut",
+  //     para: "Ready-to-install sections reduce site work, rework, and installation time.",
+  //   },
+  // ],
+
+  section: {
+    title: "Why Choose NF Forgings PEB Structures?",
+    points: [
+      "Lightweight Yet High Strength: Delivers excellent strength-to-weight ratio, reducing load on primary supports.",
+      "Cold-Formed for Enhanced Performance: Yield strength and structural safety are maximized through cold-forming processes.",
+      "Low-Maintenance and Durable: Galvanized or painted finishes ensure resistance to corrosion with minimal upkeep.",
+      "Pre-Punched & Custom-Cut: Ready-to-install sections reduce site work, rework, and installation time.",
+      "Optimized Engineering: Designed to match exact specifications, ensuring structural precision and efficiency.",
+      "Versatile Application Compatibility: Supports a wide range of roof types—composition, tile, S-tile, and standing seam systems.",
+      "Wire Management Ready: Comes with stainless steel clips for organized and secure wire routing.",
+      "PV System Ready: Compatible with Quick Mount PV-certified attachments for solar mounting integration.",
+      "Trusted Across Industries: Widely used in Power, Cement, Steel, Metallurgy, Airports, Automobiles, and Textile sectors.",
+    ],
+  },
+};
+export const railwayWagonCoaches_data = {
+  title: "Railway Wagon and Coaches",
+  // Icon:,
+  oneLiner:
+    "Certified, high-precision components for railway wagons and coaches — meeting the standards of EMUs, Metros, and IFC stainless steel models.",
+  image: "/images/service/railwy-couches.jpg", // Replace with actual banner if available
+  para: `NF Forgings is a trusted manufacturer of high-precision components for both railway wagons and passenger coaches. With a strong emphasis on quality, compliance, and innovation, we continuously enhance our manufacturing capabilities to meet the evolving standards of the railway industry.`,
+  para2: `Our certified facilities—approved by RDSO and RITES—support a wide range of components for wagon assemblies and coach applications, including EMUs, MUs, metro coaches, and the latest stainless steel IFC models. We serve major public and private sector undertakings like BEML and IFC, ensuring safe, reliable, and timely delivery of critical railway components.`,
+
+  highlights: [
+    {
+      Icon: <TrainFrontIcon />,
+      title: "Wagon & Coach Manufacturing",
+      para: "Proven expertise in producing components for freight wagons and passenger coaches including EMU, MU, and Metro types.",
+    },
+    {
+      Icon: <BadgeCheckIcon />,
+      title: "RDSO & RITES Certified Facilities",
+      para: "All production units are certified to meet stringent railway industry standards.",
+    },
+    {
+      Icon: <ShieldCheckIcon />,
+      title: "Stainless Steel IFC Supply",
+      para: "Key supplier of stainless steel coach components under the IFC initiative, recognized for durability and safety.",
+    },
+  ],
+
+  section: {
+    title: "Why Choose NF Forgings for Railway Applications?",
+    points: [
+      {
+        title: "Comprehensive Component Manufacturing:",
+        para: "Proven expertise in producing individual and assembly components for both freight wagons and passenger coaches.",
+      },
+      {
+        title: "RDSO & RITES Certified Facilities:",
+        para: "All production units are certified to meet stringent railway industry standards.",
+      },
+      {
+        title: "Stainless Steel Coach Supply for IFC:",
+        para: "Leading supplier of stainless steel coach components under the IFC initiative—recognized for durability, safety, and performance.",
+      },
+      {
+        title: "Metro & EMU Coach Capabilities:",
+        para: "Specialized infrastructure for EMU, MU, and Metro coach production for IFC and PSUs like BEML.",
+      },
+      {
+        title: "Material Range and Grades:",
+        para: "Offers CR, HR, and galvanized steel in various finishes—bare, primer coated, pre-galvanized, and hot-dip galvanized.",
+      },
+    ],
+  },
+
+  counterSection: {
+    title: "Product Details",
+    para: "Available in BARE / RO Primer Coated / Pre-Galvanized / Hot-Dip Galvanized finishes to suit diverse applications.",
+    counter: [
+      { count: "1.5 – 8.0 mm", label: "Thickness" },
+      { count: "Up to 10,000 mm", label: "Length" },
+      { count: "240 – 350 MPa", label: "Yield Strength" },
+    ],
+  },
+};
+
+export const crashBarriers_data = {
+  title: "Crash Barriers",
+  oneLiner:
+    "High-performance metal crash barriers engineered for road safety and impact resistance — tested to meet global standards.",
+  image: "/images/service/crash-bariers.jpg", // Replace with actual banner if available
+  para: `Crash barriers, also known as traffic barriers, are vital safety installations designed to protect vehicles and pedestrians from hazardous roadside conditions, such as steep slopes, deep water, obstacles, or opposing traffic lanes.`,
+  para2: `NF Forgings specializes in the design and manufacturing of metal crash barriers that conform to both national and international safety standards, including MOST, AASHTO M 180, and EN 1317-1 AND 2. Our barriers undergo rigorous simulated and full-scale crash testing to ensure they perform reliably under various impact scenarios. With advanced manufacturing capabilities and end-to-end project execution, we serve both public and private infrastructure projects across India.`,
+
+  highlights: [
+    {
+      Icon: <ShieldAlertIcon />,
+      title: "Tested to Global Standards",
+      para: "Conforms to MOST, AASHTO M 180, and EN 1317-1 & 2 for superior safety and performance.",
+    },
+    {
+      Icon: <ConstructionIcon />,
+      title: "Durable & Galvanized Build",
+      para: "Hot-dip galvanized finish ensures long-term resistance to corrosion and extreme conditions.",
+    },
+    {
+      Icon: <HammerIcon />,
+      title: "Cost-Effective & Customizable",
+      para: "Engineered for easy installation and tailored to suit specific project requirements.",
+    },
+  ],
+
+  section: {
+    title: "Why Choose NF Forgings Crash Barriers?",
+    points: [
+      {
+        title: "Tested to International Standards",
+        para: "Conforms to MOST, AASHTO M 180, EN 1317-1 & 2 for safety, performance, and reliability.",
+      },
+      {
+        title: "Durable Hot-Dip Galvanized Build",
+        para: "Ensures long-term resistance to corrosion, weather, and impact.",
+      },
+      {
+        title: "Cost-Effective and Easy to Install",
+        para: "Designed for hassle-free installation and minimal maintenance.",
+      },
+      {
+        title: "Customizable to Project Needs",
+        para: "Can be tailored to specific buyer requirements and site conditions.",
+      },
+      {
+        title: "End-to-End Delivery",
+        para: "Complete in-house solution from manufacturing to on-site installation.",
+      },
+      {
+        title: "Trusted by Leading Infrastructure Firms",
+        para: "Preferred choice for top private and government road projects across the country.",
+      },
+    ],
+  },
+};

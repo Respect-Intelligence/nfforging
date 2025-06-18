@@ -42,28 +42,28 @@ function Overview({
 
               <div className="fancybox-layout2 ">
                 <div className="row">
-                  {fancyboxItems.map(
+                  {serviceData?.highlights?.map(
                     (
                       item: {
-                        icon: string;
+                        Icon: React.ReactNode;
                         title: string;
-                        desc: string;
+                        para: string;
                       },
-                      index
+                      index: number
                     ) => (
                       <div className="col-sm-12 col-md-12 col-lg-4" key={index}>
                         <div className="fancybox-item">
                           <div className="fancybox__icon">
                             {/* <i className={item.icon}></i> */}
 
-                            <Drill />
+                            {item.Icon}
                           </div>
                           <div className="fancybox__content">
                             <h4
                               className="fancybox__title"
                               dangerouslySetInnerHTML={{ __html: item.title }}
                             />
-                            <p className="fancybox__desc">{item.desc}</p>
+                            <p className="fancybox__desc">{item.para}</p>
                           </div>
                         </div>
                       </div>
@@ -156,8 +156,15 @@ function Overview({
             </div>
           </div>
           <div className="row">
-            {/* {serviceData?.productsArr &&
-              serviceData?.productsArr?.map((item, index) => (
+            <div className="product-section-heading">
+              <p>Our CRF Division Products</p>
+              <h2>
+                Engineered steel solutions for railways, infrastructure, solar,
+                and safety applications.
+              </h2>
+            </div>
+            {serviceData?.productsArr &&
+              serviceData?.productsArr?.map((item: any, index: number) => (
                 <div className="col-md-4" key={index}>
                   <div className="portfolio-item">
                     <div className="portfolio__img">
@@ -168,13 +175,13 @@ function Overview({
                         <h4 className="portfolio__title">
                           <a href="#">{item.title}</a>
                         </h4>
-                        <div className="portfolio__cat">
+                        {/* <div className="portfolio__cat">
                           {item.categories.map((cat, i) => (
                             <a href="#" key={i}>
                               {cat}
                             </a>
                           ))}
-                        </div>
+                        </div> */}
                         <p className="portfolio__desc">{item.desc}</p>
                       </div>
                       <a href={item.link} className="btn btn__loadMore">
@@ -184,7 +191,7 @@ function Overview({
                     </div>
                   </div>
                 </div>
-              ))} */}
+              ))}
           </div>
         </div>
       </section>

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { fancyboxItems, sheetPiles_data } from "@/assets/static/data";
 import { promises } from "dns";
 import ImageSlider from "../components/ImageSlider";
+import { getStaticData } from "@/utils/CommonFuntion";
 
 type validSlugs = "crf" | "foundry" | "fabrication" | "services";
 
@@ -22,14 +23,18 @@ function page({ params }: PageProps) {
   // const params = useParams();
   const { "service-name": serviceName, "product-name": productname } =
     use(params);
-  // let productname = params["product-name"];
-  // let serviceName = params["service-name"];
 
-  if (!productname) {
+  // if (!isValidProductName({ serviceName, productname })) {
+  //   console.log("redirecting from service page 404");
+
+  //   notFound();
+  // }
+
+  let data = getStaticData(productname);
+  if (!productname || data == null) {
     notFound(); // 🚨 This triggers the built-in 404 page
   }
 
-  let data = sheetPiles_data;
   const counters = [
     { count: "6,154", label: "Projects Completed" },
     { count: "2,512", label: "Qualified Workers" },
@@ -38,16 +43,13 @@ function page({ params }: PageProps) {
 
   return (
     <>
-      <BasicTopBanner
-        bannerImgSrc="/images/contactus.jpg"
-        title={"Product & Services"}
-      />
+      <BasicTopBanner bannerImgSrc={data.image} title={"Product & Services"} />
       <section className="portfolio-item-service-details pt-0 pb-0">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12">
               <div className="portfolio-item">
-                <div className="row justify-content-center top-image">
+                {/* <div className="row justify-content-center top-image">
                   <div className="col-lg-8">
                     <div className="portfolio__img h-auto mt-50 ">
                       <img
@@ -62,7 +64,7 @@ function page({ params }: PageProps) {
                       </span>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="portfolio__content text-center pt-50">
                   <h2 className="portfolio__title ">{data.title}</h2>
                   <div className="portfolio__cat">
@@ -72,23 +74,16 @@ function page({ params }: PageProps) {
                   <p className="portfolio__desc">{data.oneLiner}</p>
                 </div>
               </div>
-
+              {/* highlights */}
               <div className="fancybox-layout2 ">
                 <div className="row">
-                  {fancyboxItems.map((item, index) => (
+                  {data?.highlights?.map(({ Icon, title, para }, index) => (
                     <div className="col-sm-12 col-md-12 col-lg-4" key={index}>
                       <div className="fancybox-item">
-                        <div className="fancybox__icon">
-                          {/* <i className={item.icon}></i> */}
-
-                          <Drill />
-                        </div>
+                        <div className="fancybox__icon">{Icon}</div>
                         <div className="fancybox__content">
-                          <h4
-                            className="fancybox__title"
-                            dangerouslySetInnerHTML={{ __html: item.title }}
-                          />
-                          <p className="fancybox__desc">{item.desc}</p>
+                          <h4 className="fancybox__title">{title}</h4>
+                          <p className="fancybox__desc">{para}</p>
                         </div>
                       </div>
                     </div>
@@ -111,15 +106,31 @@ function page({ params }: PageProps) {
                   <p className="text__block-desc">{data.para2}</p>
 
                   <ul className="list-items list-items-layout2 list-unstyled mb-30 mt-20">
-                    {data.section.points.map((point: string, index: number) => {
-                      return (
-                        <li key={index}>
-                          <span className="checkIcon">
-                            <Check />
-                          </span>
-                          {point}
-                        </li>
-                      );
+                    {data.section.points.map((item, index: number) => {
+                      if (typeof item == "string") {
+                        return (
+                          <li key={index}>
+                            <span className="checkIcon">
+                              <Check />
+                            </span>
+                            {item}
+                          </li>
+                        );
+                      } else {
+                        return (
+                          <li key={index} className=" align-items-start">
+                            <div className="left pt-1">
+                              <span className="checkIcon">
+                                <Check />
+                              </span>
+                            </div>
+                            <div className="">
+                              <p className=" mb-0 fw-bold">{item?.title}</p>
+                              {item?.para}
+                            </div>
+                          </li>
+                        );
+                      }
                     })}
                   </ul>
                   <Link
@@ -133,80 +144,81 @@ function page({ params }: PageProps) {
               </div>
             </div>
           </div>
-          <div className="row pb-5">
-            {data?.typesOfProduct &&
-              data?.typesOfProduct?.map((item, index) => (
-                <div className="col-md-3" key={index}>
-                  <div className="portfolio-item">
-                    <div
-                      className="portfolio__img p-4"
-                      style={{
-                        height: "120px",
-                      }}
-                    >
-                      <img
-                        src={item.image}
-                        alt="portfolio img"
-                        className="object-fit-contain"
-                      />
-                    </div>
-                    <div className="portfolio__content">
-                      <div>
-                        <h4 className="portfolio__title">
-                          <a href="#">{item.title}</a>
-                        </h4>
 
-                        <p className="portfolio__desc">{item.para}</p>
+          {/* types of product if abhilable */}
+          {data?.typesOfProduct && (
+            <div className="row pb-5">
+              <div className="product-section-heading">
+                <p>{data?.typesOfProductHeading?.heading}</p>
+                <h2>{data?.typesOfProductHeading?.subHeading}</h2>
+              </div>
+              {data?.typesOfProduct &&
+                data?.typesOfProduct?.map((item, index) => (
+                  <div className="col-md-3" key={index}>
+                    <div className="portfolio-item">
+                      <div
+                        className="portfolio__img p-4"
+                        style={{
+                          height: "120px",
+                        }}
+                      >
+                        <img
+                          src={item.image}
+                          alt="portfolio img"
+                          className="object-fit-contain"
+                        />
                       </div>
-                      {/* <a href={item.link} className="btn btn__loadMore">
+                      <div className="portfolio__content">
+                        <div>
+                          <h4 className="portfolio__title">
+                            <a href="#">{item.title}</a>
+                          </h4>
+
+                          <p className="portfolio__desc">{item.para}</p>
+                        </div>
+                        {/* <a href={item.link} className="btn btn__loadMore">
                                   <span>Explore More</span>
                                   <ArrowRight height={18} />
                                 </a> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-          </div>
+                ))}
+            </div>
+          )}
 
-          <ImageSlider />
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
-              <div className="text__block text__block-layout2 mb-70">
-                <h5 className="text__block-title">
-                  Solution & <br /> Results
-                </h5>
+          {/* <ImageSlider />*/}
 
-                <div className="text__block-content">
-                  <p className="text__block-desc">
-                    That’s why we strive to find the air freight solution that
-                    best suits your needs. We’ll ask you when the freight is
-                    available, what the required delivery date is, and if
-                    there’s potential to save on time or cost. Your answers to
-                    these and other questions help us decide if you should book
-                    the air freight as direct.
-                  </p>
-                  <p className="text__block-desc">
-                    During that time, we’ve become expert in freight
-                    transportation by air and all its related services. We work
-                    closely with all major airlines around the world.
-                  </p>
+          {data?.counterSection && (
+            <div className="row">
+              <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
+                <div className="text__block text__block-layout2 mb-70">
+                  <h5 className="text__block-title">
+                    {data?.counterSection?.title}
+                  </h5>
 
-                  <div className="counters-layout2">
-                    <div className="row">
-                      {counters.map((item, index) => (
-                        <div className="col-4" key={index}>
-                          <div className="counter-item">
-                            <h4 className="counter">{item.count}</h4>
-                            <p className="counter__desc">{item.label}</p>
+                  <div className="text__block-content">
+                    <p className="text__block-desc">
+                      {data?.counterSection?.para}
+                    </p>
+
+                    <div className="counters-layout2">
+                      <div className="row">
+                        {data?.counterSection?.counter.map((item, index) => (
+                          <div className="col-4" key={index}>
+                            <div className="counter-item">
+                              <p className="counter__desc mb-1">{item.label}</p>
+                              <h4 className="counter">{item.count}</h4>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
     </>

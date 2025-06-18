@@ -43,13 +43,17 @@ const menuItems = [
         title: "Foundry",
         href: "/foundry",
         children: [
-          { id: "3_2_1", title: "Overview", href: "/crf" },
-          { id: "3_2_2", title: "Products", href: "/crf/products" },
-          { id: "3_2_3", title: "Infrastructure", href: "/crf/infrastructure" },
+          { id: "3_2_1", title: "Overview", href: "/foundry" },
+          { id: "3_2_2", title: "Products", href: "/foundry/products" },
+          {
+            id: "3_2_3",
+            title: "Infrastructure",
+            href: "/foundry/infrastructure",
+          },
           {
             id: "3_2_4",
             title: "Quality Assurance",
-            href: "/crf/foundry-quality",
+            href: "/foundry/foundry-quality",
           },
         ],
       },

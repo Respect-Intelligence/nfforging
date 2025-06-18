@@ -141,6 +141,26 @@
             }
         }
     }
+
+
+}
+
+.product-section-heading {
+    margin-bottom: 20px;
+    text-align: center;
+
+    p {
+        font-size: 15px;
+        font-weight: 700;
+        color: $color-theme;
+        margin-bottom: 10px;
+
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 600px;
+    }
 }
 
 .fancybox-layout2 {
