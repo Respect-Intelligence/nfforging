@@ -50,11 +50,12 @@ export default function ContactFormSection() {
     const form = e.currentTarget;
 
     const data = {
-      name: form["name"].value,
-      email: form["email"].value,
-      phone: form["phone"].value,
-      industry: form["industry"].value,
-      message: form["message"].value,
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      industry: (form.elements.namedItem("industry") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement)
+        .value,
     };
 
     const formErrors = validateForm(data);
@@ -73,7 +74,6 @@ export default function ContactFormSection() {
       if (res.ok) {
         alert("Message sent successfully!");
         form.reset();
-        setErrors({});
       } else {
         alert("Failed to send message.");
       }

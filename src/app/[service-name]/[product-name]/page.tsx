@@ -10,6 +10,7 @@ import { fancyboxItems, sheetPiles_data } from "@/assets/static/data";
 import { promises } from "dns";
 import ImageSlider from "../components/ImageSlider";
 import { getStaticData } from "@/utils/CommonFuntion";
+import { ProductPageData } from "@/assets/static/types";
 
 type validSlugs = "crf" | "foundry" | "fabrication" | "services";
 
@@ -30,7 +31,7 @@ function page({ params }: PageProps) {
   //   notFound();
   // }
 
-  let data = getStaticData(productname);
+  let data = getStaticData(productname) as ProductPageData;
   if (!productname || data == null) {
     notFound(); // 🚨 This triggers the built-in 404 page
   }

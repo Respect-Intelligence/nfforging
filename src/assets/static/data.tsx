@@ -18,12 +18,12 @@ import {
   WeightIcon,
   WrenchIcon,
 } from "lucide-react";
-import { Milestone } from "./types";
+import { Milestone, ServiceData } from "./types";
 
 const validSlugs = ["crf", "foundry"] as const;
 type ValidSlug = (typeof validSlugs)[number];
 
-export const services_data: Record<ValidSlug, any> = {
+export const services_data: Record<ValidSlug, ServiceData> = {
   crf: {
     title: "Cold Rolled Formed",
     highlights: [
