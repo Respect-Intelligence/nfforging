@@ -1,17 +1,21 @@
+import { ChartNoAxesCombined, Earth, Users } from "lucide-react";
 import React from "react";
 
 const tripleBottomLine = [
   {
+    Icon: <Users />,
     title: "PEOPLE",
     subtext: "We support employee well-being and inclusive growth.",
     image: "/images/triple-bottom-line/people.png",
   },
   {
+    Icon: <Earth />,
     title: "PLANET",
     subtext: "Committed to sustainable practices and climate care.",
     image: "/images/triple-bottom-line/planet.png",
   },
   {
+    Icon: <ChartNoAxesCombined />,
     title: "PROFIT",
     subtext: "Fostering ethical and long-term business value.",
     image: "/images/triple-bottom-line/profit.png",
@@ -39,10 +43,13 @@ export default function BannerCounterSection() {
         </div>
 
         <div className="row counter-light">
-          {tripleBottomLine.map(({ title, subtext, image }, index) => (
-            <div className="col-6 col-sm-3" key={index}>
+          {tripleBottomLine.map(({ title, subtext, image, Icon }, index) => (
+            <div className="col-6 col-md-4" key={index}>
               <div className="counter-item">
-                <h4 className="counter">{title}</h4>
+                <h4 className="counter">
+                  {" "}
+                  {Icon} {title}
+                </h4>
                 <p className="counter__desc">{subtext}</p>
               </div>
             </div>

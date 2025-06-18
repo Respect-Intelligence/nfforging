@@ -12,6 +12,7 @@ import AboutUsSection from "@/components/landing/AboutUsSection";
 import HighlightSection_2 from "@/components/landing/HighlightSection_2";
 import HighlightSection_3 from "@/components/landing/HighlightSection_3";
 import AboutWithHighlight from "@/components/landing/AboutWithHighlight";
+import ManufacturingLocations from "@/components/landing/ManufacturingLocations";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <CirtificationSection />
       <ContactFormSection />
       <BlogSection />
+      <ManufacturingLocations />
       <MapSection />
     </>
   );

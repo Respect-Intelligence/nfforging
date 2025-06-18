@@ -4,7 +4,7 @@ import { CareForPeople_stand, opotunityList } from "@/assets/static/data";
 
 function CareForPeopleSection() {
   return (
-    <section className="CareForPeopleSection">
+    <section className="CareForPeopleSection ">
       <div className="container">
         <div className="heading-layout2 mb-30">
           <span className="heading__subtitle">Care for our People</span>

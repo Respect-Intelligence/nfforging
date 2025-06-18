@@ -14,8 +14,8 @@ export async function POST(req: Request) {
     },
     body: JSON.stringify({
       sender: {
-        name: "abc",
-        email: "mannaarindam467@gmail.com",
+        name: "nfforgins",
+        email: "arindam@markobrando.com",
       },
       to: [{ email: "arindam@markobrando.com" }],
       subject: "New Contact Form Submission",

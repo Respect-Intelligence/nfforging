@@ -34,30 +34,23 @@ function AboutWithHighlight() {
                 <h2 className="heading__title">NF Forgings Private Limited</h2>
               </div>
               <p className="desc">
-                A quarter century ago (In Year 1964 ), our founding father Mr.
-                Murari Lal Dhanuka had sown a small seed which, over the years,
-                has grown into a behemoth known as the LAL BABA group of
-                companies in Howrah which was the heart of Melting and
-                Processing units of ferrous-based industries in erstwhile India,
-                by setting up a small pneumatic forging and fabrication unit.
+                In 1964, our founding father Mr. Murari Lal Dhanuka established
+                a small pneumatic forging and fabrication unit in Howrah — then
+                a hub for ferrous-based industries. This marked the beginning of
+                what would become the LAL BABA Group.
                 <br />
                 <br />
-                His quest and untiring efforts to set an example of excellence
-                have elevated the group to a leading position as a preferred
-                supplier for Indian Railways (IR) as well as OEMs. Today, the
-                group has in its fold multiple manufacturing facilities spread
-                over the entire Industrial belt in the state of West Bengal,
-                India.
+                Through relentless effort and a commitment to excellence, the
+                group grew into a leading supplier to Indian Railways (IR) and
+                OEMs. Today, we operate multiple manufacturing facilities across
+                West Bengal’s industrial belt.
                 <br />
                 <br />
-                The versatile range of products manufactured by the Group has
-                earned the group a unique place in the MSME sector in the state
-                of West Bengal. The products of the group are extensively used
-                in Railways Fertilizers, LNG, Non-Ferrous Metallurgy, Strategic
-                Crude Oil Storage, Infrastructure, Nuclear Energy, and thermal
-                Energy & Solar Energy. The Group has also started undertaking
-                project work (EPC/ Refurbishment/ Upgradation) in the Railway
-                Sector for upgrading Rolling Stock at customer sites.
+                Our diverse product range has secured us a strong position in
+                the MSME sector, with applications across Railways, Fertilizers,
+                LNG, Strategic Oil Storage, Infrastructure, and Renewable
+                Energy. We also execute EPC and refurbishment projects for
+                railway rolling stock.
               </p>
 
               <div className="row g-3 ">

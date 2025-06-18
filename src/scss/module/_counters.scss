@@ -9,10 +9,16 @@
 
     .counter {
         font-family: $font-heading;
-        font-size: 70px;
+        font-size: 40px;
         font-weight: 600;
         line-height: 1;
         margin-bottom: 10px;
+        text-align: center;
+
+        svg {
+            height: 40px;
+            width: 40px;
+        }
     }
 
     .counter__desc {
@@ -21,6 +27,7 @@
         font-weight: 700;
         margin-bottom: 0;
         padding-right: 30px;
+        text-align: center;
     }
 }
 
@@ -29,6 +36,8 @@
         font-size: 60px;
         font-weight: 600;
         color: $color-theme;
+
+
     }
 }
 
@@ -37,28 +46,5 @@
     .counter-item .counter,
     .counter-item .counter__desc {
         color: $color-white;
-    }
-}
-
-/* Mobile Phones and tablets */
-@media (max-width:992px) {
-    .counter-item {
-        .counter {
-            font-size: 25px;
-        }
-
-        .counter__desc {
-            font-size: 11px;
-            line-height: 14px;
-            padding-right: 0;
-        }
-    }
-
-}
-
-@media (max-width: 375px) {
-    .counter-item .counter__desc {
-        font-size: 10px;
-        line-height: 15px;
     }
 }

@@ -222,7 +222,7 @@ export default function Header() {
                 alt=""
               />
               <img
-                src="/images/logo.png"
+                src="/images/dark-logo.png"
                 className="logo-dark navbar-logo"
                 alt=""
               />

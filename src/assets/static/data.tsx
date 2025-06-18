@@ -557,3 +557,68 @@ export const milestones: Milestone[] = [
     isLeft: true,
   },
 ];
+export const manufacturingLocationsArr = [
+  {
+    companyName: "LALBABA METALLICS PVT. LTD.",
+    products: ["Cold Roll Formation (CRF)"],
+    location: "Naihati, West Bengal",
+    establishedYear: 2022,
+  },
+  {
+    companyName: "NF FORGINGS PVT. LTD.",
+    products: ["Foundry fabrication Formation"],
+    location: "Naihati, Dhulagarh, Tulsiberia, West Bengal",
+    establishedYear: 1982,
+  },
+  {
+    companyName: "LALBABA PROJECTS PVT. \n LTD.",
+    products: ["Retrofitment", "EPC refurbishment of Rolling stock"],
+    location: "Belur, West Bengal",
+    establishedYear: 2017,
+  },
+  {
+    companyName: "LALBABA SEAMLESS TUBES PVT. \n LTD.",
+    products: ["Seamless tube", "MS & SS Pipes", "Boiler Pipe"],
+    location: "Haldia, West Bengal",
+    establishedYear: 2006,
+  },
+
+  {
+    companyName: "MACEDON VINIMAY PVT. LTD.",
+    products: ["Fiver inforce plastics", "Paints for power and railway sector"],
+    location: "Sodpur, West Bengal",
+    establishedYear: 2002,
+  },
+
+  {
+    companyName: "RAILEX ENGINEERING PVT. LTD.",
+    products: ["Triangular Cock", "Bush washer", "Other Railway component"],
+    location: "Howrah, West Bengal",
+    establishedYear: 2020,
+  },
+  {
+    companyName: "PEW ENGINEERING PVT. LTD.",
+    products: [
+      "Air break pipe",
+      "Hose coupling",
+      "Cut off angel cocks",
+      "Check valves",
+      "Various railway brake equipment part",
+    ],
+    location: "Howrah, West Bengal",
+    establishedYear: 1991,
+  },
+  {
+    companyName: "LALBABA INDUSTRIAL CORPORATION PVT LTD",
+    products: [
+      "Closed Die Forgings",
+      "Pole Rod Push Rod",
+      "Equalizing Livers",
+      "Bally Bridge Forge Component",
+      "Heat resistance great bar",
+      "Machining railway product",
+    ],
+    location: "Naihati, West Bengal",
+    establishedYear: 1967,
+  },
+];
