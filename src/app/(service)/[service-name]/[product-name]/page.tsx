@@ -4,7 +4,7 @@ import BasicTopBanner from "@/components/BasicTopBanner";
 import { notFound, useParams } from "next/navigation";
 import React, { use } from "react";
 import "@/scss/sections/serviceOverview.scss";
-import { ArrowRight, Check, Drill, HandPlatter } from "lucide-react";
+import { ArrowRight, Check, Cog, Drill, HandPlatter } from "lucide-react";
 import Link from "next/link";
 import { fancyboxItems, sheetPiles_data } from "@/assets/static/data";
 import { promises } from "dns";
@@ -107,7 +107,7 @@ function page({ params }: PageProps) {
                   <p className="text__block-desc">{data.para2}</p>
 
                   <ul className="list-items list-items-layout2 list-unstyled mb-30 mt-20">
-                    {data.section.points.map((item, index: number) => {
+                    {data.section?.points.map((item, index: number) => {
                       if (typeof item == "string") {
                         return (
                           <li key={index}>
@@ -134,6 +134,7 @@ function page({ params }: PageProps) {
                       }
                     })}
                   </ul>
+
                   <Link
                     href="/contact-us"
                     className="btn btn__primary btn__icon btn__lg"
@@ -158,7 +159,7 @@ function page({ params }: PageProps) {
                   <div className="col-md-3" key={index}>
                     <div className="portfolio-item">
                       <div
-                        className="portfolio__img p-4"
+                        className="portfolio__img pt-4 px-4"
                         style={{
                           height: "120px",
                         }}
@@ -169,13 +170,25 @@ function page({ params }: PageProps) {
                           className="object-fit-contain"
                         />
                       </div>
-                      <div className="portfolio__content">
+                      <div className="portfolio__content pb-3">
                         <div>
                           <h4 className="portfolio__title">
                             <a href="#">{item.title}</a>
                           </h4>
 
-                          <p className="portfolio__desc">{item.para}</p>
+                          <p className="portfolio__desc mb-2">{item.para}</p>
+                          {item?.details?.map(({ Icon, label, value }, key) => (
+                            <div className="detail-item " key={key}>
+                              <div className="detail-label">
+                                {" "}
+                                {Icon}
+                                {label}
+                              </div>
+                              <div className="detail-value product-value">
+                                <span>{value}</span>
+                              </div>
+                            </div>
+                          ))}
                         </div>
                         {/* <a href={item.link} className="btn btn__loadMore">
                                   <span>Explore More</span>

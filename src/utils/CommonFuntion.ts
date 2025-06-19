@@ -1,5 +1,7 @@
 import {
   crashBarriers_data,
+  foundryProducts_data,
+  foundryQuality_data,
   preEngineeredBuildings_data,
   railwayWagonCoaches_data,
   sheetPiles_data,
@@ -21,6 +23,12 @@ export const getStaticData = (productname: string) => {
   }
   if (productname == "crash-barriers") {
     return crashBarriers_data;
+  }
+  if (productname == "products") {
+    return foundryProducts_data;
+  }
+  if (productname == "foundry-quality") {
+    return foundryQuality_data;
   }
 
   return null;

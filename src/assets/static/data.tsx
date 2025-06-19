@@ -1,209 +1,52 @@
 import {
+  AtomIcon,
   BadgeCheckIcon,
+  Building2,
+  Check,
   ClockIcon,
+  CogIcon,
+  Construction,
   ConstructionIcon,
   EarthIcon,
   ExpandIcon,
+  Factory,
   FactoryIcon,
+  FlaskConical,
+  FolderLock,
+  GaugeCircleIcon,
+  Globe,
+  Hammer,
   HammerIcon,
+  HardDrive,
   LayersIcon,
+  LocateFixed,
   MicroscopeIcon,
+  PackageCheck,
+  PackageCheckIcon,
+  Paintbrush2,
   Ruler,
   RulerDimensionLine,
   RulerIcon,
+  SearchCheckIcon,
+  Settings,
+  Settings2,
   SettingsIcon,
   ShieldAlertIcon,
+  ShieldCheck,
   ShieldCheckIcon,
+  Ship,
+  TrainFront,
   TrainFrontIcon,
+  Truck,
   WeightIcon,
+  Wrench,
   WrenchIcon,
 } from "lucide-react";
-import { Milestone, ServiceData } from "./types";
+import { Milestone, ServiceData, ServiceName } from "./types";
 
-const validSlugs = ["crf", "foundry"] as const;
+const validSlugs = ["crf", "foundry", "fabrication"] as const;
 type ValidSlug = (typeof validSlugs)[number];
 
-export const services_data: Record<ValidSlug, ServiceData> = {
-  crf: {
-    title: "Cold Rolled Formed",
-    highlights: [
-      {
-        Icon: <FactoryIcon />,
-        title: "3000 metric tons per month",
-        para: "Our factory’s CRF production capacity",
-      },
-      {
-        Icon: <MicroscopeIcon />,
-        title: "Lab facilities are NABH approved",
-        para: "Our QA is compliant with standards and open to testing by required agencies",
-      },
-      {
-        Icon: <SettingsIcon />,
-        title: "9 CRF mills",
-        para: "Our strength lies in the 9 facilitated Mills ready for all production demands",
-      },
-    ],
-    oneLiner:
-      "The Cold Rolled Formed (CRF) section produces high-precision steel profiles using advanced roll forming technology. It serves key industries like railways, solar, and infrastructure with sections up to 12 mm thick.",
-    overview1:
-      "We are a premier manufacturer of Cold Rolled Formed Sections and Steel Structures, dedicated to delivering high-precision components for critical industries including Indian Railways, infrastructure development, and solar energy projects.",
-    overview2:
-      "Our manufacturing process leverages advanced roll forming techniques to shape flat metal strips into complex profiles with consistent accuracy and structural integrity. With a focus on quality, efficiency, and customization, we offer solutions tailored to the evolving demands of modern engineering and construction.",
-
-    productsArr: [
-      {
-        title: "Sheet Piles",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-1.jpg",
-        desc: "Cold formed steel sheet piles are time-tested solution for all types of earth retention requirements.",
-        link: "/crf/sheet-piles",
-      },
-      {
-        title: "Solar Module Mounting Solutions",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-2.jpg",
-        desc: "N F FORGING'S Solar Module Mounting system includes everything you need for a simple and efficient PV installation.",
-        link: "solar-module.html",
-      },
-      {
-        title: "Wagon & Coaches",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-3.jpg",
-        desc: "Our quality manufacturing has enabled us to effectively meet the desired standards our customers.",
-        link: "wagon-coaches.html",
-      },
-      {
-        title: "Pre Engineered Building",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-4.jpg",
-        desc: "Cold formed members can be efficient on a weight basis relative to mill rolled sections for secondary member applications.",
-        link: "pre-engineered-building.html",
-      },
-      {
-        title: "Crash Barriers",
-        categories: ["metel", "container"],
-        image: "https://nfforging.com/images/ov-5.jpg",
-        desc: "Metal Crash Barriers are an effective road safety measure to protect a vehicle and its occupants in case of an accident.",
-        link: "crash-barriers.html",
-      },
-    ],
-    keyPoints: [
-      "Over 60 years of industrial expertise since 1964.",
-      "Multiple manufacturing facilities across West Bengal.",
-      "Preferred supplier to Indian Railways and leading OEMs.",
-      "Diverse product applications: Railways, Fertilizers, LNG, Infrastructure, and Renewable Energy.",
-      "Executing EPC, refurbishment, and rolling stock upgrades on-site.",
-    ],
-  },
-  foundry: {
-    title: "Foundry",
-    oneLiner:
-      "Our state-of-the-art foundry produces high-quality castings with precision, supporting critical industrial applications through robust infrastructure and stringent quality control.",
-    overview1:
-      "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group which has been active for the last six decades in the field of Steel, Forgings, Seamless Tubes & Pipes, FRP – Fiber Reinforced Plastic and Transmission Components.",
-    overview2:
-      "Our A-Class foundry is equipped with advanced technologies and a production capacity of 300 MTs/month. We deliver castings with exceptional dimensional accuracy and surface finish, and are approved by RDSO – Indian Railways, BHEL, BEML, NTPC, and other PSUs.",
-
-    productsArr: [
-      {
-        title: "Products",
-        categories: ["casting", "industrial"],
-        image: "https://nfforging.com/images/foundry-pro-img.jpg",
-        desc: "We offer varius range of products to our prospective buyers",
-        link: "foundry-products.html",
-      },
-      {
-        title: "Infrastructure",
-        categories: ["infrastructure", "automation"],
-        image: "https://nfforging.com/images/infra-img.jpg",
-        desc: "An automated High Pressure Molding Line with multi-piston fast loop facility",
-        link: "infrastructure.html",
-      },
-      {
-        title: "Quality Assurance",
-        categories: ["quality", "standards"],
-        image: "https://nfforging.com/images/quality-img.jpg",
-        desc: "We shall strive for a continual quality improvement and comply with",
-        link: "foundry-quality.html",
-      },
-    ],
-    keyPoints: [
-      "300 MT/month casting capacity with A-Class certification.",
-      "Approved by RDSO, BHEL, BEML, NTPC and other PSUs.",
-      "Equipped with advanced high-pressure molding technology.",
-      "Expert team including metallurgists and engineers.",
-      "High dimensional accuracy and superior surface finish.",
-    ],
-  },
-};
-export const sheetPiles_data = {
-  title: "Steel Sheet Piles",
-  // Icon:,
-  oneLiner:
-    "High-strength cold-formed steel sheet piles for reliable earth retention and structural support. Ideal for retaining walls, marine structures, and deep foundations.",
-  image: "https://nfforging.com/images/sheet-piles-banner.jpg",
-  para: "At NF Forgings, we manufacture high-quality cold rolled steel sheet piles that offer strength, durability, and design flexibility for retaining walls, foundations, and marine structures. Produced with precision in our state-of-the-art CRF division, our sheet piles meet stringent performance and safety standards.",
-  para2:
-    "Cold formed steel sheet piles are a time-tested solution for all types of earth retention requirements. The installation is simple, fast, and cost-effective. Although vibratory hammers are the most preferred installation tools, impact hammers and hydraulic presses can also be used for difficult locations where heavy vibratory hammers cannot reach.",
-  highlights: [
-    {
-      Icon: <RulerIcon />,
-      title: "1 to 10 mm",
-      para: "Our steel sheet thickness rolling capacity",
-    },
-    {
-      Icon: <ExpandIcon />,
-      title: "1250 mm",
-      para: "Maximum input steel width",
-    },
-    {
-      Icon: <RulerDimensionLine />,
-      title: "18 meters",
-      para: "Maximum output length",
-    },
-  ],
-  section: {
-    title: "Why Choose NF Forgings Sheet Piles?",
-    points: [
-      "Constant thickness over the whole section.",
-      "Unlimited choice of sheet thickness.",
-      "Wide range of steel grades are available.",
-      "Re-usable.",
-      "For bigger projects, we can make customized products, as required by the project.",
-      "Corner sections can be supplied with pre-bent sheet piles.",
-      "Quicker delivery period.",
-      "For projects in very highly-corrosive environment, we can supply sheet piles with customized surface treatment coating or hot dip galvanizing, as the case may be.",
-      "Handling hole can be punched on every sheet pile as per customers' requirement.",
-    ],
-  },
-  typesOfProductHeading: {
-    heading: "Types of Steel Sheet Piles",
-    subHeading:
-      "Engineered for strength, reuse, and adaptability across diverse soil and structural conditions.",
-  },
-  typesOfProduct: [
-    {
-      title: "'Z' Type Sheet Piles Type - A",
-      image: "https://nfforging.com/images/type-a.jpg", // Add actual image if available
-      para: "'Z' type Sheet Piles have higher modulus of section and therefore, most suitable for bad soil conditions. These sheets can be put to repeated use.",
-    },
-    {
-      title: "'Z' Type Sheet Piles Type - B",
-      image: "https://nfforging.com/images/type-b.jpg", // Add actual image if available
-      para: "'Z' type Sheet Piles (Type - B) have a conventional design; with high modulus of section and therefore, most suitable for extremely",
-    },
-    {
-      title: "'U' Type Sheet Piles",
-      image: "https://nfforging.com/images/type-u.jpg", // Add actual image if available
-      para: "Since 'U' type sheet pile has equal cross section, it is more convenient to pile. 'U' type sheet piles are suggested for support usage.",
-    },
-    {
-      title: "Trench Sheets",
-      image: "https://nfforging.com/images/trench-cheets.jpg", // Add actual image if available
-      para: "Trench Sheets are useful for projects where temporary earth retention is involved and the wall heights are not too demanding. ",
-    },
-  ],
-};
 export const fancyboxItems = [
   {
     icon: "icon-welding",
@@ -614,6 +457,436 @@ export const milestones: Milestone[] = [
     isLeft: true,
   },
 ];
+// service data
+export const services_data: Record<ServiceName, ServiceData> = {
+  crf: {
+    title: "Cold Rolled Formed",
+    bannerImg: "/images/crf-banner.jpg",
+    highlights: [
+      {
+        Icon: <FactoryIcon />,
+        title: "3000 metric tons per month",
+        para: "Our factory’s CRF production capacity",
+      },
+      {
+        Icon: <MicroscopeIcon />,
+        title: "Lab facilities are NABH approved",
+        para: "Our QA is compliant with standards and open to testing by required agencies",
+      },
+      {
+        Icon: <SettingsIcon />,
+        title: "9 CRF mills",
+        para: "Our strength lies in the 9 facilitated Mills ready for all production demands",
+      },
+    ],
+    oneLiner:
+      "The Cold Rolled Formed (CRF) section produces high-precision steel profiles using advanced roll forming technology. It serves key industries like railways, solar, and infrastructure with sections up to 12 mm thick.",
+    overview1:
+      "We are a premier manufacturer of Cold Rolled Formed Sections and Steel Structures, dedicated to delivering high-precision components for critical industries including Indian Railways, infrastructure development, and solar energy projects.",
+    overview2:
+      "Our manufacturing process leverages advanced roll forming techniques to shape flat metal strips into complex profiles with consistent accuracy and structural integrity. With a focus on quality, efficiency, and customization, we offer solutions tailored to the evolving demands of modern engineering and construction.",
+    productsSectionHeading: {
+      heading: "Our CRF Division Products",
+      subHeading:
+        "Engineered steel solutions for railways, infrastructure, solar, and safety applications.",
+    },
+    productsArr: [
+      {
+        title: "Sheet Piles",
+        categories: ["metel", "container"],
+        image: "https://nfforging.com/images/ov-1.jpg",
+        desc: "Cold formed steel sheet piles are time-tested solution for all types of earth retention requirements.",
+        link: "/crf/sheet-piles",
+      },
+      {
+        title: "Solar Module Mounting Solutions",
+        categories: ["metel", "container"],
+        image: "https://nfforging.com/images/ov-2.jpg",
+        desc: "N F FORGING'S Solar Module Mounting system includes everything you need for a simple and efficient PV installation.",
+        link: "solar-module.html",
+      },
+      {
+        title: "Wagon & Coaches",
+        categories: ["metel", "container"],
+        image: "https://nfforging.com/images/ov-3.jpg",
+        desc: "Our quality manufacturing has enabled us to effectively meet the desired standards our customers.",
+        link: "wagon-coaches.html",
+      },
+      {
+        title: "Pre Engineered Building",
+        categories: ["metel", "container"],
+        image: "https://nfforging.com/images/ov-4.jpg",
+        desc: "Cold formed members can be efficient on a weight basis relative to mill rolled sections for secondary member applications.",
+        link: "pre-engineered-building.html",
+      },
+      {
+        title: "Crash Barriers",
+        categories: ["metel", "container"],
+        image: "https://nfforging.com/images/ov-5.jpg",
+        desc: "Metal Crash Barriers are an effective road safety measure to protect a vehicle and its occupants in case of an accident.",
+        link: "crash-barriers.html",
+      },
+    ],
+    keyPoints: [
+      "Over 60 years of industrial expertise since 1964.",
+      "Multiple manufacturing facilities across West Bengal.",
+      "Preferred supplier to Indian Railways and leading OEMs.",
+      "Diverse product applications: Railways, Fertilizers, LNG, Infrastructure, and Renewable Energy.",
+      "Executing EPC, refurbishment, and rolling stock upgrades on-site.",
+    ],
+  },
+  foundry: {
+    title: "Foundry",
+    bannerImg: "/images/service/foundry-banner.jpg",
+    oneLiner:
+      "Our state-of-the-art foundry produces high-quality castings with precision, supporting critical industrial applications through robust infrastructure and stringent quality control.",
+    overview1:
+      "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group which has been active for the last six decades in the field of Steel, Forgings, Seamless Tubes & Pipes, FRP – Fiber Reinforced Plastic and Transmission Components.",
+    overview2:
+      "Our A-Class foundry is equipped with advanced technologies and a production capacity of 300 MTs/month. We deliver castings with exceptional dimensional accuracy and surface finish, and are approved by RDSO – Indian Railways, BHEL, BEML, NTPC, and other PSUs.",
+    productsSectionHeading: {
+      heading: "Our Foundry Division Products",
+      subHeading:
+        "High-quality castings engineered with precision and approved by top public sector units across India.",
+    },
+    productsArr: [
+      {
+        title: "Products",
+        categories: ["casting", "industrial"],
+        image: "https://nfforging.com/images/foundry-pro-img.jpg",
+        desc: "We offer varius range of products to our prospective buyers",
+        link: "foundry-products.html",
+      },
+      {
+        title: "Infrastructure",
+        categories: ["infrastructure", "automation"],
+        image: "https://nfforging.com/images/infra-img.jpg",
+        desc: "An automated High Pressure Molding Line with multi-piston fast loop facility",
+        link: "infrastructure.html",
+      },
+      {
+        title: "Quality Assurance",
+        categories: ["quality", "standards"],
+        image: "https://nfforging.com/images/quality-img.jpg",
+        desc: "We shall strive for a continual quality improvement and comply with",
+        link: "foundry-quality.html",
+      },
+    ],
+    keyPoints: [
+      "300 MT/month casting capacity with A-Class certification.",
+      "Approved by RDSO, BHEL, BEML, NTPC and other PSUs.",
+      "Equipped with advanced high-pressure molding technology.",
+      "Expert team including metallurgists and engineers.",
+      "High dimensional accuracy and superior surface finish.",
+    ],
+  },
+  fabrication: {
+    title: "Fabrication",
+    bannerImg: "/images/service/fabrication-banner.jpg",
+    oneLiner:
+      "Precision fabrication for large-scale infrastructure, container systems, and railway projects—powered by advanced CNC and QA-certified execution.",
+    overview1:
+      "Our Fabrication Division is equipped with a highly skilled workforce and advanced machinery, enabling us to undertake complex engineering fabrication projects. With a commitment to superior workmanship and precision, we have consistently delivered large-scale projects under stringent quality standards and reputed global certifications.",
+
+    sections: [
+      {
+        title: "Key Projects Executed",
+        content: {
+          list: [
+            {
+              Icon: <Building2 />,
+              title: "NRL Expansion at Numaligarh",
+              para: "Executed over 10,000 MT of fabrication work under the strict supervision of Technip Energies, IR Class, and TUV.",
+            },
+            {
+              Icon: <Ship />,
+              title: "ISO Shipping Containers for DP World & Concor",
+              para: "Delivered custom-designed ISO containers for efficient logistics handling and enhanced volumetric capacity.",
+            },
+            {
+              Icon: <Hammer />,
+              title: "Floating CNC Station for Ravidas Ghat, Varanasi",
+              para: "Fabrication executed under the guidance of MECON and IIT Kanpur for advanced riverfront infrastructure.",
+            },
+            {
+              Icon: <TrainFront />,
+              title: "Wagon Manufacturing for Indian Railways",
+              para: "Currently producing over 500 wagons monthly across multiple factories under Ministry of Railways contracts.",
+            },
+          ],
+        },
+      },
+      {
+        title: "Infrastructure & Capabilities",
+        content: {
+          list: [
+            {
+              Icon: <Ruler />,
+              title: "Facility Area",
+              list: [
+                {
+                  title: "Covered Area",
+                  para: "4+ Lakh Sq. Ft.",
+                },
+                {
+                  title: "Open Area",
+                  para: "1+ Lakh Sq. Ft.",
+                },
+              ],
+            },
+            {
+              Icon: <Settings />,
+              title: "CNC Machines",
+              list: [
+                {
+                  title: "CNC Profile Cutting Machines",
+                  para: "3 units (Hypertherm / Lincoln Source)",
+                },
+                {
+                  title: "CNC Press Brakes",
+                  para: "2 units + 1 unit of 12Mtr",
+                },
+                {
+                  title: "CNC Drill Machine",
+                  para: "Up to 120mm, 2.5Mtr x 6Mtr Bed",
+                },
+              ],
+            },
+            {
+              Icon: <HardDrive />,
+              title: "Machinery & Equipment",
+              list: [
+                {
+                  title: "Welding Equipment",
+                  para: "Searing Machines, Pull Through Welding Machines",
+                },
+                {
+                  title: "Beam & Surface Preparation",
+                  para: "Beam Straightening Machine, Automated Shot Blasting Machines",
+                },
+                {
+                  title: "Finishing Systems",
+                  para: "Painting Booth, GMAW, SAW Systems",
+                },
+                {
+                  title: "Material Processing",
+                  para: "Plate Slitting cum Shearing Line",
+                },
+                {
+                  title: "Material Handling",
+                  para: "EOTs, Hydra, Farana",
+                },
+              ],
+            },
+          ],
+        },
+      },
+    ],
+    keyPoints: [
+      "Over 500+ wagons produced monthly for Indian Railways.",
+      "Successfully executed 10,000+ MT project for NRL.",
+      "Expertise in ISO container fabrication with complete in-house design and FEM.",
+      "Strong collaborations with reputed organizations like Technip, TUV, MECON, and IIT-Kanpur.",
+      "State-of-the-art CNC machines and automated fabrication capabilities.",
+      "5+ lakh sq. ft. of combined covered and open fabrication area.",
+    ],
+  },
+  services: {
+    title: "Our Services",
+    bannerImg: "/images/service/ourservices.jpg",
+    oneLiner:
+      "Cutting-edge fabrication and engineering services for India's core infrastructure sectors.",
+    highlights: [
+      {
+        Icon: <Factory />,
+        title: "Agile Execution Model",
+        para: "Faster, scalable, and high-precision delivery of large industrial components.",
+      },
+      {
+        Icon: <ShieldCheck />,
+        title: "Trusted Partner",
+        para: "Reinforcing our role as a reliable contributor to strategic infrastructure.",
+      },
+    ],
+    overview1:
+      "At NF Forgings, we deliver cutting-edge fabrication and engineering services both within our advanced manufacturing facilities and directly at client locations. Our agile execution model enables faster, scalable, and high-precision delivery of large industrial components—reinforcing our role as a trusted partner to India’s core infrastructure sectors.",
+    keyPoints: [
+      "Heavy structural fabrication",
+      "Precision machining of components",
+      "Assembly and testing of industrial equipment",
+      "Surface treatment, painting, and finishing",
+    ],
+    sections: [
+      {
+        title: "Core Capabilities",
+        content: {
+          list: [
+            {
+              Icon: <Construction />,
+              title: "Heavy Structural Fabrication",
+            },
+            {
+              Icon: <Wrench />,
+              title: "Precision Machining of Components",
+            },
+            {
+              Icon: <Settings2 />,
+              title: "Assembly and Testing of Industrial Equipment",
+            },
+            {
+              Icon: <Paintbrush2 />,
+              title: "Surface Treatment, Painting, and Finishing",
+            },
+          ],
+        },
+      },
+      {
+        title: "On-Site Manufacturing & Assembly",
+        content: {
+          list: [
+            {
+              Icon: <PackageCheck />,
+              title: "ISO Shipping Containers",
+              list: [
+                {
+                  title: "Scope",
+                  para: "Design, prototyping, and scaled production",
+                },
+                {
+                  title: "Execution",
+                  para: "Conducted directly at client’s premises",
+                },
+                {
+                  title: "Benefits",
+                  para: "Real-time quality checks, logistics optimization, and faster turnaround",
+                },
+              ],
+            },
+            {
+              Icon: <Truck />,
+              title: "Freight Wagon Fabrication",
+              list: [
+                {
+                  title: "Scope",
+                  para: "Development and assembly of complete freight wagons",
+                },
+                {
+                  title: "Special Focus",
+                  para: "New-age, high-speed freight car prototypes",
+                },
+                {
+                  title: "Process",
+                  para: "On-site fabrication, welding, testing, and quality certification",
+                },
+              ],
+            },
+          ],
+        },
+      },
+      {
+        title: "Strategic & Confidential Projects",
+        content: {
+          para: "We are engaged in large-scale, specialized engineering projects under strict non-disclosure agreements.",
+          list: [
+            {
+              Icon: <FolderLock />,
+              title: "Mission-Critical Infrastructure Prototypes",
+            },
+            {
+              Icon: <LocateFixed />,
+              title: "Mobile Manufacturing at Partner Sites",
+            },
+            {
+              Icon: <FlaskConical />,
+              title: "Advanced R&D Collaborations with Industry Leaders",
+            },
+          ],
+        },
+      },
+      {
+        title: "Committed to the Make in India Vision",
+        content: {
+          para: "NF Forgings proudly contributes to the Make in India initiative by driving local innovation, domestic production, and self-reliant manufacturing. We execute complex engineering projects within Indian borders and at client sites—helping reduce import dependence and enabling world-class infrastructure development.",
+          list: [
+            {
+              Icon: <Globe />,
+              title: "Make in India Aligned",
+              para: "Focused on local innovation and reducing import dependency.",
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+export const sheetPiles_data = {
+  title: "Steel Sheet Piles",
+  // Icon:,
+  oneLiner:
+    "High-strength cold-formed steel sheet piles for reliable earth retention and structural support. Ideal for retaining walls, marine structures, and deep foundations.",
+  image: "https://nfforging.com/images/sheet-piles-banner.jpg",
+  para: "At NF Forgings, we manufacture high-quality cold rolled steel sheet piles that offer strength, durability, and design flexibility for retaining walls, foundations, and marine structures. Produced with precision in our state-of-the-art CRF division, our sheet piles meet stringent performance and safety standards.",
+  para2:
+    "Cold formed steel sheet piles are a time-tested solution for all types of earth retention requirements. The installation is simple, fast, and cost-effective. Although vibratory hammers are the most preferred installation tools, impact hammers and hydraulic presses can also be used for difficult locations where heavy vibratory hammers cannot reach.",
+  highlights: [
+    {
+      Icon: <RulerIcon />,
+      title: "1 to 10 mm",
+      para: "Our steel sheet thickness rolling capacity",
+    },
+    {
+      Icon: <ExpandIcon />,
+      title: "1250 mm",
+      para: "Maximum input steel width",
+    },
+    {
+      Icon: <RulerDimensionLine />,
+      title: "18 meters",
+      para: "Maximum output length",
+    },
+  ],
+  section: {
+    title: "Why Choose NF Forgings Sheet Piles?",
+    points: [
+      "Constant thickness over the whole section.",
+      "Unlimited choice of sheet thickness.",
+      "Wide range of steel grades are available.",
+      "Re-usable.",
+      "For bigger projects, we can make customized products, as required by the project.",
+      "Corner sections can be supplied with pre-bent sheet piles.",
+      "Quicker delivery period.",
+      "For projects in very highly-corrosive environment, we can supply sheet piles with customized surface treatment coating or hot dip galvanizing, as the case may be.",
+      "Handling hole can be punched on every sheet pile as per customers' requirement.",
+    ],
+  },
+  typesOfProductHeading: {
+    heading: "Types of Steel Sheet Piles",
+    subHeading:
+      "Engineered for strength, reuse, and adaptability across diverse soil and structural conditions.",
+  },
+  typesOfProduct: [
+    {
+      title: "'Z' Type Sheet Piles Type - A",
+      image: "https://nfforging.com/images/type-a.jpg", // Add actual image if available
+      para: "'Z' type Sheet Piles have higher modulus of section and therefore, most suitable for bad soil conditions. These sheets can be put to repeated use.",
+    },
+    {
+      title: "'Z' Type Sheet Piles Type - B",
+      image: "https://nfforging.com/images/type-b.jpg", // Add actual image if available
+      para: "'Z' type Sheet Piles (Type - B) have a conventional design; with high modulus of section and therefore, most suitable for extremely",
+    },
+    {
+      title: "'U' Type Sheet Piles",
+      image: "https://nfforging.com/images/type-u.jpg", // Add actual image if available
+      para: "Since 'U' type sheet pile has equal cross section, it is more convenient to pile. 'U' type sheet piles are suggested for support usage.",
+    },
+    {
+      title: "Trench Sheets",
+      image: "https://nfforging.com/images/trench-cheets.jpg", // Add actual image if available
+      para: "Trench Sheets are useful for projects where temporary earth retention is involved and the wall heights are not too demanding. ",
+    },
+  ],
+};
 export const manufacturingLocationsArr = [
   {
     companyName: "LALBABA METALLICS PVT. LTD.",
@@ -882,4 +1155,429 @@ export const crashBarriers_data = {
       },
     ],
   },
+  typesOfProductHeading: {
+    heading: "Types of Metal Crash Barriers",
+    subHeading:
+      "Engineered for optimal roadside safety across varying traffic conditions and structural layouts.",
+  },
+  typesOfProduct: [
+    {
+      title: "Single Faced Single Barrier",
+      image: "/images/service/s1f1.jpg", // Replace with actual image
+      para: "Designed to protect traffic from hazards on one side of the road, ideal for edge-of-road installations with minimal space requirements.",
+    },
+    {
+      title: "Single Faced Double Barrier",
+      image: "/images/service/s2f1.jpg", // Replace with actual image
+      para: "Provides double-layer protection on a single side, enhancing impact resistance while maintaining ease of installation.",
+    },
+    {
+      title: "Double Faced Single Barrier",
+      image: "/images/service/s1f2.jpg", // Replace with actual image
+      para: "A center-mounted barrier with single-layer protection on both sides, typically used in medians to prevent cross-lane incidents.",
+    },
+    {
+      title: "Double Faced Double Barrier",
+      image: "/images/service/s2f2.png", // Replace with actual image
+      para: "Heavy-duty dual-layer barrier offering reinforced protection on both sides. Ideal for high-risk zones and expressway medians.",
+    },
+  ],
+};
+export const foundryProducts_data = {
+  title: "Foundry Products",
+  oneLiner:
+    "High-precision industrial castings from a CLASS ‘A’ certified foundry, engineered for excellence across marine, rail, and public sector applications.",
+  image: "/images/service/foundry-banner.jpg", // Replace with actual banner path
+  para: `NF Forgings' Foundry Division is a CLASS “A” certified facility, accredited by the Indian Registrar of Shipping (IRClass) for marine castings. Backed by robust infrastructure and quality assurance systems, the division delivers high-precision cast components for sectors including railways, public sector units, and industrial applications.`,
+  para2: `With an installed monthly capacity of 2000 MT, the foundry specializes in large-scale and custom casting solutions, conforming to IS:12117 standards. The division is equipped with advanced electric arc and induction furnaces, automated moulding lines, and extensive heat treatment setups. Quality is ensured through a NABL-accredited lab with comprehensive non-destructive and destructive testing capabilities.`,
+
+  highlights: [
+    {
+      Icon: <BadgeCheckIcon />,
+      title: "Certified Excellence",
+      para: "CLASS ‘A’ foundry, approved by IRClass, RDSO, BHEL, BEML, NTPC.",
+    },
+    {
+      Icon: <GaugeCircleIcon />,
+      title: "High Capacity",
+      para: "2000 MT/month casting capacity, IS:12117 compliant.",
+    },
+    {
+      Icon: <PackageCheckIcon />,
+      title: "Core Products",
+      para: "Wagon Bogies, Point Ends, Central Buffer Couplers.",
+    },
+  ],
+
+  section: {
+    title: "Why Choose NF Forgings Foundry Products?",
+    points: [
+      {
+        title: "Advanced Furnaces",
+        para: "3 electric arc (5.0 MT each) + 1 induction (3.5 MT).",
+      },
+      {
+        title: "Automated Moulding",
+        para: "Green sand line (1300×1100×350 mm) + no-bake plants (20 & 30 MT/hr).",
+      },
+      {
+        title: "Heat Treatment",
+        para: "7 PLC-controlled furnaces (5–15 MT) with quenching systems.",
+      },
+      {
+        title: "In-House Testing",
+        para: "NABL-certified lab with full NDT & destructive testing suite.",
+      },
+      {
+        title: "Precision QA",
+        para: "Microstructure analysis for material integrity and consistency.",
+      },
+    ],
+  },
+  typesOfProductHeading: {
+    heading: "Types of Metal Crash Barriers",
+    subHeading:
+      "Engineered for optimal roadside safety across varying traffic conditions and structural layouts.",
+  },
+  typesOfProduct: [
+    {
+      title: "COUPLER BODY",
+      image: "https://nfforging.com/images/COUPLER-BODY.jpg",
+      para: "Main structural part connecting railcars with robust material strength.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "WD-70-BD-10, Gr. E",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "165 Kg",
+        },
+      ],
+    },
+    {
+      title: "KNUCKLE",
+      image: "https://nfforging.com/images/KNUCKLE.jpg",
+      para: "Pivoting component of the coupling system enabling articulation.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "WD-70-BD-10, Gr. E",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "36 Kg",
+        },
+      ],
+    },
+    {
+      title: "YOKE",
+      image: "https://nfforging.com/images/YOKE.jpg",
+      para: "Transfers draft and buff loads from the coupler to the wagon body.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "WD-70-BD-10, Gr. E",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "100 Kg",
+        },
+      ],
+    },
+    {
+      title: "STRIKER",
+      image: "https://nfforging.com/images/STRIKER.jpg",
+      para: "Component that resists buffing loads during coupling impacts.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "WD-70-BD-10, Gr. B",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "75 Kg",
+        },
+      ],
+    },
+    {
+      title: "YOKE PIN SUPPORT PLATE",
+      image: "https://nfforging.com/images/YOKE-PIN-SUPPORT-PLATE.jpg",
+      para: "Provides secure mounting base for yoke pin assembly.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "WD-70-BD-10, Gr. B",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "30 Kg",
+        },
+      ],
+    },
+    {
+      title: "BACKSTOP",
+      image: "https://nfforging.com/images/BACKSTOP.jpg",
+      para: "Prevents rearward movement of coupler under impact.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "WD-70-BD-10, Gr. B",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "23.5 Kg",
+        },
+      ],
+    },
+    {
+      title: "SPRING PLANK",
+      image: "https://nfforging.com/images/SPRING-PLANK.jpg",
+      para: "Load bearing member in bogie structure supporting springs.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "IS: 5986-2011, Gr. 235",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "157 Kg",
+        },
+      ],
+    },
+    {
+      title: "SPHERICAL CENTRE PIVOT TOP & BOTTOM",
+      image: "https://nfforging.com/images/SPHERICAL-CENTRE-PIVOT-1.jpg",
+      para: "Ensures rotational movement of bogie under the wagon.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "AAR M201, Gr. C",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "53 Kg",
+        },
+      ],
+    },
+    {
+      title: "SPHERICAL CENTRE PIVOT TOP & BOTTOM",
+      image: "https://nfforging.com/images/SPHERICAL-CENTRE-PIVOT-2.jpg",
+      para: "Ensures rotational movement of bogie under the wagon.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "AAR M201, Gr. C",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "55 Kg",
+        },
+      ],
+    },
+    {
+      title: "HIGH CAPACITY DRAFT GEAR WITH FOLLOWER",
+      image: "https://nfforging.com/images/HIGH-CAPACITY-DRAFT-1.jpg",
+      para: "Absorbs impact energy during train operations and coupling.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "AAR M201, Gr. E",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "150 Kg",
+        },
+      ],
+    },
+    {
+      title: "HIGH CAPACITY DRAFT GEAR WITH FOLLOWER",
+      image: "https://nfforging.com/images/HIGH-CAPACITY-DRAFT-2.jpg",
+      para: "Secondary draft gear variant with optimized impact control.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "AAR M201, Gr. E",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "30 Kg",
+        },
+      ],
+    },
+    {
+      title: "H - TYPE HIGH TENSILE TIGHT LOCK COUPLER",
+      image: "https://nfforging.com/images/H-TYPE-HIGH-TENSILE.jpg",
+      para: "Provides high-strength coupling for demanding rail operations.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "AAR M201, Gr. E",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "300 Kg",
+        },
+      ],
+    },
+    {
+      title: "COUPLER BODY ASSEMBLY",
+      image: "https://nfforging.com/images/COUPLER-BODY-ASSEMBLY.jpg",
+      para: "Complete coupling system assembly for railcars.",
+      details: [],
+    },
+    {
+      title: "CAST MANGANESE STEEL CROSSING",
+      image: "https://nfforging.com/images/CAST-MANGANESE-STEEL-CROSSING.jpg",
+      para: "Critical rail turnout part ensuring rail vehicle redirection.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "IRS T-29",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "900 Kg",
+        },
+      ],
+    },
+    {
+      title: "YOKE PIN",
+      image: "https://nfforging.com/images/YOKE-PIN.jpg",
+      para: "Secures the yoke and allows pivotal movement.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "AAR M118 or IS:1875 Cl 5 & IS: 2004",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "15 Kg",
+        },
+      ],
+    },
+    {
+      title: "KNUCKLE PIN",
+      image: "https://nfforging.com/images/KNUCKLE-PIN.jpg",
+      para: "Locks the knuckle into position during coupling.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "IS:5517 – 42 Gr. 4- Mo2 & IS:2062 Fe 410-WA",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "4 Kg",
+        },
+      ],
+    },
+    {
+      title: "ALL TYPES OF LINERS",
+      image: "https://nfforging.com/images/ALL-TYPES-OF-LINERS.jpg",
+      para: "Metal liners used to ensure smooth rail wheel transition.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "IS:3885",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "Varies according to the drawing.",
+        },
+      ],
+    },
+    {
+      title: "AXLE BOX",
+      image: "https://nfforging.com/images/AXLE-BOX.jpg",
+      para: "Houses and supports the wheelset bearings on a wagon.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "IS: 1030",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "73 Kg",
+        },
+      ],
+    },
+    {
+      title: "MYANMAR COUPLER ASSEMBLY",
+      image: "https://nfforging.com/images/MYANMAR-COUPLER-ASSEMBLY.jpg",
+      para: "Customized coupler assembly for Myanmar rail systems.",
+      details: [
+        {
+          Icon: <CogIcon />,
+          label: "Specification",
+          value: "AAR M201, Gr. E",
+        },
+        {
+          Icon: <WeightIcon />,
+          label: "Weight",
+          value: "160 Kg",
+        },
+      ],
+    },
+  ],
+};
+export const foundryQuality_data = {
+  title: "Foundry Quality",
+  image: "/images/service/foundry-banner.jpg",
+  oneLiner:
+    "State-of-the-art quality assurance backed by NABL accreditation, simulation tools, and rigorous multi-stage testing.",
+  // Replace with actual path
+  para: `At the core of our Foundry Division lies an unwavering commitment to quality. Equipped with a NABL-accredited in-house laboratory, we follow stringent quality control protocols across every stage of production.`,
+  para2: `From advanced chemical and microstructural analysis to radiographic, ultrasonic, magnetic particle, and dye penetrant testing, each casting undergoes rigorous inspection. Mechanical integrity is validated through tensile, impact, fatigue, and creep testing using state-of-the-art equipment. This robust quality framework ensures precision, consistency, and performance you can rely on—every time.`,
+
+  highlights: [
+    {
+      Icon: <ShieldCheckIcon />,
+      title: "Advanced Quality Systems",
+      para: "Certified to ISO 9001:2008 & Class-A Foundry standards with in-house spectrometry, simulation, and UTM testing for assured casting excellence.",
+    },
+    {
+      Icon: <SearchCheckIcon />,
+      title: "Comprehensive Testing Infrastructure",
+      para: "From radiography and ultrasonic NDT to tensile and impact testing, we ensure each casting meets global reliability benchmarks.",
+    },
+    {
+      Icon: <AtomIcon />,
+      title: "Precision Through Simulation",
+      para: "Our casting solidification software eliminates errors at the source—delivering defect-free outputs from the first pour.",
+    },
+  ],
 };

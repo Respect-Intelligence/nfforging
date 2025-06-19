@@ -321,6 +321,8 @@ export default function Header() {
                                         : "opened"
                                     }`}
                                     onClick={(e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
                                       setMobileNavDropdownOpen((prev) => {
                                         if (prev.indexOf(child.id) === -1) {
                                           return [...prev, child.id];

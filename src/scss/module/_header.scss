@@ -726,16 +726,10 @@
 @media (min-width: 1200px) {
     .header-layout1 .navbar {
 
-        .navbar-brand,
-        .contact__number {
+        .navbar-brand {
             // padding: 0 50px;
             padding: 0 30px;
 
-            a {
-                /* 55 654 541 17 */
-
-                font-size: 20px;
-            }
         }
 
         .navbar-collapse {

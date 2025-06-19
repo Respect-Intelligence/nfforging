@@ -1,13 +1,14 @@
 import { JSX, ReactElement, ReactNode } from "react";
 
 // types.ts
-export type ServiceName = "crf" | "foundry";
+export type ServiceName = "crf" | "foundry" | "fabrication" | "services";
 
 export const isValidServiceName = (name: string): name is ServiceName => {
   return (
-    name === "crf" || name === "foundry"
-    // name == "services" ||
-    // name == "fabrication"
+    name === "crf" ||
+    name === "foundry" ||
+    name == "services" ||
+    name == "fabrication"
   );
 };
 // export const isValidProductName = ({
@@ -62,6 +63,11 @@ interface TypesOfProductItem {
   title: string;
   image: string;
   para: string;
+  details: {
+    Icon: ReactElement;
+    label: string;
+    value: string;
+  }[];
 }
 interface CounterItem {
   count: string;
@@ -93,13 +99,36 @@ interface ProductItem {
   desc: string;
   link: string;
 }
+export interface servicePageSections {
+  title: string;
+  para?: string;
+  content: {
+    para?: string;
+    list: servicePageSections_list[];
+  };
+}
 
+export interface servicePageSections_list {
+  Icon: ReactElement;
+  title: string;
+  para?: string;
+  list?: {
+    title: string;
+    para?: string;
+  }[];
+}
 export interface ServiceData {
   title: string;
+  bannerImg: string;
   oneLiner: string;
   highlights?: HighlightItem[];
   overview1: string;
-  overview2: string;
-  productsArr: ProductItem[];
-  keyPoints: string[];
+  overview2?: string;
+  productsSectionHeading?: {
+    heading: string;
+    subHeading: string;
+  };
+  productsArr?: ProductItem[];
+  keyPoints?: string[];
+  sections?: servicePageSections[];
 }

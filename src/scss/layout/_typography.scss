@@ -146,11 +146,13 @@ h6 {
 @media (min-width:992px) {
     .text__block-layout2 {
         position: relative;
+        margin-bottom: 30px;
 
         .text__block-title {
             position: absolute;
             top: 0;
             left: 0;
+            max-width: 210px;
         }
 
         .text__block-content {

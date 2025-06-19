@@ -10,13 +10,14 @@ import "@/scss/sections/serviceOverview.scss";
 import { Drill, HandPlatter } from "lucide-react";
 import Link from "next/link";
 import { fancyboxItems, services_data } from "@/assets/static/data";
+import { ServiceName } from "@/assets/static/types";
 
 function Overview({
   topImage = false,
   serviceName,
   productname,
 }: {
-  serviceName: "crf" | "foundry";
+  serviceName: ServiceName;
   topImage?: boolean;
 
   productname?: string;
@@ -80,42 +81,75 @@ function Overview({
         <div className="container">
           <div className="row ">
             <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
-              <div className="text__block text__block-layout2 mb-70">
+              <div className="text__block text__block-layout2 ">
                 <h5 className="text__block-title">Overview</h5>
                 <div className="text__block-content">
-                  <p className="text__block-desc">{serviceData.overview1}</p>
-                  <p className="text__block-desc">{serviceData.overview2}</p>
-                  {/* <ul className="portfolio__meta-list list-unstyled mt-30 mb-40">
-                    <li>
-                      <strong>Client:</strong>
-                      <span>7oroof Network</span>
-                    </li>
-                    <li>
-                      <strong>Location:</strong>
-                      <span>Tanta, Algharbia, Egypt</span>
-                    </li>
-                    <li>
-                      <strong>Services:</strong>
-                      <span>
-                        Construction, Architecture, Building, Renovations
-                      </span>
-                    </li>
-                  </ul> */}
+                  <p className="text__block-desc">{serviceData?.overview1}</p>
+                  <p className="text__block-desc">{serviceData?.overview2}</p>
+                  {serviceData?.keyPoints && (
+                    <ul className="list-items list-items-layout2 list-unstyled mb-30 mt-20">
+                      {serviceData?.keyPoints?.map(
+                        (point: string, index: number) => {
+                          return (
+                            <li key={index}>
+                              <span className="checkIcon">
+                                <Check />
+                              </span>
+                              {point}
+                            </li>
+                          );
+                        }
+                      )}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            </div>
+            {serviceData?.sections?.map((section, sectionIndex) => (
+              <div
+                className="col-sm-12 col-md-12 col-lg-9 offset-lg-2"
+                key={sectionIndex}
+              >
+                <div className="text__block text__block-layout2 ">
+                  <h5 className="text__block-title fs-5">{section.title}</h5>
+                  <div className="text__block-content">
+                    <p className="text__block-desc">{section?.para}</p>
+                    {/* <div key={sectionIndex} className="mb-30 mt-20"> */}
+                    {/* <h6 className="fw-semibold mb-3">{section.title}</h6> */}
+                    <ul className="list-items list-items-layout2 list-unstyled">
+                      {section.content.list.map((item, index) => (
+                        <li
+                          key={index}
+                          className="d-flex align-items-start gap-3 mb-2"
+                        >
+                          <span className="color-theme mt-1">{item.Icon}</span>
+                          <div>
+                            <p className="mb-1 fw-bold">{item.title}</p>
+                            {item.para && <p className="mb-0">{item.para}</p>}
+                            {item.list && (
+                              <ul className="list-unstyled ps-3 mt-2">
+                                {item.list.map((subItem, subIndex) => (
+                                  <li key={subIndex} className="mb-1">
+                                    <p className="mb-0">
+                                      <strong>{subItem.title}</strong>
+                                      {subItem.para ? `: ${subItem.para}` : ""}
+                                    </p>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
 
-                  <ul className="list-items list-items-layout2 list-unstyled mb-30 mt-20">
-                    {serviceData.keyPoints.map(
-                      (point: string, index: number) => {
-                        return (
-                          <li key={index}>
-                            <span className="checkIcon">
-                              <Check />
-                            </span>
-                            {point}
-                          </li>
-                        );
-                      }
-                    )}
-                  </ul>
+            <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
+              <div className="text__block text__block-layout2 ">
+                <div className="text__block-content">
                   <Link
                     href="/contact-us"
                     className="btn btn__primary btn__icon btn__lg"
@@ -125,46 +159,15 @@ function Overview({
                   </Link>
                 </div>
               </div>
-
-              {/* <div className="text__block text__block-layout2 mb-50">
-                <h5 className="text__block-title">Challenge</h5>
-                <div className="text__block-content">
-                  <p className="text__block-desc">
-                    However, the scope of Dow’s needs had only been accomplished
-                    on an inter-regional scale. What Dow wanted now was seamless
-                    information management and transportation logistics. That’s
-                    why we strive to find the air freight solution that best
-                    suits your needs. We’ll ask you when the freight is
-                    available, what the required delivery date is, and if
-                    there’s potential to save on time or cost.
-                  </p>
-                  <p className="text__block-desc">
-                    During that time, we’ve become expert in freight
-                    transportation by air and all its related services. We work
-                    closely with all major airlines around the world.
-                  </p>
-                  <ul className="list-items list-items-layout2 list-unstyled mb-30">
-                    <li>Design, bid, build contracts</li>
-                    <li>Construction manager</li>
-                    <li>Computer architecture</li>
-                    <li>Contract administrator</li>
-                    <li>Design-build contracts</li>
-                    <li>Consulting engineer</li>
-                  </ul>
-                </div>
-              </div> */}
             </div>
           </div>
-          <div className="row">
-            <div className="product-section-heading">
-              <p>Our CRF Division Products</p>
-              <h2>
-                Engineered steel solutions for railways, infrastructure, solar,
-                and safety applications.
-              </h2>
-            </div>
-            {serviceData?.productsArr &&
-              serviceData?.productsArr?.map((item: any, index: number) => (
+          {serviceData?.productsArr && (
+            <div className="row">
+              <div className="product-section-heading">
+                <p>{serviceData?.productsSectionHeading?.heading}</p>
+                <h2>{serviceData?.productsSectionHeading?.subHeading}</h2>
+              </div>
+              {serviceData?.productsArr?.map((item: any, index: number) => (
                 <div className="col-md-4" key={index}>
                   <div className="portfolio-item">
                     <div className="portfolio__img">
@@ -192,7 +195,8 @@ function Overview({
                   </div>
                 </div>
               ))}
-          </div>
+            </div>
+          )}
         </div>
       </section>
     </>
