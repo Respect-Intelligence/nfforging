@@ -104,8 +104,8 @@ export default function FeaturesSection() {
   return (
     <section className="features-layout1 pb-0">
       <div className="container col-padding-0">
-        <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-8 offset-lg-3">
+        <div className="row justify-content-center">
+          <div className="col-sm-12 col-md-12 col-lg-8 ">
             <div className="heading text-center mb-50">
               <span className="heading__subtitle">
                 NF’s Pillars of Sustainability

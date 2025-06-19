@@ -18,7 +18,7 @@ function OurTeams_section() {
               <div className="member">
                 <div className="member__img">
                   <img src={member.image} alt="member img" />
-                  <div className="member__hover">
+                  {/* <div className="member__hover">
                     <div className="member__content-inner">
                       <ul className="social__icons justify-content-center list-unstyled mb-0">
                         <li>
@@ -38,7 +38,7 @@ function OurTeams_section() {
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="member__info">
                   <h5 className="member__name">{member.name}</h5>

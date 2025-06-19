@@ -269,8 +269,12 @@ function page({ params }: PageProps) {
                         {data?.counterSection?.counter.map((item, index) => (
                           <div className="col-4" key={index}>
                             <div className="counter-item">
-                              <p className="counter__desc mb-1">{item.label}</p>
-                              <h4 className="counter">{item.count}</h4>
+                              <p className="counter__desc mb-1 text-start">
+                                {item.label}
+                              </p>
+                              <h4 className="counter text-start fs-4">
+                                {item.count}
+                              </h4>
                             </div>
                           </div>
                         ))}

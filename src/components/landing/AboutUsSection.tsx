@@ -31,9 +31,9 @@ export default function AboutUsSection() {
                   {/* <h2>About Company</h2>
                 <h3>We Are Solving All of Your Business Problem</h3> */}
                   <p className="text-justify">
-                    NF Forgings Private Limited (NFFPL) is a flagship of Lal
-                    Baba group commanding market leadership in FOUNDRY, FORMING
-                    and FABRICATION.
+                    NF Forgings Private Limited (NFFPL) is a flagship company
+                    commanding market leadership in FOUNDRY, FORMING, and
+                    FABRICATION.
                   </p>
                   <p className="text-justify">
                     Money can buy machines but at NF, we have always believed

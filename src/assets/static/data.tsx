@@ -50,7 +50,7 @@ import {
   Wrench,
   WrenchIcon,
 } from "lucide-react";
-import { Milestone, ServiceData, ServiceName } from "./types";
+import { GalleryItem, Milestone, ServiceData, ServiceName } from "./types";
 import { time } from "console";
 
 const validSlugs = ["crf", "foundry", "fabrication"] as const;
@@ -1784,3 +1784,46 @@ This end-to-end infrastructure ensures high throughput, repeatable quality, and 
     },
   ],
 };
+// Default gallery items for demonstration
+export const defaultGalleryItems: GalleryItem[] = [
+  {
+    id: 1,
+    src: "/images/sustainability/g1.jpg",
+    title: "Environment",
+    category: "Environment",
+    description:
+      "A symbolic act of sustainability — team members planting trees to promote greener environments and offset carbon footprint.",
+  },
+  {
+    id: 2,
+    src: "/images/sustainability/g2.jpg",
+    title: "Environment",
+    category: "Environment",
+    description:
+      "A symbolic act of sustainability — team members planting trees to promote greener environments and offset carbon footprint.",
+  },
+  {
+    id: 3,
+    src: "/images/sustainability/g3.jpg",
+    title: "Environment",
+    category: "Environment",
+    description:
+      "A symbolic act of sustainability — team members planting trees to promote greener environments and offset carbon footprint.",
+  },
+  {
+    id: 4,
+    src: "/images/sustainability/g4.jpg",
+    title: "Environment",
+    category: "Environment",
+    description:
+      "A symbolic act of sustainability — team members planting trees to promote greener environments and offset carbon footprint.",
+  },
+  {
+    id: 5,
+    src: "/images/sustainability/g5.jpg",
+    title: "Environment",
+    category: "Environment",
+    description:
+      "A symbolic act of sustainability — team members planting trees to promote greener environments and offset carbon footprint.",
+  },
+];

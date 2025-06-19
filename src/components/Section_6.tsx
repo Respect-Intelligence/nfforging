@@ -16,9 +16,9 @@ export default function Section_6() {
                 NF Forging Excellence Since 1997
               </h2>
               <p className="heading__desc mb-30 mt-40">
-                NF Forgings Pvt. Ltd., the flagship of the esteemed LAL BABA
-                Group, has been a name synonymous with quality and innovation in
-                the steel engineering industry since 1997
+                NF Forgings Pvt. Ltd., the flagship Company, has been a name
+                synonymous with quality and innovation in the steel engineering
+                industry since 1997
               </p>
               <p className="heading__desc">
                 Founded by Mr. Murari Lal Dhanuka, the company began as a humble

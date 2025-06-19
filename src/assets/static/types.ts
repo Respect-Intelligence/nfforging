@@ -133,3 +133,11 @@ export interface ServiceData {
   keyPoints?: string[];
   sections?: servicePageSections[];
 }
+export interface GalleryItem {
+  id?: number;
+  src: string;
+  alt?: string;
+  title?: string;
+  category: string;
+  description?: string;
+}

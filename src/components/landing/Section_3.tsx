@@ -132,15 +132,15 @@ export default function Section_3() {
                   <p className="heading__desc">
                     A quarter century ago, our founding father Mr. Murari Lal
                     Dhanuka had sown a small seed which, over the years, has
-                    grown into a behemoth known as the LAL BABA group of
-                    companies. NF Forgings Private Limited is a flagship of Lal
-                    Baba group commanding market leadership in Foundry, Forming
-                    and Fabrication. Money can buy machines but at NF, we have
-                    always believed that the men behind the machine are more
-                    important. Apart from machines, over the past few decades,
-                    we have heavily invested into and nurtured an able,
-                    experienced and qualified team to help us achieve the
-                    highest levels of excellence.
+                    grown into a behemoth known as NF Forgings. NF Forgings
+                    Private Limited is a flagship of Lal Baba group commanding
+                    market leadership in Foundry, Forming and Fabrication. Money
+                    can buy machines but at NF, we have always believed that the
+                    men behind the machine are more important. Apart from
+                    machines, over the past few decades, we have heavily
+                    invested into and nurtured an able, experienced and
+                    qualified team to help us achieve the highest levels of
+                    excellence.
                   </p>
                 </div>
 

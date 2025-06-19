@@ -37,7 +37,7 @@ function AboutWithHighlight() {
                 In 1964, our founding father Mr. Murari Lal Dhanuka established
                 a small pneumatic forging and fabrication unit in Howrah — then
                 a hub for ferrous-based industries. This marked the beginning of
-                what would become the LAL BABA Group.
+                what would become the NF Forgings Private Limited.
                 <br />
                 <br />
                 Through relentless effort and a commitment to excellence, the
