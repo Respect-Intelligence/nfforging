@@ -384,7 +384,7 @@ export default function Header() {
                 </li>
               </ul>
             </div>
-            <div className="contact__number d-flex align-items-center gap-2">
+            <div className="contact__number d-flex align-items-center gap-2 ps-3">
               <span className="phone-icon-wrapper">
                 <Phone />
               </span>

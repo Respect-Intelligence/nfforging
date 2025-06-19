@@ -33,10 +33,10 @@ function Overview({
               <div className="portfolio-item">
                 <div className="portfolio__content text-center pt-50">
                   <h2 className="portfolio__title ">{serviceData.title}</h2>
-                  <div className="portfolio__cat">
+                  {/* <div className="portfolio__cat">
                     <a href="#">Building</a>
                     <a href="#">Interior</a>
-                  </div>
+                  </div> */}
                   <p className="portfolio__desc">{serviceData.oneLiner}</p>
                 </div>
               </div>

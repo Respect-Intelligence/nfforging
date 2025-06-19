@@ -2,6 +2,7 @@ import {
   crashBarriers_data,
   foundryProducts_data,
   foundryQuality_data,
+  infrastructure_data,
   preEngineeredBuildings_data,
   railwayWagonCoaches_data,
   sheetPiles_data,
@@ -29,6 +30,9 @@ export const getStaticData = (productname: string) => {
   }
   if (productname == "foundry-quality") {
     return foundryQuality_data;
+  }
+  if (productname == "infrastructure") {
+    return infrastructure_data;
   }
 
   return null;

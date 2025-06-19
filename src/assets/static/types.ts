@@ -87,6 +87,7 @@ export interface ProductPageData {
   para2: string;
   highlights?: HighlightItem[];
   section: SectionData;
+  sections?: servicePageSections[];
   typesOfProductHeading?: TypesOfProductHeading;
   typesOfProduct?: TypesOfProductItem[];
   counterSection?: CounterSection;

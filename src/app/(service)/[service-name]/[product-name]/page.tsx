@@ -134,7 +134,55 @@ function page({ params }: PageProps) {
                       }
                     })}
                   </ul>
+                </div>
+              </div>
+            </div>
 
+            {data?.sections?.map((section, sectionIndex) => (
+              <div
+                className="col-sm-12 col-md-12 col-lg-9 offset-lg-2"
+                key={sectionIndex}
+              >
+                <div className="text__block text__block-layout2 ">
+                  <h5 className="text__block-title fs-5">{section.title}</h5>
+                  <div className="text__block-content">
+                    <p className="text__block-desc">{section?.para}</p>
+                    {/* <div key={sectionIndex} className="mb-30 mt-20"> */}
+                    {/* <h6 className="fw-semibold mb-3">{section.title}</h6> */}
+                    <ul className="list-items list-items-layout2 list-unstyled">
+                      {section.content?.list?.map((item, index) => (
+                        <li
+                          key={index}
+                          className="d-flex align-items-start gap-3 mb-2"
+                        >
+                          <span className="color-theme mt-1">{item.Icon}</span>
+                          <div>
+                            <p className="mb-1 fw-bold">{item.title}</p>
+                            {item?.para && <p className="mb-0">{item.para}</p>}
+                            {item?.list && (
+                              <ul className="list-unstyled ps-3 mt-2">
+                                {item?.list?.map((subItem, subIndex) => (
+                                  <li key={subIndex} className="mb-1">
+                                    <p className="mb-0">
+                                      <strong>{subItem.title}</strong>
+                                      {subItem.para ? `: ${subItem.para}` : ""}
+                                    </p>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
+              <div className="text__block text__block-layout2 ">
+                <div className="text__block-content">
                   <Link
                     href="/contact-us"
                     className="btn btn__primary btn__icon btn__lg"

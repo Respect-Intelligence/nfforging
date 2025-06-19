@@ -1,6 +1,8 @@
 import {
   AtomIcon,
+  Award,
   BadgeCheckIcon,
+  BoxIcon,
   Building2,
   Check,
   ClockIcon,
@@ -11,7 +13,10 @@ import {
   ExpandIcon,
   Factory,
   FactoryIcon,
+  FanIcon,
+  Flame,
   FlaskConical,
+  FlaskConicalIcon,
   FolderLock,
   GaugeCircleIcon,
   Globe,
@@ -20,6 +25,8 @@ import {
   HardDrive,
   LayersIcon,
   LocateFixed,
+  Medal,
+  Microscope,
   MicroscopeIcon,
   PackageCheck,
   PackageCheckIcon,
@@ -35,6 +42,7 @@ import {
   ShieldCheck,
   ShieldCheckIcon,
   Ship,
+  SparklesIcon,
   TrainFront,
   TrainFrontIcon,
   Truck,
@@ -43,6 +51,7 @@ import {
   WrenchIcon,
 } from "lucide-react";
 import { Milestone, ServiceData, ServiceName } from "./types";
+import { time } from "console";
 
 const validSlugs = ["crf", "foundry", "fabrication"] as const;
 type ValidSlug = (typeof validSlugs)[number];
@@ -540,6 +549,24 @@ export const services_data: Record<ServiceName, ServiceData> = {
     bannerImg: "/images/service/foundry-banner.jpg",
     oneLiner:
       "Our state-of-the-art foundry produces high-quality castings with precision, supporting critical industrial applications through robust infrastructure and stringent quality control.",
+    highlights: [
+      {
+        Icon: <Flame />,
+        title: "300 MT/Month Casting Capacity",
+        para: "High-volume, precision casting production powered by automated high-pressure molding technology and expert metallurgical supervision.",
+      },
+      {
+        Icon: <Award />,
+        title: "RDSO & PSU Approved",
+        para: "Recognized by top public sector units including BHEL, NTPC, BEML for exceptional casting standards and dimensional accuracy.",
+      },
+      {
+        Icon: <Microscope />,
+        title: "Advanced Foundry Infrastructure",
+        para: "State-of-the-art facilities equipped with multi-piston fast loop molding lines and stringent in-house quality controls.",
+      },
+    ],
+
     overview1:
       "The foundry at N F Forgings is a recent addition to the Eastern India based Lalbaba group which has been active for the last six decades in the field of Steel, Forgings, Seamless Tubes & Pipes, FRP – Fiber Reinforced Plastic and Transmission Components.",
     overview2:
@@ -585,6 +612,24 @@ export const services_data: Record<ServiceName, ServiceData> = {
     bannerImg: "/images/service/fabrication-banner.jpg",
     oneLiner:
       "Precision fabrication for large-scale infrastructure, container systems, and railway projects—powered by advanced CNC and QA-certified execution.",
+    highlights: [
+      {
+        Icon: <TrainFront />,
+        title: "500+ Wagons Fabricated Monthly",
+        para: "High-volume, quality-driven manufacturing of railway wagons under Ministry of Railways contracts.",
+      },
+      {
+        Icon: <Hammer />,
+        title: "Advanced CNC & Automation",
+        para: "Equipped with CNC presses, profile cutters, and automated welding for high-precision fabrication.",
+      },
+      {
+        Icon: <Medal />,
+        title: "Trusted by Global EPC Leaders",
+        para: "Executed projects with Technip, MECON, TUV & IIT-Kanpur, maintaining global QA and certification standards.",
+      },
+    ],
+
     overview1:
       "Our Fabrication Division is equipped with a highly skilled workforce and advanced machinery, enabling us to undertake complex engineering fabrication projects. With a commitment to superior workmanship and precision, we have consistently delivered large-scale projects under stringent quality standards and reputed global certifications.",
 
@@ -699,13 +744,18 @@ export const services_data: Record<ServiceName, ServiceData> = {
     highlights: [
       {
         Icon: <Factory />,
-        title: "Agile Execution Model",
-        para: "Faster, scalable, and high-precision delivery of large industrial components.",
+        title: "Robust Engineering Legacy",
+        para: "Over 25 years of delivering foundry, forming, and fabrication solutions powered by precision and people.",
+      },
+      {
+        Icon: <PackageCheck />,
+        title: "Turnkey Solutions Across Sectors",
+        para: "From design to commissioning, we provide comprehensive project execution in infrastructure, transportation, and renewable energy.",
       },
       {
         Icon: <ShieldCheck />,
-        title: "Trusted Partner",
-        para: "Reinforcing our role as a reliable contributor to strategic infrastructure.",
+        title: "Certified for Quality & Safety",
+        para: "Endorsed by ISO, RDSO, and BIS, we meet the highest standards for industrial manufacturing and compliance.",
       },
     ],
     overview1:
@@ -1578,6 +1628,159 @@ export const foundryQuality_data = {
       Icon: <AtomIcon />,
       title: "Precision Through Simulation",
       para: "Our casting solidification software eliminates errors at the source—delivering defect-free outputs from the first pour.",
+    },
+  ],
+};
+export const infrastructure_data = {
+  title: "Infrastructure",
+  image: "/images/service/infrastructure-banner.jpg",
+  oneLiner:
+    "State-of-the-art foundry infrastructure enabling high-precision, high-volume castings with advanced molding, melting, core making, and finishing systems.",
+  // Replace with actual path
+  para: `Our foundry is built for precision, scale, and consistency—powered by an advanced high-pressure molding system capable of handling large box sizes and producing multiple molds per hour. The setup ensures tight dimensional control and superior mold integrity.
+We operate both arc and induction furnaces, enabling flexible melting operations for varied casting needs. A fully automated sand plant with PLC controls ensures uniform sand mix quality, supporting seamless no-bake operations.
+Dedicated core making facilities enable production of complex components, while our finishing area is equipped with in-house shot blasting systems to deliver clean, ready-to-ship castings.
+This end-to-end infrastructure ensures high throughput, repeatable quality, and the ability to execute both standard and customized projects efficiently.
+`,
+
+  sections: [
+    {
+      title: "High Pressure Moulding Line",
+      para: "An automated High Pressure Molding Line with multi-piston fast loop facility has been installed by Rhino Machines.",
+    },
+    {
+      title: "Standard Dimensions",
+      content: {
+        list: [
+          {
+            Icon: <BoxIcon />,
+            title: "Box Size",
+            para: "1300 X 1100 X 350 MM",
+          },
+          {
+            Icon: <BoxIcon />,
+            title: "Pallet Size",
+            para: "1850 X 1300 MM / 8 MOULDS PER HOUR",
+          },
+        ],
+      },
+    },
+    {
+      title: "Advantages",
+      content: {
+        list: [
+          {
+            Icon: (
+              <span className="checkIcon">
+                <Check />
+              </span>
+            ),
+            title: "Rigid and dense molds",
+          },
+          {
+            Icon: (
+              <span className="checkIcon">
+                <Check />
+              </span>
+            ),
+            title: "Reduces the dilution of molds",
+          },
+          {
+            Icon: (
+              <span className="checkIcon">
+                <Check />
+              </span>
+            ),
+            title: "Provides better surface finishing of the castings",
+          },
+          {
+            Icon: (
+              <span className="checkIcon">
+                <Check />
+              </span>
+            ),
+            title: "Ensures dimensional stability",
+          },
+          {
+            Icon: (
+              <span className="checkIcon">
+                <Check />
+              </span>
+            ),
+            title:
+              "Pattern squeeze on the molds ensure High Pattern Surface Hardness and High Mold Hardness on Box Bond",
+          },
+          {
+            Icon: (
+              <span className="checkIcon">
+                <Check />
+              </span>
+            ),
+            title:
+              "Multi-piston feature ensures deep cavity and self-core hard molds",
+          },
+          {
+            Icon: (
+              <span className="checkIcon">
+                <Check />
+              </span>
+            ),
+            title: "Ensures high productivity",
+          },
+        ],
+      },
+    },
+    {
+      title: "Melt Shop",
+      para: "Our Melt Shop consists of the following set-up:",
+      content: {
+        list: [
+          {
+            Icon: <FlaskConicalIcon />,
+            title: "Electric arc furnace",
+            para: "5.0 MT CAPACITY / EASTERN METEC MAKE",
+          },
+          {
+            Icon: <FlaskConicalIcon />,
+            title: "Induction furnace",
+            para: "3.5 MT CAPACITY / DUAL-TRACK INDUCTION MELTING / DOUBLE CRUCIBLE / INDUCTOTHERM MAKE",
+          },
+        ],
+      },
+    },
+    {
+      title: "Sand Plant",
+      para: "Automated and eco-friendly plant having a capacity of 15 MT per hour and PLC-Controlled continuous mixes for no-bake sand preparations / Rhino Machines.",
+      content: {
+        list: [
+          {
+            Icon: <FanIcon />,
+            title: "Sand Plant",
+            para: "AUTOMATED AND ECO-FRIENDLY PLANT HAVING A CAPACITY OF 15 MT PER HOUR AND PLC-CONTROLLED CONTINUOUS MIXES FOR NO-BAKE SAND PREPARATIONS / RHINO MACHINES.",
+          },
+        ],
+      },
+    },
+    {
+      title: "Core Shop",
+      para: "Our Core Boxes can produce critical no-bake cores for the manufacturing of CBC Bogie components and other job works.",
+    },
+    {
+      title: "Fettling",
+      content: {
+        list: [
+          {
+            Icon: <HammerIcon />,
+            title:
+              "We have a 100% in-house finishing arrangements for the castings.",
+          },
+          {
+            Icon: <SparklesIcon />,
+            title:
+              "Table-type Shot Blasting Machine is used for shot blasting.",
+          },
+        ],
+      },
     },
   ],
 };
