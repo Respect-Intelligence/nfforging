@@ -83,10 +83,10 @@ export default function Section_6() {
             </ul>
 
             <Link
-              href="/projects-grid"
+              href="#milestoneSection"
               className="btn btn__secondary btn__icon"
             >
-              <span>Latest Projects</span>
+              <span> Our Milestones</span>
               <ArrowRight height={18} />
             </Link>
           </div>

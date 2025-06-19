@@ -41,10 +41,10 @@ export default function OurCulture_section() {
               </div>
 
               <a
-                href="projects-standard.html"
+                href="#applyForm"
                 className="btn btn__secondary btn__icon mt-20 mb-20"
               >
-                <span>Latest Projects</span>
+                <span>Apply Now</span>
                 <LucideArrowRight size={16} className="ms-1" />
               </a>
             </div>
@@ -64,7 +64,7 @@ export default function OurCulture_section() {
                   Forging a Future Together
                 </h5>
                 <a
-                  href="#jobsection"
+                  href="#JobsSection"
                   className="btn btn__primary btn__link color-white"
                 >
                   <span>Explore Jobs</span>

@@ -207,10 +207,12 @@ function page({ params }: PageProps) {
                   <div className="col-md-3" key={index}>
                     <div className="portfolio-item">
                       <div
-                        className="portfolio__img pt-4 px-4"
-                        style={{
-                          height: "120px",
-                        }}
+                        className="portfolio__img pt-0 px-4"
+                        style={
+                          {
+                            // height: "120px",
+                          }
+                        }
                       >
                         <img
                           src={item.image}

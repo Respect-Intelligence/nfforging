@@ -115,8 +115,11 @@ export default function Footer() {
                     </ul>
                   </nav>
                 </div>
+              </div>
+
+              <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 footer__widget footer__widget-nav">
                 {/* Quick Links / Brochure */}
-                <div className="d-none">
+                <div className="">
                   <h6 className="footer__widget-title">Quick Links</h6>
                   <div className="footer__widget-content">
                     <nav>
@@ -133,18 +136,12 @@ export default function Footer() {
                         <li>
                           <a href="#">Contact Us</a>
                         </li>
-                        <li>
-                          <a href="#" download>
-                            Download Brochure
-                          </a>
-                        </li>
                       </ul>
                     </nav>
                   </div>
                 </div>
               </div>
-
-              <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 footer__widget footer__widget-newsletter">
+              {/* <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 footer__widget footer__widget-newsletter">
                 <h6 className="footer__widget-title">Newsletter</h6>
                 <div className="footer__widget-content">
                   <p>
@@ -170,7 +167,7 @@ export default function Footer() {
                 <p className="text-right footer__more-info mt-20 mb-0">
                   Have a question? <a href="#">Click here</a>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ import { jobs } from "@/assets/static/data";
 
 function JobsSection() {
   return (
-    <section className="careers pb-70">
+    <section className="careers pb-70" id="JobsSection">
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
@@ -54,8 +54,11 @@ function JobsSection() {
                     </div>
                     <h4 className="job__title">{job.title}</h4>
                     <p className="job__desc">{job.desc}</p>
-                    <a href="#" className="btn btn__secondary btn__link">
-                      <span>Read More</span>
+                    <a
+                      href="#applyForm"
+                      className="btn btn__secondary btn__link"
+                    >
+                      <span>Apply Now</span>
                       <span className="circleIcon ms-2">
                         <LucideArrowRight size={16} />
                       </span>

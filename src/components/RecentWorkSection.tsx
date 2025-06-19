@@ -6,6 +6,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const RecentWorkSection = () => {
   let objArr = [
@@ -14,21 +15,21 @@ const RecentWorkSection = () => {
       title: "Cold Rolled Formed Sections",
       categories: ["Building", "Interior"],
       desc: "CRF division which has capabilities to Cold Roll Form profiles and sections ranging from 1 kilogram per square meter to 125 kilograms per square meter in thicknesses ranging from 0.8mm to 10mm",
-      link: "/projects-single-project.html",
+      link: "/crf",
     },
     {
       image: "/images/service/ser2.jpg",
       title: "Foundry",
       categories: ["Construction", "Engineering"],
       desc: "Foundry division which has been classified as Class 'A' by RDSO (Research and Development Services Organisation). Details may please be seen in the relevant section of this website.",
-      link: "/projects-single-project.html",
+      link: "/foundry",
     },
     {
       image: "/images/service/ser3.jpg",
       title: "Fabrication",
       categories: ["Renovation", "Architecture"],
       desc: "abrication division which is at ease with most demanding and challenging assignments for wagons for railways (Indian and overseas both), passenger coaches, ISO Shipping Containers and engineering assignments for refineries and other industries.",
-      link: "/projects-single-project.html",
+      link: "/fabrication",
     },
   ];
   return (
@@ -65,21 +66,21 @@ const RecentWorkSection = () => {
                     <div className="portfolio__content">
                       <div>
                         <h4 className="portfolio__title">
-                          <a href="#">{item.title}</a>
+                          <Link href={item.link}>{item.title}</Link>
                         </h4>
                         <div className="portfolio__cat">
                           {item.categories.map((cat, i) => (
-                            <a href="#" key={i}>
+                            <Link href={item.link} key={i}>
                               {cat}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                         <p className="portfolio__desc">{item.desc}</p>
                       </div>
-                      <a href={item.link} className="btn btn__loadMore">
+                      <Link href={item.link} className="btn btn__loadMore">
                         <span>Explore More</span>
                         <ArrowRight height={18} />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>

@@ -5,7 +5,7 @@ import "@/scss/sections/milestoneSection.scss";
 const MilestoneSection: React.FC = () => {
   return (
     <>
-      <section className="milestone-section">
+      <section className="milestone-section" id="milestoneSection">
         <div className="container">
           {/* Header */}
           <div className="row">

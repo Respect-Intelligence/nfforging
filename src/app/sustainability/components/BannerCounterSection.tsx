@@ -45,12 +45,12 @@ export default function BannerCounterSection() {
         <div className="row counter-light">
           {tripleBottomLine.map(({ title, subtext, image, Icon }, index) => (
             <div className="col-6 col-md-4" key={index}>
-              <div className="counter-item">
-                <h4 className="counter">
+              <div className="counter-item d-flex flex-column align-items-center">
+                <h4 className="counter d-flex align-items-center gap-3 justify-content-center">
                   {" "}
                   {Icon} {title}
                 </h4>
-                <p className="counter__desc">{subtext}</p>
+                <p className="counter__desc w-10/12">{subtext}</p>
               </div>
             </div>
           ))}

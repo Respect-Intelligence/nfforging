@@ -147,8 +147,8 @@ export default function FeaturesSection() {
                       ))}
                     </ul>
                   </div>
-                  <Link href={feature.link} className="btn btn__secondary">
-                    <span>Read More</span>
+                  <Link href={"/about-us"} className="btn btn__secondary">
+                    <span>About Us</span>
                     <ArrowRight size={16} className="ms-2" />
                     {/* <span className="circleIcon">
                     </span> */}

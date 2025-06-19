@@ -165,49 +165,58 @@ export const serviceArray = [
     imgSrc: "images/ov-1.jpg",
     description:
       "Cold formed steel sheet piles are time-tested solution for all types of earth retention requirements.",
+    href: "/crf/sheet-piles",
   },
   {
     title: "Solar Module Mounting Solutions",
     imgSrc: "images/ov-2.jpg",
     description:
       "N F FORGING'S Solar Module Mounting system includes everything you need for a simple and efficient PV installation.",
+    href: "/crf/solar-module",
   },
   {
     title: "Wagon & Coaches",
     imgSrc: "images/ov-3.jpg",
     description:
       "Our quality manufacturing has enabled us to effectively meet the desired standards our customers.",
+    href: "/crf/wagon-coaches",
   },
   {
     title: "Pre Engineered Building",
     imgSrc: "images/ov-4.jpg",
     description:
       "Cold formed members can be efficient on a weight basis relative to mill rolled sections for secondary member applications.",
+    href: "/crf/pre-engineered-building",
   },
   {
     title: "Crash Barriers",
     imgSrc: "images/ov-5.jpg",
     description:
       "Metal Crash Barriers are an effective road safety measure to protect a vehicle and its occupants in case of an accident.",
+    href: "/crf/crash-barriers",
   },
   {
     title: "Products",
     imgSrc: "images/foundry-pro-img.jpg",
     description: "We offer various range of products to our prospective buyers",
+    href: "/foundry/products",
   },
   {
     title: "Infrastructure",
     imgSrc: "images/infra-img.jpg",
     description:
       "An automated High Pressure Molding Line with multi-piston fast loop facility",
+    href: "/foundry/infrastructure",
   },
   {
     title: "Quality Assurance",
     imgSrc: "images/quality-img.jpg",
     description:
       "We shall strive for a continual quality improvement and comply with",
+    href: "/foundry/foundry-quality",
   },
 ];
+
 export const aboutHighlights = [
   {
     icon: "sparkles", // replace with actual icon name you're using
@@ -512,28 +521,28 @@ export const services_data: Record<ServiceName, ServiceData> = {
         categories: ["metel", "container"],
         image: "https://nfforging.com/images/ov-2.jpg",
         desc: "N F FORGING'S Solar Module Mounting system includes everything you need for a simple and efficient PV installation.",
-        link: "solar-module.html",
+        link: "/crf/solar-module",
       },
       {
         title: "Wagon & Coaches",
         categories: ["metel", "container"],
         image: "https://nfforging.com/images/ov-3.jpg",
         desc: "Our quality manufacturing has enabled us to effectively meet the desired standards our customers.",
-        link: "wagon-coaches.html",
+        link: "/crf/wagon-coaches",
       },
       {
         title: "Pre Engineered Building",
         categories: ["metel", "container"],
         image: "https://nfforging.com/images/ov-4.jpg",
         desc: "Cold formed members can be efficient on a weight basis relative to mill rolled sections for secondary member applications.",
-        link: "pre-engineered-building.html",
+        link: "/crf/pre-engineered-building",
       },
       {
         title: "Crash Barriers",
         categories: ["metel", "container"],
         image: "https://nfforging.com/images/ov-5.jpg",
         desc: "Metal Crash Barriers are an effective road safety measure to protect a vehicle and its occupants in case of an accident.",
-        link: "crash-barriers.html",
+        link: "/crf/crash-barriers",
       },
     ],
     keyPoints: [
@@ -582,21 +591,21 @@ export const services_data: Record<ServiceName, ServiceData> = {
         categories: ["casting", "industrial"],
         image: "https://nfforging.com/images/foundry-pro-img.jpg",
         desc: "We offer varius range of products to our prospective buyers",
-        link: "foundry-products.html",
+        link: "foundry/products",
       },
       {
         title: "Infrastructure",
         categories: ["infrastructure", "automation"],
         image: "https://nfforging.com/images/infra-img.jpg",
         desc: "An automated High Pressure Molding Line with multi-piston fast loop facility",
-        link: "infrastructure.html",
+        link: "foundry/infrastructure",
       },
       {
         title: "Quality Assurance",
         categories: ["quality", "standards"],
         image: "https://nfforging.com/images/quality-img.jpg",
         desc: "We shall strive for a continual quality improvement and comply with",
-        link: "foundry-quality.html",
+        link: "foundry/foundry-quality",
       },
     ],
     keyPoints: [

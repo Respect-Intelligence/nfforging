@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, ClockPlus, TrendingUp } from "lucide-react";
@@ -24,11 +26,8 @@ function Section_7() {
                   innovation, and skilled craftsmanship has solidified our
                   position in the steel engineering industry.
                 </p>
-                <Link
-                  href="#aboutCompany"
-                  className="btn btn__primary btn__link"
-                >
-                  <span>Learn More</span>{" "}
+                <Link href="/contact-us" className="btn btn__primary btn__link">
+                  <span>Contact Us</span>{" "}
                   <span className="">
                     <ArrowRight height={18} />
                   </span>
@@ -82,13 +81,20 @@ function Section_7() {
                     </div>
                   </div>
                 </div>
-                <Link
-                  href="request-quote.html"
+                <button
                   className="btn btn__white btn__bordered btn__icon box-shadow-none"
+                  onClick={() => {
+                    let btn = document.querySelector(
+                      ".get-aquoteBtn"
+                    ) as HTMLElement;
+                    if (btn) {
+                      btn.click();
+                    }
+                  }}
                 >
                   <span>Request A Quote</span>
                   <ArrowRight height={18} />
-                </Link>
+                </button>
               </div>
             </div>
           </div>
