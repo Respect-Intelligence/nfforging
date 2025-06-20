@@ -83,7 +83,7 @@ async function page({ params }: { params: { slug: string } }) {
             {/* Sidebar */}
             <div className="col-sm-12 col-md-12 col-lg-4">
               <aside className="sidebar mb-30">
-                <div className="widget widget-search">
+                {/* <div className="widget widget-search">
                   <h5 className="widget__title">Search</h5>
                   <div className="widget__content">
                     <form className="widget__form-search">
@@ -97,7 +97,7 @@ async function page({ params }: { params: { slug: string } }) {
                       </button>
                     </form>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="widget widget-posts">
                   <h5 className="widget__title">Recent Posts</h5>
