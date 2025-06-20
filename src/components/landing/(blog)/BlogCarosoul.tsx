@@ -10,9 +10,28 @@ import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Blog, blogImageBaseURL } from "@/assets/static/types";
-import { adjustSlideHeights, getdateToStr } from "@/utils/CommonFuntion";
+import { getdateToStr } from "@/utils/CommonFuntion";
 
 function BlogCarosoul({ blogPosts }: { blogPosts: Blog[] }) {
+  const adjustSlideHeights = (swiper: SwiperClass) => {
+    if (!swiper?.slides?.length) return;
+
+    let maxHeight = 0;
+
+    swiper.slides.forEach((slideEl) => {
+      const el = slideEl as HTMLElement;
+      el.style.height = "auto"; // reset
+      const height = el.offsetHeight;
+      if (height > maxHeight) maxHeight = height;
+    });
+
+    swiper.slides.forEach((slideEl) => {
+      const el = slideEl as HTMLElement;
+      el.style.height = `${maxHeight}px`;
+    });
+
+    swiper.update();
+  };
   return (
     <Swiper
       modules={[Pagination, Autoplay, Navigation]}
@@ -50,9 +69,9 @@ function BlogCarosoul({ blogPosts }: { blogPosts: Blog[] }) {
           index: number
         ) => {
           return (
-            <SwiperSlide key={index} className="pb-3">
+            <SwiperSlide key={index} className=" d-flex">
               <div
-                className="blog-item slick-slide slick-cloned h-100 d-flex flex-column"
+                className="blog-item slick-slide slick-cloned  d-flex flex-column"
                 data-slick-index="-3"
                 id=""
                 aria-hidden="true"

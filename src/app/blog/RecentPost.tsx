@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Blog, blogImageBaseURL } from "@/assets/static/types";
 import { getdateToStr } from "@/utils/CommonFuntion";
+import Link from "next/link";
 
 const RecentPost = ({ recentBlogs }: { recentBlogs: Blog[] | null }) => {
   const slides = [
@@ -29,25 +30,27 @@ const RecentPost = ({ recentBlogs }: { recentBlogs: Blog[] | null }) => {
       loop={true}
       className="mySwiper recent-post-swiper"
     >
-      {recentBlogs?.map(({ blog_image, title, published_date }, index) => (
-        <SwiperSlide key={index}>
-          <div className="widget-post-item">
-            <div className="widget__post-img">
-              <a href="#">
-                <img src={`${blogImageBaseURL}${blog_image}`} alt="thumb" />
-              </a>
+      {recentBlogs?.map(
+        ({ blog_image, title, published_date, slug }, index) => (
+          <SwiperSlide key={index}>
+            <div className="widget-post-item">
+              <div className="widget__post-img">
+                <a href="#">
+                  <img src={`${blogImageBaseURL}${blog_image}`} alt="thumb" />
+                </a>
+              </div>
+              <div className="widget__post-content">
+                <span className="widget__post-date">
+                  {getdateToStr(published_date)}
+                </span>
+                <h6 className="widget__post-title">
+                  <Link href={`/blog/${slug}`}>{title}</Link>
+                </h6>
+              </div>
             </div>
-            <div className="widget__post-content">
-              <span className="widget__post-date">
-                {/* {getdateToStr(published_date)} */}
-              </span>
-              <h6 className="widget__post-title">
-                <a href="#">{title}</a>
-              </h6>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
+          </SwiperSlide>
+        )
+      )}
     </Swiper>
   );
 };

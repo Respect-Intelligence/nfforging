@@ -2,11 +2,11 @@ import Link from "next/link";
 import React from "react";
 import "@/scss/sections/blog.scss";
 import RecentPost from "../RecentPost";
-import { Facebook, Instagram, Search, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Search, Twitter } from "lucide-react";
 import { query } from "@/utils/db";
 import { Blog, blogImageBaseURL } from "@/assets/static/types";
 import { notFound } from "next/navigation";
-import { fetchRecentBlogs, getdateToStr } from "@/utils/CommonFuntion";
+import { getdateToStr } from "@/utils/CommonFuntion";
 import Content from "./Content";
 
 async function fetchBlogs(slug: string): Promise<Blog[] | null> {
@@ -20,7 +20,18 @@ async function fetchBlogs(slug: string): Promise<Blog[] | null> {
     return null;
   }
 }
-
+export async function fetchRecentBlogs(): Promise<Blog[] | null> {
+  try {
+    const results = await query<Blog>(
+      `SELECT * FROM blogs ORDER BY published_date DESC LIMIT 6`
+    );
+    console.log(results);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
 async function page({ params }: { params: { slug: string } }) {
   const blogs = await fetchBlogs(params.slug);
   if (blogs == null) {
@@ -148,7 +159,10 @@ async function page({ params }: { params: { slug: string } }) {
               </div>
 
               <div className="blog-share d-flex flex-wrap gap-4 mb-30">
-                <a href="#" className="btn  btn__facebook">
+                <a
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${`/blog/${slug}`}`}
+                  className="btn  btn__facebook"
+                >
                   <Facebook
                     fill="#fff"
                     stroke="none"
@@ -157,7 +171,10 @@ async function page({ params }: { params: { slug: string } }) {
                   />
                   <span>Share on Facebook</span>
                 </a>
-                <a href="#" className="btn  btn__twitter">
+                <a
+                  href={`https://twitter.com/intent/tweet?url=${`/blog/${slug}`}}&text=${title}`}
+                  className="btn  btn__twitter"
+                >
                   <Twitter
                     fill="#fff"
                     stroke="none"
@@ -166,9 +183,14 @@ async function page({ params }: { params: { slug: string } }) {
                   />
                   <span>Share on Twitter</span>
                 </a>
-                <a href="#" className="btn  btn__google-plus">
-                  <Instagram height={18} />
-                  <span>Share on Instagram</span>
+                <a
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                    `/blog/${slug}`
+                  )}`}
+                  className="btn  btn__google-plus"
+                >
+                  <Linkedin height={18} />
+                  <span>Share on Linkedin</span>
                 </a>
               </div>
 

@@ -140,6 +140,17 @@
 
         .widget__post-img {
             margin-bottom: 19px;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                width: 100%;
+                max-width: unset;
+                max-width: unset;
+            }
         }
 
         .widget__post-date {

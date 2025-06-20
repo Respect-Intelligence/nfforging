@@ -50,18 +50,7 @@ export const getdateToStr = (date: string | undefined | Date) => {
       })
     : "No date";
 };
-export async function fetchRecentBlogs(): Promise<Blog[] | null> {
-  try {
-    const results = await query<Blog>(
-      `SELECT * FROM blogs ORDER BY published_date DESC LIMIT 6`
-    );
-    console.log(results);
-    return results;
-  } catch (error) {
-    console.log(error);
-    return null;
-  }
-}
+
 export const adjustSlideHeights = (swiper: SwiperClass) => {
   if (!swiper?.slides?.length) return;
 
