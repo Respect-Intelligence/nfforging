@@ -1,10 +1,47 @@
 import Link from "next/link";
 import React from "react";
 import "@/scss/sections/blog.scss";
-import RecentPost from "./RecentPost";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import RecentPost from "../RecentPost";
+import { Facebook, Instagram, Search, Twitter } from "lucide-react";
+import { query } from "@/utils/db";
+import { Blog, blogImageBaseURL } from "@/assets/static/types";
+import { notFound } from "next/navigation";
+import { fetchRecentBlogs, getdateToStr } from "@/utils/CommonFuntion";
+import Content from "./Content";
 
-function page() {
+async function fetchBlogs(slug: string): Promise<Blog[] | null> {
+  try {
+    const results = await query<Blog>("SELECT * FROM blogs WHERE slug = ?", [
+      slug,
+    ]);
+    return results;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
+
+async function page({ params }: { params: { slug: string } }) {
+  const blogs = await fetchBlogs(params.slug);
+  if (blogs == null) {
+    notFound();
+  }
+  const recentBlogs = await fetchRecentBlogs();
+  console.log(recentBlogs);
+
+  const {
+    title,
+    intro,
+    content,
+    tags,
+    category,
+    blog_image,
+    blog_image_alt,
+    id,
+    slug,
+    published_by,
+    published_date,
+  } = blogs[0];
   return (
     <>
       <section className="page-title page-title-layout8 text-center blog-page-title">
@@ -20,8 +57,7 @@ function page() {
                     <Link href="/blog">Blog</Link> {">"}
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
-                    Importance of specialized focus in Projects, Oil &amp; Gas
-                    Logistic
+                    {title}
                   </li>
                 </ol>
               </nav>
@@ -46,7 +82,7 @@ function page() {
                         placeholder="Search..."
                       />
                       <button className="btn" type="submit">
-                        <i className="fa fa-search"></i>
+                        <Search />
                       </button>
                     </form>
                   </div>
@@ -55,7 +91,7 @@ function page() {
                 <div className="widget widget-posts">
                   <h5 className="widget__title">Recent Posts</h5>
                   <div className="widget__content">
-                    <RecentPost />
+                    <RecentPost recentBlogs={recentBlogs} />
                   </div>
                 </div>
 
@@ -63,21 +99,15 @@ function page() {
                   <h5 className="widget__title">Tags</h5>
                   <div className="widget-content">
                     <ul className="list-unstyled">
-                      <li>
-                        <a href="#">Insights</a>
-                      </li>
-                      <li>
-                        <a href="#">Industry</a>
-                      </li>
-                      <li>
-                        <a href="#">Modern</a>
-                      </li>
-                      <li>
-                        <a href="#">Corporate</a>
-                      </li>
-                      <li>
-                        <a href="#">Business</a>
-                      </li>
+                      {tags
+                        ? tags?.split(",").map((tag, i) => {
+                            return (
+                              <li key={i} className=" pe-2">
+                                <a href={`/blog?tag=${tag}`}>{tag}</a>
+                              </li>
+                            );
+                          })
+                        : " No Tags Given"}
                     </ul>
                   </div>
                 </div>
@@ -90,7 +120,7 @@ function page() {
                 <div className="blog__img">
                   <a href="#">
                     <img
-                      src="/images/home3/heroBanner_2.png"
+                      src={`${blogImageBaseURL}${blog_image}`}
                       alt="blog image"
                     />
                   </a>
@@ -98,64 +128,22 @@ function page() {
                 <div className="blog__content">
                   <div className="blog__meta d-flex align-items-center">
                     <div className="blog__meta-cat">
-                      <a href="#">Engineering</a>
-                      <a href="#">Distribution</a>
+                      <a href={`/blog?category=${category}`}>{category}</a>
                     </div>
                     <span className="blog__meta-author">
-                      By: <a href="#">Mike Dooley</a>
+                      By: <a href="#">{published_by}</a>
                     </span>
-                    <span className="blog__meta-date">Jan 20, 2020</span>
+                    <span className="blog__meta-date">
+                      {getdateToStr(published_date)}
+                    </span>
                   </div>
-                  <h1 className="blog__title">
-                    Importance of specialized focus in Projects, Oil &amp; Gas
-                    Logistics?
-                  </h1>
-                  <div className="blog__desc">
-                    <p>
-                      The key to the success of any logistics contract is good
-                      logistics management. The key to good management is the
-                      ability to identify the needs of the client and the
-                      countries in which the work will take place, as well as
-                      being in a position to advise the best way forward. In
-                      today’s international and remote locations, experience and
-                      understanding of logistics operations and local networks
-                      is vital. With the many years of experience in our team,
-                      we have a detailed understanding of the criticality or
-                      every aspect of the logistics world.
-                    </p>
-                    <p>
-                      {" "}
-                      Focus can provide logistics personnel to meet the needs of
-                      your company or portfolio. From logistics managers to
-                      warehousemen, logistics controllers to transport
-                      coordinators, we can assist you. We provide personnel for
-                      one-off portfolio as well as long or short-term agency
-                      personnel, assist in the recruitment of permanent staff,
-                      or we can manage your logistics department for you.
-                    </p>
-                    <p>
-                      When travelling to a foreign country, most people are
-                      nervous of the obstacles that will be there for them to
-                      overcome. When a full marine crew travels en-mass to a
-                      vessel mobilisation, it is imperative that they arrive on
-                      time and safely, especially in a remote location.
-                    </p>
-                    <p>
-                      Focus provides meet-and-greet facilities through our
-                      network of specialist companies. From hotel reservations
-                      and taxi arrangements to a full pick-up facility, with or
-                      without armed guards, this can be arranged.
-                    </p>
-                    <p>
-                      Ever had a last minute requirement for items to be in a
-                      country where you do not have a visa to enter? Are you
-                      frustrated at having to hand-carry important documents to
-                      your client, which takes you out of the office for days?
-                      Let Focus help you. Our personnel are available
-                      24-hours-a-day for these important deliveries. This leaves
-                      you free to concentrate on your business.
-                    </p>
-                  </div>
+                  <h1 className="blog__title">{title}</h1>
+                  {content && (
+                    <div
+                      dangerouslySetInnerHTML={{ __html: content }}
+                      className="blog__desc"
+                    />
+                  )}
                 </div>
               </div>
 
@@ -184,27 +172,16 @@ function page() {
                 </a>
               </div>
 
-              <div className="blog-tags d-flex flex-wrap">
+              <div className="blog-tags d-flex ">
                 <strong className="mr-20 color-heading">Tags:</strong>
                 <ul className="list-unstyled d-flex flex-wrap mb-40">
-                  <li>
-                    <a href="#">Tiling</a>
-                  </li>
-                  <li>
-                    <a href="#">Painting</a>
-                  </li>
-                  <li>
-                    <a href="#">Construction</a>
-                  </li>
-                  <li>
-                    <a href="#">Architecture</a>
-                  </li>
-                  <li>
-                    <a href="#">Building</a>
-                  </li>
-                  <li>
-                    <a href="#">Renovations</a>
-                  </li>
+                  {tags?.split(",").map((tag, i) => {
+                    return (
+                      <li key={i} className=" pe-2">
+                        <a href={`/blog?tag=${tag}`}>{tag}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 

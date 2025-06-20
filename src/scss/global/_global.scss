@@ -131,3 +131,11 @@ select {
 .text-justify {
     text-align: justify;
 }
+
+.truncate-2-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

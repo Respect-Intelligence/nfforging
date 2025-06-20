@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Blog, blogImageBaseURL } from "@/assets/static/types";
+import { getdateToStr } from "@/utils/CommonFuntion";
 
-const RecentPost = () => {
+const RecentPost = ({ recentBlogs }: { recentBlogs: Blog[] | null }) => {
   const slides = [
     {
       img: "/images/banner3.jpg",
@@ -27,18 +29,20 @@ const RecentPost = () => {
       loop={true}
       className="mySwiper recent-post-swiper"
     >
-      {slides.map((slide, index) => (
+      {recentBlogs?.map(({ blog_image, title, published_date }, index) => (
         <SwiperSlide key={index}>
           <div className="widget-post-item">
             <div className="widget__post-img">
               <a href="#">
-                <img src={slide.img} alt="thumb" />
+                <img src={`${blogImageBaseURL}${blog_image}`} alt="thumb" />
               </a>
             </div>
             <div className="widget__post-content">
-              <span className="widget__post-date">{slide.date}</span>
+              <span className="widget__post-date">
+                {/* {getdateToStr(published_date)} */}
+              </span>
               <h6 className="widget__post-title">
-                <a href="#">{slide.title}</a>
+                <a href="#">{title}</a>
               </h6>
             </div>
           </div>

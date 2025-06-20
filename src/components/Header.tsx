@@ -87,7 +87,7 @@ export default function Header() {
     const handleScroll = () => {
       console.log(pathname, "fd");
       setIsMobilenavOpen(false);
-      if (pathname == "/blog") {
+      if (pathname.indexOf("/blog") !== -1) {
         setIsSticky(true);
       } else if (window.innerWidth >= 992) {
         setIsSticky(window.scrollY > 200);

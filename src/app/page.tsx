@@ -1,4 +1,4 @@
-import BlogSection from "@/components/landing/BlogSection";
+import BlogSection from "@/components/landing/(blog)/BlogSection";
 import CirtificationSection from "@/components/CirtificationSection";
 import ContactFormSection from "@/components/landing/ContactFormSection";
 import HighlightSection from "@/components/landing/HighlightSection";

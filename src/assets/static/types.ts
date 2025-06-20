@@ -141,3 +141,24 @@ export interface GalleryItem {
   category: string;
   description?: string;
 }
+export type Blog = {
+  id?: number;
+  title?: string;
+  slug?: string;
+  category?: string;
+  intro?: string;
+  blog_image?: string;
+  content?: string;
+  meta_title?: string;
+  meta_keywords?: string;
+  meta_description?: string;
+  meta_canonical?: string;
+  tags?: string;
+  published_date?: Date; // Use `Date` if you parse it
+  published_by?: string;
+  published_status?: number; // Or boolean if you convert it
+  blog_image_alt?: string;
+  modified_date?: string; // Use `Date` if parsed
+};
+export const blogImageBaseURL =
+  "http://localhost/nf-forging/assets/images/blog/";

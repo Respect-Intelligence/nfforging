@@ -40,7 +40,12 @@
         display: flex;
         flex-shrink: 0;
         width: 100%;
-        height: 160px;
+
+        @include breakpoint-up(md) {
+            height: 160px;
+
+
+        }
 
         // @include breakpoint-down(md) {
         //     height: 180px;
