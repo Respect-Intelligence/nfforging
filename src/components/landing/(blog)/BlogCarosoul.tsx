@@ -87,7 +87,7 @@ function BlogCarosoul({ blogPosts }: { blogPosts: Blog[] }) {
                   <div className="top">
                     <div className="blog__meta">
                       <div className="blog__meta-cat">
-                        <a href="#" tabIndex={-1}>
+                        <a href={`/blog?category=${category}`} tabIndex={-1}>
                           {category}
                         </a>
                       </div>

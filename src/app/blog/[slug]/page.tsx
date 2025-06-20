@@ -114,7 +114,7 @@ async function page({ params }: { params: { slug: string } }) {
                         ? tags?.split(",").map((tag, i) => {
                             return (
                               <li key={i} className=" pe-2">
-                                <a href={`/blog?tag=${tag}`}>{tag}</a>
+                                <a href={`/blog?tags=${tag}`}>{tag}</a>
                               </li>
                             );
                           })
@@ -142,7 +142,10 @@ async function page({ params }: { params: { slug: string } }) {
                       <a href={`/blog?category=${category}`}>{category}</a>
                     </div>
                     <span className="blog__meta-author">
-                      By: <a href="#">{published_by}</a>
+                      By:{" "}
+                      <a href={`/blog?published_by=${published_by}`}>
+                        {published_by}
+                      </a>
                     </span>
                     <span className="blog__meta-date">
                       {getdateToStr(published_date)}
@@ -200,7 +203,7 @@ async function page({ params }: { params: { slug: string } }) {
                   {tags?.split(",").map((tag, i) => {
                     return (
                       <li key={i} className=" pe-2">
-                        <a href={`/blog?tag=${tag}`}>{tag}</a>
+                        <a href={`/blog?tags=${tag}`}>{tag}</a>
                       </li>
                     );
                   })}
