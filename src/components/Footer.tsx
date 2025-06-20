@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { contactDetails } from "@/assets/static/data";
-import { ArrowRight, Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -33,8 +34,11 @@ export default function Footer() {
                   </p>
                   <ul className="social__icons list-unstyled">
                     <li>
-                      <a href="#" className="">
-                        {/* <i className="fa fa-facebook"></i> */}
+                      <a
+                        href="https://www.facebook.com/profile.php?id=61575973403117"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Facebook
                           fill="#fff"
                           stroke="none"
@@ -44,13 +48,12 @@ export default function Footer() {
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <Instagram height={18} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Twitter
+                      <a
+                        href="https://www.linkedin.com/company/nf-forgings/?viewAsMember=true"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Linkedin
                           fill="#fff"
                           stroke="none"
                           height={18}
@@ -69,22 +72,26 @@ export default function Footer() {
                   <nav>
                     <ul className="list-unstyled">
                       <li>
-                        <a href="#">Overview</a>
+                        <Link href="/crf">Overview</Link>
                       </li>
                       <li>
-                        <a href="#">Sheet Piles</a>
+                        <Link href="/crf/sheet-piles">Sheet Piles</Link>
                       </li>
                       <li>
-                        <a href="#">Solar Module Mounting Solutions</a>
+                        <Link href="/crf/solar-module">
+                          Solar Module Mounting Solutions
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">Wagon & Coaches</a>
+                        <Link href="/crf/wagon-coaches">Wagon & Coaches</Link>
                       </li>
                       <li>
-                        <a href="#">Pre Engineered Building</a>
+                        <Link href="/crf/pre-engineered-building">
+                          Pre Engineered Building
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">Crash Barriers</a>
+                        <Link href="/crf/crash-barriers">Crash Barriers</Link>
                       </li>
                     </ul>
                   </nav>
@@ -98,43 +105,47 @@ export default function Footer() {
                   <nav>
                     <ul className="list-unstyled">
                       <li>
-                        <a href="#">Overview</a>
+                        <Link href="/foundry">Overview</Link>
                       </li>
                       <li>
-                        <a href="#">Products</a>
+                        <Link href="/foundry/products">Products</Link>
                       </li>
                       <li>
-                        <a href="#">Infrastructure</a>
+                        <Link href="/foundry/infrastructure">
+                          Infrastructure
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">Quality</a>
+                        <Link href="/foundry/foundry-quality">
+                          Quality Assurance
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">Fabrication</a>
+                        <Link href="/fabrication">Fabrication</Link>
                       </li>
                     </ul>
                   </nav>
                 </div>
               </div>
 
+              {/* Quick Links */}
               <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 footer__widget footer__widget-nav">
-                {/* Quick Links / Brochure */}
                 <div className="">
                   <h6 className="footer__widget-title">Quick Links</h6>
                   <div className="footer__widget-content">
                     <nav>
                       <ul className="list-unstyled">
                         <li>
-                          <a href="#">Home</a>
+                          <Link href="/">Home</Link>
                         </li>
                         <li>
-                          <a href="#">About Us</a>
+                          <Link href="/about-us">About Us</Link>
                         </li>
                         <li>
-                          <a href="#">Careers</a>
+                          <Link href="/careers">Careers</Link>
                         </li>
                         <li>
-                          <a href="#">Contact Us</a>
+                          <Link href="/contact-us">Contact Us</Link>
                         </li>
                       </ul>
                     </nav>
@@ -180,10 +191,7 @@ export default function Footer() {
                 <nav>
                   <ul className="footer__copyright-links list-unstyled d-flex flex-wrap mb-0">
                     <li>
-                      <a href="#">Privacy Policy</a>
-                    </li>
-                    <li>
-                      <a href="#">Disclaimer</a>
+                      <Link href="/privacy-policy">Privacy Policy</Link>
                     </li>
                   </ul>
                 </nav>
