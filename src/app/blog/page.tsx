@@ -16,9 +16,7 @@ type BlogQueryResult = {
   total: number;
 };
 
-export async function getBlogs(
-  params: BlogQueryParams
-): Promise<BlogQueryResult> {
+async function getBlogs(params: BlogQueryParams): Promise<BlogQueryResult> {
   const { page = 1, limit = 9, ...filters } = params;
   console.log("params", filters);
 
@@ -92,18 +90,22 @@ export async function getBlogs(
 //   }
 // }
 
-type pageProps = {
-  searchParams: {
+interface PageProps {
+  params: Promise<Record<string, string>>; // Changed this line
+  searchParams: Promise<{
+    // Changed this line
     category?: string;
     tags?: string;
     slug?: string;
     title?: string;
     published_by?: string;
-  };
-};
-async function page({ searchParams }: pageProps) {
-  const category = searchParams.category;
-  const blogs = await getBlogs(searchParams);
+  }>;
+}
+
+export default async function Page({ params, searchParams }: PageProps) {
+  // Added await for searchParams
+  const search = await searchParams;
+  const blogs = await getBlogs(search);
   console.log("blogs", blogs);
 
   return (
@@ -181,4 +183,4 @@ async function page({ searchParams }: pageProps) {
   );
 }
 
-export default page;
+// export default page;

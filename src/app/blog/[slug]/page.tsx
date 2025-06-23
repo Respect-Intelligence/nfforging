@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { use } from "react";
 import "@/scss/sections/blog.scss";
 import RecentPost from "../RecentPost";
 import { Facebook, Instagram, Linkedin, Search, Twitter } from "lucide-react";
@@ -7,7 +7,6 @@ import { query } from "@/utils/db";
 import { Blog, blogImageBaseURL } from "@/assets/static/types";
 import { notFound } from "next/navigation";
 import { getdateToStr } from "@/utils/CommonFuntion";
-import Content from "./Content";
 
 async function fetchBlogs(slug: string): Promise<Blog[] | null> {
   try {
@@ -20,7 +19,8 @@ async function fetchBlogs(slug: string): Promise<Blog[] | null> {
     return null;
   }
 }
-export async function fetchRecentBlogs(): Promise<Blog[] | null> {
+
+async function fetchRecentBlogs(): Promise<Blog[] | null> {
   try {
     const results = await query<Blog>(
       `SELECT * FROM blogs ORDER BY published_date DESC LIMIT 6`
@@ -32,8 +32,14 @@ export async function fetchRecentBlogs(): Promise<Blog[] | null> {
     return null;
   }
 }
-async function page({ params }: { params: { slug: string } }) {
-  const blogs = await fetchBlogs(params.slug);
+
+interface PageProps {
+  params: Promise<{ slug: string }>; // Changed this line
+}
+
+export default async function page({ params }: PageProps) {
+  const { slug: slug_text } = await params; // Added await here
+  const blogs = await fetchBlogs(slug_text);
   if (blogs == null) {
     notFound();
   }
@@ -53,6 +59,7 @@ async function page({ params }: { params: { slug: string } }) {
     published_by,
     published_date,
   } = blogs[0];
+
   return (
     <>
       <section className="page-title page-title-layout8 text-center blog-page-title">
@@ -102,7 +109,7 @@ async function page({ params }: { params: { slug: string } }) {
                 <div className="widget widget-posts">
                   <h5 className="widget__title">Recent Posts</h5>
                   <div className="widget__content">
-                    <RecentPost recentBlogs={recentBlogs} />
+                    {/* {recentBlogs && <RecentPost recentBlogs={recentBlogs} />} */}
                   </div>
                 </div>
 
@@ -132,7 +139,7 @@ async function page({ params }: { params: { slug: string } }) {
                   <a href="#">
                     <img
                       src={`${blogImageBaseURL}${blog_image}`}
-                      alt="blog image"
+                      alt={blog_image_alt}
                     />
                   </a>
                 </div>
@@ -247,5 +254,3 @@ async function page({ params }: { params: { slug: string } }) {
     </>
   );
 }
-
-export default page;
