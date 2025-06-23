@@ -109,7 +109,7 @@ export default async function page({ params }: PageProps) {
                 <div className="widget widget-posts">
                   <h5 className="widget__title">Recent Posts</h5>
                   <div className="widget__content">
-                    {/* {recentBlogs && <RecentPost recentBlogs={recentBlogs} />} */}
+                    {recentBlogs && <RecentPost recentBlogs={recentBlogs} />}
                   </div>
                 </div>
 
