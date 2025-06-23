@@ -10,28 +10,28 @@ import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Blog, blogImageBaseURL } from "@/assets/static/types";
-import { getdateToStr } from "@/utils/CommonFuntion";
+import { adjustSlideHeights, getdateToStr } from "@/utils/CommonFuntion";
 
 function BlogCarosoul({ blogPosts }: { blogPosts: Blog[] }) {
-  const adjustSlideHeights = (swiper: SwiperClass) => {
-    if (!swiper?.slides?.length) return;
+  // const adjustSlideHeights = (swiper: SwiperClass) => {
+  //   if (!swiper?.slides?.length) return;
 
-    let maxHeight = 0;
+  //   let maxHeight = 0;
 
-    swiper.slides.forEach((slideEl) => {
-      const el = slideEl as HTMLElement;
-      el.style.height = "auto"; // reset
-      const height = el.offsetHeight;
-      if (height > maxHeight) maxHeight = height;
-    });
+  //   swiper.slides.forEach((slideEl) => {
+  //     const el = slideEl as HTMLElement;
+  //     el.style.height = "auto"; // reset
+  //     const height = el.offsetHeight;
+  //     if (height > maxHeight) maxHeight = height;
+  //   });
 
-    swiper.slides.forEach((slideEl) => {
-      const el = slideEl as HTMLElement;
-      el.style.height = `${maxHeight}px`;
-    });
+  //   swiper.slides.forEach((slideEl) => {
+  //     const el = slideEl as HTMLElement;
+  //     el.style.height = `${maxHeight}px`;
+  //   });
 
-    swiper.update();
-  };
+  //   swiper.update();
+  // };
   return (
     <Swiper
       modules={[Pagination, Autoplay, Navigation]}

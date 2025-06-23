@@ -58,8 +58,13 @@ async function fetchBlogs(): Promise<Blog[]> {
   // }));
 }
 const BlogSection = async () => {
-  const blogs = await fetchBlogs();
-  // console.log("blogs", blogs);
+  let blogs: null | Blog[] = null;
+  try {
+    blogs = await fetchBlogs();
+    console.log("blogs", blogs);
+  } catch (error) {
+    console.log(error, "err");
+  }
 
   return (
     <section className="blog-carousel pb-0 z-index-2 pt-80">
@@ -74,15 +79,17 @@ const BlogSection = async () => {
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-12 ">
             <div className="position-relative">
-              <div className="carousel-nav-wrapper">
-                <button className="carousel-nav-arrow carousel-nav-prev ">
-                  <ArrowLeft />
-                  <span>Prev</span>
-                </button>
-                <button className="carousel-nav-arrow carousel-nav-next">
-                  <ArrowRight />
-                </button>
-              </div>
+              {blogs && (
+                <div className="carousel-nav-wrapper">
+                  <button className="carousel-nav-arrow carousel-nav-prev ">
+                    <ArrowLeft />
+                    <span>Prev</span>
+                  </button>
+                  <button className="carousel-nav-arrow carousel-nav-next">
+                    <ArrowRight />
+                  </button>
+                </div>
+              )}
               {/* <button
                 className="slick-prev slick-arrow"
                 aria-label="Previous"
@@ -90,8 +97,11 @@ const BlogSection = async () => {
               >
                 Previous
               </button> */}
-
-              <BlogCarosoul blogPosts={blogs} />
+              {blogs ? (
+                <BlogCarosoul blogPosts={blogs} />
+              ) : (
+                <p>No Blogs Found</p>
+              )}
             </div>
           </div>
         </div>
