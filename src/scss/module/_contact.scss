@@ -297,7 +297,8 @@
 
     .contact-panel {
         justify-content: space-between;
-        margin-top: -140px;
+        margin-top: -80px;
+        // margin-top: -140px;
 
         @include breakpoint-down(lg) {
             margin-top: 20px;

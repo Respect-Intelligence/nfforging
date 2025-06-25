@@ -1,6 +1,8 @@
 import ClientBootstrapWrapper from "@/components/ClientBootstrapWrapper";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { ToastContainer } from "@/components/Toster/ToastContainer";
+import { ToastProvider } from "@/components/Toster/ToastProvider";
 
 export default function RootLayout({
   children,
@@ -12,7 +14,10 @@ export default function RootLayout({
       <body className={``}>
         <ClientBootstrapWrapper />
         <Header />
-        {children}
+        <ToastProvider>
+          {children}
+          <ToastContainer />
+        </ToastProvider>
 
         <Footer />
       </body>

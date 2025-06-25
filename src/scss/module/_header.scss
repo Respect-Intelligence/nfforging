@@ -250,7 +250,8 @@
             }
 
             .nav__item-link {
-                color: $color-body;
+                // color: $color-body;
+                color: $color-heading;
                 text-transform: capitalize;
                 font-weight: 400;
                 line-height: 33px !important;

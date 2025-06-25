@@ -105,6 +105,7 @@ interface PageProps {
 export default async function Page({ params, searchParams }: PageProps) {
   // Added await for searchParams
   const search = await searchParams;
+  console.log("search", search);
   const blogs = await getBlogs(search);
   console.log("blogs", blogs);
 

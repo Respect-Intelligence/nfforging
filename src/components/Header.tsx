@@ -9,6 +9,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { contactDetails } from "@/assets/static/data";
 import Popup from "./Popup";
+import ContactForm from "./ContactForm";
 const menuItems = [
   { id: "1", title: "Home", href: "/" },
   { id: "2", title: "About Us", href: "/about-us" },
@@ -112,101 +113,11 @@ export default function Header() {
             <h4 className="contact__panel-title">Send Us Message</h4>
             <div className="d-flex justify-content-center">
               <p className="contact__panel-desc mb-40">
-                Send us a message and we'll get back to you as soon as possible.
+                Send us a message and we'll get back to you as soon as possi
               </p>
             </div>
           </div>
-          <form
-            method="post"
-            action="assets/php/contact.php"
-            id="contactForm"
-            className="contact__panel-form  border-r-0"
-            noValidate
-          >
-            <div className="row">
-              <div className="col-sm-12 col-md-6 col-lg-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Name*"
-                    id="contact-name"
-                    name="contact-name"
-                    required
-                    aria-required="true"
-                  />
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-6 col-lg-6">
-                <div className="form-group">
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Email*"
-                    id="contact-email"
-                    name="contact-email"
-                    required
-                    aria-required="true"
-                  />
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-6 col-lg-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Phone*"
-                    id="contact-Phone"
-                    name="contact-phone"
-                    required
-                    aria-required="true"
-                  />
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-6 col-lg-6">
-                <div className="form-group">
-                  <select
-                    className="form-control form-select"
-                    required
-                    defaultValue=""
-                  >
-                    <option value="" disabled hidden>
-                      select your industry*
-                    </option>
-
-                    <option>Petroleum &amp; Gas Energy</option>
-                    <option>Construction &amp; Engineering</option>
-                    <option>Mechanical Engineering</option>
-                  </select>
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-12 col-lg-12">
-                <div className="form-group">
-                  <textarea
-                    className="form-control"
-                    placeholder="Additional Details!"
-                    id="contact-messgae"
-                    name="contact-messgae"
-                    required
-                    aria-required="true"
-                  ></textarea>
-                </div>
-              </div>
-              <div className="col-sm-12 col-md-12 col-lg-12 d-flex align-items-center">
-                <button type="submit" className="btn btn__primary mr-40">
-                  <span className="mx-2">Submit Request</span>
-                  <i className="icon-arrow-right mx-2"></i>
-                </button>
-                <div className="form-group input-radio my-3">
-                  <label className="label-radio">
-                    I accept the privacy and terms.
-                    <input type="checkbox" defaultChecked />
-                    <span className="radio-indicator"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </form>
+          <ContactForm />
           <div className="contact__panel-info">
             <img src="/images/contactus.jpg" alt="" />
           </div>

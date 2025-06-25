@@ -150,9 +150,13 @@ export default async function page({ params }: PageProps) {
                     </div>
                     <span className="blog__meta-author">
                       By:{" "}
-                      <a href={`/blog?published_by=${published_by}`}>
+                      <Link
+                        href={`/blog?published_by=${encodeURIComponent(
+                          published_by || ""
+                        )}`}
+                      >
                         {published_by}
-                      </a>
+                      </Link>
                     </span>
                     <span className="blog__meta-date">
                       {getdateToStr(published_date)}
@@ -217,7 +221,7 @@ export default async function page({ params }: PageProps) {
                 </ul>
               </div>
 
-              <div className="blog-widget blog-nav mb-0">
+              {/* <div className="blog-widget blog-nav mb-0">
                 <div className="blog__prev">
                   <a href="#">
                     <div className="blog__nav-img">
@@ -246,7 +250,7 @@ export default async function page({ params }: PageProps) {
                     </div>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
