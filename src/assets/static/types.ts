@@ -169,3 +169,19 @@ export interface Toast {
   type: "success" | "error" | "warning" | "info";
   duration?: number;
 }
+export interface JobDetailsProps {
+  jobTitle: string;
+  company: string;
+  description: string;
+  responsibilities: string[];
+  //   preferredSkills: string[];
+  //   requiredSkills: string[];
+  experience?: string;
+  location?: string;
+  jobType: string;
+  salary?: string;
+  postedDate: string;
+  applicationDeadline?: string;
+  preferedCadidate?: string[];
+  slug: string;
+}
