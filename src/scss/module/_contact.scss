@@ -25,9 +25,10 @@
         li {
             font-size: 14px;
             margin-bottom: 9px;
+            color: $para-color;
 
             a {
-                color: $color-body;
+                color: $color-theme;
             }
         }
     }
@@ -56,6 +57,7 @@
 
         .contact__info-list li {
             margin-bottom: 2px;
+            color: $para-color;
         }
     }
 
@@ -276,6 +278,7 @@
     .contact__panel-desc {
         font-size: 15px;
         line-height: 25px;
+        color: $para-color;
     }
 
     .nice-select .list {

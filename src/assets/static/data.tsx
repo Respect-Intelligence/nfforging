@@ -84,11 +84,11 @@ export const teamMembers = [
     role: "Director",
     image: "/images/team/Picture1.jpg",
   },
-  {
-    name: "Kishan Dhanuka",
-    role: "Director",
-    image: "/images/team/Picture2.png",
-  },
+  // {
+  //   name: "Kishan Dhanuka",
+  //   role: "Director",
+  //   image: "/images/team/Picture2.png",
+  // },
   {
     name: "Narayan Dhanuka",
     role: "Director",
@@ -434,27 +434,27 @@ export const milestones: Milestone[] = [
       "Set up a manufacturing unit for casting Cold Rolled Formed and Fabrications as NF FORGINGS PVT LTD, SANKRAIL (Unit 1)",
     isLeft: true,
   },
-  {
-    year: "1991",
-    title: "Air Brake Components",
-    description:
-      "PEW Pvt. Ltd. commenced operations for supplying Air Brake components to Indian Railways",
-    isLeft: false,
-  },
-  {
-    year: "2002",
-    title: "FRP & Paints Catering",
-    description:
-      "MACEDON VINIMAY PVT. LTD setup in SODEPUR first of its kind state-of-art of FRP & Paints Catering to power sector and Railway sector",
-    isLeft: true,
-  },
-  {
-    year: "2009",
-    title: "Seamless Pipes Innovation",
-    description:
-      "LALBABA SEAMLESS TUBES PVT. LTD was set up in Haldia, West Bengal, a first of its kind state-of-art seamless pipes unit in Eastern India",
-    isLeft: false,
-  },
+  // {
+  //   year: "1991",
+  //   title: "Air Brake Components",
+  //   description:
+  //     "PEW Pvt. Ltd. commenced operations for supplying Air Brake components to Indian Railways",
+  //   isLeft: false,
+  // },
+  // {
+  //   year: "2002",
+  //   title: "FRP & Paints Catering",
+  //   description:
+  //     "MACEDON VINIMAY PVT. LTD setup in SODEPUR first of its kind state-of-art of FRP & Paints Catering to power sector and Railway sector",
+  //   isLeft: true,
+  // },
+  // {
+  //   year: "2009",
+  //   title: "Seamless Pipes Innovation",
+  //   description:
+  //     "LALBABA SEAMLESS TUBES PVT. LTD was set up in Haldia, West Bengal, a first of its kind state-of-art seamless pipes unit in Eastern India",
+  //   isLeft: false,
+  // },
   {
     year: "2018",
     title: "Retro Fitment Services",

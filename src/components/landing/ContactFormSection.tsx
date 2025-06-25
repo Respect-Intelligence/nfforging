@@ -211,7 +211,7 @@ export default function ContactFormSection() {
                         <i className="icon-arrow-right mx-2"></i>
                       </button>
                       <div className="form-group input-radio my-3">
-                        <label className="label-radio">
+                        <label className="label-radio color-para ">
                           I accept the privacy and terms.
                           <input type="checkbox" defaultChecked />
                           <span className="radio-indicator"></span>

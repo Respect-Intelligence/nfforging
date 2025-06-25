@@ -17,6 +17,12 @@
         display: none;
     }
 
+    .heading-layout2 {
+        .heading__desc {
+            color: $para-color;
+        }
+    }
+
     .btn__icon {
         height: 55px;
         line-height: 55px;
@@ -53,6 +59,12 @@
         max-width: 100%;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .heading-layout2 {
+        .heading__desc {
+            color: $para-color;
+        }
     }
 
     .imgs-block {

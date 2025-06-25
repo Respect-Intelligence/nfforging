@@ -14,7 +14,7 @@ function OurTeams_section() {
             </h2>
           </div>
           {teamMembers.map((member, index) => (
-            <div key={index} className="col-sm-6 col-md-6 col-lg-3">
+            <div key={index} className="col-sm-6 col-md-6 col-lg-4">
               <div className="member">
                 <div className="member__img">
                   <img src={member.image} alt="member img" />

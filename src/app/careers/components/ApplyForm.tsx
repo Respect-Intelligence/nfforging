@@ -166,7 +166,7 @@ export default function ApplyForm() {
                       <LucideArrowRight className="mx-2" size={16} />
                     </button>
                     <div className="form-group input-radio my-3">
-                      <label className="label-radio">
+                      <label className="label-radio color-para ">
                         I accept the privacy and terms.
                         <input
                           type="checkbox"
