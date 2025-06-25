@@ -10,6 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.6",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.510.0",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

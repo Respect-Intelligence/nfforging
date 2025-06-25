@@ -1,15 +1,21 @@
 import { Phone } from "lucide-react";
 
 import ContactForm from "../ContactForm";
-
-export default function ContactFormSection() {
+interface pageProps {
+  className?: string;
+}
+export default function ContactFormSection({ className }: pageProps) {
   return (
     <>
-      <section className="contact-layout2 p-0">
+      <section className={`contact-layout2 p-0 ${className}`}>
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12">
-              <div className="contact-panel ">
+              <div
+                className="contact-panel "
+                data-aos="zoom-in-up"
+                data-aos-duration="300"
+              >
                 <div className="col-sm-12">
                   <h4 className="contact__panel-title">Send Us Message</h4>
                   <div className="d-flex justify-content-center">

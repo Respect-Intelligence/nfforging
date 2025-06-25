@@ -9,7 +9,11 @@ export default function AboutUsSection() {
             <div className="col-lg-6 col-12">
               <div className="about-left-image d-none d-md-block">
                 <div className="img-wraper">
-                  <img src="/images/home3/ab-1.jpg.png" alt="" />
+                  <img
+                    src="/images/home3/ab-1.jpg.png"
+                    data-aos="zoom-in-left"
+                    alt=""
+                  />
                 </div>
                 {/* <div className="ab-2">
                   <img
@@ -20,7 +24,7 @@ export default function AboutUsSection() {
               </div>
             </div>
             <div className="col-lg-6 col-12 pe-4">
-              <div className="">
+              <div className="" data-aos="fade-right">
                 <div className="heading-layout2">
                   <p className="heading__subtitle">About Company</p>
                   <h2 className="heading__title">
@@ -56,8 +60,12 @@ export default function AboutUsSection() {
           <div className="row align-items-end ">
             <div className="col-lg-6 col-12">
               <div className="about-left-image ">
-                <div className="img-wraper">
-                  <img src="/images/home3/ab-2.png" alt="" />
+                <div className="img-wraper" data-aos="fade-right">
+                  <img
+                    src="/images/home3/ab-2.png"
+                    alt=""
+                    data-aos="zoom-in-right"
+                  />
                 </div>
                 {/* <div className="ab-2">
                   <img
@@ -68,7 +76,7 @@ export default function AboutUsSection() {
               </div>
             </div>
             <div className="col-lg-6 col-12">
-              <div className=" ">
+              <div className=" " data-aos="fade-left">
                 <div className="content">
                   <p className="text-justify">
                     NFFPL is a ‘Total Solutions’ engineering company providing

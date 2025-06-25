@@ -4,7 +4,10 @@ export default function MapSection() {
       <section className="google-map-layout2 ">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12 col-md-12 position-relative">
+            <div
+              className="col-sm-12 col-md-12 position-relative"
+              data-aos="zoom-in"
+            >
               <div className="contact-info-carousel ">
                 <h5 className="contact__info-title">Locations</h5>
 

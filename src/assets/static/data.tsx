@@ -50,7 +50,13 @@ import {
   Wrench,
   WrenchIcon,
 } from "lucide-react";
-import { GalleryItem, Milestone, ServiceData, ServiceName } from "./types";
+import {
+  GalleryItem,
+  JobDetailsProps,
+  Milestone,
+  ServiceData,
+  ServiceName,
+} from "./types";
 import { time } from "console";
 
 const validSlugs = ["crf", "foundry", "fabrication"] as const;
@@ -95,38 +101,181 @@ export const teamMembers = [
     image: "/images/team/Picture3.jpg",
   },
 ];
-export const jobs = [
+export const jobs: JobDetailsProps[] = [
   {
-    type: "Full Time",
-    location: "Kolkata",
-    title: "Production Engineer",
-    desc: "Responsible for overseeing manufacturing processes, ensuring quality standards, and optimizing production efficiency.",
+    jobTitle: "Senior Frontend Developer",
+    company: "TechCorp Solutions",
+    description:
+      "We are seeking a highly skilled Senior Frontend Developer to join our dynamic team. You will be responsible for developing user-facing web applications using modern JavaScript frameworks and ensuring optimal user experience across all platforms.",
+    responsibilities: [
+      "Develop and maintain high-quality web applications using React, Next.js, and TypeScript",
+      "Collaborate with designers and backend developers to implement pixel-perfect UI/UX designs",
+      "Optimize applications for maximum speed and scalability across various devices and browsers",
+      "Write clean, maintainable, and well-documented code following best practices",
+      "Participate in code reviews and provide constructive feedback to team members",
+      "Stay up-to-date with the latest frontend technologies and industry trends",
+      "Mentor junior developers and contribute to team knowledge sharing",
+      "Work with product managers to translate business requirements into technical solutions",
+    ],
+    experience: "3-5 Years",
+    location: "San Francisco, CA (Hybrid)",
+    jobType: "Full-time",
+    postedDate: "Dec 15, 2024",
+    applicationDeadline: "Jan 31, 2025",
+    preferedCadidate: [
+      "A minimum of 5 years of experience in the relevant field preferred",
+      "Minimum Education Qualification – Graduation Interested Candidates please share your resume at frontend.hr@techcorp.com",
+    ],
+    slug: "senior-frontend-developer",
   },
   {
-    type: "Full Time",
+    jobTitle: "Production Engineer",
+    company: "NF Forgings Pvt. Ltd.",
+    description:
+      "Oversee manufacturing processes and ensure products are produced efficiently, safely, and meet quality standards.",
+    responsibilities: [
+      "Monitor production lines and supervise technical staff",
+      "Maintain and improve manufacturing efficiency and productivity",
+      "Implement quality control processes",
+      "Troubleshoot equipment issues and ensure timely maintenance",
+      "Collaborate with the design and QA teams to resolve production challenges",
+    ],
+    experience: "2-4 Years",
     location: "Kolkata",
-    title: "Quality Assurance Supervisor",
-    desc: "Leads the QA team to maintain product standards, conducts inspections, and implements quality control procedures.",
+    jobType: "Full-time",
+    postedDate: "Jun 01, 2025",
+    applicationDeadline: "Jul 15, 2025",
+    preferedCadidate: [
+      "Bachelor's Degree in Mechanical or Production Engineering",
+      "Hands-on experience in industrial production preferred",
+    ],
+    slug: "production-engineer",
   },
   {
-    type: "Full Time",
+    jobTitle: "Quality Assurance Supervisor",
+    company: "NF Forgings Pvt. Ltd.",
+    description:
+      "Lead the QA team to enforce company standards, conduct inspections, and manage quality control systems across manufacturing operations.",
+    responsibilities: [
+      "Develop and enforce quality assurance protocols",
+      "Supervise QA inspectors and analysts",
+      "Perform audits and generate reports on product quality",
+      "Liaise with production teams to resolve quality issues",
+      "Ensure compliance with ISO and BIS certifications",
+    ],
+    experience: "3-5 Years",
     location: "Kolkata",
-    title: "Design Engineer",
-    desc: "Develops and designs components and systems, collaborates with cross-functional teams to meet project requirements.",
+    jobType: "Full-time",
+    postedDate: "Jun 01, 2025",
+    applicationDeadline: "Jul 15, 2025",
+    preferedCadidate: [
+      "Degree/Diploma in Quality Engineering or related field",
+      "Familiarity with RDSO/BIS norms is a plus",
+    ],
+    slug: "quality-assurance-supervisor",
   },
   {
-    type: "Full Time",
+    jobTitle: "Design Engineer",
+    company: "NF Forgings Pvt. Ltd.",
+    description:
+      "Design and develop components and systems for industrial applications. Collaborate with cross-functional teams to deliver precise and efficient solutions.",
+    responsibilities: [
+      "Create detailed engineering designs using CAD tools",
+      "Review and modify design prototypes based on testing results",
+      "Support production with technical documentation",
+      "Collaborate with suppliers for design feasibility",
+      "Ensure compliance with engineering standards and safety norms",
+    ],
+    experience: "2-3 Years",
     location: "Kolkata",
-    title: "Logistics Manager",
-    desc: "Manages supply chain operations, coordinates with vendors, and ensures timely delivery of materials and products.",
+    jobType: "Full-time",
+    postedDate: "Jun 01, 2025",
+    applicationDeadline: "Jul 15, 2025",
+    preferedCadidate: [
+      "Bachelor's degree in Mechanical or Design Engineering",
+      "Proficiency in AutoCAD, SolidWorks preferred",
+    ],
+    slug: "design-engineer",
   },
   {
-    type: "Full Time",
+    jobTitle: "Logistics Manager",
+    company: "NF Forgings Pvt. Ltd.",
+    description:
+      "Oversee and optimize the logistics and supply chain operations to ensure timely delivery and cost efficiency.",
+    responsibilities: [
+      "Plan and monitor inbound and outbound logistics operations",
+      "Manage vendor relations and transport contracts",
+      "Analyze logistics data to improve operations",
+      "Ensure compliance with transportation regulations",
+      "Coordinate with procurement and warehouse teams",
+    ],
+    experience: "4-6 Years",
     location: "Kolkata",
-    title: "Assistant Store Manager",
-    desc: "Assists in managing inventory, supervises store operations, and ensures compliance with company policies.",
+    jobType: "Full-time",
+    postedDate: "Jun 01, 2025",
+    applicationDeadline: "Jul 15, 2025",
+    preferedCadidate: [
+      "MBA in Supply Chain or equivalent field preferred",
+      "Strong analytical and negotiation skills",
+    ],
+    slug: "logistics-manager",
+  },
+  {
+    jobTitle: "Assistant Store Manager",
+    company: "NF Forgings Pvt. Ltd.",
+    description:
+      "Support the Store Manager in inventory management, staff supervision, and maintaining operational efficiency.",
+    responsibilities: [
+      "Assist with day-to-day store operations and staff management",
+      "Ensure proper inventory control and documentation",
+      "Coordinate with suppliers and procurement for stock replenishment",
+      "Maintain cleanliness and compliance within the store",
+    ],
+    experience: "1-2 Years",
+    location: "Kolkata",
+    jobType: "Full-time",
+    postedDate: "Jun 01, 2025",
+    applicationDeadline: "Jul 15, 2025",
+    preferedCadidate: [
+      "Bachelor’s degree in Business Administration or related field",
+      "Prior experience in warehouse/store handling preferred",
+    ],
+    slug: "assistant-store-manager",
   },
 ];
+
+// export const jobs = [
+//   {
+//     type: "Full Time",
+//     location: "Kolkata",
+//     title: "Production Engineer",
+//     desc: "Responsible for overseeing manufacturing processes, ensuring quality standards, and optimizing production efficiency.",
+//   },
+//   {
+//     type: "Full Time",
+//     location: "Kolkata",
+//     title: "Quality Assurance Supervisor",
+//     desc: "Leads the QA team to maintain product standards, conducts inspections, and implements quality control procedures.",
+//   },
+//   {
+//     type: "Full Time",
+//     location: "Kolkata",
+//     title: "Design Engineer",
+//     desc: "Develops and designs components and systems, collaborates with cross-functional teams to meet project requirements.",
+//   },
+//   {
+//     type: "Full Time",
+//     location: "Kolkata",
+//     title: "Logistics Manager",
+//     desc: "Manages supply chain operations, coordinates with vendors, and ensures timely delivery of materials and products.",
+//   },
+//   {
+//     type: "Full Time",
+//     location: "Kolkata",
+//     title: "Assistant Store Manager",
+//     desc: "Assists in managing inventory, supervises store operations, and ensures compliance with company policies.",
+//   },
+// ];
 export const contactDetails = {
   phone: "+91 33 4600 9083",
   email: "info@nfforging.com",
@@ -947,30 +1096,30 @@ export const sheetPiles_data = {
   ],
 };
 export const manufacturingLocationsArr = [
-  {
-    companyName: "LALBABA METALLICS PVT. LTD.",
-    products: ["Cold Roll Formation (CRF)"],
-    location: "Naihati, West Bengal",
-    establishedYear: 2022,
-  },
+  // {
+  //   companyName: "LALBABA METALLICS PVT. LTD.",
+  //   products: ["Cold Roll Formation (CRF)"],
+  //   location: "Naihati, West Bengal",
+  //   establishedYear: 2022,
+  // },
   {
     companyName: "NF FORGINGS PVT. LTD.",
     products: ["Foundry fabrication Formation"],
     location: "Naihati, Dhulagarh, Tulsiberia, West Bengal",
     establishedYear: 1982,
   },
-  {
-    companyName: "LALBABA PROJECTS PVT. \n LTD.",
-    products: ["Retrofitment", "EPC refurbishment of Rolling stock"],
-    location: "Belur, West Bengal",
-    establishedYear: 2017,
-  },
-  {
-    companyName: "LALBABA SEAMLESS TUBES PVT. \n LTD.",
-    products: ["Seamless tube", "MS & SS Pipes", "Boiler Pipe"],
-    location: "Haldia, West Bengal",
-    establishedYear: 2006,
-  },
+  // {
+  //   companyName: "LALBABA PROJECTS PVT. \n LTD.",
+  //   products: ["Retrofitment", "EPC refurbishment of Rolling stock"],
+  //   location: "Belur, West Bengal",
+  //   establishedYear: 2017,
+  // },
+  // {
+  //   companyName: "LALBABA SEAMLESS TUBES PVT. \n LTD.",
+  //   products: ["Seamless tube", "MS & SS Pipes", "Boiler Pipe"],
+  //   location: "Haldia, West Bengal",
+  //   establishedYear: 2006,
+  // },
 
   {
     companyName: "MACEDON VINIMAY PVT. LTD.",
@@ -997,19 +1146,19 @@ export const manufacturingLocationsArr = [
     location: "Howrah, West Bengal",
     establishedYear: 1991,
   },
-  {
-    companyName: "LALBABA INDUSTRIAL CORPORATION PVT LTD",
-    products: [
-      "Closed Die Forgings",
-      "Pole Rod Push Rod",
-      "Equalizing Livers",
-      "Bally Bridge Forge Component",
-      "Heat resistance great bar",
-      "Machining railway product",
-    ],
-    location: "Naihati, West Bengal",
-    establishedYear: 1967,
-  },
+  // {
+  //   companyName: "LALBABA INDUSTRIAL CORPORATION PVT LTD",
+  //   products: [
+  //     "Closed Die Forgings",
+  //     "Pole Rod Push Rod",
+  //     "Equalizing Livers",
+  //     "Bally Bridge Forge Component",
+  //     "Heat resistance great bar",
+  //     "Machining railway product",
+  //   ],
+  //   location: "Naihati, West Bengal",
+  //   establishedYear: 1967,
+  // },
 ];
 export const solarMounting_data = {
   title: "Solar Module Mounting Structure",

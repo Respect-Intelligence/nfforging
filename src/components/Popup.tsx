@@ -16,7 +16,7 @@ function Popup({
     <>
       {isOpen && (
         <div className={`popup ${isOpen ? "" : "d-none"} ${className}`}>
-          <div className="content">
+          <div className="content" data-aos="zoom-in">
             <button type="button" className="closeBtn" onClick={onClose}>
               <CircleX />
             </button>

@@ -33,13 +33,13 @@ export default function ServiceSection() {
       <section className="wpo-service-section section-padding ">
         <div className="container">
           <div className="service-wrap">
-            <div className="heading-layout2">
+            <div className="heading-layout2" data-aos="fade-down">
               <p className="heading__subtitle">What We Offer</p>
               <h2 className="heading__title">Our Products</h2>
               {/* <h2>What We Offer</h2>
             <h3>Our Services</h3> */}
             </div>
-            <div className="service-slider">
+            <div className="service-slider" data-aos="fade-left">
               <Swiper
                 modules={[Autoplay]}
                 pagination={{ clickable: true }}

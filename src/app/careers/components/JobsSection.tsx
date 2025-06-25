@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { LucideArrowRight } from "lucide-react";
 import { jobs } from "@/assets/static/data";
+import Link from "next/link";
 
 function JobsSection() {
   return (
@@ -49,20 +50,33 @@ function JobsSection() {
                 <SwiperSlide key={index}>
                   <div className="job-item">
                     <div className="job__meta d-flex align-items-center">
-                      <span className="job__type">{job.type}</span>
-                      <span className="job__location">{job.location}</span>
+                      <div className="d-flex justify-content-between align-items-center w-100">
+                        <div className="left">
+                          <span className="job__type">{job.jobType}</span>
+                          <span className="job__location">{job.location}</span>
+                        </div>
+                        <img
+                          src="/images/dark-logo.png"
+                          alt=""
+                          className="nf-logo"
+                        />
+                      </div>
                     </div>
-                    <h4 className="job__title">{job.title}</h4>
-                    <p className="job__desc">{job.desc}</p>
-                    <a
-                      href="#applyForm"
+                    <Link href={`/careers/${encodeURIComponent(job.slug)}`}>
+                      <h4 className="job__title">{job.jobTitle}</h4>
+                    </Link>
+                    <p className="job__desc truncate-2-lines">
+                      {job.description}
+                    </p>
+                    <Link
+                      href={`/careers/${encodeURIComponent(job.slug)}`}
                       className="btn btn__secondary btn__link"
                     >
                       <span>Apply Now</span>
                       <span className="circleIcon ms-2">
                         <LucideArrowRight size={16} />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </SwiperSlide>
               ))}

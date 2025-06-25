@@ -25,6 +25,12 @@
     box-shadow: 0 0 12px 0 rgba(40, 40, 40, 0.08);
     @include prefix(transition, all 0.4s ease, webkit moz ms o);
 
+
+
+    .nf-logo {
+        height: 30px;
+    }
+
     &:hover {
         box-shadow: 0 0 15px 0 rgba(40, 40, 40, 0.1);
         @include prefix(transform, translateY(-2px), webkit moz ms o);

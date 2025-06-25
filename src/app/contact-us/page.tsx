@@ -8,7 +8,7 @@ function page() {
   return (
     <>
       <BasicTopBanner bannerImgSrc="/images/contactus.jpg" title="Contact Us" />
-      <ContactFormSection />
+      <ContactFormSection className="contactUs-page" />
       <ContactInfoSection />
     </>
   );

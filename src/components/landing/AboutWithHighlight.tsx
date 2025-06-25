@@ -27,13 +27,13 @@ function AboutWithHighlight() {
         <div className=" d-flex flex-col flex-md-row">
           <div className="col-md-7">
             <div className="about-video">
-              <div className="heading-layout2">
+              <div className="heading-layout2" data-aos="fade-right">
                 <p className="heading__subtitle">
                   Providing Robust Engineering Solutions
                 </p>
                 <h2 className="heading__title">NF Forgings Private Limited</h2>
               </div>
-              <p className="desc">
+              <p className="desc" data-aos="fade-right">
                 In 1964, our founding father Mr. Murari Lal Dhanuka established
                 a small pneumatic forging and fabrication unit in Howrah — then
                 a hub for ferrous-based industries. This marked the beginning of
@@ -57,7 +57,13 @@ function AboutWithHighlight() {
                 {aboutHighlights.map(
                   ({ icon, title, description, IconSvg }, index) => {
                     return (
-                      <div className="col-md-6" key={index}>
+                      <div
+                        className="col-md-6"
+                        key={index}
+                        data-aos-delay={index * 300}
+                        data-aos="fade-down"
+                        data-aos-duration="300"
+                      >
                         <div className="highlight">
                           <div className="top">
                             <span className="icon">{IconSvg}</span>

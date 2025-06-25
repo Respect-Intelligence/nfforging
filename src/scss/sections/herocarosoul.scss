@@ -1,0 +1,41 @@
+@use "../global/vars" as *;
+@use "../global/mixins" as *;
+@use "../global/global" as *;
+
+
+.HeroCarosoul {
+    padding-top: 90px;
+
+    height: 800px;
+
+
+    .carousel-nav-wrapper {
+
+        .carousel-nav-arrow {
+            position: absolute;
+            z-index: 99;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $color-theme;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            svg {
+                height: 40px;
+                color: #fff;
+            }
+
+            &.carousel-nav-prev {
+                left: 30px;
+            }
+
+            &.carousel-nav-next {
+                right: 30px;
+            }
+        }
+    }
+}
