@@ -78,10 +78,25 @@ export default function Header() {
   console.log(pathname);
 
   const isActive = (href: string) => {
-    // if (href == "/") {
-    // }
-    return pathname == href;
-    // return pathname.includes(href);
+    console.log(pathname, href);
+    console.log(pathname.startsWith(href + "/"));
+
+    if (!href) return false;
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  };
+  const isMenuActive = (item: any) => {
+    if (!item) return false;
+    if (item.href) {
+      if (item.href === "/") return pathname === "/";
+      if (pathname === item.href || pathname.startsWith(item.href + "/")) {
+        return true;
+      }
+    }
+    if (item.children) {
+      return item.children.some((child: any) => isMenuActive(child));
+    }
+    return false;
   };
 
   useEffect(() => {
@@ -174,7 +189,8 @@ export default function Header() {
                     <Link
                       href={item.href ? item.href : "#"}
                       className={`nav__item-link ${
-                        isActive(item.href) ? "active" : ""
+                        // isActive(item.href) ? "active" : ""
+                        isMenuActive(item) ? "active" : ""
                       } ${item.children ? "dropdown-toggle" : ""}`}
                     >
                       {item.title}{" "}
@@ -221,7 +237,8 @@ export default function Header() {
                               <Link
                                 href={child.href}
                                 className={`nav__item-link ${
-                                  isActive(child.href) ? "active" : ""
+                                  // isActive(child.href) ? "active" : ""
+                                  isMenuActive(child) ? "active" : ""
                                 }`}
                               >
                                 {child.title}
@@ -266,7 +283,8 @@ export default function Header() {
                                       <Link
                                         href={sub.href}
                                         className={`nav__item-link ${
-                                          isActive(sub.href) ? "active" : ""
+                                          // isActive(sub.href) ? "active" : ""
+                                          isMenuActive(sub) ? "active" : ""
                                         }`}
                                       >
                                         {sub.title}
