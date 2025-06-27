@@ -66,12 +66,15 @@ function page({ params }: PageProps) {
                     </div>
                   </div>
                 </div> */}
-                <div className="portfolio__content text-center pt-50">
+                <div
+                  className="portfolio__content text-center pt-50"
+                  data-aos="fade-down"
+                >
                   <h2 className="portfolio__title ">{data.title}</h2>
-                  <div className="portfolio__cat">
+                  {/* <div className="portfolio__cat">
                     <a href="#">Building</a>
                     <a href="#">Interior</a>
-                  </div>
+                  </div> */}
                   <p className="portfolio__desc">{data.oneLiner}</p>
                 </div>
               </div>
@@ -79,7 +82,12 @@ function page({ params }: PageProps) {
               <div className="fancybox-layout2 ">
                 <div className="row">
                   {data?.highlights?.map(({ Icon, title, para }, index) => (
-                    <div className="col-sm-12 col-md-12 col-lg-4" key={index}>
+                    <div
+                      className="col-sm-12 col-md-12 col-lg-4"
+                      key={index}
+                      data-aos="fade-right"
+                      data-aos-delay={index * 150}
+                    >
                       <div className="fancybox-item">
                         <div className="fancybox__icon">{Icon}</div>
                         <div className="fancybox__content">
@@ -101,8 +109,10 @@ function page({ params }: PageProps) {
           <div className="row ">
             <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
               <div className="text__block text__block-layout2 mb-70">
-                <h5 className="text__block-title">Overview</h5>
-                <div className="text__block-content">
+                <h5 className="text__block-title" data-aos="fade-down">
+                  Overview
+                </h5>
+                <div className="text__block-content" data-aos="fade-left">
                   <p className="text__block-desc">{data.para}</p>
                   <p className="text__block-desc">{data.para2}</p>
 
@@ -110,7 +120,11 @@ function page({ params }: PageProps) {
                     {data.section?.points.map((item, index: number) => {
                       if (typeof item == "string") {
                         return (
-                          <li key={index}>
+                          <li
+                            key={index}
+                            data-aos="fade-right"
+                            data-aos-delay={index * 100}
+                          >
                             <span className="checkIcon">
                               <Check />
                             </span>
@@ -119,7 +133,12 @@ function page({ params }: PageProps) {
                         );
                       } else {
                         return (
-                          <li key={index} className=" align-items-start">
+                          <li
+                            key={index}
+                            className=" align-items-start"
+                            data-aos="fade-right"
+                            data-aos-delay={index * 100}
+                          >
                             <div className="left pt-1">
                               <span className="checkIcon">
                                 <Check />
@@ -144,8 +163,10 @@ function page({ params }: PageProps) {
                 key={sectionIndex}
               >
                 <div className="text__block text__block-layout2 ">
-                  <h5 className="text__block-title fs-5">{section.title}</h5>
-                  <div className="text__block-content">
+                  <h5 className="text__block-title fs-5" data-aos="fade-down">
+                    {section.title}
+                  </h5>
+                  <div className="text__block-content" data-aos="fade-right">
                     <p className="text__block-desc">{section?.para}</p>
                     {/* <div key={sectionIndex} className="mb-30 mt-20"> */}
                     {/* <h6 className="fw-semibold mb-3">{section.title}</h6> */}
@@ -154,6 +175,8 @@ function page({ params }: PageProps) {
                         <li
                           key={index}
                           className="d-flex align-items-start gap-3 mb-2"
+                          data-aos="fade-right"
+                          data-aos-delay={index * 100}
                         >
                           <span className="color-theme mt-1">{item.Icon}</span>
                           <div>
@@ -182,7 +205,7 @@ function page({ params }: PageProps) {
 
             <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
               <div className="text__block text__block-layout2 ">
-                <div className="text__block-content">
+                <div className="text__block-content" data-aos="fade-right">
                   <Link
                     href="/contact-us"
                     className="btn btn__primary btn__icon btn__lg"
@@ -198,13 +221,18 @@ function page({ params }: PageProps) {
           {/* types of product if abhilable */}
           {data?.typesOfProduct && (
             <div className="row pb-5">
-              <div className="product-section-heading">
+              <div className="product-section-heading" data-aos="fade-down">
                 <p>{data?.typesOfProductHeading?.heading}</p>
                 <h2>{data?.typesOfProductHeading?.subHeading}</h2>
               </div>
               {data?.typesOfProduct &&
                 data?.typesOfProduct?.map((item, index) => (
-                  <div className="col-md-3" key={index}>
+                  <div
+                    className="col-md-3"
+                    key={index}
+                    data-aos="fade-right"
+                    data-aos-delay={index * 150}
+                  >
                     <div className="portfolio-item">
                       <div
                         className="portfolio__img pt-4 px-4"
@@ -259,19 +287,24 @@ function page({ params }: PageProps) {
             <div className="row">
               <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
                 <div className="text__block text__block-layout2 mb-70">
-                  <h5 className="text__block-title">
+                  <h5 className="text__block-title" data-aos="fade-right">
                     {data?.counterSection?.title}
                   </h5>
 
                   <div className="text__block-content">
-                    <p className="text__block-desc">
+                    <p className="text__block-desc" data-aos="fade-right">
                       {data?.counterSection?.para}
                     </p>
 
                     <div className="counters-layout2">
                       <div className="row">
                         {data?.counterSection?.counter.map((item, index) => (
-                          <div className="col-4" key={index}>
+                          <div
+                            className="col-4"
+                            key={index}
+                            data-aos="fade-down"
+                            data-aos-delay={index * 100}
+                          >
                             <div className="counter-item">
                               <p className="counter__desc mb-1 text-start">
                                 {item.label}

@@ -79,7 +79,7 @@ function StatusSection() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12">
-              <div className="heading text-center mb-50">
+              <div className="heading text-center mb-50" data-aos="fade-down">
                 <span className="heading__subtitle">
                   Our Action To Gain Longevity
                 </span>
@@ -91,6 +91,7 @@ function StatusSection() {
                 <div
                   className="col-12 col-lg-6 statusItem-wrapper mb-2 mb-md-4 "
                   key={index}
+                  data-aos="fade-right"
                 >
                   <div className="statusItem">
                     <div className="img-wraper">

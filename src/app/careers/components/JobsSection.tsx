@@ -14,7 +14,7 @@ function JobsSection() {
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div className="heading text-center mb-50">
+            <div className="heading text-center mb-50" data-aos="fade-down">
               <span className="heading__subtitle">Join Our Team!</span>
               <h2 className="heading__title">
                 Explore Opportunities to Forge Your Future with Us
@@ -48,7 +48,11 @@ function JobsSection() {
             >
               {jobs.map((job, index) => (
                 <SwiperSlide key={index}>
-                  <div className="job-item">
+                  <div
+                    className="job-item"
+                    data-aos="fade-right"
+                    data-aos-delay={index * 150}
+                  >
                     <div className="job__meta d-flex align-items-center">
                       <div className="d-flex justify-content-between align-items-center w-100">
                         <div className="left">

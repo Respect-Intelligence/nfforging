@@ -36,13 +36,14 @@ function HeroCarosoul() {
           //   }}
           navigation={{
             nextEl: ".carousel-nav-next",
-            prevEl: ".arousel-nav-prev",
+            prevEl: ".carousel-nav-prev",
           }}
           autoHeight={false}
           spaceBetween={0}
           slidesPerView={1}
           // className="pb-5"
           loop={true}
+          className="h-100"
         >
           {gallery.map((src, i) => {
             return (

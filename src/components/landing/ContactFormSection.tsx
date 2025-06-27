@@ -11,11 +11,7 @@ export default function ContactFormSection({ className }: pageProps) {
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12">
-              <div
-                className="contact-panel "
-                data-aos="zoom-in-up"
-                data-aos-duration="300"
-              >
+              <div className="contact-panel " data-aos="zoom-in-up">
                 <div className="col-sm-12">
                   <h4 className="contact__panel-title">Send Us Message</h4>
                   <div className="d-flex justify-content-center">

@@ -15,7 +15,7 @@ export default function OurCulture_section() {
         <div className="row align-items-center">
           <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
             <div className="inner-wrapper">
-              <div className="heading-layout2 mb-30">
+              <div className="heading-layout2 mb-30" data-aos="fade-right">
                 <span className="heading__subtitle">
                   A Culture Built on Integrity, Innovation, and Inclusivity
                 </span>
@@ -43,6 +43,7 @@ export default function OurCulture_section() {
               <a
                 href="#applyForm"
                 className="btn btn__secondary btn__icon mt-20 mb-20"
+                data-aos="fade-down"
               >
                 <span>Apply Now</span>
                 <LucideArrowRight size={16} className="ms-1" />
@@ -51,9 +52,12 @@ export default function OurCulture_section() {
           </div>
 
           <div className="col-sm-12 col-md-10 col-lg-8 col-xl-5">
-            <div className="about__img position-relative">
+            <div
+              className="about__img position-relative"
+              data-aos="zoom-in-left"
+            >
               <Image
-                src="/images/careers/1.jpg"
+                src="/images/careers/culture.jpg"
                 alt="about"
                 width={600}
                 height={500}

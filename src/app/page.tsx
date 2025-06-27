@@ -13,6 +13,7 @@ import HighlightSection_2 from "@/components/landing/HighlightSection_2";
 import HighlightSection_3 from "@/components/landing/HighlightSection_3";
 import AboutWithHighlight from "@/components/landing/AboutWithHighlight";
 import ManufacturingLocations from "@/components/landing/ManufacturingLocations";
+import VedioSection from "@/components/landing/VedioSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <TopBanner />
       {/* <HighlightSection_3 /> */}
       {/* <HighlightSection /> */}
+      <VedioSection />
       <AboutUsSection />
       <ServiceSection />
       <AboutWithHighlight />

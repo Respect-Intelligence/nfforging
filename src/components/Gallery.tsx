@@ -43,14 +43,17 @@ const Gallery: React.FC<GalleryProps> = ({
         <div className="container">
           {/* Header */}
           <div className="row justify-content-center mb-5">
-            <div className="heading text-center">
+            <div className="heading text-center" data-aos="fade-down">
               <span className="heading__subtitle">Action Plan</span>
               <h2 className="heading__title">Weaving a Sustainable Future</h2>
             </div>
           </div>
 
           {/* Filter Buttons */}
-          <div className="row justify-content-center mb-4">
+          <div
+            className="row justify-content-center mb-4"
+            data-aos="fade-right"
+          >
             <div className="col-auto">
               <div className="gallery-filters">
                 {categories?.map((category, i) => (
@@ -71,8 +74,12 @@ const Gallery: React.FC<GalleryProps> = ({
 
           {/* Gallery Grid */}
           <div className="row g-4">
-            {filteredItems.map((item) => (
-              <div key={item.id} className="col-lg-4 col-md-6">
+            {filteredItems.map((item, key) => (
+              <div
+                key={item.id}
+                className="col-lg-4 col-md-6"
+                data-aos="fade-right"
+              >
                 <div className="gallery-item" onClick={() => openModal(item)}>
                   <div className="gallery-image-wrapper">
                     <img

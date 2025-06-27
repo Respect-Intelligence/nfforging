@@ -100,7 +100,7 @@ function AboutWithHighlight() {
                   />
                 </svg>
               </button>
-              <img src="/images/home3/Background (1).png" alt="" />
+              <img src="/images/home3/Background (1).jpg" alt="" />
             </div>
           </div>
         </div>

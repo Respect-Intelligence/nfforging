@@ -106,7 +106,7 @@ export default function FeaturesSection() {
       <div className="container col-padding-0">
         <div className="row justify-content-center">
           <div className="col-sm-12 col-md-12 col-lg-8 ">
-            <div className="heading text-center mb-50">
+            <div className="heading text-center mb-50" data-aos="fade-down">
               <span className="heading__subtitle">
                 NF’s Pillars of Sustainability
               </span>
@@ -120,7 +120,12 @@ export default function FeaturesSection() {
 
         <div className="row features-wrapper">
           {SustainabilityPillars?.map((feature, index) => (
-            <div className="col-sm-12 col-md-4 col-lg-4" key={index}>
+            <div
+              className="col-sm-12 col-md-4 col-lg-4"
+              key={index}
+              data-aos="fade-right"
+              data-aos-delay={index * 150}
+            >
               <div className="feature-item">
                 <div className="feature__img">
                   <Image

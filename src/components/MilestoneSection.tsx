@@ -10,7 +10,7 @@ const MilestoneSection: React.FC = () => {
           {/* Header */}
           <div className="row">
             <div className="col-12">
-              <div className="heading text-center mb-50">
+              <div className="heading text-center mb-50" data-aos="fade-down">
                 <span className="heading__subtitle">Our Milestones</span>
                 <h2 className="heading__title">
                   Long legacy of delivering excellence <br />
@@ -32,6 +32,8 @@ const MilestoneSection: React.FC = () => {
                       className={`milestone-item ${
                         milestone.isLeft ? "milestone-left" : "milestone-right"
                       }`}
+                      data-aos={milestone.isLeft ? "fade-left" : "fade-right"}
+                      data-aos-delay={index * 150}
                     >
                       {/* Milestone Card */}
                       <div className="milestone-card">

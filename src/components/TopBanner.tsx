@@ -7,7 +7,7 @@ function TopBanner() {
     <section
       className="page-title page-title-layout1 bg-overlay bg-overlay-2 bg-parallax"
       style={{
-        backgroundImage: "url(/images/page-titles/1.jpg)",
+        backgroundImage: "url('/images/about/g (7).jpg')",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

@@ -7,14 +7,19 @@ function OurTeams_section() {
     <section className="team-layout2 text-center pb-30 ">
       <div className="container">
         <div className="row">
-          <div className="heading-layout2">
+          <div className="heading-layout2" data-aos="fade-down">
             <p className="heading__subtitle">Our Teams</p>
             <h2 className="heading__title">
               Meet the Experts Behind Our Success
             </h2>
           </div>
           {teamMembers.map((member, index) => (
-            <div key={index} className="col-sm-6 col-md-6 col-lg-4">
+            <div
+              key={index}
+              className="col-sm-6 col-md-6 col-lg-4"
+              data-aos="fade-right"
+              data-aos-delay={index * 150}
+            >
               <div className="member">
                 <div className="member__img">
                   <img src={member.image} alt="member img" />

@@ -31,7 +31,10 @@ function Overview({
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12">
               <div className="portfolio-item">
-                <div className="portfolio__content text-center pt-50">
+                <div
+                  className="portfolio__content text-center pt-50"
+                  data-aos="fade-down"
+                >
                   <h2 className="portfolio__title ">{serviceData.title}</h2>
                   {/* <div className="portfolio__cat">
                     <a href="#">Building</a>
@@ -52,7 +55,12 @@ function Overview({
                       },
                       index: number
                     ) => (
-                      <div className="col-sm-12 col-md-12 col-lg-4" key={index}>
+                      <div
+                        className="col-sm-12 col-md-12 col-lg-4"
+                        key={index}
+                        data-aos="fade-right"
+                        data-aos-delay={index * 150}
+                      >
                         <div className="fancybox-item">
                           <div className="fancybox__icon">
                             {/* <i className={item.icon}></i> */}
@@ -82,8 +90,10 @@ function Overview({
           <div className="row ">
             <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
               <div className="text__block text__block-layout2 ">
-                <h5 className="text__block-title">Overview</h5>
-                <div className="text__block-content">
+                <h5 className="text__block-title" data-aos="fade-down">
+                  Overview
+                </h5>
+                <div className="text__block-content" data-aos="fade-left">
                   <p className="text__block-desc">{serviceData?.overview1}</p>
                   <p className="text__block-desc">{serviceData?.overview2}</p>
                   {serviceData?.keyPoints && (
@@ -91,7 +101,11 @@ function Overview({
                       {serviceData?.keyPoints?.map(
                         (point: string, index: number) => {
                           return (
-                            <li key={index}>
+                            <li
+                              key={index}
+                              data-aos="fade-right"
+                              data-aos-delay={index * 100}
+                            >
                               <span className="checkIcon">
                                 <Check />
                               </span>
@@ -111,8 +125,10 @@ function Overview({
                 key={sectionIndex}
               >
                 <div className="text__block text__block-layout2 ">
-                  <h5 className="text__block-title fs-5">{section.title}</h5>
-                  <div className="text__block-content">
+                  <h5 className="text__block-title fs-5" data-aos="fade-down">
+                    {section.title}
+                  </h5>
+                  <div className="text__block-content" data-aos="fade-left">
                     <p className="text__block-desc">{section?.para}</p>
                     {/* <div key={sectionIndex} className="mb-30 mt-20"> */}
                     {/* <h6 className="fw-semibold mb-3">{section.title}</h6> */}
@@ -121,6 +137,8 @@ function Overview({
                         <li
                           key={index}
                           className="d-flex align-items-start gap-3 mb-2"
+                          data-aos="fade-right"
+                          data-aos-delay={index * 100}
                         >
                           <span className="color-theme mt-1">{item.Icon}</span>
                           <div>
@@ -149,7 +167,7 @@ function Overview({
 
             <div className="col-sm-12 col-md-12 col-lg-9 offset-lg-2">
               <div className="text__block text__block-layout2 ">
-                <div className="text__block-content">
+                <div className="text__block-content" data-aos="fade-right">
                   <Link
                     href="/contact-us"
                     className="btn btn__primary btn__icon btn__lg"
@@ -163,12 +181,17 @@ function Overview({
           </div>
           {serviceData?.productsArr && (
             <div className="row mt-5 mt-md-4">
-              <div className="product-section-heading">
+              <div className="product-section-heading" data-aos="fade-down">
                 <p>{serviceData?.productsSectionHeading?.heading}</p>
                 <h2>{serviceData?.productsSectionHeading?.subHeading}</h2>
               </div>
               {serviceData?.productsArr?.map((item: any, index: number) => (
-                <div className="col-md-4" key={index}>
+                <div
+                  className="col-md-4"
+                  key={index}
+                  data-aos="fade-right"
+                  data-aos-delay={index * 150}
+                >
                   <div className="portfolio-item">
                     <div className="portfolio__img">
                       <img src={item.image} alt="portfolio img" />

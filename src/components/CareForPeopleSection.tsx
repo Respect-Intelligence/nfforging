@@ -6,7 +6,7 @@ function CareForPeopleSection() {
   return (
     <section className="CareForPeopleSection ">
       <div className="container">
-        <div className="heading-layout2 mb-30">
+        <div className="heading-layout2 mb-30" data-aos="fade-down">
           <span className="heading__subtitle">Care for our People</span>
           <h2 className="heading__title">
             Adhering to the highest labour standards
@@ -16,7 +16,12 @@ function CareForPeopleSection() {
           <div className="col-lg-7">
             <div className="row">
               {CareForPeople_stand?.map(({ iconSrc, title, para }, key) => (
-                <div className="col-md-6 " key={key}>
+                <div
+                  className="col-md-6 "
+                  key={key}
+                  data-aos="fade-right"
+                  data-aos-delay={key * 150}
+                >
                   <div className="standard-card">
                     <div className="top">
                       <div className="logo">
@@ -31,11 +36,17 @@ function CareForPeopleSection() {
                   </div>
                 </div>
               ))}
-              <h5>Creating fulfilling career opportunities</h5>
+              <h5 data-aos="fade-down">
+                Creating fulfilling career opportunities
+              </h5>
 
               <ul className="opotunityList">
                 {opotunityList?.map(({ iconSrc, para }, key) => (
-                  <li key={key}>
+                  <li
+                    key={key}
+                    data-aos="fade-right"
+                    data-aos-delay={key * 150}
+                  >
                     <div className="logo">
                       <img src={iconSrc} alt="" />
                     </div>
@@ -46,7 +57,11 @@ function CareForPeopleSection() {
             </div>
           </div>
           <div className="col-lg-5 ">
-            <img src="/images/careers/Picture4.png" alt="" />
+            <img
+              src="/images/careers/Picture4.png"
+              alt=""
+              data-aos="zoom-in-left"
+            />
           </div>
         </div>
       </div>

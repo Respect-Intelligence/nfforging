@@ -5,6 +5,7 @@ import "@/scss/sections/highlightSection_3.scss";
 
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
+import { adjustSlideHeights } from "@/utils/CommonFuntion";
 function HighlightSection_4() {
   return (
     // <section className="highlightSection_4">
@@ -32,8 +33,8 @@ function HighlightSection_4() {
               slidesPerView: 3,
             },
           }}
-          // onSwiper={(swiper) => adjustSlideHeights(swiper)}
-          // onResize={(swiper) => adjustSlideHeights(swiper)}
+          onSwiper={(swiper) => adjustSlideHeights(swiper)}
+          onResize={(swiper) => adjustSlideHeights(swiper)}
         >
           {highlightsData?.map(({ icon, title, description, value }, index) => {
             return (

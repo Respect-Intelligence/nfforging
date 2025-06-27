@@ -29,6 +29,8 @@ const ContactInfoSection = () => {
             <div
               className="col-sm-12 col-md-6 col-lg-6 mb-2 mb-md-0"
               key={index}
+              data-aos="fade-right"
+              data-aos-delay={index * 150}
             >
               <div className="contact-info-box">
                 <h4 className="contact__info-box-title">{info.office}</h4>

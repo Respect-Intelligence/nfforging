@@ -10,7 +10,7 @@ export default function AboutUsSection() {
               <div className="about-left-image d-none d-md-block">
                 <div className="img-wraper">
                   <img
-                    src="/images/home3/ab-1.jpg.png"
+                    src="/images/home3/ab_2.webp"
                     data-aos="zoom-in-left"
                     alt=""
                   />
@@ -62,7 +62,7 @@ export default function AboutUsSection() {
               <div className="about-left-image ">
                 <div className="img-wraper" data-aos="fade-right">
                   <img
-                    src="/images/home3/ab-2.png"
+                    src="/images/home3/ab_1.png"
                     alt=""
                     data-aos="zoom-in-right"
                   />

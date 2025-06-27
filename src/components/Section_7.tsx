@@ -18,7 +18,7 @@ function Section_7() {
                 backgroundSize: "cover",
               }}
             >
-              <div className="cta__banner bg-white">
+              <div className="cta__banner bg-white" data-aos="zoom-in-up">
                 <h5 className="cta__title">Forging Excellence Since 1997</h5>
                 <p className="cta__desc text-justify">
                   For over 25 years, NF Forgings Pvt. Ltd. has been a leader in
@@ -35,8 +35,11 @@ function Section_7() {
               </div>
             </div>
             <div className="col-sm-12 col-md-12 col-lg-6">
-              <div className="inner-padding">
-                <div className="heading-layout2 heading-light mb-40">
+              <div className="inner-padding ps-0 ps-md-5">
+                <div
+                  className="heading-layout2 heading-light mb-40"
+                  data-aos="fade-left"
+                >
                   <h2 className="heading__title">
                     Driven by Vision, Powered by Purpose
                   </h2>
@@ -47,7 +50,7 @@ function Section_7() {
                     technology, expertise, and experience.
                   </p>
                 </div>
-                <div className="row fancybox-light">
+                <div className="row fancybox-light" data-aos="fade-down">
                   <div className="col-sm-6 col-md-6 col-lg-6">
                     <div className="fancybox-item">
                       <div className="fancybox__icon">
@@ -82,6 +85,7 @@ function Section_7() {
                   </div>
                 </div>
                 <button
+                  data-aos="fade-right"
                   className="btn btn__white btn__bordered btn__icon box-shadow-none"
                   onClick={() => {
                     let btn = document.querySelector(

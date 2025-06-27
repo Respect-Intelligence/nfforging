@@ -36,7 +36,11 @@ export default function ApplyForm() {
   };
 
   return (
-    <section className="contact-layout3 mt-50" id="applyForm">
+    <section
+      className="contact-layout3 mt-50"
+      id="applyForm"
+      data-aos="zoom-in-up"
+    >
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-12">

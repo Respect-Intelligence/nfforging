@@ -196,6 +196,8 @@
             height: auto;
             position: absolute;
             z-index: 0;
+            left: 0;
+            transform: translateX(-50%);
 
             @include breakpoint-down(md) {
 

@@ -1,0 +1,28 @@
+@use "../global/vars" as *;
+@use "../global/mixins" as *;
+@use "../global/global" as *;
+
+
+
+section:has(+ .vedioSection) {
+    // outline: solid blue 3px;
+    padding-bottom: 170px !important;
+
+    @include breakpoint-down(md) {
+        padding-bottom: 140px !important;
+    }
+}
+
+.vedioSection {
+    margin-top: -140px;
+    padding-top: 0px;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint-down(md) {
+        margin-top: -120px;
+    }
+
+
+
+}

@@ -37,7 +37,7 @@ const RecentWorkSection = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div className="heading text-center mb-50">
+            <div className="heading text-center mb-50" data-aos="fade-down">
               <span className="heading__subtitle">Infra Capability</span>
               <h2 className="heading__title">
                 Built to deliver precision and performance.
@@ -46,7 +46,7 @@ const RecentWorkSection = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-12">
+          <div className="col-sm-12 col-md-12 col-lg-12" data-aos="fade-left">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}

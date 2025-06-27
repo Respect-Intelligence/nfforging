@@ -17,7 +17,10 @@ export default function SecondUnitAboutSection({
             <div className="col-sm-12 col-md-12 col-lg-12">
               <div className="row">
                 <div className="col-lg-6">
-                  <div className="heading-layout2 heading-light mb-50">
+                  <div
+                    className="heading-layout2 heading-light mb-50"
+                    data-aos="fade-right"
+                  >
                     <span className="heading__subtitle">
                       Our second unit at Tulsiberia (Unit-II)
                     </span>
@@ -29,7 +32,10 @@ export default function SecondUnitAboutSection({
                   </div>
                 </div>
                 <div className="col-lg-6">
-                  <ul className="list-items list-items-white list-unstyled mb-40">
+                  <ul
+                    className="list-items list-items-white list-unstyled mb-40"
+                    data-aos="fade-down"
+                  >
                     <li>
                       <div>
                         <b>Unit-II will be equipped with:</b> <br />

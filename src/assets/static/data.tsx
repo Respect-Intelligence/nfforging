@@ -1984,4 +1984,68 @@ export const defaultGalleryItems: GalleryItem[] = [
     description:
       "A symbolic act of sustainability — team members planting trees to promote greener environments and offset carbon footprint.",
   },
+  {
+    id: 6,
+    src: "/images/sustainability/yoga (1).jpg",
+    title: "Yoga for Wellness",
+    category: "Wellness",
+    description:
+      "Team members practicing yoga together, fostering physical wellness, mindfulness, and a balanced work-life culture.",
+  },
+  {
+    id: 7,
+    src: "/images/sustainability/yoga (2).jpg",
+    title: "Yoga for Wellness",
+    category: "Wellness",
+    description:
+      "Team members practicing yoga together, fostering physical wellness, mindfulness, and a balanced work-life culture.",
+  },
+  {
+    id: 8,
+    src: "/images/sustainability/yoga (3).jpg",
+    title: "Yoga for Wellness",
+    category: "Wellness",
+    description:
+      "Team members practicing yoga together, fostering physical wellness, mindfulness, and a balanced work-life culture.",
+  },
+  {
+    id: 9,
+    src: "/images/sustainability/yoga (4).jpg",
+    title: "Yoga for Wellness",
+    category: "Wellness",
+    description:
+      "Team members practicing yoga together, fostering physical wellness, mindfulness, and a balanced work-life culture.",
+  },
+  {
+    id: 10,
+    src: "/images/sustainability/yoga (5).jpg",
+    title: "Yoga for Wellness",
+    category: "Wellness",
+    description:
+      "Team members practicing yoga together, fostering physical wellness, mindfulness, and a balanced work-life culture.",
+  },
+  {
+    id: 11,
+    src: "/images/sustainability/yoga (6).jpg",
+    title: "Yoga for Wellness",
+    category: "Wellness",
+    description:
+      "Team members practicing yoga together, fostering physical wellness, mindfulness, and a balanced work-life culture.",
+  },
+  {
+    id: 12,
+    src: "/images/sustainability/yoga (7).jpg",
+    title: "Yoga for Wellness",
+    category: "Wellness",
+    description:
+      "Team members practicing yoga together, fostering physical wellness, mindfulness, and a balanced work-life culture.",
+  },
+  {
+    id: 13,
+    src: "/images/sustainability/yoga (8).jpg",
+    title: "Yoga for Wellness",
+    category: "Wellness",
+    description:
+      "Team members practicing yoga together, fostering physical wellness, mindfulness, and a balanced work-life culture.",
+  },
 ];

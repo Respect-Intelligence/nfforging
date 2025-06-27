@@ -35,14 +35,20 @@ export default function BannerCounterSection() {
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6">
-            <div className="heading-layout2 heading-light mb-50">
+            <div
+              className="heading-layout2 heading-light mb-50"
+              data-aos="fade-right"
+            >
               <span className="heading__subtitle">Our Triple Bottom Line</span>
               <h2 className="heading__title">Forging a Greener Future</h2>
             </div>
           </div>
         </div>
 
-        <div className="row counter-light justify-content-center">
+        <div
+          className="row counter-light justify-content-center"
+          data-aos="fade-down"
+        >
           {tripleBottomLine.map(({ title, subtext, image, Icon }, index) => (
             <div className=" col-md-4" key={index}>
               <div className="counter-item d-flex flex-column align-items-center">

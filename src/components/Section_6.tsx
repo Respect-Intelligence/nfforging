@@ -8,7 +8,7 @@ export default function Section_6() {
       <div className="container-fluid">
         <div className="row">
           <div className="text-block">
-            <div className="heading-layout2 mb-30">
+            <div className="heading-layout2 mb-30" data-aos="fade-right">
               <span className="heading__subtitle">
                 Driven by Innovation, Built on Legacy
               </span>
@@ -31,7 +31,7 @@ export default function Section_6() {
               </p>
             </div>
 
-            <ul className="list-items list-unstyled mb-40">
+            <ul className="list-items list-unstyled mb-40" data-aos="fade-down">
               <li>
                 <span className="checkIcon">
                   <Check />
@@ -91,10 +91,13 @@ export default function Section_6() {
             </Link>
           </div>
 
-          <div className="imgs-block pe-xl-0 px-0 mt-50">
+          <div
+            className="imgs-block pe-xl-0 px-0 mt-50"
+            data-aos="fade-down-left"
+          >
             <div className="about__img">
               <img
-                src="/images/about/2.jpg"
+                src="/images/about/about.jpg"
                 alt="about"
                 className="img-fluid  w-auto"
               />

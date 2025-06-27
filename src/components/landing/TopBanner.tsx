@@ -4,7 +4,7 @@ import HighlightSection_4 from "./HighlightSection_4";
 export default function TopBanner() {
   return (
     <>
-      <section className="static-hero relative">
+      <section className="static-hero relative ">
         {/* <video
           autoPlay
           muted
@@ -21,7 +21,7 @@ export default function TopBanner() {
           Your browser does not support HTML5 video.
         </video> */}
         <div className="container py-3 py-md-0">
-          <div className="wraper position-relative pt-100 z-50">
+          <div className="wraper position-relative  z-50">
             <div className="row ">
               <div className="col-lg-6">
                 <div className="content pe-lg-5  ">
@@ -49,7 +49,13 @@ export default function TopBanner() {
               </div>
               <div className="col-lg-6 d-none d-lg-block">
                 <div className="hero-img">
-                  <img src="/images/home3/heroBanner_2.png" alt="NF Foregins" />
+                  <img src="/images/home3/heroBanner_3.jpg" alt="NF Foregins" />
+
+                  <img
+                    src="/images/home3/contactBatch.png"
+                    alt=""
+                    className="contact-us-img"
+                  />
                 </div>
               </div>
             </div>

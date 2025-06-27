@@ -71,12 +71,15 @@ const BlogSection = async () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-6">
-            <div className="heading heading-layout3 mb-40">
+            <div
+              className="heading heading-layout3 mb-40"
+              data-aos="fade-right"
+            >
               <h2 className="heading__title">Recent Blogs</h2>
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row" data-aos="fade-left">
           <div className="col-sm-12 col-md-12 col-lg-12 ">
             <div className="position-relative">
               {blogs && (
