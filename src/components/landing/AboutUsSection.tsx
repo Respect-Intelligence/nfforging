@@ -10,7 +10,7 @@ export default function AboutUsSection() {
               <div className="about-left-image d-none d-md-block">
                 <div className="img-wraper">
                   <img
-                    src="/images/home3/ab_2.webp"
+                    src="/images/home3/ab-3.webp"
                     data-aos="zoom-in-left"
                     alt=""
                   />

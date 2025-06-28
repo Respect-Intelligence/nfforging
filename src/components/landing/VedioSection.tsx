@@ -6,7 +6,18 @@ function VedioSection() {
     <>
       <section className="vedioSection" data-aos="zoom-in-up">
         <div className="container">
-          <div className="px-lg-5">
+          <div className="px-lg-5 position-relative">
+            <div
+              className=""
+              style={{
+                border: "4px solid #fff",
+                position: "absolute",
+                bottom: "-1px",
+                left: "0px",
+                width: "100%",
+                zIndex: 9,
+              }}
+            ></div>
             <video
               width="100%"
               height="auto"
@@ -24,10 +35,7 @@ function VedioSection() {
               data-aos-delay="800"
               data-aos-duration="800"
             >
-              <source
-                src="https://www.markobrando.com/asset/video/1St%20Cut%20M-Comp.webm"
-                type="video/webm"
-              />
+              <source src="/images/home3/vid.mp4" type="video/webm" />
             </video>
           </div>
         </div>
